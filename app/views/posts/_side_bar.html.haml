@@ -1,17 +1,19 @@
-!!!
-%html{lang: "ja"}
-  %head
-    %meta{charset: "utf-8"}
-  %body
-    .side-bar
-      .header
-        %img{ src: "PFCMASTER.png", alt: "PFCMASTERのロゴ" }
-        ロゴ画像
-        PFC Master
-      .contents
-        プロフィール画像
+.side-bar
+  %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    %a.navbar-brand{ href: 'http://www.pikawaka.com'}
+      %img{ src: "PFCMASTER.png", alt: "PFCMASTERのロゴ" }
+        PFC MASTER
+  .header
+  .contents
+    .user-box
+      %img{ src: "#", alt: "プロフィール画像" }
+      %p 
         ユーザー名
+      %p
         (数字)フォロー中
+      %p
         (数字)フォロワー
+      %p
         自分の記録
+      %p
         カロリーグラフ

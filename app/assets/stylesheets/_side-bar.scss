@@ -1,22 +1,6 @@
 .side-bar {
-  .header {
-    width:500px;
-    height: 80px;
-    background-color: #f5fffa;
+  .nav {
     box-shadow: 0 5px 4px -3px rgba(36, 35, 35, 0.5);
-    position: relative;
-    z-index: 1;
-    h1 {
-      float: left;
-      padding: 6px 0;
-    }
-      h1 a {
-        display: block;
-        width: 70px;
-        height: 70px;
-        font-size: 0;
-        background: url(./Downloads/PFCMASTER.png) left top/64px auto no-repeat;
-      }
   }
   .contents {
     width:500px;
