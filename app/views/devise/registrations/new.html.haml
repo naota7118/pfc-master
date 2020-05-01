@@ -1,32 +1,54 @@
 #account-page.account-page
+  .header
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      %div.thumbnail
+        %img{ src: "PFCMASTER.png"}
+      %a.navbar-brand{ href: '#'}
+        NAVBAR
+      %button.navbar-toggler{"type" => "button",
+                            "data-toggle" => "collapse",
+                            "data-target" => "#navbarSupportedContent",
+                            "aria-controls" => "navbarSupportedContent",
+                            "aria-expanded" => "false",
+                            "aria-label" => "Toggle navigation"}
+        %span.navbar-toggler-icon
+      %div.collapse.navbar-collapse{ id: "navbarSupportedContent"}
+        %ul.navbar-nav
+          %li.nav-item
+            %a.nav-link{ href: "#"}
+              Menu1
+          %li.nav-item
+            %a.nav-link{ href: "#"}
+              Menu2
+          %li.nav-item
+            %a.nav-link{ href: "#"}
+              Menu3
   .account-page__inner.clearfix
     .account-page__inner--left.account-page__header
-      %h2 Create Account
-      %h5 新規アカウントの作成
+      %h3 ユーザー新規登録
       = render "devise/shared/links"
     .account-page__inner--right.user-form
       = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         = devise_error_messages!
         .field
           .field-label
-            = f.label :name
+            ユーザー名
           .field-input
             = f.text_field :name, autofocus: true
         .field
           .field-label
-            = f.label :email
+            メールアドレス
           .field-input
             = f.email_field :email
         .field
           .field-label
-            = f.label :password
-            %i (英数字8文字以上)
+            パスワード(英数字8文字以上)
           .field-input
             = f.password_field :password, autocomplete: "off"
         .field
           .field-label
-            = f.label :password_confirmation
+            確認用パスワード
           .field-input
             = f.password_field :password_confirmation, autocomplete: "off"
         .actions
-          = f.submit "Create Account", class: 'btn'
+          = f.submit "登録する", class: 'btn'
