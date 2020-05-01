@@ -1,27 +1,28 @@
 .main-tweet
-  %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-    %div.thumbnail
-      %img{ src: "PFCMASTER.png"}
-    %a.navbar-brand{ href: '#'}
-      NAVBAR
-    %button.navbar-toggler{"type" => "button",
-                           "data-toggle" => "collapse",
-                           "data-target" => "#navbarSupportedContent",
-                           "aria-controls" => "navbarSupportedContent",
-                           "aria-expanded" => "false",
-                           "aria-label" => "Toggle navigation"}
-      %span.navbar-toggler-icon
-    %div.collapse.navbar-collapse{ id: "navbarSupportedContent"}
-      %ul.navbar-nav
-        %li.nav-item
-          %a.nav-link{ href: "#"}
-            Menu1
-        %li.nav-item
-          %a.nav-link{ href: "#"}
-            Menu2
-        %li.nav-item
-          %a.nav-link{ href: "#"}
-            Menu3
+  .header
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      %div.thumbnail
+        %img{ src: "PFCMASTER.png"}
+      %a.navbar-brand{ href: '#'}
+        NAVBAR
+      %button.navbar-toggler{"type" => "button",
+                            "data-toggle" => "collapse",
+                            "data-target" => "#navbarSupportedContent",
+                            "aria-controls" => "navbarSupportedContent",
+                            "aria-expanded" => "false",
+                            "aria-label" => "Toggle navigation"}
+        %span.navbar-toggler-icon
+      %div.collapse.navbar-collapse{ id: "navbarSupportedContent"}
+        %ul.navbar-nav
+          %li.nav-item
+            %a.nav-link{ href: "#"}
+              Menu1
+          %li.nav-item
+            %a.nav-link{ href: "#"}
+              Menu2
+          %li.nav-item
+            %a.nav-link{ href: "#"}
+              Menu3
   .container-fluid
     %div.row
       %div.col-sm.left
@@ -41,7 +42,7 @@
         %div#id.index
           %section.register
             %div.register_record
-              %div.food_record_
+              %div.food_record
                 %form#food_record{"action" => "#", "method" => "post"}
                   %textarea{"type" => "text？", "placeholder" => "なに食べた？", "class" => "what_food"}
                   %div.pfc_box

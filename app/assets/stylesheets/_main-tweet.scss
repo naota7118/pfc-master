@@ -6,22 +6,41 @@
   height: 100vh;
   width: 100%;
   background-color: #add8e6;
-  .container {
-    #food_record {
-      margin: 0 auto;
-      .what_food {
-        width: 400px;
-        height: 100px;
-        background-color: white;
-        margin-top: 20px;
-        margin-left: 160px;
-      }
-        .pfc_table {
-          width: 400px;
-          height: 100px;
-          background-color: white;
-          margin: 0 auto;
-        }
+  .container-fluid {
+    .user-box {
+      height: 300px;
+      width: 200px;
+      background-color: white;
+      padding: 10px 10px 10px 10px;
+      border: gray 10px solid;
+      margin: 60px 10px 10px 200px;
+      border-radius: 25px 25px 25px 25px;
     }
+      .register_record {
+        background-color: #ffdead;
+        border: gray 5px solid;
+        margin: 50px 50px 0 0;
+        border-radius: 25px 25px 25px 25px;
+        width: 600px;
+        .food_record {
+          width: 600px;
+          .what_food {
+            margin-top: 10px;
+            width: 400px;
+            height: 100px;
+            background-color: white;
+            padding: 5px;
+            display: block;
+            margin: 10px auto;
+          }
+          .pfc_table {
+            width: 400px;
+            height: 100px;
+            background-color: white;
+            margin: 0 auto;
+            margin-bottom: 10px;
+          }
+        }
+      }
   }
 }
