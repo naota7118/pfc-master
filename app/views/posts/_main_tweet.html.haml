@@ -22,31 +22,46 @@
         %li.nav-item
           %a.nav-link{ href: "#"}
             Menu3
-  .container
-    %div#id.index
-      %section.register
-        %div.register_record
-          %div.food_record_
-            %form#food_record{"action" => "#", "method" => "post"}
-              %textarea{"type" => "text？", "placeholder" => "なに食べた？", "class" => "what_food"}
-              %div.pfc_box
-                %div.pfc_record
-                  %table{"border" => "2", "class" => "pfc_table"}
-                    %tr{"align" => "center"}
-                      %th
-                        カロリー(kcal)
-                      %th
-                        P(g)
-                      %th
-                        F(g)
-                      %th
-                        c(g)
-                    %tr
-                      %td{"align" => "center"}
-                        ???
-                      %td{"align" => "center"}
-                        ???
-                      %td{"align" => "center"}
-                        ???
-                      %td{"align" => "center"}
-                        ???
+  .container-fluid
+    %div.row
+      %div.col-sm.left
+        .user-box
+          %img{ src: "#", alt: "プロフィール画像" }
+          %p 
+            ユーザー名
+          %p
+            (数字)フォロー中
+          %p
+            (数字)フォロワー
+          %p
+            自分の記録
+          %p
+            カロリーグラフ
+      %div.col-sm.right
+        %div#id.index
+          %section.register
+            %div.register_record
+              %div.food_record_
+                %form#food_record{"action" => "#", "method" => "post"}
+                  %textarea{"type" => "text？", "placeholder" => "なに食べた？", "class" => "what_food"}
+                  %div.pfc_box
+                    %div.pfc_record
+                      %table{"border" => "2", "class" => "pfc_table"}
+                        %tr{"align" => "center"}
+                          %th
+                            カロリー(kcal)
+                          %th
+                            P(g)
+                          %th
+                            F(g)
+                          %th
+                            c(g)
+                        %tr
+                          %td{"align" => "center"}
+                            ???
+                          %td{"align" => "center"}
+                            ???
+                          %td{"align" => "center"}
+                            ???
+                          %td{"align" => "center"}
+                            ???
