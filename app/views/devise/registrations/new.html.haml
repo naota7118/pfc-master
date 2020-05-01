@@ -23,32 +23,33 @@
           %li.nav-item
             %a.nav-link{ href: "#"}
               Menu3
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h3 ユーザー新規登録
-      = render "devise/shared/links"
-    .account-page__inner--right.user-form
-      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = devise_error_messages!
-        .field
-          .field-label
-            ユーザー名
-          .field-input
-            = f.text_field :name, autofocus: true
-        .field
-          .field-label
-            メールアドレス
-          .field-input
-            = f.email_field :email
-        .field
-          .field-label
-            パスワード(英数字8文字以上)
-          .field-input
-            = f.password_field :password, autocomplete: "off"
-        .field
-          .field-label
-            確認用パスワード
-          .field-input
-            = f.password_field :password_confirmation, autocomplete: "off"
-        .actions
-          = f.submit "登録する", class: 'btn'
+  .content
+    .account-page
+      .account-page__inner--left.account-page__header
+        %h3 ユーザー新規登録
+        = render "devise/shared/links"
+      .account-page__inner--right.user-form
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .field
+            .field-label
+              ユーザー名
+            .field-input
+              = f.text_field :name, autofocus: true
+          .field
+            .field-label
+              メールアドレス
+            .field-input
+              = f.email_field :email
+          .field
+            .field-label
+              パスワード(英数字8文字以上)
+            .field-input
+              = f.password_field :password, autocomplete: "off"
+          .field
+            .field-label
+              確認用パスワード
+            .field-input
+              = f.password_field :password_confirmation, autocomplete: "off"
+          .actions
+            = f.submit "登録する", class: 'btn'
