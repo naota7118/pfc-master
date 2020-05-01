@@ -35,10 +35,17 @@
           }
           .pfc_table {
             width: 400px;
-            height: 100px;
+            height: 80px;
             background-color: white;
             margin: 0 auto;
             margin-bottom: 10px;
+            table-layout: fixed;
+            word-break: break-all;
+            word-wrap: break-word;
+            .input_pfc {
+              width: 95px;
+              padding: 2px;
+            }
           }
         }
       }
