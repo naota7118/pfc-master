@@ -1,11 +1,17 @@
 .contents.row
   .container
     = form_with model: @post do |f|
+      食べたもの
       = f.text_field :food
+      カロリー
       = f.number_field :calorie
+      タンパク質(P)
       = f.number_field :protein
+      脂質(F)
       = f.number_field :fat
+      炭水化物(C)
       = f.number_field :carbo
+      今日のつぶやき
       = f.text_area :text
       = f.file_field :image
       = f.submit
