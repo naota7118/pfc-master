@@ -1,0 +1,11 @@
+.contents.row
+  .container
+    = form_with model: @post do |f|
+      = f.text_field :food
+      = f.number_field :calorie
+      = f.number_field :protein
+      = f.number_field :fat
+      = f.number_field :carbo
+      = f.text_area :text
+      = f.file_field :image
+      = f.submit
