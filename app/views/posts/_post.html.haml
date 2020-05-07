@@ -1,24 +1,37 @@
 %div.container
-  <!-- Panel部分-->
-  %div.panel.panel-info
-    %div.panel-heading
-      カロリー&PFC記録
-    %div.panel-body
-      食べたもの
-      = post.food
-      カロリー
-      %br
-      = post.calorie
-      タンパク質(P)
-      %br
-      = post.protein
-      脂質(F)
-      %br
-      = post.fat
-      炭水化物(C)
-      %br
-      = post.carbo
-      日記
-      %br
-      = post.text
-      %a.btn.btn-success(href="https://wwww.google.com")Boostrapのボタン
+  %table.table.table-hover
+    %tr
+      %th  
+        食べたもの
+      %th  
+        カロリー
+        %br
+        (kcal)
+      %th
+        タンパク質
+        %br
+        (g)
+      %th
+        脂質
+        %br
+        (g)
+      %th
+        炭水化物
+        %br
+        (g)
+    %tr
+      %td
+        = post.food
+      %td 
+        = post.calorie
+      %td 
+        = post.protein
+      %td 
+        = post.fat
+      %td 
+        = post.carbo
+      
+
+    -#   %td 日記
+    -# = post.text
+    -# %a.btn.btn-success(href="https://wwww.google.com")Boostrapのボタン

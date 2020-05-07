@@ -1,80 +1,41 @@
 .main-tweet
-  .header
-    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      %div.thumbnail
-        %img{ src: "PFCMASTER.png"}
-      %a.navbar-brand{ href: '#'}
-        NAVBAR
-      %button.navbar-toggler{"type" => "button",
-                            "data-toggle" => "collapse",
-                            "data-target" => "#navbarSupportedContent",
-                            "aria-controls" => "navbarSupportedContent",
-                            "aria-expanded" => "false",
-                            "aria-label" => "Toggle navigation"}
-        %span.navbar-toggler-icon
-      %div.collapse.navbar-collapse{ id: "navbarSupportedContent"}
-        %ul.navbar-nav
-          %li.nav-item
-            %a.nav-link{ href: "#"}
-              Menu1
-          %li.nav-item
-            %a.nav-link{ href: "#"}
-              Menu2
-          %li.nav-item
-            %a.nav-link{ href: "#"}
-              Menu3
-  .container-fluid
-    %div.row
-      %div.col-sm.left
-        .user-box
-          %img{ src: "#", alt: "プロフィール画像" }
-          %p 
-            ユーザー名
-          %p
-            (数字)フォロー中
-          %p
-            (数字)フォロワー
-          %p
-            自分の記録
-          %p
-            カロリーグラフ
-      %div.col-sm.right
-        %div#id.index
-          %section.register
-            %div.register_record
-              %div.record_form
-                .posts
-                  = render @posts
-
-                -# %form#food_record{"action" => "#", "method" => "post"}
-                -#   %textarea{"type" => "text？", "placeholder" => "なに食べた？", "class" => "what_food"}
-                -#   %div.pfc_box
-                -#     %div.pfc_record
-                -#       %form{"action" => "#", "method" => "post"}
-                -#         %table{"border" => "2", "class" => "pfc_table"}
-                -#           %tr{"align" => "center"}
-                -#             %th
-                -#               カロリー
-                -#               %br
-                -#               (kcal)
-                -#             %th
-                -#               タンパク質
-                -#               %br
-                -#               (g)
-                -#             %th
-                -#               脂質
-                -#               %br
-                -#               (g)
-                -#             %th
-                -#               炭水化物
-                -#               %br
-                -#               (g)
-                -#           %tr
-                -#             %td{"align" => "center"}
-                -#               %input{"type" => "number", "name" => "calorie", "class" => "input_pfc"} 
-                -#             %td{"align" => "center"}
-                -#               %input{"type" => "number", "name" => "protein", "class" => "input_pfc"} 
-                -#             %td{"align" => "center"}
-                -#               %input{"type" => "number", "name" => "fat", "class" => "input_pfc"} 
-                -#             %td{"align" => "center"}
-                -#               %input{"type" => "number", "name" => "carbohydrate", "class" => "input_pfc"} 
+  %div.col-sm.right
+    %div#id.index
+      %section.register
+        %div.register_record
+          %div.record_form
+            .posts
+              = render @posts
+            %div.post_form
+              %form#food_record{"action" => "#", "method" => "post"}
+                %textarea{"type" => "text？", "placeholder" => "なに食べた？", "class" => "what_food"}
+                %div.pfc_box
+                  %div.pfc_record
+                    %form{"action" => "#", "method" => "post"}
+                      %table{"border" => "2", "class" => "pfc_table"}
+                        %tr{"align" => "center"}
+                          %th
+                            カロリー
+                            %br
+                            (kcal)
+                          %th
+                            タンパク質
+                            %br
+                            (g)
+                          %th
+                            脂質
+                            %br
+                            (g)
+                          %th
+                            炭水化物
+                            %br
+                            (g)
+                        %tr
+                          %td{"align" => "center"}
+                            %input{"type" => "number", "name" => "calorie", "class" => "input_pfc"} 
+                          %td{"align" => "center"}
+                            %input{"type" => "number", "name" => "protein", "class" => "input_pfc"} 
+                          %td{"align" => "center"}
+                            %input{"type" => "number", "name" => "fat", "class" => "input_pfc"} 
+                          %td{"align" => "center"}
+                            %input{"type" => "number", "name" => "carbohydrate", "class" => "input_pfc"} 

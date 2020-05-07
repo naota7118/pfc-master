@@ -3,4 +3,10 @@
 @import "reset";
 @import "bootstrap";
 @import "modules/posts";
+@import "side-bar";
 @import "main-tweet";
+@import "post";
+
+.navbar-nav {
+  background-color: rgba(255, 0, 191, 0.507);
+}
