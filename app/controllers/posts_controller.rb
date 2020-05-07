@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
   
   def show
-    @post = find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def edit
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :content, :image)
+    params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image)
   end
 
 end
