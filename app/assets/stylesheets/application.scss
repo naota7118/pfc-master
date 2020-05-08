@@ -7,6 +7,9 @@
 @import "main-tweet";
 @import "post";
 
-.navbar-nav {
-  background-color: rgba(255, 0, 191, 0.507);
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
 }
