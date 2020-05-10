@@ -18,7 +18,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'sprockets'
   gem 'kaminari'
-  gem 'devise'
   gem 'rspec-rails'
 end
 
@@ -43,3 +42,5 @@ gem 'jquery-rails'
 
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'devise'

@@ -29,14 +29,21 @@
         %div.collapse.navbar-collapse{ id: "navbarSupportedContent"}
           %ul.navbar-nav
             %li.nav-item
-              %a.nav-link{ href: "#"}
-                Menu1
+              %if.user_signed_in?
+                %a.nav-link{ href: "new_post_path"}
+                  新規投稿
+              %else
+                %a.nav-link{ href: "new_user_registration_path"}
+                  ログイン
+              %end
             %li.nav-item
-              %a.nav-link{ href: "#"}
-                Menu2
-            %li.nav-item
-              %a.nav-link{ href: "#"}
-                Menu3
+              %if.user_signed_in?
+                %a.nav-link{ href: "destroy_user_session_path", method:  :delete}
+                  ログアウト
+              %else
+                %a.nav-link{ href: "new_user_session_path"}
+                  アカウント作成
+              %end
         %form.form-inline
           %input.form-control.mr-sm-2{ "type" =>"search", "placeholder" => "Search", "aria-label"=>"Search"}
           %button.btn.btn-outline-success.my-2.my-sm-0{ "type" => "submit"}Search
