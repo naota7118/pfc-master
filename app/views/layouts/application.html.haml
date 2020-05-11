@@ -12,39 +12,31 @@
 
   %body
     %header
-      %nav.navbar.navbar-expand-lg.navbar-light{"style" => "background-color: #e3f2fd;"}
-        %a.navbar-brand{ href: '#'}
-          %img.d-inline-block.align-top{ "src" => "images/PFCMASTER.png",
-                                        "width" => "30",
-                                        "height" => "30",
-                                        "alt" =>  "画像"}
-          PFC MASTER
-        %button.navbar-toggler{"type" => "button",
-                              "data-toggle" => "collapse",
-                              "data-target" => "#navbarSupportedContent",
-                              "aria-controls" => "navbarSupportedContent",
-                              "aria-expanded" => "false",
-                              "aria-label" => "Toggle navigation"}
+      %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        %a.navbar-brand{ href: '#'}PFC MASTER
+        %button.navbar-toggler{ "type" => "button", 
+                                "data-toggle" => "collapse",
+                                "data-target" => "#navbarSupportedContent",
+                                "aria-controls" => "navbarSupportedContent",
+                                "aria-expanded" => "false", 
+                                "aria-label" => "Toggle navigation" }
           %span.navbar-toggler-icon
-        %div.collapse.navbar-collapse{ id: "navbarSupportedContent"}
-          %ul.navbar-nav
+        .collapse.navbar-collapse{ id: "navbarSupportedContent"}
+          %ul.navbar-nav.mr-auto
             %li.nav-item
-              %if.user_signed_in?
-                %a.nav-link{ href: "new_post_path"}
-                  新規投稿
-              %else
-                %a.nav-link{ href: "new_user_registration_path"}
-                  ログイン
-              %end
+              %a.nav-link{ "href" => "new_post_path" }
+                新規投稿
+            %li.nav-item 
+              %a.nav-link{ "href" => "destroy_user_session_path", method:  :delete}
+                ログアウト
             %li.nav-item
-              %if.user_signed_in?
-                %a.nav-link{ href: "destroy_user_session_path", method:  :delete}
-                  ログアウト
-              %else
-                %a.nav-link{ href: "new_user_session_path"}
-                  アカウント作成
-              %end
-        %form.form-inline
+              %a.nav-link{ "href" => "new_user_registration_path"}
+                ログイン
+            %li.nav-item  
+              %a.nav-link{ "href" =>"new_user_registration_path"}
+                新規登録
+        
+        %form.form-inline.my-2.my-lg-0
           %input.form-control.mr-sm-2{ "type" =>"search", "placeholder" => "Search", "aria-label"=>"Search"}
           %button.btn.btn-outline-success.my-2.my-sm-0{ "type" => "submit"}Search
               
