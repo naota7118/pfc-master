@@ -18,7 +18,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'sprockets'
   gem 'kaminari'
-  gem 'devise'
   gem 'rspec-rails'
 end
 
@@ -40,3 +39,8 @@ gem 'font-awesome-sass'
 
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+
+gem 'carrierwave'
+gem 'mini_magick'
+
+gem 'devise'

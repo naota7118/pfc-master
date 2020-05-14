@@ -1,0 +1,16 @@
+.container-fluid {
+  width: 40%;
+  background-color: rgba(0, 255, 255, 0.342);
+  padding-top: 100px;
+  .col-sm-4 {
+    background-color: rgba(175, 255, 47, 0.377);
+    .user-box {
+      height: 300px;
+      width: 160px;
+      background-color: white;
+      border: 5px solid #438cd465;
+      border-radius: 10px;
+      position: fixed;
+    }
+  }
+}

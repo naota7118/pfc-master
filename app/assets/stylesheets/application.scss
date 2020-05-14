@@ -3,4 +3,13 @@
 @import "reset";
 @import "bootstrap";
 @import "modules/posts";
+@import "side-bar";
 @import "main-tweet";
+@import "post";
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+}

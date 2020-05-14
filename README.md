@@ -1,24 +1,66 @@
-# README
+# #DB設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false|
 
-Things you may want to cover:
+# Association
+- has_many :posts, dependent: :destroy
+- has_many :comments, dependent: :destroy
+- has_many :posts, through: :comments, dependent: :destroy
+- has_many :posts, through: :likes, :dependent: :destroy
 
-* Ruby version
+# postsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|food|text|null: false|
+|calorie|integer|null: false|
+|protein|integer||
+|fat|integer||
+|carbo|integer||
+|weight|integer||
+|text|text||
+|image|string||
+|date|date|
+|user_id|integer|null: false, foreign_key: true|
 
-* System dependencies
+# Association
+- belongs_to :user
+- has_many :images, dependent: destroy
+- has_many :comments, dependent: :destroy
+- has_many :likes, dependent: :destroy
 
-* Configuration
+# commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|comment|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|post_id|integer|null: false, foreign_key: true|
 
-* Database creation
+# Association
+- belongs_to :user
+- belongs_to :post
 
-* Database initialization
 
-* How to run the test suite
+# likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|post_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
-* Services (job queues, cache servers, search engines, etc.)
+# Association
+- belongs_to :user
+- belongs_to :post
 
-* Deployment instructions
+# imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string|null, false|
+|post_id|integer|null: false, foreign_key: true|
 
-* ...
+# Association
+- belongs_to :user
+- belongs_to :post

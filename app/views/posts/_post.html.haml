@@ -1,0 +1,37 @@
+%div.container
+  %table.table.table-hover
+    %tr
+      %th  
+        食べたもの
+      %th  
+        カロリー
+        %br
+        (kcal)
+      %th
+        タンパク質
+        %br
+        (g)
+      %th
+        脂質
+        %br
+        (g)
+      %th
+        炭水化物
+        %br
+        (g)
+    %tr
+      %td
+        = post.food
+      %td 
+        = post.calorie
+      %td 
+        = post.protein
+      %td 
+        = post.fat
+      %td 
+        = post.carbo
+      
+
+    -#   %td 日記
+    -# = post.text
+    -# %a.btn.btn-success(href="https://wwww.google.com")Boostrapのボタン
