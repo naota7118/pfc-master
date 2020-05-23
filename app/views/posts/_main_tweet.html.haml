@@ -1,39 +1,78 @@
 .main-tweet
-  %div.container
+  .container
     %section.post_area
-      %div.row
+      .row
         %div.col-sm-10
-          %textarea.new_post{"type" => "text？","placeholder" =>"何たべた？", "class" => "what_food"}
-        %div.col-sm-10
-          %div.pfc_record
-            %form{"action" => "#", "method" => "post"}
-              %table.table.table-hover
-                %tr{"align" => "center"}
-                  %th
-                    カロリー
-                    %br
-                    (kcal)
-                  %th
-                    タンパク質
-                    %br
-                    (g)
-                  %th
-                    脂質
-                    %br
-                    (g)
-                  %th
-                    炭水化物
-                    %br
-                    (g)
-                  %tr
-                    %td
-                      A
-                    %td
-                      B
-                    %td
-                      C
-                    %td
-                      D
+          .container
+            = form_with model: @post do |f|
+              食べたもの
+              = f.text_field :food, placeholder: '例）サラダチキン'
+              カロリー
+              = f.number_field :calorie, placeholder: '例）200'
+              タンパク質(P)
+              = f.number_field :protein, placeholder: '例）30'
+              脂質(F)
+              = f.number_field :fat, placeholder: '例）20'
+              炭水化物(C)
+              = f.number_field :carbo, placeholder: '例）50'
+              今日のつぶやき
+              = f.text_area :text, placeholder: 'なにたべた？'
+              = f.file_field :image
+              = f.submit '投稿する'
+        .col-sm-10
+          .pfc-record
+            = @posts.each do |post|
+              .pfc-post
+                %span.username
+                  = post.user.name
+                %span.food
+                  = post.food
+                %span.calorie
+                  = post.calorie
+                %span.protein
+                  = post.protein
+                %span.fat
+                  = post.fat
+                %span.carbo
+                  = post.carbo
+                %span.text
+                  = post.text
+                %span.image
+                  = image_tag post.image.to_s
+                %span.time
+                  = post.created_at
+
+            -# = render @posts
+
+            -# %form{"action" => "#", "method" => "post"}
+            -#   %table.table.table-hover
+            -#     %tr{"align": "center"}
+            -#       %th
+            -#         カロリー
+            -#         %br
+            -#         (kcal)
+            -#       %th
+            -#         タンパク質
+            -#         %br
+            -#         (g)
+            -#       %th
+            -#         脂質
+            -#         %br
+            -#         (g)
+            -#       %th
+            -#         炭水化物
+            -#         %br
+            -#         (g)
+            -#       %tr
+            -#         %td
+            -#           = @post.calorie
+            -#         %td
+            -#           = @post.protein
+            -#         %td
+            -#           = @post.fat
+            -#         %td
+            -#           = @post.carbo
+
                   -# %td{"align" => "center"}
                   -#   %input{"type" => "number", "name" => "calorie", "class" => "input_pfc"} 
                   -# %td{"align" => "center"}
@@ -42,9 +81,8 @@
                   -#   %input{"type" => "number", "name" => "fat", "class" => "input_pfc"} 
                   -# %td{"align" => "center"}
                   -#   %input{"type" => "number", "name" => "carbohydrate", "class" => "input_pfc"}
-  %hr
-    %div.row
-      %div.col-sm-10-3
-        %div.posts
-          = render @posts
-             
+  -# %hr
+  -#   %div.row
+  -#     %div.col-sm-10-3
+  -#       %div.posts
+  -#         = render @posts

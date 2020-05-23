@@ -3,18 +3,21 @@
   %head
     %meta(charset="UTF-8")/
     %meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")/
-    %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
+    -# %meta(http-equiv="X-UA-Compatible" content="ie=edge")/
     %title PFC MASTER
     %link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")/
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
+    = javascript_include_tag 'application', 'data-turbolinks-track': true
 
   %body
+    = render 'layouts/notifications'
     %header.header
       .header__bar.row
         %h1.grid-6 
-          %a{:href => "/"}PFC-MASTER
+          %a 
+            PFC-MASTER
+            = link_to root_path
         - if user_signed_in?
           .user_nav.grid-6
             = link_to "ログアウト", destroy_user_session_path, method: :delete
