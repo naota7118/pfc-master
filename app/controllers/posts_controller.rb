@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   end
   
   def create
+    # binding.pry
     Post.create(post_params)
     redirect_to root_path
   end
