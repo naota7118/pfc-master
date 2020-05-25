@@ -19,6 +19,10 @@
               = f.text_area :text, placeholder: 'なにたべた？'
               = f.file_field :image
               = f.submit '投稿する'
+            -# .link
+            -#   = link_to '詳細', post_path
+            -#   = link_to '編集', edit_user_path
+
         .col-sm-10
           .pfc-record
             = @posts.each do |post|
