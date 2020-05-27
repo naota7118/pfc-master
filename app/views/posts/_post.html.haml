@@ -1,32 +1,77 @@
-%div.container
-  %table.table.table-hover
-    %tr
-      %th  
-        食べたもの
-      %th  
-        カロリー
-        %br
-        (kcal)
-      %th
-        タンパク質
-        %br
-        (g)
-      %th
-        脂質
-        %br
-        (g)
-      %th
-        炭水化物
-        %br
-        (g)
-    %tr
-      %td
-        = post.food
-      %td 
-        = post.calorie
-      %td 
-        = post.protein
-      %td 
-        = post.fat
-      %td 
-        = post.carbo
+.post
+  .posts
+    .upper-post
+      .upper-post__user-name
+        = post.user.name
+      .upper-post__date
+        = post.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    .lower-post
+      - if post.calorie.present?
+        %table
+          %thead
+            %tr
+              %th FOOD
+              %th Calorie
+          %tbody
+            %tr
+              %td 
+                = post.food
+              %td 
+                = post.calorie
+        %table
+          %thead
+            %tr
+              %th P
+              %th F
+              %th C
+          %tbody
+            %tr
+              %td 
+                = post.protein
+              %td 
+                = post.fat
+              %td 
+                = post.carbo
+        %table
+          %tbody
+            %tr
+              %td 
+                = post.text
+        %table
+          %tbody
+            %tr
+              %td 
+                = post.image
+
+
+  -# %table.table.table-hover
+  -#   %tr
+  -#     %th  
+  -#       食べたもの
+  -#     %th  
+  -#       カロリー
+  -#       %br
+  -#       (kcal)
+  -#     %th
+  -#       タンパク質
+  -#       %br
+  -#       (g)
+  -#     %th
+  -#       脂質
+  -#       %br
+  -#       (g)
+  -#     %th
+  -#       炭水化物
+  -#       %br
+  -#       (g)
+  -#   %tr
+  -#     %td
+  -#       = post.food
+  -#     %td 
+  -#       = post.calorie
+  -#     %td 
+  -#       = post.protein
+  -#     %td 
+  -#       = post.fat
+  -#     %td 
+  -#       = post.carbo

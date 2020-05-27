@@ -26,96 +26,56 @@
         -# %form.form-inline.my-2.my-lg-0
         -#   %input.form-control.mr-sm-2{ "type" =>"search", "placeholder" => "Search", "aria-label"=>"Search"}
         -#   %button.btn.btn-outline-success.my-2.my-sm-0{ "type" => "submit"}Search
-.main-tweet
-  .new-post
-    = form_with model: @post do |f|
-      .input-box
-        %table
-          %thead
-            %tr
-              %th FOOD
-              %th Calorie
-          %tbody
-            %tr
-              %td 
-                = f.text_field :food, placeholder: '例）サラダチキン'
-              %td 
-                = f.number_field :calorie, placeholder: '例）200'
-        %table
-          %thead
-            %tr
-              %th P
-              %th F
-              %th C
-          %tbody
-            %tr
-              %td 
-                = f.number_field :protein, placeholder: '例）30'
-              %td 
-                = f.number_field :fat, placeholder: '例）20'
-              %td 
-                = f.number_field :carbo, placeholder: '例）50'
-        %table
-          %thead
-            %tr
-              %th 今日のひとこと
-          %tbody
-            %tr
-              %td 
-                = f.text_area :text, placeholder: 'なにたべた？'
-        %table
-          %thead
-            %tr
-              %th 3枚までアップロードできます
-          %tbody
-            %tr
-              %td 
-                = f.file_field :image
-        .submit-btn
-          = f.submit '投稿する'
-        -# FOOD
-        -# = f.text_field :food, placeholder: '例）サラダチキン'
-        -# Calorie
-        -# = f.number_field :calorie, placeholder: '例）200'
-        -# P
-        -# = f.number_field :protein, placeholder: '例）30'
-        -# F
-        -# = f.number_field :fat, placeholder: '例）20'
-        -# C
-        -# = f.number_field :carbo, placeholder: '例）50'
-        -# 今日のひとこと
-        -# = f.text_area :text, placeholder: 'なにたべた？'
-        -# = f.file_field :image
-        -# = f.submit '投稿する'
-
-      -# .link
-      -#   = link_to '詳細', post_path
-      -#   = link_to '編集', edit_user_path
-
-        -# .col-sm-10
-        -#   .username
-        -#     -# = @post.user.name
-        -#   .food
-        -#     食べ物
-        -#     = @post.food()
-        -#   .calorie
-        -#     カロリー
-        -#     = @post.calorie
-        -#   .protein
-        -#     タンパク質
-        -#     = @post.protein
-        -#   .fat
-        -#     脂質
-        -#     = @post.fat
-        -#   .carbo
-        -#     炭水化物
-        -#     = @post.carbo
-        -#   .text
-        -#     投稿
-        -#     = @post.text
-        -#   .image
-        -#     画像
-        -#     -# = @image_tag post.image.to_s
-        -#   .time
-        -#     日時
-        -#     = @post.created_at
+%body
+  .main-tweet
+    .new-post
+      = form_with model: @post do |f|
+        .input-box
+          %table
+            %thead
+              %tr
+                %th FOOD
+                %th Calorie
+            %tbody
+              %tr
+                %td 
+                  = f.text_field :food, placeholder: '例）サラダチキン'
+                %td 
+                  = f.number_field :calorie, placeholder: '例）200'
+          %table
+            %thead
+              %tr
+                %th P
+                %th F
+                %th C
+            %tbody
+              %tr
+                %td 
+                  = f.number_field :protein, placeholder: '例）30'
+                %td 
+                  = f.number_field :fat, placeholder: '例）20'
+                %td 
+                  = f.number_field :carbo, placeholder: '例）50'
+          %table
+            %thead
+              %tr
+                %th 今日のひとこと
+            %tbody
+              %tr
+                %td 
+                  = f.text_area :text, placeholder: 'なにたべた？'
+          %table
+            %thead
+              %tr
+                %th 3枚までアップロードできます
+            %tbody
+              %tr
+                %td 
+                  = icon('fas', 'image', class: 'icon')
+                  = f.file_field :image
+          .submit-btn
+            = f.submit '投稿する'
+    -#   = link_to '編集', post_path
+    -#   = link_to '削除', edit_user_path
+    .posts
+      = render @posts
