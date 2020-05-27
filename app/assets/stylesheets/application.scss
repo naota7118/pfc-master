@@ -1,15 +1,18 @@
+@import "reset";
+@import "config/colors";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "reset";
 @import "bootstrap";
 @import "modules/posts";
 @import "side-bar";
 @import "main-tweet";
 @import "post";
+@import "modules/user";
+@import "modules/flash";
 
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10000;
-}
+// header {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   z-index: 10000;
+// }

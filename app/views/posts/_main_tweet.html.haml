@@ -1,50 +1,52 @@
 .main-tweet
-  %div.container
+  .container
     %section.post_area
-      %div.row
+      .row
         %div.col-sm-10
-          %textarea.new_post{"type" => "text？","placeholder" =>"何たべた？", "class" => "what_food"}
-        %div.col-sm-10
-          %div.pfc_record
-            %form{"action" => "#", "method" => "post"}
-              %table.table.table-hover
-                %tr{"align" => "center"}
-                  %th
-                    カロリー
-                    %br
-                    (kcal)
-                  %th
-                    タンパク質
-                    %br
-                    (g)
-                  %th
-                    脂質
-                    %br
-                    (g)
-                  %th
-                    炭水化物
-                    %br
-                    (g)
-                  %tr
-                    %td
-                      A
-                    %td
-                      B
-                    %td
-                      C
-                    %td
-                      D
-                  -# %td{"align" => "center"}
-                  -#   %input{"type" => "number", "name" => "calorie", "class" => "input_pfc"} 
-                  -# %td{"align" => "center"}
-                  -#   %input{"type" => "number", "name" => "protein", "class" => "input_pfc"} 
-                  -# %td{"align" => "center"}
-                  -#   %input{"type" => "number", "name" => "fat", "class" => "input_pfc"} 
-                  -# %td{"align" => "center"}
-                  -#   %input{"type" => "number", "name" => "carbohydrate", "class" => "input_pfc"}
-  %hr
-    %div.row
-      %div.col-sm-10-3
-        %div.posts
-          = render @posts
-             
+          .container
+            = form_with model: @post do |f|
+              食べたもの
+              = f.text_field :food, placeholder: '例）サラダチキン'
+              カロリー
+              = f.number_field :calorie, placeholder: '例）200'
+              タンパク質(P)
+              = f.number_field :protein, placeholder: '例）30'
+              脂質(F)
+              = f.number_field :fat, placeholder: '例）20'
+              炭水化物(C)
+              = f.number_field :carbo, placeholder: '例）50'
+              今日のつぶやき
+              = f.text_area :text, placeholder: 'なにたべた？'
+              = f.file_field :image
+              = f.submit '投稿する'
+            -# .link
+            -#   = link_to '詳細', post_path
+            -#   = link_to '編集', edit_user_path
+
+        .col-sm-10
+          .username
+            -# = @post.user.name
+          .food
+            食べ物
+            = @post.food()
+          .calorie
+            カロリー
+            = @post.calorie
+          .protein
+            タンパク質
+            = @post.protein
+          .fat
+            脂質
+            = @post.fat
+          .carbo
+            炭水化物
+            = @post.carbo
+          .text
+            投稿
+            = @post.text
+          .image
+            画像
+            -# = @image_tag post.image.to_s
+          .time
+            日時
+            = @post.created_at

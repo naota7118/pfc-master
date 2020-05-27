@@ -1,15 +1,22 @@
 .container-fluid.d-none.d-lg-block
-  %div.row
-    %div.col-sm-12
-    %div.col-sm-6
-    %div.col-sm-4
+  .row
+    .col-sm-12
+    .col-sm-6
+    .col-sm-4
       %div.user-box
         %img{ src: "#", alt: "プロフィール画像" }
-        %div.username
-          testユーザー
-        %div.follow
+        .username
+          = current_user.name
+        .follow
           フォロー中 100
-        %div.follower
+        .follower
           フォロワー 100
         %a.btn.btn-danger(href="#")PFCを投稿する
-    %div.col-sm-2
+        %ul.header__lists
+          %li.list
+            = link_to do
+              = icon('fas', 'pen-square', class: 'icon')
+          %li.list
+            = link_to edit_user_path(current_user) do
+              = icon('fas', 'cog', class: 'icon')
+    .col-sm-2
