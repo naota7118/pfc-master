@@ -24,69 +24,29 @@
             -#   = link_to '編集', edit_user_path
 
         .col-sm-10
-          .pfc-record
-            = @posts.each do |post|
-              .pfc-post
-                %span.username
-                  = post.user.name
-                %span.food
-                  = post.food
-                %span.calorie
-                  = post.calorie
-                %span.protein
-                  = post.protein
-                %span.fat
-                  = post.fat
-                %span.carbo
-                  = post.carbo
-                %span.text
-                  = post.text
-                %span.image
-                  = image_tag post.image.to_s
-                %span.time
-                  = post.created_at
-
-            -# = render @posts
-
-            -# %form{"action" => "#", "method" => "post"}
-            -#   %table.table.table-hover
-            -#     %tr{"align": "center"}
-            -#       %th
-            -#         カロリー
-            -#         %br
-            -#         (kcal)
-            -#       %th
-            -#         タンパク質
-            -#         %br
-            -#         (g)
-            -#       %th
-            -#         脂質
-            -#         %br
-            -#         (g)
-            -#       %th
-            -#         炭水化物
-            -#         %br
-            -#         (g)
-            -#       %tr
-            -#         %td
-            -#           = @post.calorie
-            -#         %td
-            -#           = @post.protein
-            -#         %td
-            -#           = @post.fat
-            -#         %td
-            -#           = @post.carbo
-
-                  -# %td{"align" => "center"}
-                  -#   %input{"type" => "number", "name" => "calorie", "class" => "input_pfc"} 
-                  -# %td{"align" => "center"}
-                  -#   %input{"type" => "number", "name" => "protein", "class" => "input_pfc"} 
-                  -# %td{"align" => "center"}
-                  -#   %input{"type" => "number", "name" => "fat", "class" => "input_pfc"} 
-                  -# %td{"align" => "center"}
-                  -#   %input{"type" => "number", "name" => "carbohydrate", "class" => "input_pfc"}
-  -# %hr
-  -#   %div.row
-  -#     %div.col-sm-10-3
-  -#       %div.posts
-  -#         = render @posts
+          .username
+            -# = @post.user.name
+          .food
+            食べ物
+            = @post.food()
+          .calorie
+            カロリー
+            = @post.calorie
+          .protein
+            タンパク質
+            = @post.protein
+          .fat
+            脂質
+            = @post.fat
+          .carbo
+            炭水化物
+            = @post.carbo
+          .text
+            投稿
+            = @post.text
+          .image
+            画像
+            -# = @image_tag post.image.to_s
+          .time
+            日時
+            = @post.created_at
