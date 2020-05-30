@@ -42,7 +42,10 @@
             %tr
               %td 
                 = post.image
-
+      -# .li
+      -#   = link_to '編集', edit_post_path[:id]
+      -# .li
+      -#   = link_to '削除', post_path, method: :delete
 
   -# %table.table.table-hover
   -#   %tr
