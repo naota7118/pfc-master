@@ -9,8 +9,14 @@ class PostsController < ApplicationController
   end
   
   def create
-    Post.create(post_params)
-    redirect_to root_path
+    binding.pry
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to root_path
+    else
+      flash.now[:alert] = '必須項目をしてください。'
+      render :index
+    end
   end
   
   def show
@@ -21,9 +27,24 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to root_path
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      flash.now[:alert] = 'エラーが発生しました。'
+      render :edit
+    end
+  end
+
   private
   def post_params
     params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image)
   end
-
 end
