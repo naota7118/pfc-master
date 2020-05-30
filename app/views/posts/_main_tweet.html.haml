@@ -11,17 +11,17 @@
     .collapse.navbar-collapse{ id: "navbarSupportedContent"}
       %ul.navbar-nav.mr-auto
         %li.nav-item
-          %a.nav-link{ "href" => "new_post_path" }
-            新規投稿
+          %a.nav-link
+            = link_to '新規投稿', new_post_path
         %li.nav-item 
-          %a.nav-link{ "href" => "destroy_user_session_path", method:  :delete}
-            ログアウト
+          %a.nav-link
+            = link_to 'ログアウト', destroy_user_session_path, method:  :delete
         %li.nav-item
-          %a.nav-link{ "href" => "new_user_registration_path"}
-            ログイン
+          %a.nav-link
+            = link_to '新規登録', new_user_registration_path
         %li.nav-item  
-          %a.nav-link{ "href" =>"new_user_registration_path"}
-            新規登録
+          %a.nav-link
+            = link_to 'ログイン', new_user_session_path
         
         -# %form.form-inline.my-2.my-lg-0
         -#   %input.form-control.mr-sm-2{ "type" =>"search", "placeholder" => "Search", "aria-label"=>"Search"}
