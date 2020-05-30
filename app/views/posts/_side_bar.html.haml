@@ -1,15 +1,16 @@
 .container-fluid.d-none.d-lg-block
-  %div.row
-    %div.col-sm-12
-    %div.col-sm-6
-    %div.col-sm-4
-      %div.user-box
-        %img{ src: "#", alt: "プロフィール画像" }
-        %div.username
-          testユーザー
-        %div.follow
+  .row
+    .col-sm-12
+    .col-sm-6
+    .col-sm-4
+      .user-box
+        = image_tag 'https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100'
+        .username
+          ログイン中ユーザー：
+          = current_user.name
+        .follow
           フォロー中 100
-        %div.follower
+        .follower
           フォロワー 100
-        %a.btn.btn-danger(href="#")PFCを投稿する
-    %div.col-sm-2
+        -# %a.btn.btn-danger(href="#")PFCを投稿する
+    .col-sm-2
