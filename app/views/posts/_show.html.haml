@@ -1,0 +1,40 @@
+.post
+  %table
+    %thead
+      %tr
+        %th FOOD
+        %th Calorie
+    %tbody
+      %tr
+        %td 
+          = post.food
+        %td 
+          = post.calorie
+  %table
+    %thead
+      %tr
+        %th P
+        %th F
+        %th C
+    %tbody
+      %tr
+        %td 
+          = post.protein
+        %td 
+          = post.fat
+        %td 
+          = post.carbo
+  %table
+    %tbody
+      %tr
+        %td 
+          = post.text
+  %table
+    %tbody
+      %tr
+        %td 
+          = post.image
+.li
+  = link_to '編集', edit_post_path[:id]
+.li
+  = link_to '削除', post_path, method: :delete
