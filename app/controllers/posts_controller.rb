@@ -1,12 +1,13 @@
 class PostsController < ApplicationController
   
   def index
+    @post = Post.new
     @posts = Post.all.includes(:user).order("created_at DESC")
   end
 
-  def new
-    @post = Post.new
-  end
+  # def new
+  #   @post = Post.new
+  # end
   
   def create
     binding.pry
