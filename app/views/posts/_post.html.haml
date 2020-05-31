@@ -41,7 +41,7 @@
           %tbody
             %tr
               %td 
-                = post.image
+                = image_tag post.image.url if post.image.present?
       -# .li
       -#   = link_to '編集', edit_post_path[:id]
       -# .li
