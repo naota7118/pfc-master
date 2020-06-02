@@ -14,9 +14,9 @@ class PostsController < ApplicationController
     @post = Post.new(post_params) 
     @post.user_id = current_user.id
     if @post.save
-      redirect_back(fallback_location: root_path)
+      redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
     else
-      flash.now[:alert] = '必須項目をしてください。'
+      flash.now[:alert] = '必須項目をしてください。' # フラッシュメッセージが出るか確認する
       redirect_back(fallback_location: root_path)
     end
   end
@@ -30,14 +30,14 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
-    post.destroy
-    redirect_to root_path
+    @post = Post.find(params[:id])
+    @post.destroy
+    # 削除ボタンを押したら、「id=23が見つかりません」と出てきた。なぜ？
   end
 
   def update
     @post = Post.find(params[:id])
-    if @item.update(item_params)
+    if @post.update(post_params)
       redirect_to root_path
     else
       flash.now[:alert] = 'エラーが発生しました。'
