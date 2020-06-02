@@ -26,7 +26,7 @@
         %tbody
           %tr
             %td 
-              = post.protein
+              = post.protein # なぜここが@post.proteinじゃダメなのかがまだわからない
             %td 
               = post.fat
             %td 
@@ -41,8 +41,13 @@
           %tr
             %td 
               = image_tag post.image.url if post.image.present?
-      %p
-        = link_to '詳細', post_path
+      %ul.more_list
+        %li
+          = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう
+        %li
+          = link_to '編集', "/posts/#{post.id}/edit", method: :get
+        %li
+          = link_to '削除', "/posts/#{post.id}", method: :delete
       -# %p
       -#   = link_to '削除', post_path, method: :delete
 
