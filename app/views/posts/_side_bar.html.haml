@@ -7,7 +7,8 @@
         = image_tag 'https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100'
         .username
           ログイン中ユーザー：
-          = current_user.name
+          - if user_signed_in?
+            = current_user.name
         .follow
           フォロー中 100
         .follower
