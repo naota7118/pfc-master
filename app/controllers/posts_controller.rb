@@ -30,9 +30,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_back(fallback_location: root_path) 
     # 削除ボタンを押したら、「id=23が見つかりません」と出てきた。なぜ？
+    # 削除ボタンを押したら、sequel proでデータは消えていた。これがid=23が見つかりませんの原因だった。
+    # データは削除されているのに、画面が変わらないのはなぜ？
+    # 削除した後の記述をしてないからか。redirect_back root_pathを書き足した。その結果、削除が完了した後の画面になった。
   end
 
   def update
