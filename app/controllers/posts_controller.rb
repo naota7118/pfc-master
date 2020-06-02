@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  # before_action :set_post, only: [:edit, ]
   
   def index
     @posts = Post.all.includes(:user).order("created_at DESC")
