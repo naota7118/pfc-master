@@ -20,7 +20,7 @@ class PostsController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
   end
-  
+
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
@@ -53,6 +53,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image)
+    params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image).merge(user_id: current_user.id)
   end
 end
