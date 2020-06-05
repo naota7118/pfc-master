@@ -3,20 +3,14 @@
     .col-sm-12
     .col-sm-6
     .col-sm-4
-      %div.user-box
-        %img{ src: "#", alt: "プロフィール画像" }
+      .user-box
+        = image_tag 'https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100'
         .username
-          = current_user.name
+          ユーザー：
+          - if user_signed_in?
+            = current_user.name
         .follow
           フォロー中 100
         .follower
           フォロワー 100
-        %a.btn.btn-danger(href="#")PFCを投稿する
-        %ul.header__lists
-          %li.list
-            = link_to do
-              = icon('fas', 'pen-square', class: 'icon')
-          %li.list
-            = link_to edit_user_path(current_user) do
-              = icon('fas', 'cog', class: 'icon')
     .col-sm-2

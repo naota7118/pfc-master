@@ -7,12 +7,17 @@
 @import "side-bar";
 @import "main-tweet";
 @import "post";
-@import "modules/user";
 @import "modules/flash";
+@import "modules/user";
 
-// header {
-//   position: fixed;
-//   width: 100%;
-//   top: 0;
-//   z-index: 10000;
-// }
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+}
+
+body {
+  margin-top: 100px;
+  background-color: rgb(245, 245, 245);
+}

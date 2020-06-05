@@ -1,7 +1,15 @@
-.table.table-hover {
-  border: 1px solid rgba(73, 80, 87, 0.377);
-  border: ridge;
-  th {
-    background-color: rgba(128, 248, 252, 0.76);
+.post {
+  background-color: rgb(245, 245, 245);
+  .posts {
+    background-color: #fff;
+    margin-top: 60px;
+    width: 600px;
+    border-color: gray;
+    border: ridge;
+    border-radius: 10px;
+    padding: 5px;
+    textarea {
+      width: 400px;
+    }
   }
 }

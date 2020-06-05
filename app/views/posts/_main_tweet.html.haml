@@ -1,52 +1,50 @@
 .main-tweet
-  .container
-    %section.post_area
-      .row
-        %div.col-sm-10
-          .container
-            = form_with model: @post do |f|
-              食べたもの
-              = f.text_field :food, placeholder: '例）サラダチキン'
-              カロリー
-              = f.number_field :calorie, placeholder: '例）200'
-              タンパク質(P)
-              = f.number_field :protein, placeholder: '例）30'
-              脂質(F)
-              = f.number_field :fat, placeholder: '例）20'
-              炭水化物(C)
-              = f.number_field :carbo, placeholder: '例）50'
-              今日のつぶやき
-              = f.text_area :text, placeholder: 'なにたべた？'
-              = f.file_field :image
-              = f.submit '投稿する'
-            -# .link
-            -#   = link_to '詳細', post_path
-            -#   = link_to '編集', edit_user_path
-
-        .col-sm-10
-          .username
-            -# = @post.user.name
-          .food
-            食べ物
-            = @post.food()
-          .calorie
-            カロリー
-            = @post.calorie
-          .protein
-            タンパク質
-            = @post.protein
-          .fat
-            脂質
-            = @post.fat
-          .carbo
-            炭水化物
-            = @post.carbo
-          .text
-            投稿
-            = @post.text
-          .image
-            画像
-            -# = @image_tag post.image.to_s
-          .time
-            日時
-            = @post.created_at
+  .new-post
+    = form_with model: @post do |f|
+      .input-box
+        %table
+          %thead
+            %tr
+              %th FOOD
+              %th Calorie
+          %tbody
+            %tr
+              %td 
+                = f.text_field :food, placeholder: '例）サラダチキン'
+              %td 
+                = f.number_field :calorie, placeholder: '例）200'
+        %table
+          %thead
+            %tr
+              %th P
+              %th F
+              %th C
+          %tbody
+            %tr
+              %td 
+                = f.number_field :protein, placeholder: '例）30'
+              %td 
+                = f.number_field :fat, placeholder: '例）20'
+              %td 
+                = f.number_field :carbo, placeholder: '例）50'
+        %table
+          %thead
+            %tr
+              %th 今日のひとこと
+          %tbody
+            %tr
+              %td 
+                = f.text_area :text, placeholder: 'なにたべた？'
+        %table
+          %thead
+            %tr
+              %th 3枚までアップロードできます
+          %tbody
+            %tr
+              %td 
+                = icon('fas', 'image', class: 'icon')
+                = f.file_field :image
+        .submit-btn
+          = f.submit '投稿する'
+  .posts
+    = render @posts

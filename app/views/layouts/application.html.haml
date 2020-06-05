@@ -11,22 +11,33 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': true
 
   %body
+    %header
+      %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        %a.navbar-brand{ href: '#'}
+        %button.navbar-toggler{ "type" => "button", 
+                                "data-toggle" => "collapse",
+                                "data-target" => "#navbarSupportedContent",
+                                "aria-controls" => "navbarSupportedContent",
+                                "aria-expanded" => "false", 
+                                "aria-label" => "Toggle navigation" }
+          %span.navbar-toggler-icon
+        .collapse.navbar-collapse{ id: "navbarSupportedContent"}
+          %ul.navbar-nav.mr-auto
+          - if user_signed_in?
+            %li.nav-item
+              %a.nav-link
+                = link_to 'マイページ', "#"
+            %li.nav-item 
+              %a.nav-link
+                = link_to 'ログアウト', destroy_user_session_path, method:  :delete
+          - else
+            %li.nav-item
+              %a.nav-link
+                = link_to '新規登録', new_user_registration_path
+            %li.nav-item  
+              %a.nav-link
+                = link_to 'ログイン', new_user_session_path
     = render 'layouts/notifications'
-    %header.header
-      .header__bar.row
-        %h1.grid-6 
-          %a 
-            PFC-MASTER
-            = link_to root_path
-        - if user_signed_in?
-          .user_nav.grid-6
-            = link_to "ログアウト", destroy_user_session_path, method: :delete
-            = link_to "投稿する", "/posts/new", class: "post"
-        - else
-          .grid-6
-            = link_to "ログイン", new_user_session_path, class: 'post'
-            = link_to "新規登録", new_user_registration_path, class: 'post'
-              
     = yield
     %script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
     %script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
