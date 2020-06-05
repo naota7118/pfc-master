@@ -11,35 +11,33 @@
     = csrf_meta_tags
 
   %body
-    -# %header
-    -#   %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-    -#     %a.navbar-brand{ href: '#'}
-    -#     %button.navbar-toggler{ "type" => "button", 
-    -#                             "data-toggle" => "collapse",
-    -#                             "data-target" => "#navbarSupportedContent",
-    -#                             "aria-controls" => "navbarSupportedContent",
-    -#                             "aria-expanded" => "false", 
-    -#                             "aria-label" => "Toggle navigation" }
-    -#       %span.navbar-toggler-icon
-    -#     .collapse.navbar-collapse{ id: "navbarSupportedContent"}
-    -#       %ul.navbar-nav.mr-auto
-    -#         %li.nav-item
-    -#           %a.nav-link{ "href" => "new_post_path" }
-    -#             新規投稿
-    -#         %li.nav-item 
-    -#           %a.nav-link{ "href" => "destroy_user_session_path", method:  :delete}
-    -#             ログアウト
-    -#         %li.nav-item
-    -#           %a.nav-link{ "href" => "new_user_registration_path"}
-    -#             ログイン
-    -#         %li.nav-item  
-    -#           %a.nav-link{ "href" =>"new_user_registration_path"}
-    -#             新規登録
-        
-    -#     %form.form-inline.my-2.my-lg-0
-    -#       %input.form-control.mr-sm-2{ "type" =>"search", "placeholder" => "Search", "aria-label"=>"Search"}
-    -#       %button.btn.btn-outline-success.my-2.my-sm-0{ "type" => "submit"}Search
-              
+    %header
+      %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        %a.navbar-brand{ href: '#'}
+        %button.navbar-toggler{ "type" => "button", 
+                                "data-toggle" => "collapse",
+                                "data-target" => "#navbarSupportedContent",
+                                "aria-controls" => "navbarSupportedContent",
+                                "aria-expanded" => "false", 
+                                "aria-label" => "Toggle navigation" }
+          %span.navbar-toggler-icon
+        .collapse.navbar-collapse{ id: "navbarSupportedContent"}
+          %ul.navbar-nav.mr-auto
+          - if user_signed_in?
+            %li.nav-item
+              %a.nav-link
+                = link_to 'マイページ', "#"
+            %li.nav-item 
+              %a.nav-link
+                = link_to 'ログアウト', destroy_user_session_path, method:  :delete
+          - else
+            %li.nav-item
+              %a.nav-link
+                = link_to '新規登録', new_user_registration_path
+            %li.nav-item  
+              %a.nav-link
+                = link_to 'ログイン', new_user_session_path
+    = render 'layouts/notifications'
     = yield
     %script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
     %script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")

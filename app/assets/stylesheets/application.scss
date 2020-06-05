@@ -1,11 +1,13 @@
+@import "reset";
+@import "config/colors";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "reset";
 @import "bootstrap";
 @import "modules/posts";
 @import "side-bar";
 @import "main-tweet";
 @import "post";
+@import "modules/flash";
 
 header {
   position: fixed;
@@ -15,5 +17,6 @@ header {
 }
 
 body {
+  margin-top: 100px;
   background-color: rgb(245, 245, 245);
 }

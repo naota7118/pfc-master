@@ -33,9 +33,10 @@
     %tbody
       %tr
         %td 
-          = @post.image
+          = image_tag @post.image.url, class: "image"
+
 %ul.more_list
   %li
-    = link_to '編集', "/posts/#{@post.id}/edit", method: :get
+    = link_to '編集', edit_post_path(@post.id)
   %li
     = link_to '削除', "/posts/#{@post.id}", method: :delete
