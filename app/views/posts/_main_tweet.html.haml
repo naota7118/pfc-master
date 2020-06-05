@@ -1,75 +1,50 @@
-%header
-  %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-    %a.navbar-brand{ href: '#'}
-    %button.navbar-toggler{ "type" => "button", 
-                            "data-toggle" => "collapse",
-                            "data-target" => "#navbarSupportedContent",
-                            "aria-controls" => "navbarSupportedContent",
-                            "aria-expanded" => "false", 
-                            "aria-label" => "Toggle navigation" }
-      %span.navbar-toggler-icon
-    .collapse.navbar-collapse{ id: "navbarSupportedContent"}
-      %ul.navbar-nav.mr-auto
-        %li.nav-item
-          %a.nav-link
-            = link_to '新規投稿', new_post_path
-        %li.nav-item 
-          %a.nav-link
-            = link_to 'ログアウト', destroy_user_session_path, method:  :delete
-        %li.nav-item
-          %a.nav-link
-            = link_to '新規登録', new_user_registration_path
-        %li.nav-item  
-          %a.nav-link
-            = link_to 'ログイン', new_user_session_path
-%body
-  .main-tweet
-    .new-post
-      = form_with model: @post do |f|
-        .input-box
-          %table
-            %thead
-              %tr
-                %th FOOD
-                %th Calorie
-            %tbody
-              %tr
-                %td 
-                  = f.text_field :food, placeholder: '例）サラダチキン'
-                %td 
-                  = f.number_field :calorie, placeholder: '例）200'
-          %table
-            %thead
-              %tr
-                %th P
-                %th F
-                %th C
-            %tbody
-              %tr
-                %td 
-                  = f.number_field :protein, placeholder: '例）30'
-                %td 
-                  = f.number_field :fat, placeholder: '例）20'
-                %td 
-                  = f.number_field :carbo, placeholder: '例）50'
-          %table
-            %thead
-              %tr
-                %th 今日のひとこと
-            %tbody
-              %tr
-                %td 
-                  = f.text_area :text, placeholder: 'なにたべた？'
-          %table
-            %thead
-              %tr
-                %th 3枚までアップロードできます
-            %tbody
-              %tr
-                %td 
-                  = icon('fas', 'image', class: 'icon')
-                  = f.file_field :image
-          .submit-btn
-            = f.submit '投稿する'
-    .posts
-      = render @posts
+.main-tweet
+  .new-post
+    = form_with model: @post do |f|
+      .input-box
+        %table
+          %thead
+            %tr
+              %th FOOD
+              %th Calorie
+          %tbody
+            %tr
+              %td 
+                = f.text_field :food, placeholder: '例）サラダチキン'
+              %td 
+                = f.number_field :calorie, placeholder: '例）200'
+        %table
+          %thead
+            %tr
+              %th P
+              %th F
+              %th C
+          %tbody
+            %tr
+              %td 
+                = f.number_field :protein, placeholder: '例）30'
+              %td 
+                = f.number_field :fat, placeholder: '例）20'
+              %td 
+                = f.number_field :carbo, placeholder: '例）50'
+        %table
+          %thead
+            %tr
+              %th 今日のひとこと
+          %tbody
+            %tr
+              %td 
+                = f.text_area :text, placeholder: 'なにたべた？'
+        %table
+          %thead
+            %tr
+              %th 3枚までアップロードできます
+          %tbody
+            %tr
+              %td 
+                = icon('fas', 'image', class: 'icon')
+                = f.file_field :image
+        .submit-btn
+          = f.submit '投稿する'
+  .posts
+    = render @posts
