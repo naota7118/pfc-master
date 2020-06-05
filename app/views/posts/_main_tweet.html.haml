@@ -46,5 +46,12 @@
                 = f.file_field :image
         .submit-btn
           = f.submit '投稿する'
-  .posts
-    = render @posts
+  = render @posts
+
+  -# .postBox
+  -#   %ul.postLists
+  -#     - @posts.each do |post|
+  -#       -# = link_to "/posts/#{post.id}", method: :get, class: "postList" %do
+  -#       %p
+  -#       = post.user.name
+  -#       = post.text
