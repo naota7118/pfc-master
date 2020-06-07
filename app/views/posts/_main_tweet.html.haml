@@ -47,6 +47,7 @@
         .submit-btn
           = f.submit '投稿する'
   = render @posts
+  = paginate(@posts)
 
   -# .postBox
   -#   %ul.postLists
