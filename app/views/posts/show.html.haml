@@ -33,13 +33,21 @@
     %tbody
       %tr
         %td 
-          = image_tag @post.image.url, class: "image"
+          - if @post.image.present?
+            = image_tag @post.image.url, class: "image"
 
 %ul.more_list
   %li
     = link_to '編集', edit_post_path(@post.id)
   %li
     = link_to '削除', "/posts/#{@post.id}", method: :delete
+
+%p
+  - @post.likes
+- if current_user.already_liked?(@post)
+  = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
+- else
+  = button_to 'いいね', post_likes_path(@post)
 
 .comment
   - if user_signed_in?
@@ -56,3 +64,5 @@
       %p
         = comment.comment
       %time(datetime="#{comment.created_at}")= time_ago_in_words(comment.created_at)+"前"
+
+= link_to "ホームへ戻る", root_path
