@@ -33,7 +33,8 @@
     %tbody
       %tr
         %td 
-          = image_tag @post.image.url, class: "image"
+          - if @post.image.present?
+            = image_tag @post.image.url, class: "image"
 
 %ul.more_list
   %li
