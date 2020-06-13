@@ -3,6 +3,7 @@
     .upper-post
       .upper-post__user-name
         = post.user.name
+        = render 'relationships/follow_button', user:@user
       .upper-post__date
         %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)+"前"
     .lower-post
@@ -42,6 +43,7 @@
             %td 
             - if post.image.present?
               = image_tag post.image.url
+
       %ul.more_list
         %li
           = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう
