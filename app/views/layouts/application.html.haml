@@ -13,23 +13,13 @@
   %body
     %header
       %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        %a.navbar-brand{ href: '#'}
-        %button.navbar-toggler{ "type" => "button", 
-                                "data-toggle" => "collapse",
-                                "data-target" => "#navbarSupportedContent",
-                                "aria-controls" => "navbarSupportedContent",
-                                "aria-expanded" => "false", 
-                                "aria-label" => "Toggle navigation" }
-          %span.navbar-toggler-icon
         .collapse.navbar-collapse{ id: "navbarSupportedContent"}
           %ul.navbar-nav.mr-auto
           - if user_signed_in?
             %li.nav-item
-              %a.nav-link
-                = link_to 'マイページ', "#"
+              = link_to 'マイページ', "#"
             %li.nav-item 
-              %a.nav-link
-                = link_to 'ログアウト', destroy_user_session_path, method:  :delete
+              = link_to 'ログアウト', destroy_user_session_path, method:  :delete
           - else
             %li.nav-item
               %a.nav-link
