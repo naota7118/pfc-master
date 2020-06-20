@@ -1,10 +1,3 @@
-- @user ||= current_user
-.stats
-  = link_to following_user_path(@user)
-  #following.stat
-    = @user.followings.count
-  following
-  = link_to following_user_path(@user)
-  #follower.stat
-    = @user.followers.count
-  followers
+= form_for(current_user.following_relationships.build(following_id: @user.id)) do |f|
+  = f.hidden_field :following_id
+  = f.submit "Follow", class: "btn btn-large btn-primary follow-btn"

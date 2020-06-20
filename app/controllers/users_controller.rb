@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def show
+    binding.pry
+    @user = User.find(params[:id])
+  end
   
   def edit
     
@@ -12,14 +17,16 @@ class UsersController < ApplicationController
     end
   end
 
-  def follwing
-    @user = User.find(user_params[:id])
+  def following
+    @user = User.find(id: params[:id])
+    binding.pry
     @users = @user.followings
     render 'show_following'
   end
 
-  def follwers
-    @user = User.find(user_params[:id])
+  def followers
+    @user = User.find(id: params[:id])
+    binding.pry
     @users = @user.followers
     render 'show_follower'
   end
@@ -27,7 +34,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:id, :name, :email)
   end
 
 end
