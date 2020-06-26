@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   def show
-    binding.pry
     @user = User.find(params[:id])
   end
   
@@ -18,15 +17,13 @@ class UsersController < ApplicationController
   end
 
   def following
-    @user = User.find(id: params[:id])
-    binding.pry
+    @user = User.find(params[:id])
     @users = @user.followings
     render 'show_following'
   end
 
   def followers
-    @user = User.find(id: params[:id])
-    binding.pry
+    @user = User.find(params[:id])
     @users = @user.followers
     render 'show_follower'
   end

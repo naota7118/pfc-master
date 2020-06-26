@@ -2,8 +2,9 @@
   .posts
     .upper-post
       .upper-post__user-name
-        = post.user.name
-        = render 'relationships/follow_button', user:@user
+        = link_to user_path(post.user_id) do 
+          = post.user.name
+        -# = render 'relationships/follow_button', user:@user
       .upper-post__date
         %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)+"前"
     .lower-post

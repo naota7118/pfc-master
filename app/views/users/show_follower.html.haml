@@ -1,7 +1,10 @@
-- @user.followers.each do |user|
-%table
-  %tr
-    %td
-      = user.name
-    %td
-      = link_to '詳細', user_path(user)
+詳細
+まだ誰からもフォローされてないのでフォロワーは誰も表示されない
+
+-# - @user.followers.each do |user|
+-# %table
+-#   %tr
+-#     %td
+-#       = user.name
+-#     %td
+-#       = link_to '詳細', user_path(user)

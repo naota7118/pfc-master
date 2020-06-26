@@ -1,10 +1,13 @@
-- @user ||= current_user
-.stats
-  = link_to following_user_path(@user)
-  #following.stat
-    = @user.followings.count
-  following
-  = link_to following_user_path(@user)
-  #follower.stat
-    = @user.followers.count
-  followers
+フォロー一覧
+- if current_user
+  .stats
+    .following
+      = link_to following_user_path(@user) do
+        = @user.followings.count
+      following
+    .follower
+      = link_to followers_user_path(@user) do
+        = @user.followers.count
+      followers
+
+-# 数字を押すと、フォローしている、フォローされている人の一覧が出てくる

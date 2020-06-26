@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new # 投稿するための空のインスタンスを用意する
+    # @user = User.find_by(id: @post.user_id) #その投稿をしたユーザー
   end
 
   # def new
@@ -52,4 +53,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image).merge(user_id: current_user.id)
   end
+
 end
