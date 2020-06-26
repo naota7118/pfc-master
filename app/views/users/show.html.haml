@@ -2,3 +2,10 @@
 = render 'stats'
 
 = link_to '一覧画面に戻る', root_path
+
+-# <%= グラフの種類 モデル名.group(:カラム名).count %>
+-# <%= pie_chart Yogurt.group(:flavor).count %>
+-# <%= line_chart User.group_by_day(:created_at).count %>
+
+= line_chart Post.group(:calorie).count
+-# = line_chart User.group_by_day(:created_at).count
