@@ -10,7 +10,9 @@
           - if user_signed_in?
             = current_user.name
         .follow
-          フォロー中 100
+          フォロー：
+          = current_user.followings.count
         .follower
-          フォロワー 100
+          フォロワー：
+          = current_user.followers.count
     .col-sm-2
