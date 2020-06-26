@@ -1,8 +1,8 @@
 class RelationshipsController < ApplicationController
-  before_action :set_user
+  # before_action :set_user
 
   def create
-    @user = User.find(params[:repationship][:following_id])
+    @user = User.find(params[:relationship][:following_id])
     current_user.follow!(@user)
     redirect_to @user
   end
@@ -13,8 +13,8 @@ class RelationshipsController < ApplicationController
     redirect_to @user
   end
 
-  private
-  def
-    @user = User.find(params[:relationship][:follow_id])
-  end
+  # private
+  # def
+  #   @user = User.find(params[:relationship][:follow_id])
+  # end
 end
