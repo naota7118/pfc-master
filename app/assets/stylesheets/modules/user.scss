@@ -83,8 +83,8 @@
   }
 
   input[type='submit'] {
-    float: left;
-    margin-top: 20px;
+    // float: left;
+    // margin-top: 20px;
     color: #fff;
     background-color: #38aef0;
   }
@@ -112,6 +112,10 @@
         background-color: #d65f4c;
       }
     }
+  }
+
+  .easyLogin {
+    margin-top: 10px;
   }
 }
 

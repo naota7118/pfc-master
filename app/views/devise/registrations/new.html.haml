@@ -30,3 +30,5 @@
             = f.password_field :password_confirmation, autocomplete: "off"
         .actions
           = f.submit "Create Account", class: 'btn'
+      .easyLogin
+        = link_to 'かんたんログイン', guestsessions_path, method: :post, class:"btn btn-lg btn-success center-block" 
