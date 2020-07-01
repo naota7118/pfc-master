@@ -19,3 +19,5 @@
               = f.password_field :password, autocomplete: "off"
           .actions
             = f.submit "Log in", class: 'btn'
+          .easyLogin
+            = link_to 'かんたんログイン', users_guest_sign_in_path, method: :post, class:"btn btn-lg btn-success center-block"
