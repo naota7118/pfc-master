@@ -54,7 +54,7 @@
 
   .comment
     - if user_signed_in?
-      = form_with( model: [@post, @comment], local: true) do |f|
+      = form_with model: [@post, @comment], local: true, id: 'new_comment' do |f|
         = f.text_area :comment, placeholder: "コメントする", rows: "2"
         = f.submit "SEND"
 
