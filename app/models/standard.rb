@@ -1,4 +1,4 @@
 class Standard < ApplicationRecord
-  belongs_to :user, optional: true
-  varidates :weight, :calorie, :protein, :fat, :carbo ,presence: true
+  belongs_to :user
+  varidates :weight, :calorie, :protein, :fat, :carbo , presence: true
 end

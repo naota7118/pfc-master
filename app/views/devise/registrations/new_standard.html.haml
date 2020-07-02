@@ -1,0 +1,28 @@
+%h2
+  カロリー・PFC目安登録
+
+- form_for @standard do |f|
+  = render "devise/shared/error_messages", resource: @address
+.field
+  = f.label :weight
+  = f.input :weight {type: number}
+
+.field
+  = f.label :calorie
+  = f.input :calorie {type: number}
+
+.field
+  = f.label :protein
+  = f.input :protein {type: number}
+
+.field
+  = f.label :fat
+  = f.input :fat {type: number}
+
+.field
+  = f.label :carbo
+  = f.input :carbo {type: number}
+
+
+
+

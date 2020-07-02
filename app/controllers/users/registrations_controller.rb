@@ -1,12 +1,52 @@
-# frozen_string_literal: true
-
 class Users::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
-  # before_action :configure_account_update_params, only: [:update]
 
   def new
     @user = User.new
   end
+
+  def create
+    # 1ページ目で送られてきたパラメータを@userに代入
+    @user = User.new(sign_up_params)
+    # 送られてきたパラメータがバリデーションに違反していないかチェック
+    unless @user.valid?
+      # エラーメッセージを出す
+      flash.now[:alert] = @user.errors.full_messages
+      # newアクションへrenderする
+      render :new and return
+      # 同じアクション内でrenderを2回記述する場合はand returnを使用する
+    end
+    # attributesで全ての属性を取得しsessionで保存
+    session["devise.regist_data"] = {user: @user.attributes}
+    # passwordを保存
+    session["devise.regist_data"][:user]["password"] = params[:user][:password]
+    binding.pry
+    standard = @user.standard
+    @standard = @user.build_standard
+    render :new_standard
+  end
+
+  def create_standard
+    @user = User.new(session["devise.regist_data"]["user"])
+    @standard = Standard.new(standard_params)
+    unless @standard.valid?
+      flash.now[:alert] = @standard.errors.full_messages
+      render :new_standard and return
+    end
+    @user.build_standard(@standard.attributes)
+    @user.save
+    session["devise.regist_data"]["user"].clear
+    sign_in(:user, @user)
+  end
+
+# 省略
+
+  protected
+
+  def standard_params
+    params.require(:address).permit(:zipcode, :address)
+  end
+
+
   # GET /resource/sign_up
   # def new
   #   super
