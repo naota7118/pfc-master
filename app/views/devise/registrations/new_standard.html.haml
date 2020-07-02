@@ -1,7 +1,7 @@
 %h2
   カロリー・PFC目安登録
 
-- form_for @standard do |f|
+= form_for @standard do |f|
   = render "devise/shared/error_messages", resource: @standard
   .field
     = f.label :weight
