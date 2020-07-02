@@ -16,7 +16,7 @@
           .field-label
             = f.label :email
           .field-input
-            = f.email_field :email
+            = f.email_field :email, autocomplete: "email"
         .field
           .field-label
             = f.label :password
@@ -29,4 +29,4 @@
           .field-input
             = f.password_field :password_confirmation, autocomplete: "off"
         .actions
-          = f.submit "Create Account", class: 'btn'
+          = f.submit "Next", class: 'btn'

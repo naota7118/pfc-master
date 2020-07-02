@@ -5,15 +5,15 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :liked_posts, through: :likes, source: :post
   has_many :comments
-  
-  def already_liked?(post)
-    self.likes.exists?(post_id: post.id)
-  end
-
   has_many :following_relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
   has_many :followings, through: :following_relationships, source: :following
   has_many :follower_relationships, class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
   has_many :followers, through: :follower_relationships, source: :follower
+  has_one :standard
+
+  def already_liked?(post)
+    self.likes.exists?(post_id: post.id)
+  end
 
   def following?(other_user)
     following_relationships.find_by(following_id: other_user.id)
