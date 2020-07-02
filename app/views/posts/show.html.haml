@@ -56,16 +56,18 @@
     - if user_signed_in?
       = form_with model: [@post, @comment], local: true, id: 'new_comment' do |f|
         = f.text_area :comment, placeholder: "コメントする", rows: "2"
-        = f.submit "SEND"
+        = f.submit "SEND", class: "commentBtn", id: "commentBtn"
 
   .commentList
-    %p コメント一覧
+    コメント一覧
     - if @comments
-      - @comments.each do |comment|
-        %p
-          = comment.user.name
-        %p
-          = comment.comment
-        %time(datetime="#{comment.created_at}")= time_ago_in_words(comment.created_at)+"前"
+      .comments
+        - @comments.each do |comment|
+          .comment
+            .commentUser
+              = comment.user.name
+            .commentContent
+              = comment.comment
+            %time(datetime="#{comment.created_at}")= time_ago_in_words(comment.created_at)+"前"
 
   = link_to "ホームへ戻る", root_path
