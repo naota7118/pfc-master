@@ -1,12 +1,12 @@
 class CommentsController < ApplicationController
   def create
     # comment = Comment.create(comment_params) # createだと保存に成功したか失敗したかがわからない
-    comment = Comment.new(comment_params) 
-    if comment.save
-      redirect_to post_path(comment.post.id) # コメントと結びつく投稿の詳細画面に遷移する
+    @comment = Comment.new(comment_params) 
+    if @comment.save
+      redirect_to post_path(@comment.post.id) # コメントと結びつく投稿の詳細画面に遷移する
     else
       flash[:alert] = 'エラーが発生しました。'
-      redirect_to post_path(comment.post.id)
+      redirect_to post_path(@comment.post.id)
     end
   end
 
