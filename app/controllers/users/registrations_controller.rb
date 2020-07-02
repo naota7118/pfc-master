@@ -33,16 +33,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
     @user.build_standard(@standard.attributes)
     @user.save
+    # sessionを削除
     session["devise.regist_data"]["user"].clear
     sign_in(:user, @user)
+    # redirect_to root_path
   end
-
-# 省略
 
   protected
 
   def standard_params
-    params.require(:address).permit(:zipcode, :address)
+    params.require(:standard).permit(:weight, :calorie, :protein, :fat, :carbo, :bodyFatPercentage, :leanBodyMass, :user_id)
   end
 
 
