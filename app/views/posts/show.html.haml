@@ -1,68 +1,73 @@
-.post
-  %table
-    %thead
-      %tr
-        %th FOOD
-        %th Calorie
-    %tbody
-      %tr
-        %td 
-          = @post.food
-        %td 
-          = @post.calorie
-  %table
-    %thead
-      %tr
-        %th P
-        %th F
-        %th C
-    %tbody
-      %tr
-        %td 
-          = @post.protein
-        %td 
-          = @post.fat
-        %td 
-          = @post.carbo
-  %table
-    %tbody
-      %tr
-        %td 
-          = @post.text
-  %table
-    %tbody
-      %tr
-        %td 
-          - if @post.image.present?
-            = image_tag @post.image.url, class: "image"
+%head
+  %link(rel="stylesheet" type="text/js" href="js/show.js")
+%body
+  .post
+    %table
+      %thead
+        %tr
+          %th FOOD
+          %th Calorie
+      %tbody
+        %tr
+          %td 
+            = @post.food
+          %td 
+            = @post.calorie
+    %table
+      %thead
+        %tr
+          %th P
+          %th F
+          %th C
+      %tbody
+        %tr
+          %td 
+            = @post.protein
+          %td 
+            = @post.fat
+          %td 
+            = @post.carbo
+    %table
+      %tbody
+        %tr
+          %td 
+            = @post.text
+    %table
+      %tbody
+        %tr
+          %td 
+            - if @post.image.present?
+              = image_tag @post.image.url, class: "image"
 
-%ul.more_list
-  %li
-    = link_to '編集', edit_post_path(@post.id)
-  %li
-    = link_to '削除', "/posts/#{@post.id}", method: :delete
+  %ul.more_list
+    %li
+      = link_to '編集', edit_post_path(@post.id)
+    %li
+      = link_to '削除', "/posts/#{@post.id}", method: :delete
 
-%p
-  - @post.likes
-- if current_user.already_liked?(@post)
-  = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
-- else
-  = button_to 'いいね', post_likes_path(@post)
+  %p
+    - @post.likes
+  - if current_user.already_liked?(@post)
+    = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
+  - else
+    = button_to 'いいね', post_likes_path(@post)
 
-.comment
-  - if user_signed_in?
-    = form_with( model: [@post, @comment], local: true) do |f|
-      = f.text_area :comment, placeholder: "コメントする", rows: "2"
-      = f.submit "SEND"
+  .comment
+    - if user_signed_in?
+      = form_with model: [@post, @comment], local: true, id: 'new_comment' do |f|
+        = f.text_area :comment, placeholder: "コメントする", rows: "2"
+        = f.submit "SEND", class: "commentBtn", id: "commentBtn"
 
-.commentList
-  %p コメント一覧
-  - if @comments
-    - @comments.each do |comment|
-      %p
-        = comment.user.name
-      %p
-        = comment.comment
-      %time(datetime="#{comment.created_at}")= time_ago_in_words(comment.created_at)+"前"
+  .commentList
+    コメント一覧
+    - if @comments
+      .comments
+        - @comments.each do |comment|
+          .comment
+            .commentUser
+              = comment.user.name
+            .commentContent
+              = comment.comment
+            %time(datetime="#{comment.created_at}")= time_ago_in_words(comment.created_at)+"前"
 
-= link_to "ホームへ戻る", root_path
+  = link_to "ホームへ戻る", root_path
