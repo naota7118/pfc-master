@@ -57,7 +57,6 @@
       = form_with model: [@post, @comment], local: true, id: 'new_comment' do |f|
         = f.text_area :comment, placeholder: "コメントする", rows: "2"
         = f.submit "SEND", class: "commentBtn", id: "commentBtn"
-
   .commentList
     コメント一覧
     - if @comments
