@@ -44,14 +44,22 @@
       = link_to '編集', edit_post_path(@post.id)
     %li
       = link_to '削除', "/posts/#{@post.id}", method: :delete
+
   .like
-    - if current_user.already_liked?(@post)
-      = button_to 'いいねを取り消す', post_like_path(@post), method: :delete, id: 'delete'
-    - else
-      = button_to 'いいね', post_likes_path(@post), id: 'like'
+    - if user_signed_in?
+      - if current_user.already_liked?(@post)     
+        .likeIcon
+          %i.far.fa-heart.likeIcon-fa-heart.heart
+      - else
+        .likeIcon
+          %i.far.fa-heart.likeIcon-fa-heart
     .likeCounts
       いいね数：
       = @post.likes.count
+    -# - if current_user.already_liked?(@post)
+    -#   = button_to 'いいねを取り消す', post_like_path(@post), method: :delete, id: 'delete'
+    -# - else
+    -#   = button_to 'いいね', post_likes_path(@post), id: 'like'
 
   .comment
     - if user_signed_in?
