@@ -4,7 +4,7 @@ class LikesController < ApplicationController
     if @like.save
       @likeCounts = Like.where(post_id: params[:post_id])
       respond_to do |format|
-        format.html { redirect_to post_path(@like.post.id) }
+        # format.html { redirect_to post_path(@like.post.id) }
         format.json
       end
     else
@@ -17,8 +17,9 @@ class LikesController < ApplicationController
     @like = Like.find_by(post_id: params[:post_id], user_id: current_user.id)
     @like.destroy
     if @like.destroy
+      @likeCounts = Like.where(post_id: params[:post_id])
       respond_to do |format|
-        format.html { redirect_to post_path(@like.post.id) }
+        # format.html { redirect_to post_path(@like.post.id) }
         format.json
       end
     else

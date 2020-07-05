@@ -14,9 +14,13 @@ $(function(){
 
   function buildDeleteHTML(like){
     var html = `<form class="button_to" method="post" action="/posts/${like.post_id}/likes">
-                  <input id="like" type="submit" value="いいね">
-                  <input type="hidden" name="authenticity_token" value="">
-                </form>`
+                  <input type="hidden" name="_method" value="good">
+                  <input type="submit" value="いいね">
+                </form>
+                <div class="likeCounts">
+                  いいね数：
+                  ${like.counts}
+                </div>`
     return html;
   }
 
@@ -46,6 +50,7 @@ $(function(){
       })
     } else {
       var formData = new FormData(this);
+      console.log(this);
       var url = $(this).attr('action')
       $.ajax({
         url: url,
@@ -56,8 +61,8 @@ $(function(){
         contentType: false
       }) 
       .done(function(data){
-        console.log('data');
         $('.button_to').remove();
+        $('.likeCounts').remove();
         var html = buildDeleteHTML(data);
         $('.like').append(html);
         // $('.form__submit').prop('disabled', false);
