@@ -26,6 +26,24 @@ $(function(){
 
   $('.button_to').on('submit', function(e) {
     e.preventDefault();
+    // $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+    //   var token;
+    //   if (!options.crossDomain) {
+    //     token = $('meta[name="csrf-token"]').attr('content');
+    //     if (token) {
+    //       return jqXHR.setRequestHeader('X-CSRF-Token', token);
+    //     }
+    //   }
+    // });
+    $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+      var token;
+      if (!options.crossDomain) {
+        token = $('meta[name="csrf-token"]').attr('content');
+        if (token) {
+          return jqXHR.setRequestHeader('X-CSRF-Token', token);
+        }
+      }
+    });
     if($('.button_to').children().is('#like')) {
       var formData = new FormData(this);
       var url = $(this).attr('action')
@@ -43,7 +61,7 @@ $(function(){
         var html = buildHTML(data);
         $('.like').append(html);
         console.log('good');
-        // $('.form__submit').prop('disabled', false);
+        $('.button_to').prop('disabled', false);
       })
       .fail(function(){
         alert('エラー');
@@ -65,7 +83,7 @@ $(function(){
         $('.likeCounts').remove();
         var html = buildDeleteHTML(data);
         $('.like').append(html);
-        // $('.form__submit').prop('disabled', false);
+        $('.button_to').prop('disabled', false);
       })
       .fail(function(){
         alert('エラー');
