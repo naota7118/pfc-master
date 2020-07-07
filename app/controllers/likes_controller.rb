@@ -11,4 +11,7 @@ class LikesController < ApplicationController
     redirect_to post_path(@like.post.id)
     # redirect_back(fallback_location: root_path)
   end
+
+
+  
 end
