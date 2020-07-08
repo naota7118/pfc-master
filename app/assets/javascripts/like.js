@@ -3,7 +3,7 @@ $(function(){
   function buildHTML(like){
     var html = `<form class="button_to" method="post" action="/posts/${like.post_id}/likes/${like.id}">
                   <input type="hidden" name="_method" value="delete">
-                  <input type="submit" value="いいねを取り消す">
+                  <input type="submit" value="いいねを取り消す" id="delete">
                 </form>
                 <div class="likeCounts">
                   いいね数：
@@ -14,8 +14,8 @@ $(function(){
 
   function buildDeleteHTML(like){
     var html = `<form class="button_to" method="post" action="/posts/${like.post_id}/likes">
-                  <input type="hidden" name="_method" value="good">
-                  <input type="submit" value="いいね">
+                  <input type="hidden" name="_method" value="post">
+                  <input type="submit" value="いいね" id="like">
                 </form>
                 <div class="likeCounts">
                   いいね数：
