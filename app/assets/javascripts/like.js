@@ -23,27 +23,24 @@ $(function(){
                 </div>`
     return html;
   }
-
+  
   $('.button_to').on('submit', function(e) {
     e.preventDefault();
-    $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
-      var token;
-      if (!options.crossDomain) {
-        token = $('meta[name="csrf-token"]').attr('content');
-        if (token) {
-          return jqXHR.setRequestHeader('X-CSRF-Token', token);
-        }
+    $.ajaxSetup({
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+        console.log('aaaaa');
       }
     });
-    $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
-      var token;
-      if (!options.crossDomain) {
-        token = $('meta[name="csrf-token"]').attr('content');
-        if (token) {
-          return jqXHR.setRequestHeader('X-CSRF-Token', token);
-        }
-      }
-    });
+    // $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+    //   var token;
+    //   if (!options.crossDomain) {
+    //     token = $('meta[name="csrf-token"]').attr('content');
+    //     if (token) {
+    //       return jqXHR.setRequestHeader('X-CSRF-Token', token);
+    //     }
+    //   }
+    // });
     if($('.button_to').children().is('#like')) {
       var formData = new FormData(this);
       var url = $(this).attr('action')

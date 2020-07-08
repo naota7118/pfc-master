@@ -1,5 +1,8 @@
 class LikesController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   def create
+    # binding.pry
     @like = current_user.likes.create(post_id: params[:post_id])
     if @like.save
       @likeCounts = Like.where(post_id: params[:post_id])
@@ -7,6 +10,7 @@ class LikesController < ApplicationController
         # format.html { redirect_to post_path(@like.post.id) }
         format.json
       end
+      # binding.pry
     else
       flash[:alert] = 'エラーが発生しました。'
       redirect_to post_path(@like.post.id)
