@@ -26,15 +26,15 @@ $(function(){
 
   $('.button_to').on('submit', function(e) {
     e.preventDefault();
-    // $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
-    //   var token;
-    //   if (!options.crossDomain) {
-    //     token = $('meta[name="csrf-token"]').attr('content');
-    //     if (token) {
-    //       return jqXHR.setRequestHeader('X-CSRF-Token', token);
-    //     }
-    //   }
-    // });
+    $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
+      var token;
+      if (!options.crossDomain) {
+        token = $('meta[name="csrf-token"]').attr('content');
+        if (token) {
+          return jqXHR.setRequestHeader('X-CSRF-Token', token);
+        }
+      }
+    });
     $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
       var token;
       if (!options.crossDomain) {
