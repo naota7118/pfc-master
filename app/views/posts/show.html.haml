@@ -45,19 +45,14 @@
     %li
       = link_to '削除', "/posts/#{@post.id}", method: :delete
 
-  %p
-    - @post.likes
-  - if current_user.already_liked?(@post)
-    = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
-  - else
-    = button_to 'いいね', post_likes_path(@post)
+  .like
+    = render partial: "likes/like", locals: {post: @post}
 
   .comment
     - if user_signed_in?
       = form_with model: [@post, @comment], local: true, id: 'new_comment' do |f|
         = f.text_area :comment, placeholder: "コメントする", rows: "2"
         = f.submit "SEND", class: "commentBtn", id: "commentBtn"
-
   .commentList
     コメント一覧
     - if @comments
