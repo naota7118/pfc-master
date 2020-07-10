@@ -1,65 +1,54 @@
-# #DB設計
+# PFC MASTER
+カロリーとPFCバランスを投稿したり記録したりできるアプリです。
+何を食べてどれくらいカロリーを摂取したかを記録しグラフで見ることができます。
+体脂肪を落としたい人用にカロリーを自動計算してくれる機能もあります。
+レスポンシブに対応しているのでスマホからも確認できます。
 
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false, unique: true|
-|email|string|null: false, unique: true|
-|password|string|null: false|
+# URL
+この項目はあとで追記します。
 
-### Association
-- has_many :posts, dependent: :destroy
-- has_many :comments, dependent: :destroy
-- has_many :posts, through: :comments, dependent: :destroy
-- has_many :posts, through: :likes, :dependent: :destroy
+# 使用言語・使用技術
+フロント
+・Haml
+・Scss
+・jQuery
+・boostrap4
 
-## postsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|food|text|null: false|
-|calorie|integer|null: false|
-|protein|integer||
-|fat|integer||
-|carbo|integer||
-|weight|integer||
-|text|text||
-|image|string||
-|date|date|
-|user_id|integer|null: false, foreign_key: true|
+バックエンド
+・Ruby 2.5.1
+・Rails 5.2.4.3
 
-### Association
-- belongs_to :user
-- has_many :images, dependent: destroy
-- has_many :comments, dependent: :destroy
-- has_many :likes, dependent: :destroy
+サーバー
+・Nginx(予定)
 
-## commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|comment|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|post_id|integer|null: false, foreign_key: true|
+データベース
+・MySQL 5.6.47
 
-### Association
-- belongs_to :user
-- belongs_to :post
+インフラ・開発環境など
+・AWS(予定)
+・Capistrano(予定)
+・RSpec
 
+AWS構成図
+この項目はあとで追記します。
 
-## likesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|post_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+# 実装機能
+・ユーザー機能
+　・deviseを使用
+  ・新規登録・ログイン・ログアウト機能
+  ・マイページ・登録情報編集機能
+・投稿機能
+　・投稿編集機能
+  ・投稿削除機能
+・画像投稿機能
+・カロリー自動計算機能
+・グラフ機能
+・コメント機能(Ajaxで非同期化)
+・いいね機能(Ajaxで非同期化)
+・フォロー機能
+・検索機能
+　・Ransackを使用
+・ページネーション機能
 
-### Association
-- belongs_to :user
-- belongs_to :post
-
-## imagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|image|string|null, false|
-|post_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :post
+# ER図
+この項目はあとで追記します。
