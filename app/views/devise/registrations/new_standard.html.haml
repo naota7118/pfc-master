@@ -10,23 +10,19 @@
     %a kg
 
   あなたの除脂肪体重は
-  %a#yourleanBodyMass
+  %a#leanBodyMass
   kgです。
-  
-  あなたの体脂肪率は
-  %a#standard_body
-  kgです。
+
+  %p
+    あなたの１日のカロリー目安は
+    %a#standard_calorie 
+    kcalです。
 
   体脂肪率を入力してください。
   .field
     = f.label :"体脂肪率"
     = f.number_field :bodyFatPercentage
     %a %
-
-  .field
-    = f.label :"除脂肪体重"
-    = f.number_field :leanBodyMass
-    %a kg
 
   .field
     = f.label :"１日のカロリー目安"
