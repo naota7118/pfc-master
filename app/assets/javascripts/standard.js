@@ -4,10 +4,13 @@ $(function() {
   })
 
   var $input = $('#standard_weight');
-  var $output = $('#standard_body');
+  var $output = $('#yourleanBodyMass');
   $input.on('input', function(event) {
     var value = $input.val();
-    $output.text(value);
+    var result = Number(value);
+    var multi = result*0.8
+    $output.text(multi);
   })
+
 
 });

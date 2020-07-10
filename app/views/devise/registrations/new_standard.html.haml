@@ -8,10 +8,16 @@
     = f.label :"体重"
     = f.number_field :weight
     %a kg
+
+  あなたの除脂肪体重は
+  %a#yourleanBodyMass
+  kgです。
   
   あなたの体脂肪率は
   %a#standard_body
   kgです。
+
+  体脂肪率を入力してください。
   .field
     = f.label :"体脂肪率"
     = f.number_field :bodyFatPercentage
