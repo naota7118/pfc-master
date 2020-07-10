@@ -3,11 +3,15 @@
 
 = form_for @standard do |f|
   = render "devise/shared/error_messages", resource: @standard
+  体重を入力してください。
   .field
     = f.label :"体重"
     = f.number_field :weight
     %a kg
-    
+  
+  あなたの体脂肪率は
+  %a#standard_body
+  kgです。
   .field
     = f.label :"体脂肪率"
     = f.number_field :bodyFatPercentage
