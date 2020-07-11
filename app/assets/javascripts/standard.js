@@ -1,7 +1,7 @@
 $(function() {
 
   var $standard_weight = $('#standard_weight');
-  var $leanBodyMass = $('#leanBodyMass');
+  var $leanBodyMass = $('#standard_leanBodyMass');
   var $calorie = $('#calorie');
 
   $standard_weight.on('input', function(event) {
@@ -17,6 +17,7 @@ $(function() {
       var mathLeanBodyMass = Math.round(leanBodyMass*10) / 10
       var calorie = leanBodyMass*40
       var mathCalorie = Math.round(calorie*10) / 10
+      $('#standard_leanBodyMass').val(mathLeanBodyMass);
       $leanBodyMass.text(mathLeanBodyMass);
       $calorie.text(mathCalorie);
 
@@ -46,6 +47,7 @@ $(function() {
       var mathLeanBodyMass = Math.round(leanBodyMass*10) / 10
       var calorie = leanBodyMass*40
       var mathCalorie = Math.round(calorie*10) / 10
+      $('#standard_leanBodyMass').val(mathLeanBodyMass);
       $leanBodyMass.text(mathLeanBodyMass);
       $calorie.text(mathCalorie);
 
