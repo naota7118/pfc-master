@@ -21,25 +21,35 @@
     .field
       = f.label :"除脂肪体重"
       = f.number_field :leanBodyMass
-    -# %a#leanBodyMass
-    kgです。
+      %a kgです。
 
   %p
     あなたの１日のカロリー目安は
-    %a#calorie
-    kcalです。
+    .field
+      = f.label :"カロリー"
+      = f.number_field :calorie
+      %a gです。
+
   %p
     あなたの１日のタンパク質目安は
-    %a#protein 
-    gです。
+    .field
+      = f.label :"タンパク質"
+      = f.number_field :protein
+      %a gです。
+
   %p
     あなたの１日の脂質目安は
-    %a#fat
-    gです。
+    .field
+      = f.label :"脂質"
+      = f.number_field :fat
+      %a gです。
+
   %p
     あなたの１日の炭水化物目安は
-    %a#carbo 
-    gです。
+    .field
+      = f.label :"炭水化物"
+      = f.number_field :carbo
+      %a gです。
 
   .actions
     = f.submit "新規登録"
