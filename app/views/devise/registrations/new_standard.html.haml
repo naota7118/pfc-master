@@ -3,40 +3,53 @@
 
 = form_for @standard do |f|
   = render "devise/shared/error_messages", resource: @standard
-  .field
-    = f.label :"体重"
-    = f.number_field :weight
-    %a kg
-    
-  .field
-    = f.label :"体脂肪率"
-    = f.number_field :bodyFatPercentage
-    %a %
+  %p
+    体重を入力してください。
+    .field
+      = f.label :"体重"
+      = f.number_field :weight 
+      %a kg
+  %p
+    体脂肪率を入力してください。
+    .field
+      = f.label :"体脂肪率"
+      = f.number_field :bodyFatPercentage
+      %a %
 
-  .field
-    = f.label :"除脂肪体重"
-    = f.number_field :leanBodyMass
-    %a kg
+  %p
+    あなたの除脂肪体重は
+    .field
+      = f.label :"除脂肪体重"
+      = f.number_field :leanBodyMass
+      %a kgです。
 
-  .field
-    = f.label :"１日のカロリー目安"
-    = f.number_field :calorie
-    %a kcal
+  %p
+    あなたの１日のカロリー目安は
+    .field
+      = f.label :"カロリー"
+      = f.number_field :calorie
+      %a gです。
 
-  .field
-    = f.label :"１日のタンパク質目安"
-    = f.number_field :protein
-    %a g
+  %p
+    あなたの１日のタンパク質目安は
+    .field
+      = f.label :"タンパク質"
+      = f.number_field :protein
+      %a gです。
 
-  .field
-    = f.label :"１日の脂質目安"
-    = f.number_field :fat
-    %a g
+  %p
+    あなたの１日の脂質目安は
+    .field
+      = f.label :"脂質"
+      = f.number_field :fat
+      %a gです。
 
-  .field
-    = f.label :"１日の炭水化物目安"
-    = f.number_field :carbo
-    %a g
+  %p
+    あなたの１日の炭水化物目安は
+    .field
+      = f.label :"炭水化物"
+      = f.number_field :carbo
+      %a gです。
 
   .actions
     = f.submit "新規登録"
