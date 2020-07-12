@@ -5,12 +5,12 @@
 var ctx = document.getElementById("myChart").getContext('2d');
 
 var myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
         labels: [1,2,3,4,5],
         datasets: [{
             label: "サンプル",
-            data: [1,2,3,4,5],
+            data: gon.data,
             backgroundColor: 'rgba(0, 120, 100, 1.0)',
             borderColor: 'rgba(100, 100, 132, 1.0)',
             fill: false
@@ -23,4 +23,6 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+console.log(gon.user_name);
 </script>
