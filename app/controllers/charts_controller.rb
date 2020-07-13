@@ -4,7 +4,7 @@ class ChartsController < ApplicationController
     gon.data = []
     @post = Post.where("calorie > ?", 1)
     gon.data << @post.select("calorie")
-    binding.pry
+    # binding.pry
   end
   
 end
