@@ -1,10 +1,8 @@
 class ChartsController < ApplicationController
 
   def index
-    gon.data = []
-    @post = Post.where("calorie > ?", 1)
-    gon.data << @post.select("calorie")
-    # binding.pry
+    @posts = current_user.posts.select(:calorie).map{ |posts| posts.calorie}
+    gon.data = @posts
   end
   
 end
