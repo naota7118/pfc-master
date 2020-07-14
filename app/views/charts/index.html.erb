@@ -5,14 +5,15 @@
 var ctx = document.getElementById("myChart").getContext('2d');
 
 console.log(gon.data);
+console.log(gon.date);
 
 var myChart = new Chart(ctx, {
 
     type: 'bar',
     data: {
-        labels: ["day1","day2"],
+        labels: [gon.date, gon.date],
         datasets: [{
-            label: "サンプル",
+            label: gon.date,
             data: gon.data,
             backgroundColor: 'rgba(0, 120, 100, 1.0)',
             borderColor: 'rgba(100, 100, 132, 1.0)',
