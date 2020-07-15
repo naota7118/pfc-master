@@ -9,11 +9,11 @@ console.log(gon.date);
 
 var myChart = new Chart(ctx, {
 
-    type: 'bar',
+    type: 'line',
     data: {
-        labels: [gon.date, gon.date],
+        labels: gon.date,
         datasets: [{
-            label: gon.date,
+            label: "日にち",
             data: gon.data,
             backgroundColor: 'rgba(0, 120, 100, 1.0)',
             borderColor: 'rgba(100, 100, 132, 1.0)',
@@ -21,6 +21,10 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+        title:  {
+            display: true,
+            text: "カロリーグラフ"
+        },
         scales: {
             yAxes: [{
                 ticks: {
@@ -28,10 +32,6 @@ var myChart = new Chart(ctx, {
                 }
             }]
         }
-        // title:  {
-        //   display: true,
-        //   text: "カロリーグラフ"
-        // }
     }
 });
 
