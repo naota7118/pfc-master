@@ -1,7 +1,6 @@
 class ChartsController < ApplicationController
 
   def index
-    binding.pry
     gon.data = []
     gon.data = current_user.posts.select(:calorie).map{ |posts| posts.calorie}
 
@@ -10,7 +9,6 @@ class ChartsController < ApplicationController
     @dates.each do |a|
       gon.date << a.strftime("%Y年%m月%d日")
     end
-    binding.pry
   end
   
 end
