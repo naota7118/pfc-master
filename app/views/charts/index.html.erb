@@ -1,7 +1,9 @@
+<%# canvasタグ内にグラフを描く  %>
 <canvas id="myChart" width="900" height="400"></canvas>
+
+<%# htmlのscriptタグ内にjsを書いていく %>
 <script>
-//id=myChartのDOMを取得して、canvasに描画するグラフを取得し変数に代入
-//ctxはcontextの略
+// グラフ部分のDOMを取得しgetContextメソッドでグラフを描く
 var ctx = document.getElementById("myChart").getContext('2d');
 
 var plugin = {
@@ -40,8 +42,7 @@ var plugin = {
     }
 };
 
-console.log(gon.data);
-console.log(gon.date);
+
 
 var myChart = new Chart(ctx, {
 
@@ -49,9 +50,11 @@ var myChart = new Chart(ctx, {
 
     type: 'bar',
     data: {
+        // labelsでX軸を指定
         labels: gon.date,
         datasets: [{
-            label: "日にち",
+            label: "1日のカロリー合計",
+            // dataでY軸を指定
             data: gon.data,
             backgroundColor: 'rgba(60, 179, 113, 1.0)',
             borderColor: 'rgba(245, 245, 245, 1.0)',
