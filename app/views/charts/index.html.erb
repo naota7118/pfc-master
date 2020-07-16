@@ -1,0 +1,118 @@
+<%# canvasタグ内にグラフを描く  %>
+<canvas id="myChart" width="900" height="400"></canvas>
+
+<%# htmlのscriptタグ内にjsを書いていく %>
+<script>
+// グラフ部分のDOMを取得しgetContextメソッドでグラフを描く
+var ctx = document.getElementById("myChart").getContext('2d');
+
+var plugin = {
+    annotation: {
+        annotations: [
+            {
+                type: 'line', // 線分を指定
+                drawTime: 'afterDatasetsDraw',
+                id: 'a-line-1', // 線のid名を指定（他の線と区別するため）
+                mode: 'horizontal', // 水平を指定
+                scaleID: 'y左軸', // 基準とする軸のid名
+                value: 2240, // 引きたい線の数値（始点）
+                endValue: 2240, // 引きたい線の数値（終点）
+                borderColor: 'red', // 線の色
+                borderWidth: 3, // 線の幅（太さ）
+                borderDash: [2, 2],
+                borderDashOffset: 1,
+                label: { // ラベルの設定
+                    backgroundColor: 'rgba(255,255,255,0.8)',
+                    bordercolor: 'rgba(200,60,60,0.8)',
+                    borderwidth: 2,
+                    fontSize: 10,
+                    fontStyle: 'bold',
+                    fontColor: 'rgba(200,60,60,0.8)',
+                    xPadding: 10,
+                    yPadding: 10,
+                    cornerRadius: 3,
+                    position: 'left',
+                    xAdjust: 0,
+                    yAdjust: 0,
+                    enabled: true,
+                    content: 'カロリー目安'
+                }
+            },
+        ]
+    }
+};
+
+
+
+var myChart = new Chart(ctx, {
+
+    plugins: [plugin],
+
+    type: 'bar',
+    data: {
+        // labelsでX軸を指定
+        labels: gon.date,
+        datasets: [{
+            label: "1日のカロリー合計",
+            // dataでY軸を指定
+            data: gon.data,
+            backgroundColor: 'rgba(60, 179, 113, 1.0)',
+            borderColor: 'rgba(245, 245, 245, 1.0)',
+            fill: false
+        }]
+    },
+    options: {
+        title:  {
+            display: true,
+            text: "カロリーグラフ"
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                },
+                id: 'y左軸'
+            }]
+        }
+
+        // ここから
+        // plugins: {
+        //     annotation: {
+        //         annotations: [
+        //             {
+        //                 type: 'line', // 線分を指定
+        //                 drawTime: 'afterDatasetsDraw',
+        //                 id: 'a-line-1', // 線のid名を指定（他の線と区別するため）
+        //                 mode: 'horizontal', // 水平を指定
+        //                 scaleID: 'y左軸', // 基準とする軸のid名
+        //                 value: 2240, // 引きたい線の数値（始点）
+        //                 endValue: 2240, // 引きたい線の数値（終点）
+        //                 borderColor: 'red', // 線の色
+        //                 borderWidth: 3, // 線の幅（太さ）
+        //                 borderDash: [2, 2],
+        //                 borderDashOffset: 1,
+        //                 label: { // ラベルの設定
+        //                     backgroundColor: 'rgba(255,255,255,0.8)',
+        //                     bordercolor: 'rgba(200,60,60,0.8)',
+        //                     borderwidth: 2,
+        //                     fontSize: 10,
+        //                     fontStyle: 'bold',
+        //                     fontColor: 'rgba(200,60,60,0.8)',
+        //                     xPadding: 10,
+        //                     yPadding: 10,
+        //                     cornerRadius: 3,
+        //                     position: 'left',
+        //                     xAdjust: 0,
+        //                     yAdjust: 0,
+        //                     enabled: true,
+        //                     content: 'カロリー目安'
+        //                 }
+        //             },
+        //         ]
+        //     }
+        // }
+        // // ここまで
+    }
+});
+
+</script>

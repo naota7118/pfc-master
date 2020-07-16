@@ -44,3 +44,5 @@ gem 'devise'
 gem "chartkick"
 gem 'groupdate'
 gem 'font-awesome-rails'
+gem 'chart-js-rails'
+gem 'gon'

@@ -23,6 +23,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :charts, only: :index
+
   resources :relationships, only: [:create, :destroy]
 
 end
