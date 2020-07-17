@@ -1,20 +1,16 @@
-.container-fluid.d-none.d-lg-block
-  .row
-    .col-sm-12
-    .col-sm-6
-    .col-sm-4
-      .user-box
-        = image_tag 'https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100'
-        .username
-          ユーザー：
-          - if user_signed_in?
-            = current_user.name
-        .follow
-          フォロー：
-          - if user_signed_in?
-            = current_user.followings.count
-        .follower
-          フォロワー：
-          - if user_signed_in?
-            = current_user.followers.count
-    .col-sm-2
+.content
+  .section
+    .user-box
+      = image_tag 'https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100'
+      .username
+        ユーザー：
+        - if user_signed_in?
+          = current_user.name
+      .follow
+        フォロー：
+        - if user_signed_in?
+          = current_user.followings.count
+      .follower
+        フォロワー：
+        - if user_signed_in?
+          = current_user.followers.count

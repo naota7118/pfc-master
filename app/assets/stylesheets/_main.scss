@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(245, 245, 245);
+  .main {
+    padding: 10px 20px 10px 20px;
+    font-family: Verdana, sans-serif;
+    background-color: rgb(245, 245, 245);
+    height: 100%;
+    .new-post {
+      background-color: #fff;
+      margin-top: 60px;
+      width: 1000px;
+      border-color: gray;
+      border: ridge;
+      border-radius: 10px;
+      padding: 5px;
+    }
+  }
+}
+
+
+hr.style {
+  border: 3px solid grey ;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+}

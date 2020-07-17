@@ -1,32 +1,27 @@
-.main-tweet
+.main
   .new-post
     = form_with model: @post do |f|
       .input-box
         %table
           %thead
             %tr
-              %th FOOD
-              %th Calorie
+              %th 食べたもの
+              %th カロリー
+              %th P（タンパク質）
+              %th F（脂質）
+              %th C（炭水化物）
           %tbody
             %tr
               %td 
                 = f.text_field :food, placeholder: '例）サラダチキン'
               %td 
                 = f.number_field :calorie, placeholder: '例）200'
-        %table
-          %thead
-            %tr
-              %th P
-              %th F
-              %th C
-          %tbody
-            %tr
               %td 
                 = f.number_field :protein, placeholder: '例）30'
               %td 
                 = f.number_field :fat, placeholder: '例）20'
               %td 
-                = f.number_field :carbo, placeholder: '例）50'
+                = f.number_field :carbo, placeholder: '例）50'              
         %table
           %thead
             %tr
