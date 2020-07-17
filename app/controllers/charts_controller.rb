@@ -10,6 +10,7 @@ class ChartsController < ApplicationController
     gon.data = []
     # mapメソッドで日付ごとのカロリー合計を1つずつ取り出す
     # mapメソッドの使い方 → 配列変数.map {|変数名| 具体的な処理 }
+    binding.pry
     gon.data = array_calorie.map{ |calorie| calorie}
 
     # 日付ごとにまとめてそのうちcreated_atカラムだけ取得。配列の形で格納されている
