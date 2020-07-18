@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+
 .post {
-  background-color: rgb(245, 245, 245);
-  .posts {
+  font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  .post-box {
     background-color: #fff;
     margin-top: 60px;
     width: 600px;
@@ -10,6 +15,61 @@
     padding: 5px;
     textarea {
       width: 400px;
+    }
+    .upper-post {
+
+    }
+    .lower-post {
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+        // border-radius: 5px 5px 5px 5px;
+      }
+      table th:first-child{
+        border-radius: 5px 5px 5px 5px;
+        border-right: 1px solid #3c6690;
+      }
+      table th{
+        text-align: center;
+        color: white;
+        background: linear-gradient(#9fb8d3,#418cd8);
+        border-left: 1px solid #3c6690;
+        border-top: 1px solid #3c6690;
+        border-bottom: 1px solid #3c6690;
+        box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+        width: 25%;
+        padding: 10px 0;
+        border-radius: 5px 5px 5px 5px;
+      }
+      table td{
+        text-align: center;
+        border-left: 1px solid #a8b7c5;
+        border-bottom: 1px solid #a8b7c5;
+        border-top:none;
+        box-shadow: 0px -3px 5px 1px #eee inset;
+        width: 25%;
+        padding: 10px 0;
+        border-radius: 5px 5px 5px 5px;
+      }
+      
+      // table td:last-child{
+      //   border-right: 1px solid #a8b7c5;
+      //   color: #93beec;;
+      // }
+      
+      table tr:last-child td:first-child {
+        // border-radius: 0 0 0 5px;
+        border-radius: 5px 5px 5px 5px;
+      }
+      
+      // table tr:last-child td:last-child {
+      //   // border-radius: 0 0 5px 0;
+      //   border-radius: 5px 5px 5px 5px;
+      // }
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

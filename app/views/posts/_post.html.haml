@@ -1,8 +1,8 @@
 .post
-  .posts
+  .post-box
     .upper-post
       .upper-post__user-name
-        = link_to user_path(post.user_id) do 
+        = link_to user_path(post.user_id) do
           = post.user.name
         -# = render 'relationships/follow_button', user:@user
       .upper-post__date
@@ -38,17 +38,22 @@
           %tr
             %td 
               = post.text
-      %table
-        %tbody
-          %tr
-            %td 
-            - if post.image.present?
-              = image_tag post.image.url
-
+      - if post.image.present?
+        = image_tag post.image.url
       %ul.more_list
         %li
           = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう
         %li
           = link_to '編集', "/posts/#{post.id}/edit", method: :get
         %li
-          = link_to '削除', "/posts/#{post.id}", method: :delete
+          = link_to post_path(post.id), method: :delete do
+            = fa_icon 'trash'
+        %li
+          = link_to "https://twitter.com/" do
+            = fa_icon 'twitter'
+        %li
+          = link_to "#" do
+            = fa_icon 'heart-o'
+        %li
+          = link_to "#" do
+            = fa_icon 'comment-o'

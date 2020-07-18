@@ -1,58 +1,55 @@
-.main-tweet
-  .new-post
-    = form_with model: @post do |f|
-      .input-box
-        %table
-          %thead
-            %tr
-              %th FOOD
-              %th Calorie
-          %tbody
-            %tr
-              %td 
-                = f.text_field :food, placeholder: '例）サラダチキン'
-              %td 
-                = f.number_field :calorie, placeholder: '例）200'
-        %table
-          %thead
-            %tr
-              %th P
-              %th F
-              %th C
-          %tbody
-            %tr
-              %td 
-                = f.number_field :protein, placeholder: '例）30'
-              %td 
-                = f.number_field :fat, placeholder: '例）20'
-              %td 
-                = f.number_field :carbo, placeholder: '例）50'
-        %table
-          %thead
-            %tr
-              %th 今日のひとこと
-          %tbody
-            %tr
-              %td 
-                = f.text_area :text, placeholder: 'なにたべた？'
-        %table
-          %thead
-            %tr
-              %th 3枚までアップロードできます
-          %tbody
-            %tr
-              %td 
-                = icon('fas', 'image', class: 'icon')
+.main
+  %header
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .collapse.navbar-collapse{ id: "navbarSupportedContent"}
+        %ul.navbar-nav.mr-auto
+        - if user_signed_in?
+          %li.nav-item
+            = link_to 'マイページ', user_path(current_user.id)
+          %li.nav-item 
+            = link_to 'ログアウト', destroy_user_session_path, method:  :delete
+        - else
+          %li.nav-item
+            %a.nav-link
+              = link_to '新規登録', new_user_registration_path
+          %li.nav-item  
+            %a.nav-link
+              = link_to 'ログイン', new_user_session_path
+  .content
+    .new-post
+      = form_with model: @post, id: 'new_post' do |f|
+        .input-box
+          %table
+            %thead
+              %tr
+                %th Food
+                %th Calorie
+                %th P タンパク質
+                %th F 脂質
+                %th C 炭水化物
+            %tbody
+              %tr
+                %td 
+                  = f.text_field :food, placeholder: '例）サラダチキン'
+                %td 
+                  = f.number_field :calorie, placeholder: '例）200'
+                %td 
+                  = f.number_field :protein, placeholder: '例）30'
+                %td 
+                  = f.number_field :fat, placeholder: '例）20'
+                %td 
+                  = f.number_field :carbo, placeholder: '例）50'              
+          .text
+            = f.text_area :text, placeholder: 'なにたべた？'
+          .icon
+            .image-upload
+              -# %p 5枚までアップロードできます
+              %label{class: "input-box__image"}
+                = fa_icon 'file-image-o'
                 = f.file_field :image
-        .submit-btn
-          = f.submit '投稿する'
-  = render @posts
-  = paginate(@posts)
-
-  -# .postBox
-  -#   %ul.postLists
-  -#     - @posts.each do |post|
-  -#       -# = link_to "/posts/#{post.id}", method: :get, class: "postList" %do
-  -#       %p
-  -#       = post.user.name
-  -#       = post.text
+                -# %input{type: "file"}
+            .btn-square
+              = f.submit '投稿する', class: 'post-btn'
+    .posts
+      = render @posts
+      = paginate(@posts)
