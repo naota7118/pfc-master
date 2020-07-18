@@ -41,5 +41,6 @@
                 = f.file_field :image
         .submit-btn
           = f.submit '投稿する'
-  = render @posts
-  = paginate(@posts)
+  .posts
+    = render @posts
+    = paginate(@posts)

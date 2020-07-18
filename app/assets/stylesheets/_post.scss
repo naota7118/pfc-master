@@ -1,15 +1,24 @@
-.post {
-  background-color: rgb(1, 20, 1);
-  .posts {
-    background-color: #fff;
-    margin-top: 60px;
-    width: 600px;
-    border-color: gray;
-    border: ridge;
-    border-radius: 10px;
-    padding: 5px;
-    textarea {
-      width: 400px;
+* {
+  box-sizing: border-box;
+}
+
+// .wrapper {
+//   display: flex;
+//   height:100vh;
+//   width:100vw;
+  .post {
+    background-color: rgb(1, 20, 1);
+    .post-box {
+      background-color: #fff;
+      margin-top: 60px;
+      width: 600px;
+      border-color: gray;
+      border: ridge;
+      border-radius: 10px;
+      padding: 5px;
+      textarea {
+        width: 400px;
+      }
     }
   }
-}
+// }

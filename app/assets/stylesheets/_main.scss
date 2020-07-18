@@ -1,10 +1,11 @@
 .main {
-  height: 100vh;
-  width: calc(100vw - 250px);
+  min-height: calc(100vh - 40px );
+  width: calc(100vw - 300px);
   padding: 10px 20px 10px 20px;
   font-family: Verdana, sans-serif;
-  background-color: rgb(245, 245, 245);
+  background-color: pink;
   .new-post {
+    width: 250px;
     background-color: #fff;
     margin-top: 60px;
     width: 1000px;
@@ -16,6 +17,11 @@
       padding: 10px 20px 10px 20px;
     }
   }
+  .posts {
+    height: calc(100vh - 250px);;
+    overflow-y: scroll;
+  }
+
 }
 
 
