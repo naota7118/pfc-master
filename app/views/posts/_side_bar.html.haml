@@ -14,3 +14,11 @@
         フォロワー：
         - if user_signed_in?
           = current_user.followers.count
+    .chart
+      = link_to charts_path(current_user.id) do
+        = fa_icon 'bar-chart'
+      %a グラフ
+    .table
+      = link_to "#" do
+        = fa_icon 'table'
+      %a 今月の記録
