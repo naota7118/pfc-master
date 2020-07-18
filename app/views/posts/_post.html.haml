@@ -2,7 +2,7 @@
   .posts
     .upper-post
       .upper-post__user-name
-        = link_to user_path(post.user_id) do 
+        = link_to user_path(post.user_id) do
           = post.user.name
         -# = render 'relationships/follow_button', user:@user
       .upper-post__date
@@ -44,7 +44,6 @@
             %td 
             - if post.image.present?
               = image_tag post.image.url
-
       %ul.more_list
         %li
           = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう

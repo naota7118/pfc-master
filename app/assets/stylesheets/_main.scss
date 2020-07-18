@@ -1,24 +1,23 @@
-body {
+.main {
+  height: 100vh;
+  width: calc(100vw - 250px);
+  padding: 10px 20px 10px 20px;
+  font-family: Verdana, sans-serif;
   background-color: rgb(245, 245, 245);
-  height: 100%;
-  .main {
-    padding: 10px 20px 10px 20px;
-    font-family: Verdana, sans-serif;
-    background-color: rgb(245, 245, 245);
-    .new-post {
-      background-color: #fff;
-      margin-top: 60px;
-      width: 1000px;
-      border-color: gray;
-      border: ridge;
-      border-radius: 10px;
-      padding: 5px;
-      #new_post {
-        padding: 10px 20px 10px 20px;
-      }
+  .new-post {
+    background-color: #fff;
+    margin-top: 60px;
+    width: 1000px;
+    border-color: gray;
+    border: ridge;
+    border-radius: 10px;
+    padding: 5px;
+    #new_post {
+      padding: 10px 20px 10px 20px;
     }
   }
 }
+
 
 
 hr.style {
