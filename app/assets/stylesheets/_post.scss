@@ -66,5 +66,9 @@
       //   border-radius: 5px 5px 5px 5px;
       // }
     }
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
