@@ -1,9 +1,23 @@
+// header {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   z-index: 10000;
+// }
+
+
+// li {
+//   list-style: none;
+// }
+
 .main {
+  // margin-left: 300px;
   min-height: calc(100vh - 40px );
-  width: calc(100vw - 300px);
+  width: 100%;
   padding: 10px 20px 10px 20px;
   font-family: Verdana, sans-serif;
   background-color: pink;
+  overflow-y: scroll;
   .new-post {
     width: 250px;
     background-color: #fff;
@@ -17,22 +31,21 @@
       padding: 10px 20px 10px 20px;
     }
   }
-  .posts {
-    height: calc(100vh - 250px);;
-    overflow-y: scroll;
-  }
+  // .posts {
+  //   height: calc(100vh - 250px);
+  // }
 
 }
 
 
 
-hr.style {
-  border: 3px solid grey ;
-}
+// hr.style {
+//   border: 3px solid grey ;
+// }
 
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10000;
-}
+// header {
+//   position: fixed;
+//   width: 100%;
+//   top: 0;
+//   z-index: 10000;
+// }
