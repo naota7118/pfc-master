@@ -22,11 +22,11 @@
           %table
             %thead
               %tr
-                %th 食べたもの
-                %th カロリー
-                %th P（タンパク質）
-                %th F（脂質）
-                %th C（炭水化物）
+                %th Food
+                %th Calorie
+                %th P タンパク質
+                %th F 脂質
+                %th C 炭水化物
             %tbody
               %tr
                 %td 
@@ -39,23 +39,14 @@
                   = f.number_field :fat, placeholder: '例）20'
                 %td 
                   = f.number_field :carbo, placeholder: '例）50'              
-          %table
-            %thead
-              %tr
-                %th 今日のひとこと
-            %tbody
-              %tr
-                %td 
-                  = f.text_area :text, placeholder: 'なにたべた？'
-          %table
-            %thead
-              %tr
-                %th 5枚までアップロードできます
-            %tbody
-              %tr
-                %td 
-                  = icon('fas', 'image', class: 'icon')
-                  = f.file_field :image
+          .text
+            = f.text_area :text, placeholder: 'なにたべた？'
+          .image-upload
+            %p 5枚までアップロードできます
+            %label{class: "input-box__image"}
+              = fa_icon 'file-image-o'
+              = f.file_field :image
+              -# %input{type: "file"}
           .submit-btn
             = f.submit '投稿する'
     .posts
