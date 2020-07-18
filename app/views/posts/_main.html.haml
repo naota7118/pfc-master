@@ -41,14 +41,15 @@
                   = f.number_field :carbo, placeholder: '例）50'              
           .text
             = f.text_area :text, placeholder: 'なにたべた？'
-          .image-upload
-            %p 5枚までアップロードできます
-            %label{class: "input-box__image"}
-              = fa_icon 'file-image-o'
-              = f.file_field :image
-              -# %input{type: "file"}
-          .submit-btn
-            = f.submit '投稿する'
+          .icon
+            .image-upload
+              -# %p 5枚までアップロードできます
+              %label{class: "input-box__image"}
+                = fa_icon 'file-image-o'
+                = f.file_field :image
+                -# %input{type: "file"}
+            .btn-square
+              = f.submit '投稿する', class: 'post-btn'
     .posts
       = render @posts
       = paginate(@posts)
