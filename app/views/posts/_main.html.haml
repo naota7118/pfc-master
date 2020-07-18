@@ -41,56 +41,5 @@
                 = f.file_field :image
         .submit-btn
           = f.submit '投稿する'
-  -# = render @posts
-  .postBox
-    .postLists
-      - @posts.each do |post|
-        = link_to "/posts/#{post.id}", method: :get, class: "postList" do
-          .posts
-            .upper-post
-              .upper-post__user-name
-                = link_to user_path(post.user_id) do 
-                  = post.user.name
-                -# = render 'relationships/follow_button', user:@user
-              .upper-post__date
-                %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)+"前"
-            .lower-post
-              %table
-                %thead
-                  %tr
-                    %th FOOD
-                    %th Calorie
-                %tbody
-                  %tr
-                    %td 
-                      = post.food
-                    %td 
-                      = post.calorie
-              %table
-                %thead
-                  %tr
-                    %th P
-                    %th F
-                    %th C
-                %tbody
-                  %tr
-                    %td 
-                      = post.protein # なぜここが@post.proteinじゃダメなのかがまだわからない
-                    %td 
-                      = post.fat
-                    %td 
-                      = post.carbo
-              %table
-                %tbody
-                  %tr
-                    %td 
-                      = post.text
-              %table
-                %tbody
-                  %tr
-                    %td 
-                    - if post.image.present?
-                      = image_tag post.image.url
-                  = post.user.name
-                  = post.text
-          = paginate(@posts)
+  = render @posts
+  = paginate(@posts)
