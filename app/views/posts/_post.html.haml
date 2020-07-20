@@ -38,8 +38,9 @@
           %tr
             %td 
               = post.text
-      - if post.image.present?
-        = image_tag post.image.url
+      - if post.images.present?
+        - @post.images.each do |image|
+          = image_tag image.image.url
       %ul.more_list
         %li
           = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう
