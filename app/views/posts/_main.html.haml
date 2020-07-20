@@ -18,6 +18,8 @@
   .content
     .new-post
       = form_with model: @post, id: 'new_post' do |f|
+        = f.fields_for :images do |i|
+          = i.file_field :image
         .input-box
           %table
             %thead
