@@ -48,12 +48,12 @@
               -# %p 5枚までアップロードできます
               %label{class: "input-box__image"}
                 = fa_icon 'file-image-o'
-              .hidden-content
+              #image-box
                 = f.fields_for :images do |i|
-                  -# .js-file_group{"data-index": "#{image.index}" }
-                  = i.file_field :image, class: 'hidden-field'
-                  = i.file_field :image, class: 'hidden-field'
-                  = i.file_field :image, class: 'hidden-field'
+                  .js-file_group{data: {index: "1"}}
+                    = i.file_field :image, class: 'js-file'
+                    .js-zoom 拡大
+                    .js-remove 削除
             .btn-square
               = f.submit '投稿する', class: 'post-btn'
     .posts

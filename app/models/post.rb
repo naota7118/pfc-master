@@ -10,5 +10,4 @@ class Post < ApplicationRecord
   # 画像の複数枚投稿に必要な記述
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
-  # mount_uploader :image, ImageUploader
 end
