@@ -1,5 +1,6 @@
 $(function(){
   //画像用のinputを生成する関数
+  
   const buildFileField = (index)=> {
     const html = `<div data-index="${index}" class="js-file_group">
                     <input class="js-file" type="file"
@@ -17,7 +18,12 @@ $(function(){
   lastIndex = $('.js-file_group:last').data('index');
   fileIndex.splice(0, lastIndex);
 
-  $(document).on('change', function() { 
+  $('#image-box').on('click', '.js-file', function() { 
+    console.log('hello');
+  });
+
+
+  $('#image-box').on('change', '.js-file', function() { 
     console.log('hello');
     // fileIndexの先頭の数字を使ってinputを作る
     $('#image-box').append(buildFileField(fileIndex[0]));
