@@ -105,7 +105,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.posts').prepend(html);
-
+      console.log('hello');
       // $('.posts').animate({ scrollTop: $('.posts')[0].scrollHeight});
       $('form')[0].reset();
       $(".post-btn").prop("disabled", false);
