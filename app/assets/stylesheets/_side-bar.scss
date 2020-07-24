@@ -10,10 +10,12 @@
         border-radius: 50%;
       }
       .username {
+        margin-top: 10px;
         color: #F2F2F2;
       }
     }
     .chart {
+      -webkit-border-radius: 4px;
       color: whitesmoke;
       margin-bottom: 5px;
       margin-left: 10px;
@@ -21,32 +23,76 @@
       margin-top: 25px;
       list-style: none;
       text-decoration: none;
+      background-color: #2f323a;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all  0.3s ease;
       .charts-path {
+        text-decoration: none;
         padding: 15px 0 15px 10px;
         -webkit-border-radius: 4px;
-        background-color: #0078ff;
+        // background-color: #2f323a;
         display: block;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all  0.3s ease;
         .fa.fa-bar-chart, .graph {
+          color: whitesmoke;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all  0.3s ease;
+        }
+      }
+    }
+    .chart:hover {
+      background-color: #0078ff;
+      .fa.fa-bar-chart:hover {
+      }
+      .graph {
+      }
+    }
+    .record {
+      color:  whitesmoke;
+      margin-bottom: 5px;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+      padding-right: 20px;
+      list-style: none;
+      text-decoration: none;
+      background-color: #2f323a;
+      -webkit-border-radius: 4px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all  0.3s ease;
+      .record-path {
+        text-decoration: none;
+        padding: 15px 10px 15px 10px;
+        -webkit-border-radius: 4px;
+        // background-color: #2f323a;
+        display: block;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all  0.3s ease;
+        .fa.fa-table, .record-text {
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all  0.3s ease;
           color: whitesmoke;
         }
       }
     }
-    .table {
-      color: whitesmoke;
-      margin-bottom: 5px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-top: 25px;
-      list-style: none;
-      text-decoration: none;
-      .table-path {
-        padding: 15px 0 15px 10px;
-        -webkit-border-radius: 4px;
-        background-color: #0078ff;
-        display: block;
-        .fa.fa-table, .table {
-          color: whitesmoke;
-        }
+    .record:hover {
+      background-color: #0078ff;
+      .table-path:hover {
+      }
+      .fa.fa-table:hover {
       }
     }
   }
