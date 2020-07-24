@@ -19,7 +19,8 @@
     -# = render 'layouts/notifications'
     %header.header.black-bg
       .sidebar-toggle-box
-        .fa.fa-bars.tooltips
+        -# .fa.fa-bars.tooltips
+        = fa_icon 'bars', class: 'my-big'
       %a.logo
         = image_tag 'PFCMASTER3.png'
       .nav.notify-row

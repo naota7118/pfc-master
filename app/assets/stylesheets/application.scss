@@ -11,8 +11,13 @@
 @import "main";
 @import "post";
 
-// body {
-//   margin: 0;
-//   padding: 0;
-//   background-color: rgb(245, 245, 245);
-// }
+header {
+  display: flex;
+}
+
+.my-big {
+  font-size: 2em;
+  color: gray;
+  padding-top: 10px;
+  padding-left: 20px;
+}
