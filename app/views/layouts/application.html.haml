@@ -24,7 +24,7 @@
             %li.sidebar-toggle-box
               = fa_icon 'bars', class: 'my-big'
             %li.logo
-              = image_tag 'PFCMASTER2.png', class: 'my-logo'
+              = link_to image_tag('PFCMASTER2.png', class: 'my-logo'), root_path
           - if user_signed_in?
             %li.nav-item
               = link_to 'マイページ', user_path(current_user.id), class: 'mypage'
