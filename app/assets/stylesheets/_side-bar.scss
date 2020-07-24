@@ -1,7 +1,9 @@
 .sidebar {
+  position: fixed;
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   width: 300px;
   background-color: #2f323a;
+  margin-top: 87px;
   &-menu {
     .user-box {
       text-align: center;
