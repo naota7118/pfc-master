@@ -11,7 +11,15 @@
 @import "main";
 @import "post";
 
+
 header {
+  background-color: #22242a;
+  nav {
+    background-color: #22242a;
+  }
+}
+
+ul {
   display: flex;
 }
 
@@ -19,5 +27,9 @@ header {
   font-size: 2em;
   color: gray;
   padding-top: 10px;
-  padding-left: 20px;
+  padding-right: 2px;
+}
+
+.my-logo {
+  background-color: #f8f9fa;
 }
