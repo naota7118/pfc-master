@@ -1,7 +1,7 @@
 .sidebar
   %ul.sidebar-menu
     .user-box
-      = image_tag 'https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100', class: 'user-img'
+      = link_to image_tag('https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100', class: 'user-img'), user_path(current_user.id)
       .username
         - if user_signed_in?
           = link_to current_user.name, user_path(current_user.id)
