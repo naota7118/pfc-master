@@ -15,14 +15,38 @@
     }
     .chart {
       color: whitesmoke;
-      .fa {
-        color: whitesmoke;
+      margin-bottom: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 25px;
+      list-style: none;
+      text-decoration: none;
+      .charts-path {
+        padding: 15px 0 15px 10px;
+        -webkit-border-radius: 4px;
+        background-color: #0078ff;
+        display: block;
+        .fa.fa-bar-chart, .graph {
+          color: whitesmoke;
+        }
       }
     }
     .table {
       color: whitesmoke;
-      .fa {
-        color: whitesmoke;
+      margin-bottom: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 25px;
+      list-style: none;
+      text-decoration: none;
+      .table-path {
+        padding: 15px 0 15px 10px;
+        -webkit-border-radius: 4px;
+        background-color: #0078ff;
+        display: block;
+        .fa.fa-table, .table {
+          color: whitesmoke;
+        }
       }
     }
   }

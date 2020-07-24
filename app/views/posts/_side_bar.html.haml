@@ -9,8 +9,8 @@
       - if user_signed_in?
         = link_to charts_path(current_user.id), class: 'charts-path' do
           = fa_icon 'bar-chart'
-        %a グラフ
+          %span.graph グラフ
     %li.table
-      = link_to "#" do
+      = link_to "#", class: 'table-path' do
         = fa_icon 'table'
-      %a 今月の記録
+        %span.table 今月の記録
