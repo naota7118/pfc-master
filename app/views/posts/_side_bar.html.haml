@@ -3,17 +3,16 @@
     .user-box
       = image_tag 'https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100', class: 'user-img'
       .username
-        ユーザー：
         - if user_signed_in?
-          = current_user.name
-      .follow
-        フォロー：
-        - if user_signed_in?
-          = current_user.followings.count
-      .follower
-        フォロワー：
-        - if user_signed_in?
-          = current_user.followers.count
+          = link_to current_user.name, user_path(current_user.id)
+      -# .follow
+      -#   フォロー：
+      -#   - if user_signed_in?
+      -#     = current_user.followings.count
+      -# .follower
+      -#   フォロワー：
+      -#   - if user_signed_in?
+      -#     = current_user.followers.count
     %li.chart
       - if user_signed_in?
         = link_to charts_path(current_user.id) do
