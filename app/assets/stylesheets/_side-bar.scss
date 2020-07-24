@@ -1,14 +1,17 @@
-.side-bar {
+.sidebar {
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   width: 300px;
   background-color: #2f323a;
-  .section {
+  &-menu {
     .user-box {
-      height: 300px;
-      width: 160px;
-      // background-color: white;
-      border: 5px solid #438cd465;
-      border-radius: 10px;
+      text-align: center;
+      margin: 20px 0 10px;
+      .user-img {
+        border-radius: 50%;
+      }
+      .username {
+        color: #F2F2F2;
+      }
     }
     .chart {
       color: whitesmoke;
