@@ -12,6 +12,10 @@
       .username {
         margin-top: 10px;
         color: #F2F2F2;
+        font-weight: bolder;
+        .user-link {
+          text-decoration: none;
+        }
       }
     }
     .chart {
