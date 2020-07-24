@@ -1,126 +1,105 @@
 .main {
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   min-height: calc(100vh - 40px );
-  width: 100%;
+  width: calc(100vw - 300px);
   // padding: 10px 20px 10px 20px;
   font-family: Verdana, sans-serif;
   // background-color: #fafafa;
   overflow-y: scroll;
   margin-top: 87px;
-  header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    background-color: #ddd;
-    padding: 0;
-  }
-  .bg-slider {
-    padding: 10px 20px 10px 20px;
-    background-color: #ddd;
-    // background-image: url('Pumphose.muscles.png');
-    // background-size: contain;
-    width: 100vw;
-    height: 100vh;
-    background-position:center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .new-post {
-    width: 250px;
-    background-color: #ffffff;
-    margin-top: 60px;
-    width: 1000px;
-    border-color: gray;
-    border: ridge;
-    border-radius: 10px;
-    padding: 5px;
-    .input-box {
-      table {
-        border-collapse: separate;
-        border-spacing: 0;
-        // border-radius: 5px 5px 5px 5px;
-      }
-      table th:first-child{
-        border-radius: 5px 5px 5px 5px;
-        border-right: 1px solid #3c6690;
-      }
-      table th{
-        text-align: center;
-        color: white;
-        background: linear-gradient(#9fb8d3,#418cd8);
-        border-left: 1px solid #3c6690;
-        border-top: 1px solid #3c6690;
-        border-bottom: 1px solid #3c6690;
-        box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
-        width: 25%;
-        padding: 10px 0;
-        border-radius: 5px 5px 5px 5px;
-      }
-      table td{
-        text-align: center;
-        border-left: 1px solid #a8b7c5;
-        border-bottom: 1px solid #a8b7c5;
-        border-top:none;
-        box-shadow: 0px -3px 5px 1px #eee inset;
-        width: 25%;
-        padding: 10px 0;
-        border-radius: 5px 5px 5px 5px;
-      }
-      
-      table td:last-child{
-        border-right: 1px solid #a8b7c5;
-        color: #93beec;;
-      }
-      
-      table tr:last-child td:first-child {
-        // border-radius: 0 0 0 5px;
-        border-radius: 5px 5px 5px 5px;
-      }
-      
-      table tr:last-child td:last-child {
-        // border-radius: 0 0 5px 0;
-        border-radius: 5px 5px 5px 5px;
-      }
-    }
-    #new_post {
-      padding: 10px 20px 10px 20px;
-    }
-    #post_image {
-      // display: none;
-    }
-    .icon {
-      display: flex;
-      justify-content: space-between;
-    }
-    .btn-square {
-      display: inline-block;
-      padding: 0.5em 1em;
-      text-decoration: none;
-      background: #668ad8;/*ボタン色*/
-      // color: #FFF;
-      border-bottom: solid 4px #627295;
+  margin-left: 300px;
+  background-color: #eaeaea;
+  .section {
+    margin-left: 20px;
+    margin-right: 50px;
+    .new-post {
+      width: 250px;
+      background-color: #ffffff;
+      margin-top: 60px;
+      width: 1000px;
+      border-color: gray;
+      border: ridge;
       border-radius: 10px;
-      .post-btn {
-        background: #668ad8;/*ボタン色*/
-        border: none;
-        color: white;
-        font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 5px;
+      .input-box {
+        table {
+          border-collapse: separate;
+          border-spacing: 0;
+          // border-radius: 5px 5px 5px 5px;
+        }
+        table th:first-child{
+          border-radius: 5px 5px 5px 5px;
+          border-right: 1px solid #3c6690;
+        }
+        table th{
+          text-align: center;
+          color: white;
+          background: linear-gradient(#9fb8d3,#418cd8);
+          border-left: 1px solid #3c6690;
+          border-top: 1px solid #3c6690;
+          border-bottom: 1px solid #3c6690;
+          box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+          width: 25%;
+          padding: 10px 0;
+          border-radius: 5px 5px 5px 5px;
+        }
+        table td{
+          text-align: center;
+          border-left: 1px solid #a8b7c5;
+          border-bottom: 1px solid #a8b7c5;
+          border-top:none;
+          box-shadow: 0px -3px 5px 1px #eee inset;
+          width: 25%;
+          padding: 10px 0;
+          border-radius: 5px 5px 5px 5px;
+        }
+        
+        table td:last-child{
+          border-right: 1px solid #a8b7c5;
+          color: #93beec;;
+        }
+        
+        table tr:last-child td:first-child {
+          // border-radius: 0 0 0 5px;
+          border-radius: 5px 5px 5px 5px;
+        }
+        
+        table tr:last-child td:last-child {
+          // border-radius: 0 0 5px 0;
+          border-radius: 5px 5px 5px 5px;
+        }
       }
-    }
-    .btn-square:active {
-      /*ボタンを押したとき*/
-      -webkit-transform: translateY(4px);
-      transform: translateY(4px);/*下に動く*/
-      border-bottom: none;/*線を消す*/
+      #new_post {
+        padding: 10px 20px 10px 20px;
+      }
+      #post_image {
+        // display: none;
+      }
+      .icon {
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn-square {
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        background: #668ad8;/*ボタン色*/
+        // color: #FFF;
+        border-bottom: solid 4px #627295;
+        border-radius: 10px;
+        .post-btn {
+          background: #668ad8;/*ボタン色*/
+          border: none;
+          color: white;
+          font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+      }
+      .btn-square:active {
+        /*ボタンを押したとき*/
+        -webkit-transform: translateY(4px);
+        transform: translateY(4px);/*下に動く*/
+        border-bottom: none;/*線を消す*/
+      }
     }
   }
 }
-
-
-
-// hr.style {
-//   border: 3px solid grey ;
-// }

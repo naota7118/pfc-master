@@ -1,36 +1,5 @@
 .main
-  -# %header.header.black-bg
-  -#   %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  -#     .collapse.navbar-collapse{ id: "navbarSupportedContent"}
-  -#       %ul.navbar-nav.mr-auto
-  -#       - if user_signed_in?
-  -#         %li.nav-item
-  -#           = link_to 'マイページ', user_path(current_user.id)
-  -#         %li.nav-item 
-  -#           = link_to 'ログアウト', destroy_user_session_path, method:  :delete
-  -#       - else
-  -#         %li.nav-item
-  -#           %a.nav-link
-  -#             = link_to '新規登録', new_user_registration_path
-  -#         %li.nav-item  
-  -#           %a.nav-link
-  -#             = link_to 'ログイン', new_user_session_path
-  .bg-slider
-    -# %script
-    -# :javascript
-    -#   $(function($){
-    -#     $('.bg-slider').bgSwitcher({
-    -#       images:['Pumphose.muscles.png', 'allef-vinicius-do-0ghSDd2E-unsplash.jpg', 'sven-mieke-optBC2FxCfc.jpg'],
-    -#       //effect: "drop",
-    -#       //easing: "linear"
-    -#       interval: 3000, // 背景画像を切り替える間隔を指定 3000=3秒
-    -#       loop: true, // 切り替えを繰り返すか指定 true=繰り返す　false=繰り返さない
-    -#       shuffle: true, // 背景画像の順番をシャッフルするか指定 true=する　false=しない
-    -#       effect: "blind", // エフェクトの種類をfade,blind,clip,slide,drop,hideから指定
-    -#       duration: 500, // エフェクトの時間を指定します。
-    -#       easing: "swing" // エフェクトのイージングをlinear,swingから指定
-    -#     });
-    -#   });
+  .section
     .new-post
       = form_with model: @post, id: 'new_post' do |f|
         = f.fields_for :images do |i|
