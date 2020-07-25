@@ -11,8 +11,50 @@
 @import "main";
 @import "post";
 
-// body {
-//   margin: 0;
-//   padding: 0;
-//   background-color: rgb(245, 245, 245);
-// }
+
+header {
+  width: 100%;
+  position: fixed;
+  background-color: #22242a;
+  font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  .my-big {
+    font-size: 2em;
+    color: gray;
+    padding-top: 10px;
+    padding-right: 2px;
+  }
+  .my-logo {
+    background-color: #f8f9fa;
+  }
+  nav {
+    background-color: #22242a;
+  }
+  .navbar {
+    display: flex;
+  }
+  .mypage, .login, .logout, .admin {
+    border: 1px solid;
+    padding: 5px 15px;
+    -webkit-border-radius: 4px;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+  .mypage:hover {
+    color: #f8f9fa;
+    background-color: #0078ff;
+  }
+  .logout:hover {
+    color: #f8f9fa;
+    background-color: #0078ff;
+  }
+  .login:hover {
+    color: #f8f9fa;
+    background-color: #0078ff;
+  }
+  .admin:hover {
+    color: #f8f9fa;
+    background-color: #0078ff;
+  }
+}
+
+

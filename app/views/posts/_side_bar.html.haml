@@ -1,24 +1,17 @@
-.side-bar
-  .section
+.sidebar
+  %ul.sidebar-menu
     .user-box
-      = image_tag 'https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100'
+      - if user_signed_in?
+        = link_to image_tag('https://www.pakutaso.com/shared/img/thumb/ookawara-menIMGL1911_TP_V.jpg', height: '100', width: '100', class: 'user-img'), user_path(current_user.id)
       .username
-        ユーザー：
         - if user_signed_in?
-          = current_user.name
-      .follow
-        フォロー：
-        - if user_signed_in?
-          = current_user.followings.count
-      .follower
-        フォロワー：
-        - if user_signed_in?
-          = current_user.followers.count
-    .chart
-      = link_to charts_path(current_user.id) do
-        = fa_icon 'bar-chart'
-      %a グラフ
-    .table
-      = link_to "#" do
+          = link_to current_user.name, user_path(current_user.id), class: 'user-link'
+    %li.chart
+      - if user_signed_in?
+        = link_to charts_path(current_user.id), class: 'charts-path' do
+          = fa_icon 'bar-chart'
+          %span.graph グラフ
+    %li.record
+      = link_to "#", class: 'record-path' do
         = fa_icon 'table'
-      %a 今月の記録
+        %span.record-text 今月の記録

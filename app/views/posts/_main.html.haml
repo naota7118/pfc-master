@@ -1,21 +1,5 @@
 .main
-  %header
-    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      .collapse.navbar-collapse{ id: "navbarSupportedContent"}
-        %ul.navbar-nav.mr-auto
-        - if user_signed_in?
-          %li.nav-item
-            = link_to 'マイページ', user_path(current_user.id)
-          %li.nav-item 
-            = link_to 'ログアウト', destroy_user_session_path, method:  :delete
-        - else
-          %li.nav-item
-            %a.nav-link
-              = link_to '新規登録', new_user_registration_path
-          %li.nav-item  
-            %a.nav-link
-              = link_to 'ログイン', new_user_session_path
-  .content
+  .section
     .new-post
       = form_with model: @post, id: 'new_post' do |f|
         = f.fields_for :images do |i|
@@ -55,3 +39,5 @@
     .posts
       = render @posts
       = paginate(@posts)
+    #page_top
+      = link_to '', '#'

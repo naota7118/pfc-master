@@ -1,26 +1,17 @@
-li {
-  list-style: none;
-}
-
 .main {
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   min-height: calc(100vh - 40px );
-  width: 100%;
+  width: calc(100vw - 300px);
   // padding: 10px 20px 10px 20px;
   font-family: Verdana, sans-serif;
   // background-color: #fafafa;
   overflow-y: scroll;
-  header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1;
-    background-color: #ddd;
-    padding: 0;
-  }
-  .content {
-    padding: 10px 20px 10px 20px;
-    background-color: #ddd;
+  margin-top: 87px;
+  margin-left: 300px;
+  background-color: #eaeaea;
+  .section {
+    margin-left: 20px;
+    margin-right: 50px;
     .new-post {
       width: 250px;
       background-color: #ffffff;
@@ -111,10 +102,39 @@ li {
       }
     }
   }
+  /*PAGE TOPボタン追加*/
+  #page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    background: #0078ff; /*ボタンの色*/
+    opacity: 0.6;
+    border-radius: 50%; /*角の丸み*/
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+  }
+  #page_top a::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f102";
+    font-weight: 900;
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    // text-align: center;
+  }
 }
-
-
-
-// hr.style {
-//   border: 3px solid grey ;
-// }
