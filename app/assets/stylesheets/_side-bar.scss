@@ -103,4 +103,13 @@
       }
     }
   }
+  .bg-slider {
+    width: 300px;
+    height: 200px;
+    background-position:center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
