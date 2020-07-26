@@ -15,15 +15,15 @@ class PostsController < ApplicationController
     @post = Post.new(post_params) 
     # @post.user_id = current_user.id
     if @post.save
-      respond_to do |format|
-        format.json
-      end
-      # redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
+      # respond_to do |format|
+      #   format.json
+      # end
+      redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
     else
       @posts = Post.includes(:user)
       flash.now[:alert] = '必須項目をしてください。' # フラッシュメッセージが出るか確認する
-      render :index
-      # redirect_back(fallback_location: root_path)
+      # render :index
+      redirect_back(fallback_location: root_path)
     end
   end
 
