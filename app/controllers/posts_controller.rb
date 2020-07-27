@@ -4,18 +4,21 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new # 投稿するための空のインスタンスを用意する
+    @post.images.build
     # @user = User.find_by(id: @post.user_id) #その投稿をしたユーザー
   end
-
-  # def new
-  #   @post = Post.new
-  # end
   
   def create
+    binding.pry
     @post = Post.new(post_params) 
-    # @post.user_id = current_user.id
     if @post.save
-      # respond_to do |format|
+      # if params[:images].present?
+      #   params[:images][:image].each do |image|
+      #     @post.images.create(image: image, post_id: @post.id)
+      #   end
+      # end
+      
+        # respond_to do |format|
       #   format.json
       # end
       redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
@@ -25,6 +28,7 @@ class PostsController < ApplicationController
       # render :index
       redirect_back(fallback_location: root_path)
     end
+    binding.pry
   end
 
   def show

@@ -2,8 +2,6 @@
   .section
     .new-post
       = form_with model: @post, id: 'new_post' do |f|
-        = f.fields_for :images do |i|
-          = i.file_field :image
         .input-box
           %table
             %thead
@@ -30,10 +28,10 @@
           .icon
             .image-upload
               -# %p 5枚までアップロードできます
-              %label{class: "input-box__image"}
-                = fa_icon 'file-image-o'
-                = f.file_field :image
-                -# %input{type: "file"}
+              -# %label{class: "input-box__image"}
+              = f.fields_for :image do |i| 
+                = i.label :image
+                = i.file_field :image, multiple: true
             .btn-square
               = f.submit '投稿する', class: 'post-btn'
     .posts
