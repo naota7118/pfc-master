@@ -1,9 +1,9 @@
 - if user_signed_in?
   - if current_user.already_liked?(post)
-    = link_to post_like_path(post_id: post.id, id: post.likes[0].id), method: :delete, remote: true, id: 'delete-like' do
+    = link_to post_like_path(post_id: post.id, id: post.likes[0].id), method: :delete, remote: true, id: 'delete-like', class: 'like-button' do
       %i.fa.fa-heart
     = post.likes.count
   - else
-    = link_to post_likes_path(post.id), method: :post, remote: true, id: 'like' do
+    = link_to post_likes_path(post.id), method: :post, remote: true, id: 'like', class: 'like-button' do
       %i.fa.fa-heart-o
     = post.likes.count
