@@ -45,7 +45,7 @@
     %li
       = link_to '削除', "/posts/#{@post.id}", method: :delete
 
-  .like
+  .likes_buttons{id: "likes_buttons_#{@post.id}"}
     = render partial: "likes/like", locals: {post: @post}
 
   .comment
