@@ -51,7 +51,8 @@
         %li
           = link_to "https://twitter.com/" do
             = fa_icon 'twitter'
-        %li.like
+          
+        %li{id: "likes_buttons_#{post.id}", class: 'likes_buttons'}
           = render partial: 'likes/like', locals: {post: post, likes: @likes}
         %li
           = link_to "#" do
