@@ -18,22 +18,22 @@ $(function(){
                     <input type="number" name="post[carbo]" id="post_carbo">
                   </td>
                   <td class="icon-plus">
-                    <i class="fa fa-2x fa-plus-circle table-button"></i>
+                    <i class="fa fa-2x fa-plus-circle plus-button"></i>
                   </td>
                   <td class="icon-minus">
-                    <i class="fa fa-2x fa-minus-circle table-button"></i>
+                    <i class="fa fa-2x fa-minus-circle minus-button"></i>
                   </td>
                 </tr>`
     return html;
   }
 
-  $('.plus-button').click(function() {
+  $(document).on('click', '.plus-button', function() {
     console.log('hello');
     var html = buildHTML();
     $('.table-body').append(html);
   })
 
-  $('.minus-button').click(function() {
+  $(document).on('click', '.minus-button', function() {
     console.log('hoge');
     $('.table-body tr:last').remove();
   })
