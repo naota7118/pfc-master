@@ -27,29 +27,21 @@
           width: 600px;
         }
         table th:first-child{
-          // border-radius: 5px 5px 5px 5px;
-          // border-right: 1px solid #3c6690;
+          border-radius: 10px 0 0 0;
         }
-        .food {
-          border-radius: 10px 0px 0px 0px;
-        }
-        .carbo {
-          border-radius: 0px 10px 0px 0px;
-          border-right: 1px solid #3c6690;
-        }
-        table tr {
-          
+        table th:last-child{
+          border-radius: 0 10px 0 0;
+          border-right: 1px solid #6cb3fa;
         }
         table th{
           text-align: center;
           color: white;
-          background: linear-gradient(#9fb8d3,#418cd8);
-          border-left: 1px solid #3c6690;
-          border-top: 1px solid #3c6690;
-          border-bottom: 1px solid #3c6690;
-          // border-right: 1px solid #3c6690;
+          background: linear-gradient(#78b7fa,#007bff);
+          border-left: 1px solid #6cb3fa;
+          border-top: 1px solid #6cb3fa;
+          border-bottom: 1px solid #6cb3fa;
           box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
-          width: 25%;
+          width: 20%;
           padding: 10px 0;
         }
         table td{
@@ -60,25 +52,29 @@
           box-shadow: 0px -3px 5px 1px #eee inset;
           width: 25%;
           padding: 10px 0;
-          // border-radius: 5px 5px 5px 5px;
         }
         
         table td:last-child{
           border-right: 1px solid #a8b7c5;
-          color: #93beec;;
+          width: 25%;
         }
         
         table tr:last-child td:first-child {
-          // border-radius: 0 0 0 5px;
-          // border-radius: 5px 5px 5px 5px;
+          border-radius: 0 0 0 10px;
         }
         
-        table tr:last-child td:last-child {
-          // border-radius: 0 0 5px 0;
-          // border-radius: 5px 5px 5px 5px;
+        table tr:last-child td:nth-child(5) {
+          border-radius: 0 0 10px 0;
         }
         input {
           width: 110px;
+          border: 1px solid #e5e5e5;
+          font-size: 14px;
+          outline: none;
+          line-height: 1.6;
+        }
+        input::placeholder {
+          color: #e5e5e5;
         }
         .icon-plus {
           padding-left: 10px;
@@ -117,6 +113,27 @@
         -webkit-transform: translateY(4px);
         transform: translateY(4px);/*下に動く*/
         border-bottom: none;/*線を消す*/
+      }
+      .text {
+        margin-top: 10px;
+        #post_text {
+          width: 600px;
+          box-sizing: border-box; 
+          display: inline-block;
+          vertical-align: top;
+          max-height: 170px;
+          padding: 8px;
+          box-sizing: border-box;
+          border-radius: 5px;
+          border: 1px solid #e5e5e5;
+          font-size: 14px;
+          outline: none;
+          line-height: 1.6;
+          resize: vertical;
+        }
+        #post_text::placeholder {
+          color: #e5e5e5;
+        }
       }
     }
   }
