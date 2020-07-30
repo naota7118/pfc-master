@@ -1,22 +1,20 @@
-.main {
+* {
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.main {
   min-height: calc(100vh - 40px );
   width: calc(100vw - 300px);
-  // padding: 10px 20px 10px 20px;
-  font-family: Verdana, sans-serif;
-  // background-color: #fafafa;
   overflow-y: scroll;
   margin-top: 87px;
   margin-left: 300px;
-  // background-color: #eaeaea;
   .section {
     margin-left: 20px;
     margin-right: 50px;
     .new-post {
-      width: 250px;
       background-color: #ffffff;
       margin-top: 60px;
-      width: 1000px;
+      width: calc(100vw - 400px);
       border-color: gray;
       border: ridge;
       border-radius: 10px;
@@ -25,7 +23,7 @@
         table {
           border-collapse: separate;
           border-spacing: 0;
-          // border-radius: 5px 5px 5px 5px;
+          table-layout:fixed;
         }
         table th:first-child{
           border-radius: 5px 5px 5px 5px;

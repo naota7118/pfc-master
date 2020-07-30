@@ -5,7 +5,7 @@
         = f.fields_for :images do |i|
           = i.file_field :image
         .input-box
-          %table
+          %table(width=600)
             %thead
               %tr
                 %th Food
@@ -13,7 +13,7 @@
                 %th P タンパク質
                 %th F 脂質
                 %th C 炭水化物
-              %i.fa.fa-plus-circle
+                %i.fa.fa-plus-circle
             %tbody
               %tr
                 %td 
