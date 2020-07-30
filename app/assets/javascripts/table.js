@@ -27,9 +27,14 @@ $(function(){
     return html;
   }
 
-  $('.table-button').click(function() {
+  $('.plus-button').click(function() {
     console.log('hello');
     var html = buildHTML();
     $('.table-body').append(html);
+  })
+
+  $('.minus-button').click(function() {
+    console.log('hoge');
+    $('.table-body tr:last').remove();
   })
 });
