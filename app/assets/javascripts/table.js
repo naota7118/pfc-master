@@ -28,13 +28,18 @@ $(function(){
   }
 
   $(document).on('click', '.plus-button', function() {
-    console.log('hello');
     var html = buildHTML();
     $('.table-body').append(html);
   })
 
   $(document).on('click', '.minus-button', function() {
-    console.log('hoge');
-    $('.table-body tr:last').remove();
+    // テーブルの行を数える
+    var count = $('.table-body tr').length;
+    // 1行しかない時は消せない
+    if (count > 1) {
+      $('.table-body tr:last-child').remove();
+    }
   })
+  
+  
 });
