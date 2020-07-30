@@ -14,125 +14,123 @@
     .new-post {
       background-color: #ffffff;
       margin-top: 60px;
-      width: calc(100vw - 400px);
+      width: 735px;
       border-color: gray;
       border: ridge;
       border-radius: 10px;
       padding: 5px;
-      .input-box {
-        table {
-          border-collapse: separate;
-          border-spacing: 0;
-          table-layout:fixed;
-          width: 600px;
-        }
-        table th:first-child{
-          border-radius: 10px 0 0 0;
-        }
-        table th:last-child{
-          border-radius: 0 10px 0 0;
-          border-right: 1px solid #6cb3fa;
-        }
-        table th{
-          text-align: center;
-          color: white;
-          background: linear-gradient(#78b7fa,#007bff);
-          border-left: 1px solid #6cb3fa;
-          border-top: 1px solid #6cb3fa;
-          border-bottom: 1px solid #6cb3fa;
-          box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
-          width: 20%;
-          padding: 10px 0;
-        }
-        table td{
-          text-align: center;
-          border-left: 1px solid #a8b7c5;
-          border-bottom: 1px solid #a8b7c5;
-          border-top:none;
-          box-shadow: 0px -3px 5px 1px #eee inset;
-          width: 25%;
-          padding: 10px 0;
-        }
-        
-        table td:nth-child(5){
-          border-right: 1px solid #a8b7c5;
-          width: 25%;
-        }
-        
-        table tr:last-child td:first-child {
-          border-radius: 0 0 0 10px;
-        }
-        
-        table tr:last-child td:nth-child(5) {
-          border-radius: 0 0 10px 0;
-        }
-        input {
-          width: 110px;
-          border: 1px solid #e5e5e5;
-          font-size: 14px;
-          outline: none;
-          line-height: 1.6;
-        }
-        input::placeholder {
-          color: #e5e5e5;
-        }
-        .icon-plus {
-          padding-left: 10px;
-        }
-        .icon-minus {
-          padding-left: 50px;
-        }
-      }
       #new_post {
         padding: 10px 20px 10px 20px;
-      }
-      #post_image {
-        // display: none;
-      }
-      .icon {
-        display: flex;
-        justify-content: space-between;
-      }
-      .btn-square {
-        display: inline-block;
-        padding: 0.5em 1em;
-        text-decoration: none;
-        background: #668ad8;/*ボタン色*/
-        // color: #FFF;
-        border-bottom: solid 4px #627295;
-        border-radius: 10px;
-        .post-btn {
-          background: #668ad8;/*ボタン色*/
-          border: none;
-          color: white;
-          font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        .input-box {
+          table {
+            border-collapse: separate;
+            border-spacing: 0;
+            table-layout:fixed;
+            width: 600px;
+          }
+          table th:first-child{
+            border-radius: 10px 0 0 0;
+          }
+          table th:last-child{
+            border-radius: 0 10px 0 0;
+            border-right: 1px solid #6cb3fa;
+          }
+          table th{
+            text-align: center;
+            color: white;
+            background: linear-gradient(#78b7fa,#007bff);
+            border-left: 1px solid #6cb3fa;
+            border-top: 1px solid #6cb3fa;
+            border-bottom: 1px solid #6cb3fa;
+            box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+            width: 20%;
+            padding: 10px 0;
+          }
+          table td{
+            text-align: center;
+            border-left: 1px solid #a8b7c5;
+            border-bottom: 1px solid #a8b7c5;
+            border-top:none;
+            box-shadow: 0px -3px 5px 1px #eee inset;
+            width: 25%;
+            padding: 10px 0;
+          }
+          
+          table td:nth-child(5){
+            border-right: 1px solid #a8b7c5;
+            width: 25%;
+          }
+          
+          table tr:last-child td:first-child {
+            border-radius: 0 0 0 10px;
+          }
+          
+          table tr:last-child td:nth-child(5) {
+            border-radius: 0 0 10px 0;
+          }
+          input {
+            width: 110px;
+            border: 1px solid #e5e5e5;
+            font-size: 14px;
+            outline: none;
+            line-height: 1.6;
+          }
+          input::placeholder {
+            color: #e5e5e5;
+          }
+          .icon-plus {
+            padding-left: 10px;
+          }
+          .icon-minus {
+            padding-left: 50px;
+          }
         }
-      }
-      .btn-square:active {
-        /*ボタンを押したとき*/
-        -webkit-transform: translateY(4px);
-        transform: translateY(4px);/*下に動く*/
-        border-bottom: none;/*線を消す*/
-      }
-      .text {
-        margin-top: 10px;
-        #post_text {
-          width: 600px;
-          box-sizing: border-box; 
+        .text {
+          margin-top: 10px;
+          #post_text {
+            width: 600px;
+            box-sizing: border-box; 
+            display: inline-block;
+            vertical-align: top;
+            max-height: 170px;
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #e5e5e5;
+            font-size: 14px;
+            outline: none;
+            line-height: 1.6;
+            resize: vertical;
+          }
+          #post_text::placeholder {
+            color: #e5e5e5;
+          }
+        }
+        .icon {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+        }
+        .btn-square {
           display: inline-block;
-          vertical-align: top;
-          max-height: 170px;
-          padding: 8px;
-          box-sizing: border-box;
-          border-radius: 5px;
-          border: 1px solid #e5e5e5;
-          font-size: 14px;
-          outline: none;
-          line-height: 1.6;
-          resize: vertical;
+          padding: 0.5em 1em;
+          text-decoration: none;
+          background: linear-gradient(#78b7fa,#007bff);
+          border-bottom: solid 4px #627295;
+          border-radius: 10px;
+          margin-right: 80px;
+          .post-btn {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+          }
         }
-        #post_text::placeholder {
-          color: #e5e5e5;
+        .btn-square:active {
+          /*ボタンを押したとき*/
+          -webkit-transform: translateY(4px);
+          transform: translateY(4px);/*下に動く*/
+          border-bottom: none;/*線を消す*/
         }
       }
     }

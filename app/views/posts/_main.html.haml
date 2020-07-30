@@ -35,9 +35,8 @@
             .image-upload
               -# %p 5枚までアップロードできます
               %label{class: "input-box__image"}
-                = fa_icon 'file-image-o'
+                %i.fa.fa-camera.fa-2x
                 = f.file_field :image
-                -# %input{type: "file"}
             .btn-square
               = f.submit '投稿する', class: 'post-btn'
     .posts
