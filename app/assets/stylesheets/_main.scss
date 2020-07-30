@@ -24,6 +24,7 @@
           border-collapse: separate;
           border-spacing: 0;
           table-layout:fixed;
+          width: 600px;
         }
         table th:first-child{
           border-radius: 5px 5px 5px 5px;
@@ -68,6 +69,12 @@
         }
         input {
           width: 110px;
+        }
+        .icon-plus {
+          padding-left: 10px;
+        }
+        .icon-minus {
+          padding-left: 50px;
         }
       }
       #new_post {

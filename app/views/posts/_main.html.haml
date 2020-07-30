@@ -5,7 +5,7 @@
         = f.fields_for :images do |i|
           = i.file_field :image
         .input-box
-          %table(width=600)
+          %table
             %thead
               %tr
                 %th Food
@@ -13,7 +13,6 @@
                 %th P タンパク質
                 %th F 脂質
                 %th C 炭水化物
-                %i.fa.fa-plus-circle
             %tbody
               %tr
                 %td 
@@ -25,7 +24,11 @@
                 %td 
                   = f.number_field :fat, placeholder: '例）20'
                 %td 
-                  = f.number_field :carbo, placeholder: '例）50'              
+                  = f.number_field :carbo, placeholder: '例）50'
+                %td.icon-plus
+                  %i.fa.fa-plus-circle.fa-2x
+                %td.icon-minus
+                  %i.fa.fa-minus-circle.fa-2x
           .text
             = f.text_area :text, placeholder: 'なにたべた？'
           .icon
