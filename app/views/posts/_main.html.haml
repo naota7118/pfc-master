@@ -13,7 +13,7 @@
                 %th P タンパク質
                 %th F 脂質
                 %th C 炭水化物
-            %tbody
+            %tbody.table-body
               %tr
                 %td 
                   = f.text_field :food, placeholder: '例）サラダ'
@@ -26,9 +26,9 @@
                 %td 
                   = f.number_field :carbo, placeholder: '例）50'
                 %td.icon-plus
-                  %i.fa.fa-plus-circle.fa-2x
+                  %i.fa.fa-plus-circle.fa-2x{class: 'table-button'}
                 %td.icon-minus
-                  %i.fa.fa-minus-circle.fa-2x
+                  %i.fa.fa-minus-circle.fa-2x{class: 'table-button'}
           .text
             = f.text_area :text, placeholder: 'なにたべた？'
           .icon
