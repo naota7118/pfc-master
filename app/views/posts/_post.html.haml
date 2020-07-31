@@ -38,7 +38,7 @@
           %tr
             %td 
               = post.text
-      - if post.images.present?
+      - if @post.images.present?
         = image_tag @post.images.image.url
       %ul.more_list
         %li

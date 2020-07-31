@@ -31,11 +31,10 @@
             = f.text_area :text, placeholder: 'なにたべた？'
           .icon
             .image-upload
-              -# %label{class: "input-box__image"}
-              = f.fields_for :image do |i| 
+              = f.fields_for :images do |image| 
                 %i.fa.fa-camera.fa-2x
-                = i.label :image
-                = i.file_field :image, multiple: true
+                = image.file_field :image, multiple: true, class: 'image_upload'
+                -# = image.hidden_field :id, value: image.object.id
             .btn-square
               = f.submit '投稿する', class: 'post-btn'
     .posts
