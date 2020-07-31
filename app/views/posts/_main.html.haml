@@ -2,8 +2,6 @@
   .section
     .new-post
       = form_with model: @post, id: 'new_post' do |f|
-        = f.fields_for :images do |i|
-          = i.file_field :image
         .input-box
           %table
             %thead
@@ -33,10 +31,11 @@
             = f.text_area :text, placeholder: 'なにたべた？'
           .icon
             .image-upload
-              -# %p 5枚までアップロードできます
-              %label{class: "input-box__image"}
+              -# %label{class: "input-box__image"}
+              = f.fields_for :image do |i| 
                 %i.fa.fa-camera.fa-2x
-                = f.file_field :image
+                = i.label :image
+                = i.file_field :image, multiple: true
             .btn-square
               = f.submit '投稿する', class: 'post-btn'
     .posts
