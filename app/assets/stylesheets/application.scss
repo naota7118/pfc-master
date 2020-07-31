@@ -10,6 +10,7 @@
 @import "side-bar";
 @import "main";
 @import "post";
+@import "show";
 
 
 header {
@@ -38,6 +39,7 @@ header {
     -webkit-border-radius: 4px;
     margin-left: 10px;
     text-decoration: none;
+    transition: all .5s;
   }
   .mypage:hover {
     color: #f8f9fa;

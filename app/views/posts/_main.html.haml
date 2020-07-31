@@ -6,15 +6,15 @@
           %table
             %thead
               %tr
-                %th Food
-                %th Calorie
-                %th P タンパク質
-                %th F 脂質
-                %th C 炭水化物
-            %tbody
+                %th.food Food
+                %th.calorie Calorie
+                %th.protein P タンパク質
+                %th.fat F 脂質
+                %th.carbo C 炭水化物
+            %tbody.table-body
               %tr
                 %td 
-                  = f.text_field :food, placeholder: '例）サラダチキン'
+                  = f.text_field :food, placeholder: '例）サラダ'
                 %td 
                   = f.number_field :calorie, placeholder: '例）200'
                 %td 
@@ -22,14 +22,18 @@
                 %td 
                   = f.number_field :fat, placeholder: '例）20'
                 %td 
-                  = f.number_field :carbo, placeholder: '例）50'              
+                  = f.number_field :carbo, placeholder: '例）50'
+                %td.icon-plus
+                  %i.fa.fa-plus-circle.fa-2x{class: 'plus-button'}
+                %td.icon-minus
+                  %i.fa.fa-minus-circle.fa-2x{class: 'minus-button'}
           .text
             = f.text_area :text, placeholder: 'なにたべた？'
           .icon
             .image-upload
-              -# %p 5枚までアップロードできます
               -# %label{class: "input-box__image"}
               = f.fields_for :image do |i| 
+                %i.fa.fa-camera.fa-2x
                 = i.label :image
                 = i.file_field :image, multiple: true
             .btn-square
