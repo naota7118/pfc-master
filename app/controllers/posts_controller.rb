@@ -2,9 +2,12 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create]
   
   def index
+    binding.pry
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new # 投稿するための空のインスタンスを用意する
     @post.images.build
+    @standard = Standard.find_by(user_id: current_user.id)
+    binding.pry
     # @user = User.find_by(id: @post.user_id) #その投稿をしたユーザー
   end
   

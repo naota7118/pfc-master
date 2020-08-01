@@ -1,5 +1,10 @@
 .main
   .section
+    .today_calorie
+      %p 
+        1日のカロリー目安：
+        = @standard.calorie
+      %p 今日のカロリー合計：
     .new-post
       = form_with model: @post, id: 'new_post' do |f|
         .input-box
