@@ -13,22 +13,17 @@
           %tr
             %th FOOD
             %th Calorie
+            %th P タンパク質
+            %th F 脂質
+            %th C 炭水化物
         %tbody
           %tr
             %td 
               = post.food
             %td 
               = post.calorie
-      %table
-        %thead
-          %tr
-            %th P
-            %th F
-            %th C
-        %tbody
-          %tr
             %td 
-              = post.protein # なぜここが@post.proteinじゃダメなのかがまだわからない
+              = post.protein
             %td 
               = post.fat
             %td 
