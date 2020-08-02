@@ -34,10 +34,10 @@ $(function(){
 
   $(document).on('click', '.minus-button', function() {
     // テーブルの行を数える
-    var count = $('.table-body tr').length;
+    var count = $('.table-line tr').length;
     // 1行しかない時は消せない
     if (count > 1) {
-      $('.table-body tr:last-child').remove();
+      $('.table-line tr:last-child').remove();
     }
   })
   
