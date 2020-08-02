@@ -27,20 +27,22 @@
         // border-radius: 5px 5px 5px 5px;
       }
       table th:first-child{
-        border-radius: 5px 5px 5px 5px;
-        border-right: 1px solid #3c6690;
+        border-radius: 10px 0 0 0;
+      }
+      table th:last-child{
+        border-radius: 0 10px 0 0;
+        border-right: 1px solid #6cb3fa;
       }
       table th{
         text-align: center;
         color: white;
-        background: linear-gradient(#9fb8d3,#418cd8);
-        border-left: 1px solid #3c6690;
-        border-top: 1px solid #3c6690;
-        border-bottom: 1px solid #3c6690;
+        background: linear-gradient(#78b7fa,#007bff);
+        border-left: 1px solid #6cb3fa;
+        border-top: 1px solid #6cb3fa;
+        border-bottom: 1px solid #6cb3fa;
         box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
         width: 25%;
         padding: 10px 0;
-        border-radius: 5px 5px 5px 5px;
       }
       table td{
         text-align: center;
