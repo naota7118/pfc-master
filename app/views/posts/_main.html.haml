@@ -43,10 +43,12 @@
       %p 
       - if @calorie_standard >= @calorie_sum
         今日はあと
-        = @difference
+        %a.difference 
+          = @difference
         カロリーです
       - else 
-        = @difference
+        %a.difference 
+          = @difference
         オーバーしています
     .new-post
       = form_with model: @post, id: 'new_post' do |f|

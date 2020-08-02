@@ -11,6 +11,10 @@
   .section {
     margin-left: 20px;
     margin-right: 50px;
+    .difference {
+      font-weight: bolder;
+      color: blue;
+    }
     .new-post {
       background-color: #ffffff;
       margin-top: 10px;
