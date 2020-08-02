@@ -12,6 +12,9 @@
   .section {
     margin-left: 20px;
     margin-right: 50px;
+    .chartjs-render-monitor {
+      padding-top: 10px;
+    }
     .difference {
       font-weight: bolder;
       color: blue;
