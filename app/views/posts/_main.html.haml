@@ -2,9 +2,9 @@
   .section
     .calorie_chart
       .calorie_graph
-        %canvas(id="myChart" width="700" height="100")
+        %canvas(id="myChart2" width="700" height="100")
         :javascript
-          var ctx = document.getElementById('myChart').getContext('2d');
+          var ctx = document.getElementById('myChart2').getContext('2d');
           var myChart = new Chart(ctx, {
               type: 'horizontalBar',
               data: {
