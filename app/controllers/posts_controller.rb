@@ -2,9 +2,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create]
   
   def index
-    binding.pry
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
-    @post = Post.new # 投稿するための空のインスタンスを用意する
+    @post = Post.new
     @post.images.build
     # 今日の合計カロリー
     @calorie_sum = Post.where(user_id: current_user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
@@ -17,8 +16,6 @@ class PostsController < ApplicationController
     else
       @difference = @calorie_standard - @calorie_sum
     end
-    # @user = User.find_by(id: @post.user_id) #その投稿をしたユーザー
-    binding.pry
   end
   
   def create
