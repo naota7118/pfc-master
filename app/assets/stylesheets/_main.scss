@@ -12,12 +12,17 @@
   .section {
     margin-left: 20px;
     margin-right: 50px;
-    .chartjs-render-monitor {
-      padding-top: 10px;
-    }
-    .difference {
-      font-weight: bolder;
-      color: blue;
+    .calorie_chart {
+      margin-top: 15px;
+      background-color: #fff;
+      box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+      .chartjs-render-monitor {
+        padding-top: 10px;
+      }
+      .difference {
+        font-weight: bolder;
+        color: blue;
+      }
     }
     .new-post {
       background-color: #ffffff;
