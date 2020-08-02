@@ -41,11 +41,11 @@
         %li
           = link_to "/posts/#{post.id}/edit", method: :get do
             %i.fa.fa-edit
-            %span 編集
+            %span.edit 編集
         %li
           = link_to post_path(post.id), method: :delete do
             %i.fa.fa-trash
-            %span 削除          
+            %span.trash 削除          
         %li{id: "likes_buttons_#{post.id}", class: 'likes_buttons'}
           = render partial: 'likes/like', locals: {post: post, likes: @likes}
         %li
