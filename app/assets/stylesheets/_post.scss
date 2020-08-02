@@ -22,6 +22,8 @@
       table {
         border-collapse: separate;
         border-spacing: 0;
+        table-layout:fixed;
+        width: 600px;
         // border-radius: 5px 5px 5px 5px;
       }
       table th:first-child{

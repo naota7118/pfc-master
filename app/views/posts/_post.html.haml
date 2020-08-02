@@ -16,7 +16,7 @@
             %th P タンパク質
             %th F 脂質
             %th C 炭水化物
-        %tbody
+        %tbody.table-body
           %tr
             %td 
               = post.food
@@ -28,11 +28,8 @@
               = post.fat
             %td 
               = post.carbo
-      %table
-        %tbody
-          %tr
-            %td 
-              = post.text
+      .text
+        = post.text
       -# - if post.images.present?
       -#   = image_tag @post.images.image.url
       %ul.more_list
