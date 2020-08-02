@@ -44,16 +44,15 @@
         %li
           = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう
         %li
-          = link_to '編集', "/posts/#{post.id}/edit", method: :get
+          = link_to "/posts/#{post.id}/edit", method: :get do
+            %i.fa.fa-edit
+            %span 編集
         %li
           = link_to post_path(post.id), method: :delete do
-            = fa_icon 'trash'
-        %li
-          = link_to "https://twitter.com/" do
-            = fa_icon 'twitter'
-          
+            %i.fa.fa-trash
+            %span 削除          
         %li{id: "likes_buttons_#{post.id}", class: 'likes_buttons'}
           = render partial: 'likes/like', locals: {post: post, likes: @likes}
         %li
-          = link_to "#" do
-            = fa_icon 'comment-o'
+          = link_to "/posts/#{post.id}" do
+            %i.fa.fa-commenting-o
