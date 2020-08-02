@@ -7,7 +7,7 @@
         var myChart = new Chart(ctx, {
             type: 'horizontalBar',
             data: {
-                labels: ["１日のカロリー目安", "今日の摂取カロリー："],
+                labels: ['１日のカロリー目安：' + gon.standard, '今日のカロリー合計：' + gon.today_sum],
                 datasets: [{
                     label: '今日のカロリーを確認',
                     data: [gon.standard, gon.today_sum],
@@ -34,20 +34,20 @@
         });
     -# %script(type="text/javascript" src="javascripts/calorie.js")
     .today_calorie
-      %p 
-        1日のカロリー目安：
-        = @calorie_standard
-      %p 
-        今日のカロリー合計：
-        = @calorie_sum
+      -# %p 
+      -#   1日のカロリー目安：
+      -#   = @calorie_standard
+      -# %p 
+      -#   今日のカロリー合計：
+      -#   = @calorie_sum
       %p 
       - if @calorie_standard >= @calorie_sum
-        あと
+        今日はあと
         = @difference
         カロリーです
       - else 
         = @difference
-        オーバーです
+        オーバーしています
     .new-post
       = form_with model: @post, id: 'new_post' do |f|
         .input-box
