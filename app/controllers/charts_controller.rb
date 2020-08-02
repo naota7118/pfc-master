@@ -4,7 +4,7 @@ class ChartsController < ApplicationController
     # 日付ごとで分けてカロリー合計を算出
     sum_calorie = current_user.posts.group("date(created_at)").sum(:calorie)
     # 日付ごとのカロリー合計がハッシュの形なので値を取得して配列に入れて変数に代入
-    array_calorie = sum_calorie.values
+    array_calorie = sum_calorie
 
     # gonを使ってデータをjs側に渡す
     gon.data = []
