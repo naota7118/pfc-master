@@ -2,16 +2,25 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create]
   
   def index
+    binding.pry
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new # 投稿するための空のインスタンスを用意する
     @post.images.build
-    @calorie = Post.where(user_id: current_user.id).sum(:calorie)
+    @calorie_sum = Post.where(user_id: current_user.id).sum(:calorie)
+    gon.today_sum = @calorie_sum
     @standard = Standard.find_by(user_id: current_user.id)
+    @calorie_standard = @standard.calorie
+    gon.standard = @calorie_standard
+    if @calorie_sum >= @calorie_standard
+      @difference = @calorie_sum - @calorie_standard
+    else
+      @difference = @calorie_standard - @calorie_sum
+    end
+    binding.pry
     # @user = User.find_by(id: @post.user_id) #その投稿をしたユーザー
   end
   
   def create
-    binding.pry
     @post = Post.new(post_params) 
     if @post.save
       # if params[:images].present?
@@ -30,7 +39,6 @@ class PostsController < ApplicationController
       # render :index
       redirect_back(fallback_location: root_path)
     end
-    binding.pry
   end
 
   def show
