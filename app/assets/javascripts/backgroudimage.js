@@ -1,6 +1,6 @@
 $(function($){
   $('.bg-slider').bgSwitcher({
-    images:['bg-image1.png', 'bg-image2.png', 'bg-image3.png'],
+    images:['image4.png', 'image5.png', 'image6.png'],
     //effect: "drop",
     //easing: "linear"
     interval: 3000, // 背景画像を切り替える間隔を指定 3000=3秒
