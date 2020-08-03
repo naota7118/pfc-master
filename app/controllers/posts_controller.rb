@@ -9,7 +9,6 @@ class PostsController < ApplicationController
   end
   
   def create
-    binding.pry
     @post = Post.new(post_params) 
     if @post.save
       # if params[:images].present?
@@ -28,7 +27,6 @@ class PostsController < ApplicationController
       # render :index
       redirect_back(fallback_location: root_path)
     end
-    binding.pry
   end
 
   def show

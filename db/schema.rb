@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_02_024059) do
+ActiveRecord::Schema.define(version: 2020_08_03_212001) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_07_02_024059) do
   end
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "image", null: false
+    t.string "image"
     t.bigint "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(version: 2020_07_02_024059) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
+  create_table "meetings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "start_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "food", null: false
     t.integer "calorie", null: false
@@ -46,10 +53,10 @@ ActiveRecord::Schema.define(version: 2020_07_02_024059) do
     t.integer "fat"
     t.integer "carbo"
     t.text "text"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.datetime "start_time"
   end
 
   create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
