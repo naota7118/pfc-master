@@ -4,11 +4,14 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new # 投稿するための空のインスタンスを用意する
+    # @post.images.build
+
+    # @postと同時に@post.imagesが同時に作られる。中身は空。
     @post.images.build
-    # @user = User.find_by(id: @post.user_id) #その投稿をしたユーザー
   end
   
   def create
+    binding.pry
     @post = Post.new(post_params) 
     if @post.save
       # if params[:images].present?
@@ -27,6 +30,7 @@ class PostsController < ApplicationController
       # render :index
       redirect_back(fallback_location: root_path)
     end
+    binding.pry
   end
 
   def show
