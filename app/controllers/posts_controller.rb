@@ -17,10 +17,6 @@ class PostsController < ApplicationController
       @difference = @calorie_standard - @calorie_sum
     end
   end
-  
-
-
-  
 
 
   def create
