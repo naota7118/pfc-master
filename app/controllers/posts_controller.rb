@@ -4,8 +4,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new # 投稿するための空のインスタンスを用意する
-    # @post.images.build
-
     # @postと同時に@post.imagesが同時に作られる。中身は空。
     @post.images.build
   end
@@ -63,6 +61,7 @@ class PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, images_attributes: [:image]).merge(user_id: current_user.id)
+                                                                                 image _attributes: [:image]
   end
 
 end
