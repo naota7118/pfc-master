@@ -60,8 +60,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, images_attributes: [:image]).merge(user_id: current_user.id)
-                                                                                 image _attributes: [:image]
+    params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
   end
 
 end
