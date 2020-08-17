@@ -12,20 +12,10 @@ class PostsController < ApplicationController
     binding.pry
     @post = Post.new(post_params) 
     if @post.save
-      # if params[:images].present?
-      #   params[:images][:image].each do |image|
-      #     @post.images.create(image: image, post_id: @post.id)
-      #   end
-      # end
-      
-        # respond_to do |format|
-      #   format.json
-      # end
       redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
     else
       @posts = Post.includes(:user)
       flash.now[:alert] = '必須項目をしてください。' # フラッシュメッセージが出るか確認する
-      # render :index
       redirect_back(fallback_location: root_path)
     end
     binding.pry
