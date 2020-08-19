@@ -31,8 +31,8 @@
                 = post.carbo
         .text
           = post.text
-        -# - if post.images.present?
-        -#   = image_tag @post.images.image.url
+        - if post.image.present?
+          = image_tag post.image.url
         %ul.more_list
           %li
             = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう

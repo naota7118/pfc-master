@@ -76,11 +76,8 @@
             = f.text_area :text, placeholder: 'なにたべた？'
           .icon
             .image-upload
-              -# %label{class: "input-box__image"}
-              = f.fields_for :image do |i| 
-                %i.fa.fa-camera.fa-2x
-                = i.label :image
-                = i.file_field :image, multiple: true
+              %i.fa.fa-camera.fa-2x
+              = f.file_field :image, class: 'image_upload'
             .btn-square
               = f.submit '投稿する', class: 'post-btn'
     .posts
