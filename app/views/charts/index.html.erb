@@ -1,5 +1,7 @@
 <%# canvasタグ内にグラフを描く  %>
-<canvas id="myChart" width="900" height="400"></canvas>
+<div class="chart-container" style="position: relative; height:50vh; width:50vw">
+    <canvas id="myChart"width="400" height="400"></canvas>
+</div>
 
 <%# htmlのscriptタグ内にjsを書いていく %>
 <script>
@@ -16,8 +18,9 @@ var myChart = new Chart(ctx, {
             label: "1日のカロリー合計",
             // dataでY軸を指定
             data: gon.data,
-            backgroundColor: 'rgba(60, 179, 113, 1.0)',
-            borderColor: 'rgba(245, 245, 245, 1.0)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
             fill: false
         }]
     },
@@ -38,3 +41,7 @@ var myChart = new Chart(ctx, {
 });
 
 </script>
+
+<div class="home">
+    <%= link_to 'ホームに戻る', root_path %>
+</div>

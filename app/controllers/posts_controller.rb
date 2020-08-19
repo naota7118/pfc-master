@@ -3,13 +3,21 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
-    @post = Post.new # 投稿するための空のインスタンスを用意する
-    # @postと同時に@post.imagesが同時に作られる。中身は空。
-    # @post.images.build
+    @post = Post.new
+    # 今日の合計カロリー
+    @calorie_sum = Post.where(user_id: current_user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+    gon.today_sum = @calorie_sum
+    @standard = Standard.find_by(user_id: current_user.id)
+    @calorie_standard = @standard.calorie
+    gon.standard = @calorie_standard
+    if @calorie_sum >= @calorie_standard
+      @difference = @calorie_sum - @calorie_standard
+    else
+      @difference = @calorie_standard - @calorie_sum
+    end
   end
-  
+
   def create
-    binding.pry
     @post = Post.new(post_params) 
     if @post.save
       redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
@@ -18,7 +26,6 @@ class PostsController < ApplicationController
       flash.now[:alert] = '必須項目をしてください。' # フラッシュメッセージが出るか確認する
       redirect_back(fallback_location: root_path)
     end
-    binding.pry
   end
 
   def show

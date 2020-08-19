@@ -6,12 +6,12 @@
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   .post-box {
     background-color: #fff;
-    margin-top: 60px;
-    width: 600px;
+    margin-top: 30px;
+    width: 735px;
     border-color: gray;
     border: ridge;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px 20px 0px 20px;
     textarea {
       width: 400px;
     }
@@ -22,23 +22,27 @@
       table {
         border-collapse: separate;
         border-spacing: 0;
+        table-layout:fixed;
+        width: 600px;
         // border-radius: 5px 5px 5px 5px;
       }
       table th:first-child{
-        border-radius: 5px 5px 5px 5px;
-        border-right: 1px solid #3c6690;
+        border-radius: 10px 0 0 0;
+      }
+      table th:last-child{
+        border-radius: 0 10px 0 0;
+        border-right: 1px solid #6cb3fa;
       }
       table th{
         text-align: center;
         color: white;
-        background: linear-gradient(#9fb8d3,#418cd8);
-        border-left: 1px solid #3c6690;
-        border-top: 1px solid #3c6690;
-        border-bottom: 1px solid #3c6690;
+        background: linear-gradient(#78b7fa,#007bff);
+        border-left: 1px solid #6cb3fa;
+        border-top: 1px solid #6cb3fa;
+        border-bottom: 1px solid #6cb3fa;
         box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
         width: 25%;
         padding: 10px 0;
-        border-radius: 5px 5px 5px 5px;
       }
       table td{
         text-align: center;
@@ -48,27 +52,32 @@
         box-shadow: 0px -3px 5px 1px #eee inset;
         width: 25%;
         padding: 10px 0;
-        border-radius: 5px 5px 5px 5px;
       }
       
-      // table td:last-child{
-      //   border-right: 1px solid #a8b7c5;
-      //   color: #93beec;;
-      // }
+      table td:last-child{
+        border-right: 1px solid #a8b7c5;
+      }
       
       table tr:last-child td:first-child {
-        // border-radius: 0 0 0 5px;
-        border-radius: 5px 5px 5px 5px;
+        border-radius: 0 0 0 10px;
       }
       
-      // table tr:last-child td:last-child {
-      //   // border-radius: 0 0 5px 0;
-      //   border-radius: 5px 5px 5px 5px;
-      // }
+      table tr:last-child td:last-child {
+        border-radius: 0 0 10px 0;
+      }
     }
     ul {
       display: flex;
       justify-content: space-between;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+    .text {
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #e5e5e5;
     }
   }
 }

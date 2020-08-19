@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   resources :charts, only: :index
 
+  resources :calories, only: :index
+
   resources :relationships, only: [:create, :destroy]
 
 end

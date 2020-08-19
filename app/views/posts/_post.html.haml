@@ -1,59 +1,52 @@
-.post
-  .post-box
-    .upper-post
-      .upper-post__user-name
-        = link_to user_path(post.user_id) do
-          = post.user.name
-        -# = render 'relationships/follow_button', user:@user
-      .upper-post__date
-        %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)+"前"
-    .lower-post
-      %table
-        %thead
-          %tr
-            %th FOOD
-            %th Calorie
-        %tbody
-          %tr
-            %td 
-              = post.food
-            %td 
-              = post.calorie
-      %table
-        %thead
-          %tr
-            %th P
-            %th F
-            %th C
-        %tbody
-          %tr
-            %td 
-              = post.protein # なぜここが@post.proteinじゃダメなのかがまだわからない
-            %td 
-              = post.fat
-            %td 
-              = post.carbo
-      %table
-        %tbody
-          %tr
-            %td 
-              = post.text
-      - if post.image.present?
-        = image_tag post.image_url
-      %ul.more_list
-        %li
-          = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう
-        %li
-          = link_to '編集', "/posts/#{post.id}/edit", method: :get
-        %li
-          = link_to post_path(post.id), method: :delete do
-            = fa_icon 'trash'
-        %li
-          = link_to "https://twitter.com/" do
-            = fa_icon 'twitter'
-          
-        %li{id: "likes_buttons_#{post.id}", class: 'likes_buttons'}
-          = render partial: 'likes/like', locals: {post: post, likes: @likes}
-        %li
-          = link_to "#" do
-            = fa_icon 'comment-o'
+= link_to "/posts/#{post.id}" do
+  .post
+    .post-box
+      .upper-post
+        .upper-post__user-name
+          = link_to user_path(post.user_id) do
+            = post.user.name
+          -# = render 'relationships/follow_button', user:@user
+        .upper-post__date
+          %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)+"前"
+      .lower-post
+        %table
+          %thead
+            %tr
+              %th FOOD
+              %th Calorie
+              %th P タンパク質
+              %th F 脂質
+              %th C 炭水化物
+          %tbody.table-body
+            %tr
+              %td 
+                = post.food
+              %td 
+                = post.calorie
+              %td 
+                = post.protein
+              %td 
+                = post.fat
+              %td 
+                = post.carbo
+        .text
+          = post.text
+        - if post.image.present?
+          = image_tag post.image.url
+        %ul.more_list
+          %li
+            = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう
+          %li
+            = link_to "/posts/#{post.id}/edit", method: :get do
+              %i.fa.fa-edit
+              %span.edit 編集
+          %li
+            = link_to post_path(post.id), method: :delete do
+              %i.fa.fa-trash
+              %span.trash 削除          
+          %li{id: "likes_buttons_#{post.id}", class: 'likes_buttons'}
+            = render partial: 'likes/like', locals: {post: post, likes: @likes}
+          %li
+            = link_to "/posts/#{post.id}" do
+              %i.fa.fa-commenting-o
+            = post.comments.count
