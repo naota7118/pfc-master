@@ -6,8 +6,11 @@ $(function() {
       //FileReaderオブジェクトの生成
       var reader = new FileReader(); 
       //readAsDataURLで指定したFileオブジェクトを読み込む
-      var hoge = reader.readAsDataURL(file); 
-      console.log(hoge);
+      reader.readAsDataURL(file); 
+      //読み込み時に発火するイベント onloadメソッドは読み込みが完了したら実行する
+      reader.onload = function() {
+        console.log('hoge');
+      }
     })
   });
 });
