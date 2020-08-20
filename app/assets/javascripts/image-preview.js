@@ -38,8 +38,12 @@ $(function() {
       }
     })
 
+    // プレビュー画像を削除
     $(document).on("click", '.delete-box', function(){
+      // プレビュー画像を削除
       $('.preview-box').remove();
+      // inputタグに入ってる画像ファイルも削除
+      $('.image_upload').val("");
     })
 
   });
