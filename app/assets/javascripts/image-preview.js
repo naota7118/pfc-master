@@ -5,7 +5,7 @@ $(function() {
     function buildHTML() {
       var html = `<div class="preview-box">
                     <div class="upper-box">
-                      <img src="" alt="preview" class="upload-image">
+                      <img src="" alt="preview" class="upload-image" height="100px" width="100px">
                     </div>
                     <div class="lower-box">
                       <div class="delete-box">
