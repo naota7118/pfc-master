@@ -32,7 +32,7 @@
         .text
           = post.text
         - if post.image.present?
-          = image_tag post.image.url
+          = image_tag post.image.url, class: 'post-image', width: '300px', height: '200px'
         %ul.more_list
           %li
             = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう
