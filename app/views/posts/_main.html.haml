@@ -1,6 +1,7 @@
 .main
   .section
     .calorie_chart
+    - if user_signed_in?
       .calorie_graph
         %canvas(id="myChart2" width="700" height="100")
         :javascript
