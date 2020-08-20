@@ -31,11 +31,16 @@ $(function() {
         // プレビュー用のhtmlを追加
         var html = buildHTML();
         
-        $('.text').append(html);
+        $('.icon').before(html);
 
         //画像を追加
         $(`.upper-box img`).attr('src', `${image}`);
       }
     })
+
+    $(document).on("click", '.delete-box', function(){
+      $('.preview-box').remove();
+    })
+
   });
 });
