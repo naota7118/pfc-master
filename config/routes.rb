@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   root to: "posts#index"
 
+  # 画像一覧ページ
+  get "posts/image" => "posts#image"
+
   resources :posts do
     resources :comments, only: :create
     resources :likes, only: [:create, :destroy]
