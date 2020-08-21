@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_16_120835) do
+ActiveRecord::Schema.define(version: 2020_08_21_055333) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
@@ -20,14 +20,6 @@ ActiveRecord::Schema.define(version: 2020_08_16_120835) do
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "image"
-    t.bigint "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_images_on_post_id"
   end
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -48,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_08_16_120835) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "food", null: false
-    t.integer "calorie", null: false
+    t.float "calorie", null: false
     t.integer "protein"
     t.integer "fat"
     t.integer "carbo"
@@ -93,11 +85,11 @@ ActiveRecord::Schema.define(version: 2020_08_16_120835) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", default: "0", null: false
+    t.string "image"
   end
 
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "images", "posts"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users"
 end
