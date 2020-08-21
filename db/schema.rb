@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_21_055333) do
+ActiveRecord::Schema.define(version: 2020_08_21_060137) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(version: 2020_08_21_055333) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "food", null: false
     t.float "calorie", null: false
-    t.integer "protein"
-    t.integer "fat"
-    t.integer "carbo"
+    t.float "protein"
+    t.float "fat"
+    t.float "carbo"
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
