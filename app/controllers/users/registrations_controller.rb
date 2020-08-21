@@ -5,8 +5,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def create
+    binding.pry
     # 1ページ目で送られてきたパラメータを@userに代入
     @user = User.new(sign_up_params)
+    @user.image = 'profile-image1.png'
     # 送られてきたパラメータがバリデーションに違反していないかチェック
     unless @user.valid?
       # エラーメッセージを出す
@@ -22,9 +24,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     standard = @user.standard
     @standard = @user.build_standard
     render :new_standard
+    binding.pry
   end
 
   def create_standard
+    binding.pry
     @user = User.new(session["devise.regist_data"]["user"])
     @standard = Standard.new(standard_params)
     unless @standard.valid?
@@ -37,6 +41,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     session["devise.regist_data"]["user"].clear
     sign_in(:user, @user)
     # redirect_to root_path
+    binding.pry
   end
 
   protected
@@ -45,6 +50,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
     params.require(:standard).permit(:weight, :calorie, :protein, :fat, :carbo, :bodyFatPercentage, :leanBodyMass, :user_id)
   end
 
+  def sign_up_params
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :image)
+  end
+
+  # def configure_sign_up_params
+  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
+  # end
 
   # GET /resource/sign_up
   # def new
@@ -80,12 +92,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  # end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_account_update_params
