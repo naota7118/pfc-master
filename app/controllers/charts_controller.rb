@@ -22,5 +22,4 @@ class ChartsController < ApplicationController
       gon.date << a.strftime("%Y年%m月%d日")
     end
   end
-  
 end
