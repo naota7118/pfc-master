@@ -28,5 +28,10 @@
             = f.label :password_confirmation
           .field-input
             = f.password_field :password_confirmation, autocomplete: "off"
+        .field
+          .field-label
+            = f.label :プロフィール画像
+          .field-input
+            = f.file_field :image, class: 'userimage_upload'
         .actions
           = f.submit "Next", class: 'btn'
