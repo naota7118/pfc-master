@@ -61,13 +61,13 @@
                 %td 
                   = f.text_field :food, placeholder: '例）サラダ'
                 %td 
-                  = f.number_field :calorie, placeholder: '例）200'
+                  = f.number_field :calorie, step: '0.1', placeholder: '例）200'
                 %td 
-                  = f.number_field :protein, placeholder: '例）30'
+                  = f.number_field :protein, step: '0.1', placeholder: '例）30'
                 %td 
-                  = f.number_field :fat, placeholder: '例）20'
+                  = f.number_field :fat, step: '0.1', placeholder: '例）20'
                 %td 
-                  = f.number_field :carbo, placeholder: '例）50'
+                  = f.number_field :carbo, step: '0.1', placeholder: '例）50'
                 %td.icon-plus
                   %i.fa.fa-plus-circle.fa-2x{class: 'plus-button'}
                 %td.icon-minus
