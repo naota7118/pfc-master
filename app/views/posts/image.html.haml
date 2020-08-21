@@ -1,2 +1,4 @@
-- @posts.each do |post|
-  = image_tag post.image.url
+.content
+  .images
+  - @posts.each do |post|
+    = image_tag post.image.url, class: "my-images"

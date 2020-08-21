@@ -61,9 +61,7 @@ class PostsController < ApplicationController
 
   def image
     # @images = Post.where(user_id: current_user.id).select(:image).map{ |image| image[:image]}
-    binding.pry
     @posts = Post.where(user_id: current_user.id)
-    binding.pry
   end
 
   private
