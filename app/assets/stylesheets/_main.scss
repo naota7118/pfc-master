@@ -20,12 +20,15 @@
       .chartjs-render-monitor {
         padding-top: 10px;
       }
+    }
+    .calorie_graph {
+      
+    }
+    .today_calorie {
+      margin-left: 10px;
       .difference {
         font-weight: bolder;
-        color: blue;
-      }
-      .today_calorie {
-        margin-left: 10px;
+        color: #007bff;
       }
     }
     .new-post {

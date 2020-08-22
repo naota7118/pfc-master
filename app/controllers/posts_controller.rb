@@ -59,6 +59,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def image
+    @posts = Post.where(user_id: current_user.id)
+  end
+
   private
   def post_params
     params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image, :weight).merge(user_id: current_user.id)

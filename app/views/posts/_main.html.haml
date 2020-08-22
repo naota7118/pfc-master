@@ -38,11 +38,11 @@
         %p 
         - if @calorie_standard >= @calorie_sum
           今日はあと
-          %a.difference 
+          = link_to charts_path(current_user.id), class: 'difference' do
             = @difference
           カロリーです
         - else 
-          %a.difference 
+          = link_to charts_path(current_user.id), class: 'difference' do
             = @difference
           オーバーしています
       %hr
