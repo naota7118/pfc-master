@@ -81,6 +81,10 @@
               = f.file_field :image, class: 'image_upload'
             .btn-square
               = f.submit '投稿する', class: 'post-btn'
+          .weight
+            体重
+            = f.number_field :weight, step: '0.1', placeholder: '例）70'
+            kg
     .posts
       = render @posts
       = paginate(@posts)
