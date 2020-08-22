@@ -25,8 +25,7 @@ class ChartsController < ApplicationController
 
 
     # 体重
-    
-
+    gon.weight = current_user.posts.group("date(created_at)").select(:weight).map{ |weight| weight[:weight]}
   end
   
 end
