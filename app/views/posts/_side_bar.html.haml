@@ -16,6 +16,7 @@
         = fa_icon 'calendar'
         %span.record-text カレンダー
     %li.record
+    - if user_signed_in?
       = link_to posts_image_path(current_user.id), class: 'record-path' do
         = fa_icon 'image'
         %span.record-text 画像一覧
