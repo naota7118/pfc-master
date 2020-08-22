@@ -61,7 +61,7 @@
       .graph {
       }
     }
-    .record {
+    .record, .image-index{
       color:  whitesmoke;
       margin-bottom: 5px;
       margin-left: 10px;
@@ -95,7 +95,7 @@
         }
       }
     }
-    .record:hover {
+    .record:hover, .image-index:hover{
       background-color: #0078ff;
       .table-path:hover {
       }
