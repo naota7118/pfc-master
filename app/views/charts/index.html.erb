@@ -15,6 +15,7 @@ var myChart = new Chart(ctx, {
         // labelsでX軸を指定
         labels: gon.date,
         datasets: [{
+            type: 'bar', //カロリーは棒グラフ
             label: "1日のカロリー合計",
             // dataでY軸を指定
             data: gon.data,
@@ -22,6 +23,16 @@ var myChart = new Chart(ctx, {
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1,
             fill: false
+        },
+        {
+            type: 'line', //体重は折れ線グラフ
+            label: "体重",
+            // dataでY軸を指定
+            data: [70, 50],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgb(255, 99, 132)',
+            borderWidth: 1.2,
+            fill: false, // 追加
         }]
     },
     options: {
