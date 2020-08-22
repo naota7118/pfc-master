@@ -60,7 +60,7 @@ class PostsController < ApplicationController
   end
 
   def image
-    @posts = Post.where(user_id: current_user.id)
+    @posts = Post.where(user_id: current_user.id).where.not(image: nil)
   end
 
   private
