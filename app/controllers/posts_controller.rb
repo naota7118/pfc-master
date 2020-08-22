@@ -60,7 +60,6 @@ class PostsController < ApplicationController
   end
 
   def image
-    # @images = Post.where(user_id: current_user.id).select(:image).map{ |image| image[:image]}
     @posts = Post.where(user_id: current_user.id)
   end
 
