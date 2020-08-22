@@ -1,6 +1,7 @@
 .main
   .section
     .calorie_chart
+    - if user_signed_in?
       .calorie_graph
         %canvas(id="myChart2" width="700" height="100")
         :javascript
@@ -37,11 +38,11 @@
         %p 
         - if @calorie_standard >= @calorie_sum
           今日はあと
-          %a.difference 
+          = link_to charts_path(current_user.id), class: 'difference' do
             = @difference
           カロリーです
         - else 
-          %a.difference 
+          = link_to charts_path(current_user.id), class: 'difference' do
             = @difference
           オーバーしています
       %hr
@@ -61,13 +62,13 @@
                 %td 
                   = f.text_field :food, placeholder: '例）サラダ'
                 %td 
-                  = f.number_field :calorie, placeholder: '例）200'
+                  = f.number_field :calorie, step: '0.1', placeholder: '例）200'
                 %td 
-                  = f.number_field :protein, placeholder: '例）30'
+                  = f.number_field :protein, step: '0.1', placeholder: '例）30'
                 %td 
-                  = f.number_field :fat, placeholder: '例）20'
+                  = f.number_field :fat, step: '0.1', placeholder: '例）20'
                 %td 
-                  = f.number_field :carbo, placeholder: '例）50'
+                  = f.number_field :carbo, step: '0.1', placeholder: '例）50'
                 %td.icon-plus
                   %i.fa.fa-plus-circle.fa-2x{class: 'plus-button'}
                 %td.icon-minus
@@ -76,15 +77,18 @@
             = f.text_area :text, placeholder: 'なにたべた？'
           .icon
             .image-upload
-              -# %label{class: "input-box__image"}
-              = f.fields_for :image do |i| 
-                %i.fa.fa-camera.fa-2x
-                = i.label :image
-                = i.file_field :image, multiple: true
+              %i.fa.fa-camera.fa-2x
+              = f.file_field :image, class: 'image_upload'
             .btn-square
               = f.submit '投稿する', class: 'post-btn'
+          .weight
+            体重
+            = f.number_field :weight, step: '0.1', placeholder: '例）70'
+            kg
     .posts
       = render @posts
       = paginate(@posts)
+
+      
     #page_top
       = link_to '', '#'

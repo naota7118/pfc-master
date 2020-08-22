@@ -1,6 +1,7 @@
 class ChartsController < ApplicationController
 
   def index
+    # カロリー
     # 日付ごとで分けてカロリー合計を算出
     sum_calorie = current_user.posts.group("date(created_at)").sum(:calorie)
     # 日付ごとのカロリー合計がハッシュの形なので値を取得して配列に入れて変数に代入
@@ -21,6 +22,9 @@ class ChartsController < ApplicationController
     @dates.each do |a|
       gon.date << a.strftime("%Y年%m月%d日")
     end
+
+
+    # 体重
+    gon.weight = current_user.posts.group("date(created_at)").select(:weight).map{ |weight| weight[:weight]}
   end
-  
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_02_024059) do
+ActiveRecord::Schema.define(version: 2020_08_21_065248) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
@@ -22,14 +22,6 @@ ActiveRecord::Schema.define(version: 2020_07_02_024059) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "image", null: false
-    t.bigint "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_images_on_post_id"
-  end
-
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "post_id"
@@ -39,17 +31,26 @@ ActiveRecord::Schema.define(version: 2020_07_02_024059) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
+  create_table "meetings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "start_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "food", null: false
-    t.integer "calorie", null: false
-    t.integer "protein"
-    t.integer "fat"
-    t.integer "carbo"
+    t.float "calorie", null: false
+    t.float "protein"
+    t.float "fat"
+    t.float "carbo"
     t.text "text"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.datetime "start_time"
+    t.string "image"
+    t.float "weight"
   end
 
   create_table "relationships", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -63,16 +64,16 @@ ActiveRecord::Schema.define(version: 2020_07_02_024059) do
   end
 
   create_table "standards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "weight"
-    t.integer "calorie"
+    t.float "weight"
+    t.float "calorie"
     t.integer "protein"
-    t.integer "fat"
-    t.integer "carbo"
+    t.float "fat"
+    t.float "carbo"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "bodyFatPercentage"
-    t.integer "leanBodyMass"
+    t.float "bodyFatPercentage"
+    t.float "leanBodyMass"
     t.index ["user_id"], name: "index_standards_on_user_id"
   end
 
@@ -85,11 +86,11 @@ ActiveRecord::Schema.define(version: 2020_07_02_024059) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", default: "0", null: false
+    t.string "image"
   end
 
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "images", "posts"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users"
 end
