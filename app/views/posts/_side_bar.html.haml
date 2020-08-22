@@ -12,7 +12,7 @@
           = fa_icon 'bar-chart'
           %span.graph グラフ
     %li.record
-      = link_to "#", class: 'record-path' do
+      = link_to calendars_path(current_user.id), class: 'record-path' do
         = fa_icon 'calendar'
         %span.record-text カレンダー
     - if user_signed_in?
