@@ -2,4 +2,9 @@
   = month_calendar events: @posts do |date, posts|
     = date.day
     - posts.each do |post|
+      %p
+      = post.food
       = post.calorie
+      %a カロリー
+      = post.weight
+      %a kg
