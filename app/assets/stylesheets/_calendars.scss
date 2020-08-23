@@ -10,3 +10,23 @@
 .table.table-striped{
   text-align: center;
 }
+
+.has-events{
+  background-color:#90f7bb;
+}
+
+tr :nth-child(1) {  
+  color:red;
+}
+
+tr :nth-child(7) {  
+  color:blue;
+}
+
+.calendar-food, .calendar-calorie, .calendar-weight{
+  color:black;
+}
+
+a{
+  color:black;
+}
