@@ -12,7 +12,7 @@
 }
 
 .has-events{
-  background-color:#90f7bb;
+  background-color: rgba(248,247,172,0.7);
 }
 
 tr :nth-child(1) {  
@@ -23,10 +23,10 @@ tr :nth-child(7) {
   color:blue;
 }
 
-.calendar-food, .calendar-calorie, .calendar-weight{
+.calendar-food .calendar-calorie .calendar-weight{
   color:black;
 }
 
-a{
+a {
   color:black;
 }
