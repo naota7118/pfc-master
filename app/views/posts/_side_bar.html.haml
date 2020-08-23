@@ -11,10 +11,11 @@
         = link_to charts_path(current_user.id), class: 'charts-path' do
           = fa_icon 'bar-chart'
           %span.graph グラフ
-    %li.record
-      = link_to "#", class: 'record-path' do
-        = fa_icon 'calendar'
-        %span.record-text カレンダー
+    - if user_signed_in?
+      %li.record
+        = link_to calendars_path(current_user.id), class: 'record-path' do
+          = fa_icon 'calendar'
+          %span.record-text カレンダー
     - if user_signed_in?
       %li.image-index
         = link_to posts_image_path(current_user.id), class: 'record-path' do

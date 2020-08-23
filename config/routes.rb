@@ -30,6 +30,8 @@ Rails.application.routes.draw do
 
   resources :calories, only: :index
 
+  resources :calendars, only: :index
+
   resources :relationships, only: [:create, :destroy]
 
 end
