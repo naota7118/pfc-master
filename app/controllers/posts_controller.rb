@@ -22,7 +22,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params) 
+    binding.pry
+    @post = Post.new(post_params)
+    # 今日の日付を取得(simple_calendarのため)
+    @post[:start_time] = Date.today.strftime('%Y-%m-%d')
     if @post.save
       redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
     else
@@ -30,6 +33,7 @@ class PostsController < ApplicationController
       flash.now[:alert] = '必須項目をしてください。' # フラッシュメッセージが出るか確認する
       redirect_back(fallback_location: root_path)
     end
+    binding.pry
   end
 
   def show
@@ -65,7 +69,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image, :weight).merge(user_id: current_user.id)
+    params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image, :weight, :start_time).merge(user_id: current_user.id)
   end
 
 end
