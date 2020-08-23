@@ -1,3 +1,5 @@
 .calendar
-  = month_calendar do |date|
-    = date
+  = month_calendar events: @posts do |date, posts|
+    = date.day
+    - posts.each do |post|
+      = post.calorie
