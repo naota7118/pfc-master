@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
+    @user = current_user
     # 今日の合計カロリー
     if user_signed_in?
       @calorie_sum = Post.where(user_id: current_user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
@@ -22,7 +23,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    binding.pry
     @post = Post.new(post_params)
     # 今日の日付を取得(simple_calendarのため)
     @post[:start_time] = Date.today.strftime('%Y-%m-%d')
@@ -33,7 +33,6 @@ class PostsController < ApplicationController
       flash.now[:alert] = '必須項目をしてください。' # フラッシュメッセージが出るか確認する
       redirect_back(fallback_location: root_path)
     end
-    binding.pry
   end
 
   def show
