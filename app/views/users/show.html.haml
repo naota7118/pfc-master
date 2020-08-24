@@ -1,7 +1,34 @@
-= render 'follow_form'
-= render 'stats'
+.users-show
+  = render 'follow_form'
+  = render 'stats'
+.myposts-index
+  %table
+    %thead
+      %tr
+        %th.date date
+        %th.food Food
+        %th.calorie Calorie
+        %th.protein P タンパク質
+        %th.fat F 脂質
+        %th.carbo C 炭水化物
+    %tbody.table-body.table-line
+    - @posts.each do |post|
+      %tr
+        %td
+          = post.created_at
+        %td
+          = post.food
+        %td
+          = post.calorie
+        %td
+          = post.protein
+        %td  
+          = post.fat
+        %td 
+          = post.carbo
 
-= link_to '一覧画面に戻る', root_path
+.backtohome
+  = link_to '一覧画面に戻る', root_path
 
 -# <%= グラフの種類 モデル名.group(:カラム名).count %>
 -# <%= pie_chart Yogurt.group(:flavor).count %>
