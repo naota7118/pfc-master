@@ -12,21 +12,29 @@
         %th.fat 脂質
         %th.carbo 炭水化物
     %tbody.table-body.table-line
-    - @posts.each do |post|
-      %tr
-        %td
-          = post.created_at.strftime("%Y年%m月%d日")
-        %td
-          = post.food
-        %td
-          = post.calorie
-        %td
-          = post.protein
-        %td  
-          = post.fat
-        %td 
-          = post.carbo
-
+      .date-food
+      - @posts.each do |post|
+        %tr
+          %td
+            = post.created_at.strftime("%Y年%m月%d日")
+          %td
+            = post.food
+          %td
+            = post.calorie
+          %td
+            = post.protein
+          %td  
+            = post.fat
+          %td 
+            = post.carbo
+      .date-calorie
+      - @calorie.each do |calorie|
+        %tr
+          %td
+            = calorie[0].strftime("%Y年%m月%d日")
+          %td
+            = calorie[1]
+            カロリー
 .backtohome
   = link_to '一覧画面に戻る', root_path
 
