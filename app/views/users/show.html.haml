@@ -5,17 +5,17 @@
   %table
     %thead
       %tr
-        %th.date date
-        %th.food Food
-        %th.calorie Calorie
-        %th.protein P タンパク質
-        %th.fat F 脂質
-        %th.carbo C 炭水化物
+        %th.date 日にち
+        %th.food 食べたもの
+        %th.calorie カロリー
+        %th.protein タンパク質
+        %th.fat 脂質
+        %th.carbo 炭水化物
     %tbody.table-body.table-line
     - @posts.each do |post|
       %tr
         %td
-          = post.created_at
+          = post.created_at.strftime("%Y年%m月%d日")
         %td
           = post.food
         %td
