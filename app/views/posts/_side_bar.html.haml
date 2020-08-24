@@ -6,7 +6,7 @@
       .username
         - if user_signed_in?
           = link_to current_user.name, user_path(current_user.id), class: 'user-link'
-      .users-show
+      .users-stats
         - if user_signed_in?
           = render 'users/stats'
     %li.chart
