@@ -22,7 +22,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    binding.pry
     @post = Post.new(post_params)
     # 今日の日付を取得(simple_calendarのため)
     @post[:start_time] = Date.today.strftime('%Y-%m-%d')
@@ -33,7 +32,6 @@ class PostsController < ApplicationController
       flash.now[:alert] = '必須項目をしてください。' # フラッシュメッセージが出るか確認する
       redirect_back(fallback_location: root_path)
     end
-    binding.pry
   end
 
   def show
