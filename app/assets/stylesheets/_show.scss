@@ -1,7 +1,16 @@
 .users-show{
   padding-top: 100px;
-  .myposts-index{
-    
+}
+.record-index{
+  display: flex;
+  border: solid 1px;
+  .calorie-index{
+    // border: solid 1px;
+    margin-left: 100px;
+  }
+  .sumcalorie-index{
+    // border: solid 1px;
+    margin-left: 100px;
   }
 }
 

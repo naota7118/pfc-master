@@ -1,18 +1,18 @@
 .users-show
   = render 'follow_form'
   = render 'stats'
-.myposts-index
-  %table
-    %thead
-      %tr
-        %th.date 日にち
-        %th.food 食べたもの
-        %th.calorie カロリー
-        %th.protein タンパク質
-        %th.fat 脂質
-        %th.carbo 炭水化物
-    %tbody.table-body.table-line
-      .date-food
+.record-index
+  .calorie-index
+    %table
+      %thead
+        %tr
+          %th.date 日にち
+          %th.food 食べたもの
+          %th.calorie カロリー
+          %th.protein タンパク質
+          %th.fat 脂質
+          %th.carbo 炭水化物
+      %tbody.table-body.table-line
       - @posts.each do |post|
         %tr
           %td
@@ -27,7 +27,13 @@
             = post.fat
           %td 
             = post.carbo
-      .date-calorie
+  .sumcalorie-index    
+    %table
+      %thead
+        %tr
+          %th.date 日にち
+          %th.food 合計カロリー
+      %tbody
       - @calorie.each do |calorie|
         %tr
           %td
