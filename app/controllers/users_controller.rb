@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
 
   def show
+    binding.pry
     @user = User.find(params[:id])
     @posts = Post.where(user_id: current_user.id).order("created_at DESC")
     @calorie = current_user.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
+    binding.pry
   end
   
   def edit

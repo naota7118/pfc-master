@@ -2,8 +2,10 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create]
   
   def index
+    binding.pry
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
+    @user = current_user
     # 今日の合計カロリー
     if user_signed_in?
       @calorie_sum = Post.where(user_id: current_user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
@@ -19,6 +21,7 @@ class PostsController < ApplicationController
     else
       
     end
+    binding.pry
   end
 
   def create
