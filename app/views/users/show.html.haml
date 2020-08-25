@@ -1,6 +1,9 @@
 .users-show
   = render 'follow_form'
-  = render 'stats'
+  -# = render 'stats'
+.user-name
+  = @user.name
+  さんの記録一覧
 .record-index
   .calorie-index
     %table
