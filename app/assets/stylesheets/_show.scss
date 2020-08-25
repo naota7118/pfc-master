@@ -1,5 +1,6 @@
 .users-show{
   padding-top: 100px;
+  // display: flex;
 }
 .record-index{
   display: flex;
@@ -12,6 +13,14 @@
     // border: solid 1px;
     margin-left: 100px;
   }
+}
+
+.user-name{
+  text-align: center;
+}
+.users-follow{
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .content {
