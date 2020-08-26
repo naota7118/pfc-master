@@ -22,7 +22,8 @@ var myChart = new Chart(ctx, {
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1,
-            fill: false
+            fill: false,
+            yAxisID: "y-axis-1",
         },
         {
             type: 'line', //体重は折れ線グラフ
@@ -33,6 +34,7 @@ var myChart = new Chart(ctx, {
             borderColor: 'rgb(255, 99, 132)',
             borderWidth: 1.2,
             fill: false, // 追加
+            yAxisID: "y-axis-2",
         }]
     },
     options: {
@@ -42,11 +44,24 @@ var myChart = new Chart(ctx, {
         },
         scales: {
             yAxes: [{
+                id: "y-axis-1",
+                type: "linear",
+                position: "left",
                 ticks: {
-                    beginAtZero:true
+                    beginAtZero:true,
+                    suggestedMin: 50,
+                    suggestedMax: 100
                 },
-                id: 'y左軸'
-            }]
+                //id: 'y左軸'
+            }, {
+                id: "y-axis-2",
+                type: "linear",
+                position: "right",
+                ticks: {
+                    max: 90,
+                    min: 40,
+                },
+            }],
         }
     }
 });
