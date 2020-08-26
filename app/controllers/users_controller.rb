@@ -2,8 +2,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @posts = Post.where(user_id: current_user.id).order("created_at DESC")
-    @calorie = current_user.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
+    @posts = Post.where(user_id: @user.id).order("created_at DESC")
+    @calorie = @user.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
   end
   
   def edit

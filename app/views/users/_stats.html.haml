@@ -1,4 +1,5 @@
-- if current_user
+-# - if current_user
+- if user_signed_in?
   .stats
     .following
       = link_to following_user_path(@user) do
