@@ -63,7 +63,7 @@ class PostsController < ApplicationController
   end
 
   def image
-    @posts = Post.where(user_id: current_user.id).where.not(image: nil)
+    @posts = Post.where(user_id: current_user.id).where.not(image: nil).order("created_at DESC")
   end
 
   private
