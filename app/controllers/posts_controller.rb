@@ -34,7 +34,6 @@ class PostsController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
   end
-  
 
   def show
     @post = Post.find(params[:id])
