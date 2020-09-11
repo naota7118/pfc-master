@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_112509) do
+ActiveRecord::Schema.define(version: 2020_09_11_054115) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "comment", null: false
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.bigint "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
