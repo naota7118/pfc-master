@@ -31,13 +31,6 @@ ActiveRecord::Schema.define(version: 2020_09_12_013532) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "meetings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.datetime "start_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "food", null: false
     t.float "calorie", null: false
@@ -45,11 +38,10 @@ ActiveRecord::Schema.define(version: 2020_09_12_013532) do
     t.float "fat"
     t.float "carbo"
     t.text "text"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.datetime "start_time"
-    t.string "image"
     t.float "weight"
   end
 
@@ -85,8 +77,9 @@ ActiveRecord::Schema.define(version: 2020_09_12_013532) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name", default: "0", null: false
-    t.string "image"
+    t.string "name"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "comments", "posts"
