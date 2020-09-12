@@ -13,7 +13,7 @@ module PfcMaster
     config.i18n.default_locale = :ja
 
     config.time_zone = 'Tokyo'
-    config.active_record.default_timezone = :utc
+    # config.active_record.default_timezone = :utc
     config.beginning_of_week = :sunday
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

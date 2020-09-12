@@ -35,12 +35,14 @@ class PostsController < ApplicationController
     end
   end
 
+  
   def show
     @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user).order("created_at DESC")
     @like = Like.new
   end
+
 
   def edit
     @post = Post.find(params[:id])
@@ -63,7 +65,7 @@ class PostsController < ApplicationController
   end
 
   def image
-    @posts = Post.where(user_id: current_user.id).where.not(image: nil)
+    @posts = Post.where(user_id: current_user.id).where.not(image: nil).order("created_at DESC")
   end
 
   private

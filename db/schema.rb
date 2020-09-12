@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_21_065248) do
+ActiveRecord::Schema.define(version: 2020_09_12_013532) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "comment", null: false
+    t.text "comment"
     t.bigint "user_id"
     t.bigint "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_id"], name: "index_comments_on_post_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["post_id"], name: "fk_rails_2fd19c0db7"
+    t.index ["user_id"], name: "fk_rails_03de2dc08c"
   end
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -31,13 +31,6 @@ ActiveRecord::Schema.define(version: 2020_08_21_065248) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "meetings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.datetime "start_time"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "food", null: false
     t.float "calorie", null: false
@@ -45,11 +38,10 @@ ActiveRecord::Schema.define(version: 2020_08_21_065248) do
     t.float "fat"
     t.float "carbo"
     t.text "text"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.datetime "start_time"
-    t.string "image"
     t.float "weight"
   end
 
@@ -85,8 +77,9 @@ ActiveRecord::Schema.define(version: 2020_08_21_065248) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name", default: "0", null: false
-    t.string "image"
+    t.string "name"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "comments", "posts"

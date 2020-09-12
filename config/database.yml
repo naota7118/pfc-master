@@ -52,3 +52,5 @@ production:
   database: pfc-master_production
   username: root
   password: password
+  # username: pfc-master
+  # password: <%= ENV['PFC-MASTER_DATABASE_PASSWORD'] %>
