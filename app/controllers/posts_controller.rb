@@ -43,7 +43,6 @@ class PostsController < ApplicationController
     @like = Like.new
   end
 
-
   def edit
     @post = Post.find(params[:id])
   end
