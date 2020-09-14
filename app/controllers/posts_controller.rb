@@ -2,7 +2,9 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create]
   
   def index
-    @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    # @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
+    @posts = Post.all.includes(:user).order("created_at DESC")
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(5)
     @post = Post.new
     @user = current_user
     # 今日の合計カロリー
@@ -42,7 +44,6 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user).order("created_at DESC")
     @like = Like.new
   end
-
 
   def edit
     @post = Post.find(params[:id])
