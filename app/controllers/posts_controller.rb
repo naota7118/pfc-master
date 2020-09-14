@@ -2,8 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create]
   
   def index
-    @posts = Post.all.includes(:user).order("created_at DESC")
-    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(5)
+    @posts = Post.all.includes(:user)
     @post = Post.new
     @user = current_user
     # 今日の合計カロリー
