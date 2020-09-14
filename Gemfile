@@ -17,7 +17,7 @@ group :development, :test do
   gem 'spring'
   gem 'pry-rails'
   gem 'sprockets'
-  gem 'kaminari'
+  # gem 'kaminari'
   gem 'rspec-rails'
 end
 
@@ -51,3 +51,4 @@ gem 'font-awesome-rails'
 gem 'chart-js-rails'
 gem 'gon'
 gem 'simple_calendar', '~> 2.0'
+gem 'kaminari'
