@@ -7,9 +7,9 @@ $(function(){
                   <div class="commentContent">
                   ${comment.comment}
                   </div>
-                  <div class="commentTime">
+		              <div class="commentTime">
                     <time datetime="${comment.created_at}">${comment.created_at}</time>
-                    </div>
+                  </div>
                 </div>`;
     return html;
   }

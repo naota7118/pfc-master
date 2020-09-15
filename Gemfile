@@ -33,6 +33,10 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+group :production, :staging do
+  gem 'unicorn'
+end
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem 'font-awesome-sass'
