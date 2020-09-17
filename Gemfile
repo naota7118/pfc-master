@@ -17,8 +17,11 @@ group :development, :test do
   gem 'spring'
   gem 'pry-rails'
   gem 'sprockets'
-  # gem 'kaminari'
   gem 'rspec-rails'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
 end
 
 group :development do
