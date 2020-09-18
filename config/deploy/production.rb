@@ -2,7 +2,7 @@
 server '13.113.23.81', user: 'naota', roles: %w{app db web} 
 
 #デプロイするサーバーにsshログインする鍵の情報を記述
-set :ssh_options, keys: '~/.ssh/pfcmaster7118.pem' 
+set :ssh_options, keys: '~/.ssh/pfcmaster7118_key_rsa' 
 
 # server-based syntax
 # ======================
