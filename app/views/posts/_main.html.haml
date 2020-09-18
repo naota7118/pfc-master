@@ -38,15 +38,15 @@
           });
       .today_calorie
         %p 
-        - if @calorie_standard >= @calorie_sum
-          今日はあと
-          = link_to charts_path(current_user.id), class: 'difference' do
-            = @difference
-          カロリーです
-        - else 
-          = link_to charts_path(current_user.id), class: 'difference' do
-            = @difference
-          オーバーしています
+        -# - if @calorie_standard >= @calorie_sum
+        -#   今日はあと
+        -#   = link_to charts_path(current_user.id), class: 'difference' do
+        -#     = @difference
+        -#   カロリーです
+        -# - else 
+        -#   = link_to charts_path(current_user.id), class: 'difference' do
+        -#     = @difference
+        -#   オーバーしています
       %hr
     .new-post
       = form_with model: @post, id: 'new_post' do |f|
