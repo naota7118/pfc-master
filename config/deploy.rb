@@ -4,7 +4,7 @@ lock "~> 3.14.1"
 # デプロイするアプリケーション名
 set :application, "pfc-master"
 
-# cloneするgitのレポジトリ
+# どのリポジトリからアプリをpullするかを指定
 set :repo_url, 'https://github.com/naota7118/pfc-master.git'
 
 # deployするブランチ。デフォルトはmasterなのでなくても可。
