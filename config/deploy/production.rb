@@ -13,8 +13,6 @@ set :ssh_options, keys: '~/.ssh/pfcmaster7118_key_rsa'
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-
-
 # role-based syntax
 # ==================
 
