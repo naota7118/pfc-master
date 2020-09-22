@@ -21,6 +21,7 @@ class PostsController < ApplicationController
       
     end
   end
+  
 
   def create
     @post = Post.new(post_params)
