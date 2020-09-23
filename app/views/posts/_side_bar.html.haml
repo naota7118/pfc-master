@@ -4,12 +4,12 @@
       - if user_signed_in?
         = link_to image_tag('/profile-image1.png', height: '100', width: '100', class: 'user-img'), user_path(@user.id)
       - else
-        = link_to image_tag('/profile-image1.png', height: '100', width: '100', class: 'user-img'), user_path(@guestuser.id)
+        = link_to image_tag('/profile-image1.png', height: '100', width: '100', class: 'user-img'), user_path(@sampleuser.id)
       .username
         - if user_signed_in?
           = link_to current_user.name, user_path(current_user.id), class: 'user-link'
         - else
-          サンプルユーザー
+          = @sampleuser.name
       .users-stats
         - if user_signed_in?
           = render 'users/stats'
