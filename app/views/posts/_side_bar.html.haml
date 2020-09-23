@@ -14,14 +14,26 @@
         = link_to charts_path(current_user.id), class: 'charts-path' do
           = fa_icon 'bar-chart'
           %span.graph グラフ
-    - if user_signed_in?
-      %li.record
+      - else
+        -# = link_to charts_path(current_user.id), class: 'charts-path' do
+        = fa_icon 'bar-chart'
+        %span.graph グラフ
+    %li.record
+      - if user_signed_in?
         = link_to calendars_path(current_user.id), class: 'record-path' do
           = fa_icon 'calendar'
           %span.record-text カレンダー
-    - if user_signed_in?
-      %li.image-index
+      - else
+        -# = link_to calendars_path(current_user.id), class: 'record-path' do
+        = fa_icon 'calendar'
+        %span.record-text カレンダー
+    %li.image-index
+      - if user_signed_in?
         = link_to posts_image_path(current_user.id), class: 'record-path' do
           = fa_icon 'image'
           %span.record-text 画像一覧
+      - else
+        -# = link_to posts_image_path(current_user.id), class: 'record-path' do
+        = fa_icon 'image'
+        %span.record-text 画像一覧
   .bg-slider
