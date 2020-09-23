@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
     @user = current_user
+    @guestuser = User.find_by(id: 2)
     # 今日の合計カロリー
     if user_signed_in?
       @calorie_sum = Post.where(user_id: current_user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
