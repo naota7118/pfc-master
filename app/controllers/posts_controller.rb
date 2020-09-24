@@ -75,7 +75,12 @@ class PostsController < ApplicationController
   end
 
   def image
-    @posts = Post.where(user_id: current_user.id).where.not(image: nil).order("created_at DESC")
+    @sampleuser = User.find_by(id: 2)
+    if user_signed_in?
+      @posts = Post.where(user_id: current_user.id).where.not(image: nil).order("created_at DESC")
+    else
+      @posts = Post.where(user_id: @sampleuser.id).where.not(image: nil).order("created_at DESC")
+    end
   end
 
   private

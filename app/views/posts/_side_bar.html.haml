@@ -9,7 +9,7 @@
         - if user_signed_in?
           = link_to current_user.name, user_path(current_user.id), class: 'user-link'
         - else
-          = @sampleuser.name
+          = link_to @sampleuser.name, user_path(@sampleuser.id), class: 'user-link'
       .users-stats
         - if user_signed_in?
           = render 'users/stats'
@@ -37,7 +37,7 @@
           = fa_icon 'image'
           %span.record-text 画像一覧
       - else
-        -# = link_to posts_image_path(current_user.id), class: 'record-path' do
-        = fa_icon 'image'
-        %span.record-text 画像一覧
+        = link_to posts_image_path(@sampleuser.id), class: 'record-path' do
+          = fa_icon 'image'
+          %span.record-text 画像一覧
   .bg-slider
