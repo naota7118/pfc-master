@@ -28,9 +28,9 @@
           = fa_icon 'calendar'
           %span.record-text カレンダー
       - else
-        -# = link_to calendars_path(current_user.id), class: 'record-path' do
-        = fa_icon 'calendar'
-        %span.record-text カレンダー
+        = link_to calendars_path(@sampleuser.id), class: 'record-path' do
+          = fa_icon 'calendar'
+          %span.record-text カレンダー
     %li.image-index
       - if user_signed_in?
         = link_to posts_image_path(current_user.id), class: 'record-path' do
