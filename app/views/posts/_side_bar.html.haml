@@ -19,9 +19,9 @@
           = fa_icon 'bar-chart'
           %span.graph グラフ
       - else
-        -# = link_to charts_path(current_user.id), class: 'charts-path' do
-        = fa_icon 'bar-chart'
-        %span.graph グラフ
+        = link_to charts_path(@sampleuser.id), class: 'charts-path' do
+          = fa_icon 'bar-chart'
+          %span.graph グラフ
     %li.record
       - if user_signed_in?
         = link_to calendars_path(current_user.id), class: 'record-path' do
