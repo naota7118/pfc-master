@@ -1,7 +1,6 @@
 .main
   .section
     .calorie_chart
-    - if user_signed_in?
       .calorie_graph
         %canvas(id="myChart2" width="700" height="100")
         :javascript
@@ -38,15 +37,26 @@
           });
       .today_calorie
         %p 
-        - if @calorie_standard >= @calorie_sum
-          今日はあと
-          = link_to charts_path(current_user.id), class: 'difference' do
-            = @difference
-          カロリーです
-        - else 
-          = link_to charts_path(current_user.id), class: 'difference' do
-            = @difference
-          オーバーしています
+        - if user_signed_in?
+          - if @calorie_standard >= @calorie_sum
+            今日はあと
+            = link_to charts_path(current_user.id), class: 'difference' do
+              = @difference
+            カロリーです
+          - else 
+            = link_to charts_path(current_user.id), class: 'difference' do
+              = @difference
+            オーバーしています
+        - else
+          - if @calorie_standard >= @calorie_sum
+            今日はあと
+            = link_to charts_path(@sampleuser.id), class: 'difference' do
+              = @difference
+            カロリーです
+          - else 
+            = link_to charts_path(@sampleuser.id), class: 'difference' do
+              = @difference
+            オーバーしています
       %hr
     .new-post
       = form_with model: @post, id: 'new_post' do |f|

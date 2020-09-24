@@ -5,7 +5,9 @@ class PostsController < ApplicationController
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
     @user = current_user
-    # 今日の合計カロリー
+    @sampleuser = User.find_by(id: 2)
+
+    # グラフに必要なデータを表示させるための変数を条件分岐
     if user_signed_in?
       @calorie_sum = Post.where(user_id: current_user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
       gon.today_sum = @calorie_sum
@@ -18,7 +20,16 @@ class PostsController < ApplicationController
         @difference = @calorie_standard - @calorie_sum
       end
     else
-      
+      @calorie_sum = Post.where(user_id: @sampleuser.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+      gon.today_sum = @calorie_sum
+      @standard = Standard.find_by(user_id: @sampleuser.id)
+      @calorie_standard = @standard.calorie
+      gon.standard = @calorie_standard
+      if @calorie_sum >= @calorie_standard
+        @difference = @calorie_sum - @calorie_standard
+      else
+        @difference = @calorie_standard - @calorie_sum
+      end
     end
   end
   
@@ -64,7 +75,12 @@ class PostsController < ApplicationController
   end
 
   def image
-    @posts = Post.where(user_id: current_user.id).where.not(image: nil).order("created_at DESC")
+    @sampleuser = User.find_by(id: 2)
+    if user_signed_in?
+      @posts = Post.where(user_id: current_user.id).where.not(image: nil).order("created_at DESC")
+    else
+      @posts = Post.where(user_id: @sampleuser.id).where.not(image: nil).order("created_at DESC")
+    end
   end
 
   private

@@ -1,9 +1,15 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
-    @posts = Post.where(user_id: @user.id).order("created_at DESC")
-    @calorie = @user.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
+    if user_signed_in?
+      @user = User.find(params[:id])
+      @posts = Post.where(user_id: @user.id).order("created_at DESC")
+      @calorie = @user.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
+    else
+      @user = User.find_by(id: 2)
+      @posts = Post.where(user_id: @user.id).order("created_at DESC")
+      @calorie = @user.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
+    end
   end
   
   def edit
@@ -19,14 +25,24 @@ class UsersController < ApplicationController
   end
 
   def following
-    @user = User.find(params[:id])
-    @users = @user.followings
+    if user_signed_in?
+      @user = User.find(params[:id])
+      @users = @user.followings
+    else
+      @sampleuser = User.find_by(id: 2)
+      @users = @sampleuser.followings
+    end
     render 'show_following'
   end
 
   def followers
-    @user = User.find(params[:id])
-    @users = @user.followers
+    if user_signed_in?
+      @user = User.find(params[:id])
+      @users = @user.followings
+    else
+      @sampleuser = User.find_by(id: 2)
+      @users = @sampleuser.followings
+    end
     render 'show_follower'
   end
 
