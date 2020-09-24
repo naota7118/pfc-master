@@ -13,6 +13,8 @@
       .users-stats
         - if user_signed_in?
           = render 'users/stats'
+        - else
+          = render 'users/stats'
     %li.chart
       - if user_signed_in?
         = link_to charts_path(current_user.id), class: 'charts-path' do

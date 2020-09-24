@@ -27,20 +27,22 @@ class UsersController < ApplicationController
   def following
     if user_signed_in?
       @user = User.find(params[:id])
+      @users = @user.followings
     else
-
+      @sampleuser = User.find_by(id: 2)
+      @users = @sampleuser.followings
     end
-    @users = @user.followings
     render 'show_following'
   end
 
   def followers
     if user_signed_in?
       @user = User.find(params[:id])
+      @users = @user.followings
     else
-
+      @sampleuser = User.find_by(id: 2)
+      @users = @sampleuser.followings
     end
-    @users = @user.followers
     render 'show_follower'
   end
 
