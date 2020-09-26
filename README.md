@@ -1,6 +1,7 @@
 # 概要
 カロリーとPFC（タンパク質, 脂質, 炭水化物）を記録し体重をコントロールするためのダイエットアプリです。   
 毎日の食事やカロリーをグラフやカレンダーで可視化することで、ダイエットを続けるモチベーションを維持しやすくなります。  
+![PFCMASTERメイン画面](https://user-images.githubusercontent.com/60293887/94326168-4c3ad200-ffdd-11ea-8edd-fef99d709e40.png)
 
 #### URL
 この項目はあとで追記する。
@@ -56,7 +57,7 @@
 この項目はあとで追記します。
 
 # ER図  
-この項目はあとで追記します。
+<img src="https://user-images.githubusercontent.com/60293887/94326084-d59dd480-ffdc-11ea-8f68-b6584a5eb849.png">
 
 # 制作背景
 私自身が「ダイエットが続かない」という悩みを抱えていたため、自分と同じような「ダイエットが続かず困っている人」をユーザーと想定し、**"ダイエットを続けやすくする"** という目的で制作しました。  
@@ -73,6 +74,11 @@
 体重を入力すると、自動で1日のカロリー目標, PFC目標が設定されるようにしました。
 1日のどれくらい食べればいいのかがわかることで、食事管理しやすくなると考えました。
 
+<img src="https://user-images.githubusercontent.com/60293887/94326316-2530d000-ffde-11ea-80c1-c5ccebf07a7d.png">
+
 #### プロセスの可視化
 グラフ, カレンダー, Instagramのような画像一覧ページを実装し、ダイエットの進捗を目に見える形で確認できるようにしました。  
 目標に近づいているかどうか確認できたり、日々の頑張りが目に見えて確認できたりすることで継続するモチベーションが維持しやすくなると考えました。  
+<img src="https://user-images.githubusercontent.com/60293887/94326325-35e14600-ffde-11ea-9ae7-d9e9d5a7cc7b.png">
+<img src="https://user-images.githubusercontent.com/60293887/94326339-42fe3500-ffde-11ea-860e-648e9190199d.png">
+<img src="https://user-images.githubusercontent.com/60293887/94326343-4691bc00-ffde-11ea-8ab6-8e5190407edb.png">
