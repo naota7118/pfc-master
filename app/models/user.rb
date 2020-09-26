@@ -11,6 +11,9 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_relationships, source: :follower
   has_one :standard
 
+  validates :name, presence: true
+  validates :email, presence: true
+
   def already_liked?(post)
     self.likes.exists?(post_id: post.id)
   end
