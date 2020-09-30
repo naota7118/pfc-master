@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
-    # @user = current_user
+    @user = current_user
     @sampleuser = User.find_by(id: 1)
 
     # グラフに必要なデータを表示させるための変数を条件分岐
