@@ -48,14 +48,14 @@
               = @difference
             オーバーしています
         - else
-          - if @calorie_standard >= @calorie_sum
+          -# - if @calorie_standard >= @calorie_sum
             今日はあと
-            = link_to charts_path(@sampleuser.id), class: 'difference' do
-              = @difference
+            -# = link_to charts_path(@sampleuser.id), class: 'difference' do
+              -# = @difference
             カロリーです
           - else 
-            = link_to charts_path(@sampleuser.id), class: 'difference' do
-              = @difference
+            -# = link_to charts_path(@sampleuser.id), class: 'difference' do
+              -# = @difference
             オーバーしています
       %hr
     .new-post
