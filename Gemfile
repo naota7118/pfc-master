@@ -59,3 +59,4 @@ gem 'kaminari'
 gem 'ed25519'
 gem 'bcrypt_pbkdf'
 gem "sassc", '~>2.1.0'
+gem "mini_racer"
