@@ -1,0 +1,24 @@
+header {
+  position: fixed;
+}
+.standard-setting {
+  margin-top: 87px;
+  .standard-setting-wrapper
+    .standard-setting-content {
+      border: 1px solid gray;
+      width: 600px;
+      height: 580px;
+      padding: 30px 50px;
+      .new_standard {
+        display: flex;
+        justify-content: space-between;
+        .left  {
+          margin: 0;
+        }
+        .right {
+          margin: 0;
+        }
+      }
+    }
+}
+  
