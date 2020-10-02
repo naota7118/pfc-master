@@ -5,10 +5,12 @@ header {
   margin-top: 87px;
   .standard-setting-wrapper
     .standard-setting-content {
+      margin: 0 auto;
       border: 1px solid gray;
-      width: 600px;
+      width: 800px;
       height: 580px;
-      padding: 30px 50px;
+      padding: 10px 30px;
+      margin-top: 100px;
       .new_standard {
         display: flex;
         justify-content: space-between;
