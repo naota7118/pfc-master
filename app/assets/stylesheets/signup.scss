@@ -1,0 +1,19 @@
+.account-page {
+  .account-page__inner {
+    width: 600px;
+    height: 580px;
+    padding: 30px 50px;
+    label {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    .btn {
+      background-color: #007bff;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .field .field-label i {
+      font-size: 14px;
+    }
+  }
+}
