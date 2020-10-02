@@ -19,10 +19,12 @@
 @import "charts";
 @import "calendars";
 @import "signup";
+@import "setting_standard";
 
 header {
   width: 100%;
   position: fixed;
+  top: 0;
   background-color: #22242a;
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   .my-big {
