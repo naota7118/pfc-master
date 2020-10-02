@@ -18,7 +18,9 @@ header {
           margin: 0;
         }
         .right {
-          margin: 0;
+          .field.leanBodyMassStandard {
+            display: none;
+          }
         }
       }
     }

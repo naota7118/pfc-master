@@ -19,11 +19,10 @@
               = f.label :"体脂肪率"
               = f.number_field :bodyFatPercentage, step: '0.1'
               %a %
-              
+
         .right
-          %p
-            あなたの除脂肪体重は
-            .field
+          .leanBodyMass
+            .field.leanBodyMassStandard
               = f.label :"除脂肪体重"
               = f.number_field :leanBodyMass, step: '0.1'
               %a kgです。
@@ -55,8 +54,5 @@
               = f.label :"炭水化物"
               = f.number_field :carbo, step: '0.1'
               %a gです。
-
-        .actions
-          = f.submit "新規登録"
-
-        -# = render "devise/shared/links"
+            .actions
+              = f.submit "新規登録"
