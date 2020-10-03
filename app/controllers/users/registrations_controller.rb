@@ -36,7 +36,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     # sessionを削除
     session["devise.regist_data"]["user"].clear
     sign_in(:user, @user)
-    # redirect_to root_path
+    redirect_to root_path
   end
 
   protected
