@@ -32,11 +32,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
       render :new_standard and return
     end
     @user.build_standard(@standard.attributes)
-    @user.save
-    # sessionを削除
-    session["devise.regist_data"]["user"].clear
-    sign_in(:user, @user)
-    # redirect_to root_path
+    if @user.save
+      # sessionを削除
+      session["devise.regist_data"]["user"].clear
+      sign_in(:user, @user)
+      flash[:notice] = 'アカウント登録が完了しました'
+      redirect_to root_path
+    else
+      flash.now[:alert] = 'アカウント登録に失敗しました'
+      render :new
+    end
   end
 
   protected

@@ -22,3 +22,7 @@
 //= require chartkick
 //= require Chart.bundle
 //= require Chart.min
+
+$(function(){
+  setTimeout("$('.alert').fadeOut('slow')", 1000) 
+})
