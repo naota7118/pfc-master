@@ -1,3 +1,26 @@
 .account-page {
   padding-top: 87px;
+  .account-page__inner {
+    .btn-login {
+      margin-top: 10px;
+      border: 1px solid;
+      padding: 5px 15px;
+      -webkit-border-radius: 4px;
+      text-decoration: none;
+      transition: all .5s;
+      background-color: white;
+      color: black;
+    }
+    .btn-login:hover {
+      color: #f8f9fa;
+      background-color: #0078ff;
+    }
+    .easyLogin{
+      margin-top: 20px;
+    }
+    .btn.btn-lg.btn-success.center-block {
+      margin-top: 5px;
+      -webkit-border-radius: 4px;
+    }
+  }
 }
