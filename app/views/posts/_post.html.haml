@@ -5,10 +5,14 @@
         .upper-post__user-name
           = link_to user_path(post.user_id) do
             = post.user.name
-          -# = render 'relationships/follow_button', user:@user
         .upper-post__date
           %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)+"前"
       .lower-post
+        .weight
+        - if post.weight.present?
+          体重
+          = post.weight
+          kg
         %table
           %thead
             %tr
@@ -29,18 +33,16 @@
                 = post.fat
               %td 
                 = post.carbo
-        .text
-          = post.text
+        - if post.text.present?
+          .text
+            = post.text
         - if post.image.present?
-          = image_tag post.image.url, class: 'post-image', width: '300px', height: '200px'
-        .weight
-        - if post.weight.present?
-          今の体重
-          = post.weight
-          kg
+          = image_tag post.image.url, class: 'post-image'
         %ul.more_list
           %li
-            = link_to '詳細', "/posts/#{post.id}", method: :get # ここのpathは/posts/#{post.id}でも/posts/#{@post.id}でもどっちでもいけちゃう
+            = link_to "/posts/#{post.id}", method: :get do
+              %i.fas.fa-info-circle
+              %span.edit 詳細
           %li
             = link_to "/posts/#{post.id}/edit", method: :get do
               %i.fa.fa-edit

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :create]
+  before_action :authenticate_user!, only: [:show, :create, :destroy]
   
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
