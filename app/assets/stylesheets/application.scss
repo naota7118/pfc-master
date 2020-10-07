@@ -24,25 +24,22 @@
 header {
   width: 100vw;
   z-index: 100;
-  position: fixed;
-  top: 0;
   background-color: #22242a;
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  .my-big {
-    font-size: 2em;
-    color: gray;
-    padding-top: 10px;
-    padding-right: 2px;
+  nav {
+    background-color: #22242a;
+    justify-content: space-between;
   }
   .my-logo {
     background-color: #f8f9fa;
   }
-  nav {
-    background-color: #22242a;
-  }
   .navbar {
     display: flex;
-    // height: 60px;
+  }
+  .admin-and-login, .mypage-and-logout {
+    display: flex;
+    position: relative;
+    right: 15px;
   }
   .mypage, .login, .logout, .admin {
     border: 1px solid;
