@@ -133,36 +133,36 @@
         .image_upload {
           width: auto;
         }
-        .container {
-          .row {
-            .weight {
-              margin-top: 5px;
-              #post_weight {
-                width: 30%;
-              }
+        .weight-and-btn {
+          display: flex;
+          justify-content: space-between;
+          .weight {
+            margin-top: 5px;
+            #post_weight {
+              width: 30%;
             }
-            .btn-square {
-              display: inline-block;
-              padding: 0.5em 1em;
-              text-decoration: none;
-              background: linear-gradient(#78b7fa,#007bff);
-              border-bottom: solid 4px #627295;
-              border-radius: 10px;
-              margin-top: 5px;
-              margin-right: 80px;
-              .post-btn {
-                background-color: transparent;
-                border: none;
-                color: white;
-                font-size: 16px;
-              }
+          }
+          .btn-square {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            background: linear-gradient(#78b7fa,#007bff);
+            border-bottom: solid 4px #627295;
+            border-radius: 10px;
+            margin-top: 5px;
+            // margin-right: 80px;
+            .post-btn {
+              background-color: transparent;
+              border: none;
+              color: white;
+              font-size: 16px;
             }
-            .btn-square:active {
-              /*ボタンを押したとき*/
-              -webkit-transform: translateY(4px);
-              transform: translateY(4px);/*下に動く*/
-              border-bottom: none;/*線を消す*/
-            }
+          }
+          .btn-square:active {
+            /*ボタンを押したとき*/
+            -webkit-transform: translateY(4px);
+            transform: translateY(4px);/*下に動く*/
+            border-bottom: none;/*線を消す*/
           }
         }
       }
