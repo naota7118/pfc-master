@@ -1,73 +1,72 @@
 <%# canvasタグ内にグラフを描く  %>
 <div class="chart-container" style="position: relative; height:50vh; width:50vw">
     <canvas id="myChart"width="400" height="400"></canvas>
+    <div class="home">
+        <%= link_to 'ホームに戻る', root_path, class: 'home-btn' %>
+    </div>
 </div>
 
-<%# htmlのscriptタグ内にjsを書いていく %>
-<script>
-// グラフ部分のDOMを取得しgetContextメソッドでグラフを描く
-var ctx = document.getElementById("myChart").getContext('2d');
+    <%# htmlのscriptタグ内にjsを書いていく %>
+    <script>
+    // グラフ部分のDOMを取得しgetContextメソッドでグラフを描く
+    var ctx = document.getElementById("myChart").getContext('2d');
 
-var myChart = new Chart(ctx, {
-    
-    type: 'bar',
-    data: {
-        // labelsでX軸を指定
-        labels: gon.date,
-        datasets: [{
-            type: 'bar', //カロリーは棒グラフ
-            label: "1日のカロリー合計",
-            // dataでY軸を指定
-            data: gon.data,
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1,
-            fill: false,
-            yAxisID: "y-axis-1",
+    var myChart = new Chart(ctx, {
+        
+        type: 'bar',
+        data: {
+            // labelsでX軸を指定
+            labels: gon.date,
+            datasets: [{
+                type: 'bar', //カロリーは棒グラフ
+                label: "1日のカロリー合計",
+                // dataでY軸を指定
+                data: gon.data,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                fill: false,
+                yAxisID: "y-axis-1",
+            },
+            {
+                type: 'line', //体重は折れ線グラフ
+                label: "体重",
+                // dataでY軸を指定
+                data: gon.weight,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)',
+                borderWidth: 1.2,
+                fill: false, // 追加
+                yAxisID: "y-axis-2",
+            }]
         },
-        {
-            type: 'line', //体重は折れ線グラフ
-            label: "体重",
-            // dataでY軸を指定
-            data: gon.weight,
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgb(255, 99, 132)',
-            borderWidth: 1.2,
-            fill: false, // 追加
-            yAxisID: "y-axis-2",
-        }]
-    },
-    options: {
-        title:  {
-            display: true,
-            text: "カロリーグラフ"
-        },
-        scales: {
-            yAxes: [{
-                id: "y-axis-1",
-                type: "linear",
-                position: "left",
-                ticks: {
-                    beginAtZero:true,
-                    suggestedMin: 50,
-                    suggestedMax: 100
-                },
-                //id: 'y左軸'
-            }, {
-                id: "y-axis-2",
-                type: "linear",
-                position: "right",
-                ticks: {
-                    max: 90,
-                    min: 40,
-                },
-            }],
+        options: {
+            title:  {
+                display: true,
+                text: "カロリーグラフ"
+            },
+            scales: {
+                yAxes: [{
+                    id: "y-axis-1",
+                    type: "linear",
+                    position: "left",
+                    ticks: {
+                        beginAtZero:true,
+                        suggestedMin: 50,
+                        suggestedMax: 100
+                    },
+                    //id: 'y左軸'
+                }, {
+                    id: "y-axis-2",
+                    type: "linear",
+                    position: "right",
+                    ticks: {
+                        max: 90,
+                        min: 40,
+                    },
+                }],
+            }
         }
-    }
-});
+    });
 
-</script>
-
-<div class="home">
-    <%= link_to 'ホームに戻る', root_path %>
-</div>
+    </script>
