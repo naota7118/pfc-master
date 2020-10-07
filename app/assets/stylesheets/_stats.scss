@@ -3,7 +3,15 @@
   color: white;
   justify-content: center;
   align-items: center;
+  .following {
+    .follow-link:hover {
+      text-decoration: none;
+    }
+  }
   .follower{
     margin-left: 5px;
+    .follow-link:hover {
+      text-decoration: none;
+    }
   }
 }
