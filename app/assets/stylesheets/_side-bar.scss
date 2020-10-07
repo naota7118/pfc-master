@@ -1,15 +1,15 @@
 .sidebar {
-  position: fixed;
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  width: 300px;
   background-color: #2f323a;
   margin-top: 87px;
   height: 100vh;
+  overflow-y: scroll;
   &-menu {
     .user-box {
       text-align: center;
       margin: 20px 0 10px;
       .user-img {
+        margin-top: 10px;
         border-radius: 50%;
       }
       .username {
@@ -97,15 +97,11 @@
     }
     .record:hover, .image-index:hover{
       background-color: #0078ff;
-      .table-path:hover {
-      }
-      .fa.fa-table:hover {
-      }
     }
   }
   .bg-slider {
-    width: 300px;
-    height: 200px;
+    // width: 300px;
+    // height: 200px;
     background-position:center center;
     background-size: cover;
     display: flex;

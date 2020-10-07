@@ -4,7 +4,7 @@
 
 .post {
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  .post-box {
+  .post-box.col-sm-9 {
     background-color: #fff;
     margin: 0 auto;
     margin-top: 30px;
@@ -24,12 +24,12 @@
     }
     .lower-post {
       margin: 0 auto;
-      table {
+      table.col-sm-12 {
         border-collapse: separate;
         border-spacing: 0;
         table-layout:fixed;
-        width: 600px;
-        // border-radius: 5px 5px 5px 5px;
+        // width: 600px;
+        border-radius: 5px 5px 5px 5px;
       }
       table th:first-child{
         border-radius: 10px 0 0 0;
@@ -78,8 +78,8 @@
     a:hover {
       text-decoration: none;
     }
-    .text {
-      width: 600px;
+    .text.col-sm-12 {
+      // width: 600px;
       margin-top: 5px;
       padding: 8px;
       border-radius: 5px;

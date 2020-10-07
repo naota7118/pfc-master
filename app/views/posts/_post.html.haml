@@ -1,6 +1,6 @@
 = link_to "/posts/#{post.id}" do
   .post
-    .post-box
+    .post-box.col-sm-9
       .upper-post
         .upper-post__user-name
           = link_to user_path(post.user_id) do
@@ -13,7 +13,7 @@
           体重
           = post.weight
           kg
-        %table
+        %table.col-sm-12
           %thead
             %tr
               %th FOOD
@@ -34,7 +34,7 @@
               %td 
                 = post.carbo
         - if post.text.present?
-          .text
+          .text.col-sm-12
             = post.text
         - if post.image.present?
           = image_tag post.image.url, class: 'post-image'

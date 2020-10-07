@@ -22,7 +22,8 @@
 @import "setting_standard";
 
 header {
-  width: 100%;
+  width: 100vw;
+  z-index: 100;
   position: fixed;
   top: 0;
   background-color: #22242a;
