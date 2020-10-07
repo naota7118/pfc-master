@@ -1,7 +1,11 @@
 .users-show
   .user-name
-    = @user.name
-    さんの記録一覧
+    - if user_signed_in?
+      = @user.name
+      さんの記録一覧
+    - else
+      = @sampleuser.name
+      さんの記録一覧
   .users-follow
     = render 'follow_form'
   -# = render 'stats'
