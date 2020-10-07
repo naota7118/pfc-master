@@ -290,7 +290,7 @@
       this.$bg = $(document.createElement('div'));
       this.$bg.css({
         position: 'absolute',
-        zIndex: (parseInt(this.$el.css('zIndex'), 10) || 0) - 1,
+        zIndex: (parseInt(this.$el.css('zIndex'), 10) || 0) + 1,
         overflow: 'hidden'
       });
 
