@@ -29,41 +29,41 @@ header {
   nav {
     background-color: #22242a;
     justify-content: space-between;
-  }
-  .my-logo {
-    background-color: #f8f9fa;
-  }
-  .navbar {
-    display: flex;
-  }
-  .admin-and-login, .mypage-and-logout {
-    display: flex;
-    position: relative;
-    right: 15px;
-  }
-  .mypage, .login, .logout, .admin {
-    border: 1px solid;
-    padding: 5px 15px;
-    -webkit-border-radius: 4px;
-    margin-left: 10px;
-    text-decoration: none;
-    transition: all .5s;
-  }
-  .mypage:hover {
-    color: #f8f9fa;
-    background-color: #0078ff;
-  }
-  .logout:hover {
-    color: #f8f9fa;
-    background-color: #0078ff;
-  }
-  .login:hover {
-    color: #f8f9fa;
-    background-color: #0078ff;
-  }
-  .admin:hover {
-    color: #f8f9fa;
-    background-color: #0078ff;
+    .navbar {
+      display: flex;
+      .my-logo {
+        background-color: #f8f9fa;
+      }
+      .admin-and-login, .mypage-and-logout {
+        display: flex;
+        position: relative;
+        right: 15px;
+        .mypage, .login, .logout, .admin {
+          border: 1px solid;
+          padding: 5px 15px;
+          -webkit-border-radius: 4px;
+          margin-left: 10px;
+          text-decoration: none;
+          transition: all .5s;
+        }
+        .mypage:hover {
+          color: #f8f9fa;
+          background-color: #0078ff;
+        }
+        .logout:hover {
+          color: #f8f9fa;
+          background-color: #0078ff;
+        }
+        .login:hover {
+          color: #f8f9fa;
+          background-color: #0078ff;
+        }
+        .admin:hover {
+          color: #f8f9fa;
+          background-color: #0078ff;
+        }
+      }
+    }
   }
 }
 
