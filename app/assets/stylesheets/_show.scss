@@ -1,44 +1,50 @@
-.users-show{
-  padding-top: 100px;
-  // display: flex;
-}
-.record-index{
-  display: flex;
-  border: solid 1px;
-  .calorie-index{
-    // border: solid 1px;
-    margin-left: 100px;
-  }
-  .sumcalorie-index{
-    // border: solid 1px;
-    margin-left: 100px;
+.user-wrapper {
+  background-color: #eaeaea;
+  .users-show{
+    margin: 0 auto;
+    text-align: center;
+    .user-name {
+      padding-top: 150px;
+    }
   }
 }
-.backtohome{
-  text-align: center;
-  text-decoration: none;
-}
+// .record-index{
+//   display: flex;
+//   border: solid 1px;
+//   .calorie-index{
+//     // border: solid 1px;
+//     margin-left: 100px;
+//   }
+//   .sumcalorie-index{
+//     // border: solid 1px;
+//     margin-left: 100px;
+//   }
+// }
+// .backtohome{
+//   text-align: center;
+//   text-decoration: none;
+// }
 
-.user-name{
-  text-align: center;
-}
-.users-follow{
-  text-align: center;
-  margin-bottom: 5px;
-}
+// .user-name{
+//   text-align: center;
+// }
+// .users-follow{
+//   text-align: center;
+//   margin-bottom: 5px;
+// }
 
-.content {
-  padding-top: 100px;
-}
+// .content {
+//   padding-top: 100px;
+// }
 
-.fa.fa-heart {
-  color: red;
-}
+// .fa.fa-heart {
+//   color: red;
+// }
 
-.like {
-  text-decoration: none;
-}
+// .like {
+//   text-decoration: none;
+// }
 
-.likes_buttons a:hover{
-  text-decoration: none;
-}
+// .likes_buttons a:hover{
+//   text-decoration: none;
+// }
