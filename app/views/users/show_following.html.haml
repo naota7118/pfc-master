@@ -9,7 +9,7 @@
             %tr
               %td
                 %li
-                  = link_to root_path(@user), class: 'followings-name' do
+                  = link_to user_path(@user), class: 'followings-name' do
                     = user.name
   - else
     .following-list 
@@ -25,7 +25,7 @@
             %tr
               %td
                 %li
-                  = link_to root_path(@sampleuser), class: 'followings-name' do
+                  = link_to user_path(@sampleuser), class: 'followings-name' do
                     = user.name
   - else
     .following-list 
