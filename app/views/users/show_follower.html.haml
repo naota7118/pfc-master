@@ -1,10 +1,26 @@
-詳細
-まだ誰からもフォローされてないのでフォロワーは誰も表示されない
-
--# - @user.followers.each do |user|
--# %table
--#   %tr
--#     %td
--#       = user.name
--#     %td
--#       = link_to '詳細', user_path(user)
+- if user_signed_in?
+  - if @user.followers.present?
+    - @user.followers.each do |user|
+      .follower-list 
+        = @user.name
+        さんのフォロワー一覧
+        %table.follower-list-table
+          %tr
+            %td
+              %li
+                = link_to root_path(@user), class: 'followers-name' do
+                  = user.name
+  - else
+    .follower-list 
+      フォロワーはまだいません
+- else
+  - @sampleuser.followers.each do |user|
+    .follower-list  
+      = @sampleuser.name
+      さんのフォロワー一覧
+      %table.follower-list-table
+        %tr
+          %td
+            %li
+              = link_to root_path(@sampleuser), class: 'followers-name' do
+                = user.name
