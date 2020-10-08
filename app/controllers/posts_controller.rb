@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :create]
+  before_action :authenticate_user!, only: [:show, :create, :destroy]
   
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
     @user = current_user
-    @sampleuser = User.find_by(id: 3)
+    @sampleuser = User.find_by(id: 2)
 
     # グラフに必要なデータを表示させるための変数を条件分岐
     if user_signed_in?
@@ -21,9 +21,9 @@ class PostsController < ApplicationController
       end
     else
       @calorie_sum = Post.where(user_id: @sampleuser.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-      @calorie_sum = Post.where(user_id: 3, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+      @calorie_sum = Post.where(user_id: 2, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
       gon.today_sum = @calorie_sum
-      @standard = Standard.find_by(user_id: 3)
+      @standard = Standard.find_by(user_id: 2)
       @calorie_standard = @standard.calorie
       gon.standard = @calorie_standard
       if @calorie_sum >= @calorie_standard

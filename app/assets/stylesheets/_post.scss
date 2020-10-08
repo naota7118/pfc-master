@@ -4,27 +4,33 @@
 
 .post {
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  .post-box {
+  .post-box.col-sm-9 {
     background-color: #fff;
+    margin: 0 auto;
     margin-top: 30px;
-    width: 735px;
+    // width: 800px;
     border-color: gray;
     border: ridge;
     border-radius: 10px;
     padding: 10px 20px 0px 20px;
     textarea {
-      width: 400px;
+      // width: 400px;
     }
     .upper-post {
-
+      display: flex;
+      .upper-post__date {
+        margin-left: 5px;
+      }
     }
     .lower-post {
-      table {
+      margin: 0 auto;
+      text-align: center;
+      table.col-sm-12 {
         border-collapse: separate;
         border-spacing: 0;
         table-layout:fixed;
-        width: 600px;
-        // border-radius: 5px 5px 5px 5px;
+        // width: 600px;
+        border-radius: 5px 5px 5px 5px;
       }
       table th:first-child{
         border-radius: 10px 0 0 0;
@@ -73,11 +79,15 @@
     a:hover {
       text-decoration: none;
     }
-    .text {
-      margin: 5px 0;
+    .text.col-sm-12 {
+      // width: 600px;
+      margin-top: 5px;
       padding: 8px;
       border-radius: 5px;
       border: 1px solid #e5e5e5;
+    }
+    .post-image {
+      margin: 5px 0;
     }
   }
 }

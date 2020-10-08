@@ -7,3 +7,7 @@
     = link_to post_likes_path(post.id), method: :post, remote: true, id: 'like', class: 'like-button' do
       %i.fa.fa-heart-o
     = post.likes.count
+- else
+  = link_to post_path(post.id), class: 'like-button' do
+    %i.fa.fa-heart-o 
+  = post.likes.count
