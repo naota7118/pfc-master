@@ -14,13 +14,17 @@
     .follower-list 
       フォロワーはまだいません
 - else
-  - @sampleuser.followers.each do |user|
-    .follower-list  
-      = @sampleuser.name
-      さんのフォロワー一覧
-      %table.follower-list-table
-        %tr
-          %td
-            %li
-              = link_to root_path(@sampleuser), class: 'followers-name' do
-                = user.name
+  - if @user.followers.present?
+    - @sampleuser.followers.each do |user|
+      .follower-list  
+        = @sampleuser.name
+        さんのフォロワー一覧
+        %table.follower-list-table
+          %tr
+            %td
+              %li
+                = link_to root_path(@sampleuser), class: 'followers-name' do
+                  = user.name
+  - else
+    .follower-list 
+      フォロワーはまだいません
