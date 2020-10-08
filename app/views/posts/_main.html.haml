@@ -36,14 +36,14 @@
               }
           });
       .today_calorie
-        %p 
+        %p
         - if user_signed_in?
           - if @calorie_standard >= @calorie_sum
             今日食べてOKなのはあと
             = link_to charts_path(current_user.id), class: 'difference' do
               = @difference
             カロリーです
-          - else 
+          - else
             = link_to charts_path(current_user.id), class: 'difference' do
               = @difference
             オーバーしています
@@ -53,7 +53,7 @@
             = link_to charts_path(@sampleuser.id), class: 'difference' do
               = @difference
             カロリーです
-          - else 
+          - else
             = link_to charts_path(@sampleuser.id), class: 'difference' do
               = @difference
             オーバーしています
