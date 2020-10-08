@@ -1,8 +1,18 @@
 #myChart {
   padding: 100px 20px 20px 20px;
+  width: 100%;
+  height: 700px;
+  margin-top: 10px;
 }
 
 .home {
-  margin-top: 270px;
   margin-left: 20px;
+}
+
+@import "modules/btn"; 
+
+@media (max-width: 480px) { //スマホサイズ用
+  #myChart {
+      height: 400px;
+  }
 }

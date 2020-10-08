@@ -1,17 +1,32 @@
-詳細
-まだ誰もフォローしていないから誰も表示されない
-- @users.each do |user|
-  = user.name
-
-
-  -# = user.name
-  -# = link_to '詳細', user_path(user)
-
-
-  -# .followingsIndex
-  -#   %table
-  -#     %tr
-  -#       %td
-  -#         = user.name
-  -#       %td
-  -#         = link_to '詳細', user_path(user)
+- if user_signed_in?
+  - if @user.followings.present?
+    - @user.followings.each do |user|
+      .following-list.col-sm-5
+        .following-flame
+          = @user.name
+          さんのフォローしている人リスト
+          %table.following-list-table
+            %tr
+              %td
+                %li
+                  = link_to user_path(@user), class: 'followings-name' do
+                    = user.name
+  - else
+    .following-list 
+      フォローしている人はいません
+- else
+  - if @sampleuser.followings.present?
+    - @sampleuser.followings.each do |user|
+      .following-list.col-sm-5
+        .following-flame
+          = @sampleuser.name
+          さんのフォローしている人リスト
+          %table.following-list-table
+            %tr
+              %td
+                %li
+                  = link_to user_path(@sampleuser), class: 'followings-name' do
+                    = user.name
+  - else
+    .following-list 
+      フォローしている人はいません

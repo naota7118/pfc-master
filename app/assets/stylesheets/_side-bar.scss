@@ -1,15 +1,15 @@
 .sidebar {
-  position: fixed;
   font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  width: 300px;
   background-color: #2f323a;
   margin-top: 87px;
-  height: 100vh;
+  height: 100%;
+  overflow-y: scroll;
   &-menu {
     .user-box {
       text-align: center;
       margin: 20px 0 10px;
       .user-img {
+        margin-top: 10px;
         border-radius: 50%;
       }
       .username {
@@ -77,10 +77,10 @@
       -o-transition: all 0.3s ease;
       transition: all  0.3s ease;
       .record-path {
+        color: white;
         text-decoration: none;
         padding: 15px 10px 15px 10px;
         -webkit-border-radius: 4px;
-        // background-color: #2f323a;
         display: block;
         -webkit-transition: all 0.3s ease;
         -moz-transition: all 0.3s ease;
@@ -97,14 +97,14 @@
     }
     .record:hover, .image-index:hover{
       background-color: #0078ff;
-      .table-path:hover {
-      }
-      .fa.fa-table:hover {
-      }
     }
   }
-  .bg-slider {
-    width: 300px;
+  div {
+    z-index: 0;
+    position: relative; 
+  }
+  .bg-slider{
+    width: 100%;
     height: 200px;
     background-position:center center;
     background-size: cover;

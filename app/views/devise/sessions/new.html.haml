@@ -1,10 +1,9 @@
 #account-page.account-page
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h2 Log in
-      %h5 登録しているユーザーでログイン
-      = render "devise/shared/links"
-    .account-page__inner--right.user-form
+  .account-page__inner
+    .account-page__inner2
+      %h2 登録しているユーザーでログイン
+      -# = render "devise/shared/links"
+    .account-page__inner3
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
           .field-label
@@ -18,6 +17,7 @@
             .field-input
               = f.password_field :password, autocomplete: "off"
           .actions
-            = f.submit "Log in", class: 'btn'
+            = f.submit "ログイン", class: 'btn-login'
           .easyLogin
+            採用担当者の方はこちらからお入りください
             = link_to 'かんたんログイン', users_guest_sign_in_path, method: :post, class:"btn btn-lg btn-success center-block"

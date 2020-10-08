@@ -1,57 +1,18 @@
-.users-show
-  .user-name
-    = @user.name
-    さんの記録一覧
-  .users-follow
-    = render 'follow_form'
-  -# = render 'stats'
-.record-index
-  .calorie-index
-    %table
-      %thead
-        %tr
-          %th.date 日にち
-          %th.food 食べたもの
-          %th.calorie カロリー
-          %th.protein タンパク質
-          %th.fat 脂質
-          %th.carbo 炭水化物
-      %tbody.table-body.table-line
-      - @posts.each do |post|
-        %tr
-          %td
-            = post.created_at.strftime("%Y年%m月%d日")
-          %td
-            = post.food
-          %td
-            = post.calorie
-          %td
-            = post.protein
-          %td  
-            = post.fat
-          %td 
-            = post.carbo
-  .sumcalorie-index    
-    %table
-      %thead
-        %tr
-          %th.date 日にち
-          %th.food 合計カロリー
-      %tbody
-      - @calorie.each do |calorie|
-        %tr
-          %td
-            = calorie[0].strftime("%Y年%m月%d日")
-          %td
-            = calorie[1]
-            カロリー
-.backtohome
-  = link_to '一覧画面に戻る', root_path
-
--# <%= グラフの種類 モデル名.group(:カラム名).count %>
--# <%= pie_chart Yogurt.group(:flavor).count %>
--# <%= line_chart User.group_by_day(:created_at).count %>
-
--# = line_chart Post.group(:calorie).count
--# = pie_chart Post.group(:protein, :fat, :carbo).count
--# = line_chart User.group_by_day(:created_at).count
+.user-wrapper
+  .users-show.col-sm-8
+    .user-name
+      - if user_signed_in?
+        = @user.name
+        さんの投稿一覧
+      - else
+        = @sampleuser.name
+        さんの投稿一覧
+    .users-follow
+      = render 'follow_form'
+    .posts
+      - if user_signed_in?
+        = render @posts
+        = paginate(@posts)
+      - else
+        = render @posts
+        = paginate(@posts)

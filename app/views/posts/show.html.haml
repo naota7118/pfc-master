@@ -39,16 +39,13 @@
             %td 
               -# - if @post.image.present?
               -#   = image_tag @post.image.url, class: "image"
-
     %ul.more_list
       %li
         = link_to '編集', edit_post_path(@post.id)
       %li
         = link_to '削除', "/posts/#{@post.id}", method: :delete
-
     .likes_buttons{id: "likes_buttons_#{@post.id}"}
       = render partial: "likes/like", locals: {post: @post}
-
     .comment
       - if user_signed_in?
         = form_with model: [@post, @comment], local: true, id: 'new_comment' do |f|
