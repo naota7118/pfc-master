@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     
     # グラフに必要なデータを表示させるための変数を条件分岐
     if user_signed_in?
+      @user = current_user
       @calorie_sum = Post.where(user_id: @user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
       gon.today_sum = @calorie_sum
       @standard = Standard.find_by(user_id: @user.id)
@@ -20,6 +21,7 @@ class PostsController < ApplicationController
         @difference = @calorie_standard - @calorie_sum
       end
     else
+      @sampleuser = User.find_by(id: 2)
       @calorie_sum = Post.where(user_id: @sampleuser.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
       gon.today_sum = @calorie_sum
       @standard = Standard.find_by(user_id: @sampleuser.id)
