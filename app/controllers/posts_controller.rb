@@ -6,39 +6,13 @@ class PostsController < ApplicationController
     @post = Post.new
     @user = current_user
     @sampleuser = User.find_by(id: 2)
-
-    # グラフに必要なデータを表示させるための変数を条件分岐
-    if user_signed_in?
-      @calorie_sum = Post.where(user_id: current_user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-      gon.today_sum = @calorie_sum
-      @standard = Standard.find_by(user_id: current_user.id)
-      @calorie_standard = @standard.calorie
-      gon.standard = @calorie_standard
-      if @calorie_sum >= @calorie_standard
-        @difference = @calorie_sum - @calorie_standard
-      else
-        @difference = @calorie_standard - @calorie_sum
-      end
-    else
-      @calorie_sum = Post.where(user_id: @sampleuser.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-      @calorie_sum = Post.where(user_id: 2, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-      gon.today_sum = @calorie_sum
-      @standard = Standard.find_by(user_id: 2)
-      @calorie_standard = @standard.calorie
-      gon.standard = @calorie_standard
-      if @calorie_sum >= @calorie_standard
-        @difference = @calorie_sum - @calorie_standard
-      else
-        @difference = @calorie_standard - @calorie_sum
-      end
-    end
   end
   
 
   def create
     @post = Post.new(post_params)
     # 今日の日付を取得(simple_calendarのため)
-    @post[:start_time] = Date.today.strftime('%Y-%m-%d')
+    
     if @post.save
       redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
     else
