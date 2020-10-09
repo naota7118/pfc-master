@@ -8,7 +8,7 @@ FactoryBot.define do
 
   factory :nick, class: User do
     name { "nick"}
-    email { "nick@example.com"}
+    email { "john@example.com"}
     password { "password"}
     password_confirmation { "password"}
   end
