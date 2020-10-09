@@ -10,10 +10,13 @@ class User < ApplicationRecord
   has_many :follower_relationships, class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
   has_many :followers, through: :follower_relationships, source: :follower
   has_one :standard
-  validates :password, length: { minimum: 6 }
-  validates :email, presence: true
-  validates :password, presence: true
+
   validates :name, presence: true
+  validates :name, uniqueness: true
+  validates :email, presence: true
+  validates :email, uniqueness: true
+  validates :password, presence: true
+  validates :password, length: { minimum: 6 }
 
   def already_liked?(post)
     self.likes.exists?(post_id: post.id)
