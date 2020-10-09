@@ -24,6 +24,7 @@ group :development, :test do
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
   gem 'faker'
+  gem 'factory_bot_rails'
 end
 
 group :development do
