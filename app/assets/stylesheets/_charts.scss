@@ -15,7 +15,8 @@ body {
   padding-bottom:20px;
 }
 
-@import "modules/btn"; 
+@import "modules/btn";
+// @import "modules/home";
 
 @media (max-width: 480px) { //スマホサイズ用
   #myChart {
