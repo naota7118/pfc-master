@@ -1,5 +1,6 @@
 .simple-calendar {
   padding-top: 120px;
+  height: 100vh;
 }
 .calendar-heading{
   text-align: center;
@@ -10,11 +11,9 @@
 .table.table-striped{
   text-align: center;
 }
-
 .has-events{
   background-color: rgba(248,247,172,0.7);
 }
-
 .calendar-food .calendar-calorie .calendar-weight{
   color:black;
 }
