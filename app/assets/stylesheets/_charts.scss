@@ -1,3 +1,7 @@
+body {
+  background-color: #eaeaea;
+}
+
 #myChart {
   padding: 100px 20px 20px 20px;
   width: 100%;
@@ -6,7 +10,9 @@
 }
 
 .home {
-  margin-left: 20px;
+  background-color: #eaeaea;
+  padding-left: 20px;
+  padding-bottom:20px;
 }
 
 @import "modules/btn"; 

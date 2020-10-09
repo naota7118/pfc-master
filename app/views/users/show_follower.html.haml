@@ -15,7 +15,7 @@
     .follower-list 
       フォロワーはまだいません
 - else
-  - if @user.followers.present?
+  - if @sampleuser.followers.present?
     - @sampleuser.followers.each do |user|
       .follower-list.col-sm-5
         .follower-flame 
