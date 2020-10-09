@@ -23,6 +23,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
+  gem 'faker'
 end
 
 group :development do
@@ -61,3 +62,4 @@ gem 'ed25519'
 gem 'bcrypt_pbkdf'
 gem "sassc", '~>2.1.0'
 gem "mini_racer"
+gem 'bcrypt', '~> 3.1.7'

@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_many :follower_relationships, class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
   has_many :followers, through: :follower_relationships, source: :follower
   has_one :standard
+  validates :password, length: { minimum: 6 }
 
   def already_liked?(post)
     self.likes.exists?(post_id: post.id)
@@ -30,7 +31,6 @@ class User < ApplicationRecord
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
       user.password = SecureRandom.urlsafe_base64
-      # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end
   end
   
