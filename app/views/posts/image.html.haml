@@ -1,6 +1,7 @@
-.content
-  .images
-  - @posts.each do |post|
-    = image_tag post.image.url, class: "my-images"
-  .home
-    = link_to 'ホームに戻る', root_path, class: 'home-btn'
+.image-container
+  .image-wrapper
+    .images
+    - @posts.each do |post|
+      = image_tag post.image.url, class: "my-images"
+    .home
+      = link_to 'ホームに戻る', root_path, class: 'home-btn'
