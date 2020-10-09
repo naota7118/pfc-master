@@ -33,11 +33,11 @@ RSpec.describe User, type: :model do
     expect(user.errors.added?(:password, :too_short, count: 6)).to be_truthy
   end
 
-  it "登録済みのemailアドレスでは登録できない" do
-    user = create(:user)
-    another_user = build(:user, email: user.email)
-    another_user.valid?
-    expect(another_user.errors[:email]).to include("はすでに存在します")
-  end
-  
+
+  # it "登録済みのemailアドレスでは登録できない" do
+  #   create(:john)
+  #   user = User.new(name: 'user', email: "john@example.com", password: "password", password_confirmation: "password")
+  #   expect(user.errors[:email]).to include("はすでに存在します")
+  # end
+
 end
