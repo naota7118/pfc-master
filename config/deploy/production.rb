@@ -1,5 +1,4 @@
-# EC2サーバーのIP、EC2サーバーにログインするユーザー名、サーバーのロールを記述
-server '13.113.23.81', user: 'naota', roles: %w{app db web} 
+server '176.34.34.208', user: 'naota', roles: %w{app db web}
 
 #デプロイするサーバーにsshログインする鍵の情報を記述
 set :ssh_options, keys: '~/.ssh/pfcmaster7118_key_rsa' 
@@ -63,4 +62,3 @@ set :ssh_options, keys: '~/.ssh/pfcmaster7118_key_rsa'
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-server '176.34.34.208', user: 'ec2-user', roles: %w{app db web}
