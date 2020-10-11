@@ -9,12 +9,7 @@
 # And be sure to use new-style password hashing:
 #   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
 #
-<<<<<<< HEAD
-
-default: &default
-=======
 default:
->>>>>>> 6ac270ee23c708b481e300f6ea19111745320983
   adapter: mysql2
   encoding: utf8
   pool: 5
@@ -31,10 +26,6 @@ development:
   username: root
   password: password
   host: localhost
-<<<<<<< HEAD
-=======
-
->>>>>>> 6ac270ee23c708b481e300f6ea19111745320983
 
 test:
   adapter: mysql2
@@ -53,8 +44,4 @@ production:
   username: root
   password: password
   host: localhost
-<<<<<<< HEAD
   #socket: /var/lib/mysql/mysql.sock
-=======
-  # socket: /var/lib/mysql/mysql.sock
->>>>>>> 6ac270ee23c708b481e300f6ea19111745320983
