@@ -63,3 +63,4 @@ set :ssh_options, keys: '~/.ssh/pfcmaster7118_key_rsa'
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+server '176.34.34.208', user: 'ec2-user', roles: %w{app db web}
