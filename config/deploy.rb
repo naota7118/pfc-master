@@ -4,7 +4,7 @@ lock '3.14.1'
 
 # Capistranoのログの表示に利用する
 set :application, 'pfc-master'
-set :deploy_to, '/var/rails/pfc-master'
+set :deploy_to, '/var/www/rails/pfc-master'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'https://github.com/naota7118/pfc-master.git'
