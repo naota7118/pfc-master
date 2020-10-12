@@ -18,7 +18,7 @@ set :rbenv_custom_path, '/home/naota/.rbenv'
 
 # どの公開鍵を利用してデプロイするか
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['~/.ssh/pfcmaster7118_key_rsa'] 
+                  keys: ['~/.ssh/pfcmaster7118.pem'] 
 
 # プロセス番号を記載したファイルの場所
 set :unicorn_pid, -> { "#{shared_path}/tmp/pids/unicorn.pid" }
@@ -34,6 +34,42 @@ set :linked_files, fetch(:linked_files, []).push("config/master.key")
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:restart'
+    invoke! 'unicorn:restart'
   end
 end
+
+# namespace :deploy do
+#   desc 'Restart application'
+#   task :restart do
+#     invoke 'unicorn:restart'
+#   end
+
+#   desc 'Create database'
+#   task :db_create do
+#     on roles(:db) do |host|
+#       with rails_env: fetch(:rails_env) do
+#         within current_path do
+#           execute :bundle, :exec, :rake, 'db:create'
+#         end
+#       end
+#     end
+#   end
+
+#   desc 'Run seed'
+#   task :seed do
+#     on roles(:app) do
+#       with rails_env: fetch(:rails_env) do
+#         within current_path do
+#           execute :bundle, :exec, :rake, 'db:seed'
+#         end
+#       end
+#     end
+#   end
+
+#   after :publishing, :restart
+
+#   after :restart, :clear_cache do
+#     on roles(:web), in: :groups, limit: 3, wait: 10 do
+#     end
+#   end
+# end
