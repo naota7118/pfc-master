@@ -34,7 +34,7 @@ set :linked_files, fetch(:linked_files, []).push("config/master.key")
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
   task :restart do
-    invoke! 'unicorn:restart'
+    invoke 'unicorn:restart'
   end
 end
 
