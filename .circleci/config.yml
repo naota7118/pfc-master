@@ -6,20 +6,21 @@ orbs:
 
 jobs:
   build:
-    working_directory: ~/projects/pfc-master
     docker:
       - image: circleci/ruby:2.5.1-node-browsers
-        environment:
-          DB_HOST: 127.0.0.1
-          RAILS_ENV: test
-          BUNDLER_VERSION: 2.1.4
-          TZ: "Japan"
-      - image: circleci/mysql:5.6
+      environment:
+        DB_HOST: 127.0.0.1
+        RAILS_ENV: test
+        BUNDLER_VERSION: 2.1.4
+        TZ: "Japan"
+        - image: circleci/mysql:5.6
         command: mysqld --default-authentication-plugin=mysql_native_password
         environment:
           MYSQL_USER: root
           MYSQL_PASSWORD: password 
-
+          
+    working_directory: ~/projects/pfc-master
+    
     steps:
       - checkout
       # - ruby/install-deps
