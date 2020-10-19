@@ -30,11 +30,11 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: pfc-master_test
+  database: ci_test
   pool: 5
-  username: root
+  username: 'root'
   password: password
-  host: localhost
+  host: '127.0.0.1'
 
 production:
   adapter: mysql2
