@@ -10,9 +10,9 @@ jobs:
       - image: circleci/ruby:2.5.1-node-browsers
         environment:
           BUNDLER_VERSION: 2.1.4
-      steps:
-        - checkout
-        - ruby/install-deps
+    steps:
+      - checkout
+      - ruby/install-deps
 
   test:
     parallelism: 3
