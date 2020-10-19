@@ -44,8 +44,35 @@ jobs:
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
       # Run rspec in parallel
-      - ruby/rspec-test
-      - ruby/rubocop-check
+      
+      # Rubocop
+      - run:
+        name: Rubocop
+        command: bundle exec rubocop -a
+
+      # rspec
+      # run tests!
+      - type: shell
+        command: |
+          bundle exec rspec --profile 10 \
+                            --format RspecJunitFormatter \
+                            --out test_results/rspec.xml \
+                            --format progress \
+                            $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
+
+          bundle exec rspec \
+            --format progress \
+            --format RspecJunitFormatter \
+            --out /tmp/test-results/rspec.xml \
+            --format progress \
+            $TEST_FILES
+
+      # collect reports
+      - store_test_results:
+        path: /tmp/test-results
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: test-results
 
 workflows:
   version: 2
