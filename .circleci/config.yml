@@ -39,7 +39,6 @@ jobs:
       - ruby/rspec-test
       - ruby/rubocop-check
 
-      
 workflows:
   version: 2
   build_and_test:
