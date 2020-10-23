@@ -38,7 +38,8 @@ jobs:
       - run: bundle exec rake db:schema:load
       # Run rspec in parallel
       - ruby/rspec-test
-      - ruby/rubocop-check
+      - run:
+        name: run rubocop
         command: |
           mkdir -p /tmp/rubocop-results
           bundle exec rubocop . --out /tmp/rubocop-results/check-results.xml --format progress
