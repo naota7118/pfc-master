@@ -30,7 +30,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: ci_test
+  database: pfc-master_test
   pool: 5
   username: 'root'
   password: password
