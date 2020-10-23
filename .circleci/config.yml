@@ -79,5 +79,5 @@ jobs:
           destination: test-results
 
       - add_ssh_keys:
-        fingerprints:
-          - "49:e1:e6:20:11:93:6c:e8:60:6d:30:2e:18:23:76:33"
+          fingerprints:
+            - "49:e1:e6:20:11:93:6c:e8:60:6d:30:2e:18:23:76:33"
