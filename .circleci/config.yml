@@ -39,7 +39,10 @@ jobs:
       # Run rspec in parallel
       - ruby/rspec-test
       - ruby/rubocop-check
-
+      - run:
+        command: mkdir -p /tmp/rubocop-results
+        command: bundle exec rubocop . --out /tmp/rubocop-results/check-results.xml --format progress
+        
 workflows:
   version: 2
   build_and_test:
