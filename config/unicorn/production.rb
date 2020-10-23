@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # $worker  = 2
 # $timeout = 30
 # # $app_dir = "/var/www/rails/pfc-master"

@@ -1,9 +1,10 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 RSpec.describe User, type: :model do
-
   it "名前, メールアドレス, パスワードがあれば登録できる" do
-    user = User.new(name: 'John', email: "test@example.com", password: "testtest")
+    user = User.new(name: "John", email: "test@example.com", password: "testtest")
     expect(user).to be_valid
   end
 
@@ -23,7 +24,7 @@ RSpec.describe User, type: :model do
 
   it "パスワードが6文字以上であれば登録できる" do
     password = Faker::Internet.password(min_length: 6, max_length: 6)
-    user = User.new(name: 'John', email: "test@example.com", password: password, password_confirmation: password)
+    user = User.new(name: "John", email: "test@example.com", password: password, password_confirmation: password)
     expect(user).to be_valid
   end
 
@@ -38,5 +39,4 @@ RSpec.describe User, type: :model do
     nick = build(:nick)
     expect(nick.errors[:email]).to include()
   end
-
 end

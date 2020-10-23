@@ -1,7 +1,9 @@
-server 'pfcmaster.work', user: 'naota', roles: %w{app db web}
+# frozen_string_literal: true
 
-#デプロイするサーバーにsshログインする鍵の情報を記述
-set :ssh_options, keys: '~/.ssh/pfcmaster7118_key_rsa' 
+server "pfcmaster.work", user: "naota", roles: %w{app db web}
+
+# デプロイするサーバーにsshログインする鍵の情報を記述
+set :ssh_options, keys: "~/.ssh/pfcmaster7118_key_rsa"
 
 # server-based syntax
 # ======================

@@ -1,5 +1,6 @@
-class UsersController < ApplicationController
+# frozen_string_literal: true
 
+class UsersController < ApplicationController
   def show
     if user_signed_in?
       @user = User.find(params[:id])
@@ -11,9 +12,8 @@ class UsersController < ApplicationController
       @calorie = @sampleuser.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
     end
   end
-  
+
   def edit
-    
   end
 
   def update
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       @sampleuser = User.find_by(id: 2)
       @users = @sampleuser.followings
     end
-    render 'show_following'
+    render "show_following"
   end
 
   def followers
@@ -43,13 +43,11 @@ class UsersController < ApplicationController
       @sampleuser = User.find_by(id: 2)
       @users = @sampleuser.followings
     end
-    render 'show_follower'
+    render "show_follower"
   end
 
   private
-
-  def user_params
-    params.require(:user).permit(:id, :name, :email)
-  end
-
+    def user_params
+      params.require(:user).permit(:id, :name, :email)
+    end
 end

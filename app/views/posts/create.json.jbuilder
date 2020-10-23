@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 json.id @post.id
 json.user_id @post.user.id
 json.user_name @post.user.name

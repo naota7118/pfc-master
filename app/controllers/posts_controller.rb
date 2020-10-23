@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create, :destroy]
-  
+
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
     @user = current_user
     @sampleuser = User.find_by(id: 2)
-    
+
     # グラフに必要なデータを表示させるための変数を条件分岐
     if user_signed_in?
       @user = current_user
@@ -34,17 +36,17 @@ class PostsController < ApplicationController
       end
     end
   end
-  
+
 
   def create
     @post = Post.new(post_params)
     # 今日の日付を取得(simple_calendarのため)
-    @post[:start_time] = Date.today.strftime('%Y-%m-%d')
+    @post[:start_time] = Date.today.strftime("%Y-%m-%d")
     if @post.save
       redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
     else
       @posts = Post.includes(:user)
-      flash.now[:alert] = '必須項目をしてください。' # フラッシュメッセージが出るか確認する
+      flash.now[:alert] = "必須項目をしてください。" # フラッシュメッセージが出るか確認する
       redirect_back(fallback_location: root_path)
     end
   end
@@ -63,7 +65,7 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post.destroy
-    redirect_back(fallback_location: root_path) 
+    redirect_back(fallback_location: root_path)
   end
 
   def update
@@ -71,7 +73,7 @@ class PostsController < ApplicationController
     if @post.update(post_params)
       redirect_to root_path
     else
-      flash.now[:alert] = 'エラーが発生しました。'
+      flash.now[:alert] = "エラーが発生しました。"
       render :edit
     end
   end
@@ -86,8 +88,7 @@ class PostsController < ApplicationController
   end
 
   private
-  def post_params
-    params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image, :weight, :start_time).merge(user_id: current_user.id)
-  end
-
+    def post_params
+      params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image, :weight, :start_time).merge(user_id: current_user.id)
+    end
 end

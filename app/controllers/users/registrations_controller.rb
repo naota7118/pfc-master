@@ -1,5 +1,6 @@
-class Users::RegistrationsController < Devise::RegistrationsController
+# frozen_string_literal: true
 
+class Users::RegistrationsController < Devise::RegistrationsController
   def new
     @user = User.new
   end
@@ -16,7 +17,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       # 同じアクション内でrenderを2回記述する場合はand returnを使用する
     end
     # attributesで全ての属性を取得しsessionで保存
-    session["devise.regist_data"] = {user: @user.attributes}
+    session["devise.regist_data"] = { user: @user.attributes }
     # passwordを保存
     session["devise.regist_data"][:user]["password"] = params[:user][:password]
     standard = @user.standard
@@ -36,19 +37,18 @@ class Users::RegistrationsController < Devise::RegistrationsController
       # sessionを削除
       session["devise.regist_data"]["user"].clear
       sign_in(:user, @user)
-      flash[:notice] = 'アカウント登録が完了しました'
+      flash[:notice] = "アカウント登録が完了しました"
       redirect_to root_path
     else
-      flash.now[:alert] = 'アカウント登録に失敗しました'
+      flash.now[:alert] = "アカウント登録に失敗しました"
       render :new
     end
   end
 
   protected
-
-  def standard_params
-    params.require(:standard).permit(:weight, :calorie, :protein, :fat, :carbo, :bodyFatPercentage, :leanBodyMass, :user_id)
-  end
+    def standard_params
+      params.require(:standard).permit(:weight, :calorie, :protein, :fat, :carbo, :bodyFatPercentage, :leanBodyMass, :user_id)
+    end
 
 
   # GET /resource/sign_up
