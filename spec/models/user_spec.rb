@@ -35,7 +35,6 @@ RSpec.describe User, type: :model do
   end
 
   it "登録済みのemailアドレスでは登録できない" do
-    john = build(:john)
     nick = build(:nick)
     expect(nick.errors[:email]).to include()
   end
