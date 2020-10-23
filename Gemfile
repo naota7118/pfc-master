@@ -25,7 +25,7 @@ group :development, :test do
   gem 'capistrano3-unicorn'
   gem 'faker'
   gem 'factory_bot_rails'
-  gem 'rubocop'
+  gem 'rubocop-rails'
 end
 
 group :development do
