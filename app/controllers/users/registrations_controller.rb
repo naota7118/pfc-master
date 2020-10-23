@@ -20,7 +20,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     session["devise.regist_data"] = { user: @user.attributes }
     # passwordを保存
     session["devise.regist_data"][:user]["password"] = params[:user][:password]
-    standard = @user.standard
+    # standard = @user.standard
     @standard = @user.build_standard
     render :new_standard
   end
