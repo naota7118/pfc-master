@@ -13,6 +13,7 @@ jobs:
       - checkout
       - ruby/install-deps
 
+  # 時間短縮のためテストを並列実行する
   test:
     parallelism: 3
     docker:
@@ -36,8 +37,30 @@ jobs:
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
       # Run rspec in parallel
-      - ruby/rspec-test
-      - ruby/rubocop-check
+      # run tests!
+      - run:
+        name: run tests
+        command: |
+          mkdir /tmp/test-results
+          TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | \
+            circleci tests split --split-by=timings)"
+          bundle exec rspec \
+            --format progress \
+            --format RspecJunitFormatter \
+            --out /tmp/test-results/rspec.xml \
+            --format progress \
+            $TEST_FILES
+      # collect reports
+      - store_test_results:
+          path: /tmp/test-results
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: test-results
+
+      # run rubocop
+      - run:
+          name: run rubocop
+          command: bundle exec rubocop
 
 workflows:
   version: 2
