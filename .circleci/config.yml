@@ -40,10 +40,7 @@ jobs:
       - ruby/rspec-test
       - run:
         name: run rubocop
-        command: |
-          bundle exec rubocop
-          mkdir -p /tmp/rubocop-results
-          bundle exec rubocop . --out /tmp/rubocop-results/check-results.xml --format progress
+        command: bundle exec rubocop
 
 workflows:
   version: 2
