@@ -1,8 +1,5 @@
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
 version: 2
+
 jobs:
   build:
     docker:
@@ -16,16 +13,11 @@ jobs:
           - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
           - MYSQL_ROOT_HOST: '%'
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
     working_directory: ~/projects/pfc-master
 
     steps:
       - checkout
-
+  
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
@@ -81,7 +73,6 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "49:e1:e6:20:11:93:6c:e8:60:6d:30:2e:18:23:76:33"
-      
       - deploy:
         name: Capistrano deploy
         command: bundle exec cap production deploy
