@@ -1,4 +1,5 @@
-require:
+AllCops:
+  Include:
   - rubocop-packaging
   - rubocop-performance
   - rubocop-rails
