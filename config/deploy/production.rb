@@ -35,7 +35,6 @@ set :ssh_options, keys: "~/.ssh/pfcmaster7118_key_rsa"
 # Feel free to add new variables to customise your setup.
 
 
-
 # Custom SSH Options
 # ==================
 # You may pass any option but keep in mind that net/ssh understands a
