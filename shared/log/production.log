@@ -13029,3 +13029,460 @@ I, [2020-10-26T21:58:16.619928 #30350]  INFO -- : [f9d11a5c-0584-436d-9e73-c61bc
 I, [2020-10-26T21:58:16.620018 #30350]  INFO -- : [f9d11a5c-0584-436d-9e73-c61bcdc217ce]   Rendered posts/index.html.haml within layouts/application (26.8ms)
 I, [2020-10-26T21:58:16.621105 #30350]  INFO -- : [f9d11a5c-0584-436d-9e73-c61bcdc217ce]   Rendered layouts/_notifications.html.haml (0.1ms)
 I, [2020-10-26T21:58:16.621356 #30350]  INFO -- : [f9d11a5c-0584-436d-9e73-c61bcdc217ce] Completed 200 OK in 33ms (Views: 25.3ms | ActiveRecord: 3.9ms)
+I, [2020-10-26T22:04:12.517958 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca] Started GET "/" for 106.180.15.139 at 2020-10-26 22:04:12 +0000
+I, [2020-10-26T22:04:12.518770 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca] Processing by PostsController#index as HTML
+D, [2020-10-26T22:04:12.539039 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (8.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+D, [2020-10-26T22:04:12.544085 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:04:12.544623 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-10-26T22:04:12.547486 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (1.6ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 2 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:04:12.548139 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[36mStandard Load (0.3ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 2 LIMIT 1[0m
+I, [2020-10-26T22:04:12.548890 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:04:12.551133 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 2[0m
+D, [2020-10-26T22:04:12.552405 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 2[0m
+I, [2020-10-26T22:04:12.552547 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered users/_stats.html.haml (3.0ms)
+I, [2020-10-26T22:04:12.553541 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered posts/_side_bar.html.haml (4.5ms)
+D, [2020-10-26T22:04:12.555801 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:04:12.556879 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:04:12.559533 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:04:12.559649 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered likes/_like.html.haml (1.0ms)
+D, [2020-10-26T22:04:12.560525 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:04:12.562796 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:04:12.562914 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered likes/_like.html.haml (1.0ms)
+D, [2020-10-26T22:04:12.563713 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:04:12.565747 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:04:12.565895 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered likes/_like.html.haml (1.0ms)
+D, [2020-10-26T22:04:12.566596 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:04:12.568668 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:04:12.568795 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:04:12.569579 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:04:12.571631 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:04:12.571746 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:04:12.572541 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:04:12.572708 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered collection of posts/_post.html.haml [5 times] (15.5ms)
+D, [2020-10-26T22:04:12.573274 #30350] DEBUG -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:04:12.576543 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered posts/_main.html.haml (22.9ms)
+I, [2020-10-26T22:04:12.576624 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered posts/index.html.haml within layouts/application (27.7ms)
+I, [2020-10-26T22:04:12.577761 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:04:12.577990 #30350]  INFO -- : [8713f40b-b7bc-4c49-947f-68ce2877b8ca] Completed 200 OK in 59ms (Views: 26.2ms | ActiveRecord: 18.1ms)
+I, [2020-10-26T22:06:31.477350 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953] Started GET "/" for 106.180.15.139 at 2020-10-26 22:06:31 +0000
+I, [2020-10-26T22:06:31.477982 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953] Processing by PostsController#index as HTML
+D, [2020-10-26T22:06:31.479627 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:06:31.480029 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-10-26T22:06:31.481296 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 2 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:06:31.481907 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[36mStandard Load (0.2ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 2 LIMIT 1[0m
+I, [2020-10-26T22:06:31.482557 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:06:31.484645 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 2[0m
+D, [2020-10-26T22:06:31.485738 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 2[0m
+I, [2020-10-26T22:06:31.485931 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered users/_stats.html.haml (2.7ms)
+I, [2020-10-26T22:06:31.486722 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered posts/_side_bar.html.haml (4.0ms)
+D, [2020-10-26T22:06:31.488720 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:06:31.489753 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:06:31.492299 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:06:31.492539 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered likes/_like.html.haml (1.0ms)
+D, [2020-10-26T22:06:31.493328 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:06:31.495510 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:06:31.495671 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered likes/_like.html.haml (1.0ms)
+D, [2020-10-26T22:06:31.496398 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:06:31.498419 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:06:31.498576 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:06:31.499367 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:06:31.501368 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:06:31.501486 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:06:31.502256 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:06:31.504562 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:06:31.504676 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered likes/_like.html.haml (1.0ms)
+D, [2020-10-26T22:06:31.505527 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:06:31.505677 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered collection of posts/_post.html.haml [5 times] (15.6ms)
+D, [2020-10-26T22:06:31.506312 #30350] DEBUG -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:06:31.510071 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered posts/_main.html.haml (23.2ms)
+I, [2020-10-26T22:06:31.510162 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered posts/index.html.haml within layouts/application (27.5ms)
+I, [2020-10-26T22:06:31.511419 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:06:31.511747 #30350]  INFO -- : [fef2e663-27c0-4b9b-8c73-147ed4079953] Completed 200 OK in 34ms (Views: 26.1ms | ActiveRecord: 4.0ms)
+D, [2020-10-26T22:07:37.896104 #14842] DEBUG -- :   [1m[35m (6.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+D, [2020-10-26T22:07:37.921846 #14842] DEBUG -- :   [1m[35m (1.8ms)[0m  [1m[34mSELECT GET_LOCK('6296712239027080815', 0)[0m
+D, [2020-10-26T22:07:37.959799 #14842] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+D, [2020-10-26T22:07:37.963467 #14842] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+D, [2020-10-26T22:07:37.970904 #14842] DEBUG -- :   [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+D, [2020-10-26T22:07:37.973013 #14842] DEBUG -- :   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+D, [2020-10-26T22:07:37.973296 #14842] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('6296712239027080815')[0m
+D, [2020-10-26T22:07:42.344622 #14936] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+I, [2020-10-26T22:09:39.633176 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a] Started GET "/" for 106.180.15.139 at 2020-10-26 22:09:39 +0000
+I, [2020-10-26T22:09:39.635949 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a] Processing by PostsController#index as HTML
+D, [2020-10-26T22:09:39.644935 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+D, [2020-10-26T22:09:39.673506 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:09:39.684306 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-10-26T22:09:39.687873 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (1.6ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 2 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:09:39.690413 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[36mStandard Load (0.3ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 2 LIMIT 1[0m
+I, [2020-10-26T22:09:39.707613 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:09:39.736027 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 2[0m
+D, [2020-10-26T22:09:39.737241 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 2[0m
+I, [2020-10-26T22:09:39.737399 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered users/_stats.html.haml (8.3ms)
+I, [2020-10-26T22:09:39.738276 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered posts/_side_bar.html.haml (16.6ms)
+D, [2020-10-26T22:09:39.749630 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:09:39.750899 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:09:39.779564 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:09:39.779723 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered likes/_like.html.haml (4.4ms)
+D, [2020-10-26T22:09:39.781479 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:09:39.783663 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:09:39.783823 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:09:39.784559 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:09:39.786565 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:09:39.786688 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:09:39.787458 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:09:39.789447 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:09:39.789574 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:09:39.790333 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:09:39.792321 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:09:39.792439 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:09:39.793177 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:09:39.793378 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered collection of posts/_post.html.haml [5 times] (41.0ms)
+D, [2020-10-26T22:09:39.793964 #15004] DEBUG -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:09:39.809082 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered posts/_main.html.haml (69.7ms)
+I, [2020-10-26T22:09:39.809208 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered posts/index.html.haml within layouts/application (101.5ms)
+I, [2020-10-26T22:09:39.821776 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a]   Rendered layouts/_notifications.html.haml (1.4ms)
+I, [2020-10-26T22:09:39.822079 #15004]  INFO -- : [f71befff-8552-467a-a477-b8ab98e8bc7a] Completed 200 OK in 186ms (Views: 114.5ms | ActiveRecord: 9.1ms)
+I, [2020-10-26T22:09:53.512653 #15004]  INFO -- : [204e114d-fa13-4afd-be22-fb27f0cf4046] Started POST "/users/guest_sign_in" for 106.180.15.139 at 2020-10-26 22:09:53 +0000
+I, [2020-10-26T22:09:53.513531 #15004]  INFO -- : [204e114d-fa13-4afd-be22-fb27f0cf4046] Processing by Users::SessionsController#new_guest as HTML
+I, [2020-10-26T22:09:53.513587 #15004]  INFO -- : [204e114d-fa13-4afd-be22-fb27f0cf4046]   Parameters: {"authenticity_token"=>"KJbbKJ1Cuevr2zcQDF3QXstHFKn6qEJMvWeRlGnaSO+7lycsiGSOh6rEnmKURvdp16N0q7IoEaxJ31qMzah5jA=="}
+D, [2020-10-26T22:09:53.516230 #15004] DEBUG -- : [204e114d-fa13-4afd-be22-fb27f0cf4046]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'guest@example.com' LIMIT 1[0m
+I, [2020-10-26T22:09:53.516862 #15004]  INFO -- : [204e114d-fa13-4afd-be22-fb27f0cf4046] Redirected to http://pfcmaster.work/
+I, [2020-10-26T22:09:53.516988 #15004]  INFO -- : [204e114d-fa13-4afd-be22-fb27f0cf4046] Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+I, [2020-10-26T22:09:53.777307 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e] Started GET "/" for 106.180.15.139 at 2020-10-26 22:09:53 +0000
+I, [2020-10-26T22:09:53.777995 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e] Processing by PostsController#index as HTML
+D, [2020-10-26T22:09:53.779720 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2020-10-26T22:09:53.780288 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:09:53.781517 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 1 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:09:53.782114 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mStandard Load (0.2ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 1 LIMIT 1[0m
+I, [2020-10-26T22:09:53.782719 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:09:53.784492 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 1[0m
+D, [2020-10-26T22:09:53.785526 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 1[0m
+I, [2020-10-26T22:09:53.785675 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered users/_stats.html.haml (2.4ms)
+I, [2020-10-26T22:09:53.786320 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered posts/_side_bar.html.haml (3.4ms)
+D, [2020-10-26T22:09:53.788144 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:09:53.789075 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:09:53.792373 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mLike Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 48 LIMIT 1[0m
+D, [2020-10-26T22:09:53.793215 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:09:53.793342 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered likes/_like.html.haml (2.6ms)
+D, [2020-10-26T22:09:53.794121 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:09:53.795826 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 46 LIMIT 1[0m
+D, [2020-10-26T22:09:53.796636 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:09:53.796761 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:09:53.797519 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:09:53.799188 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 45 LIMIT 1[0m
+D, [2020-10-26T22:09:53.799989 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:09:53.800105 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered likes/_like.html.haml (1.4ms)
+D, [2020-10-26T22:09:53.800801 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:09:53.802555 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 44 LIMIT 1[0m
+D, [2020-10-26T22:09:53.803349 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:09:53.803466 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered likes/_like.html.haml (1.4ms)
+D, [2020-10-26T22:09:53.804173 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:09:53.805927 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 43 LIMIT 1[0m
+D, [2020-10-26T22:09:53.806732 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:09:53.806848 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:09:53.807541 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:09:53.807689 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered collection of posts/_post.html.haml [5 times] (18.2ms)
+D, [2020-10-26T22:09:53.808233 #15004] DEBUG -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:09:53.811332 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered posts/_main.html.haml (24.9ms)
+I, [2020-10-26T22:09:53.811425 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered posts/index.html.haml within layouts/application (28.6ms)
+I, [2020-10-26T22:09:53.812460 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:09:53.812679 #15004]  INFO -- : [49c00be1-49f8-4264-8a47-d9cb9517be2e] Completed 200 OK in 35ms (Views: 25.5ms | ActiveRecord: 5.6ms)
+I, [2020-10-26T22:10:01.757264 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c] Started GET "/" for 106.180.15.139 at 2020-10-26 22:10:01 +0000
+I, [2020-10-26T22:10:01.757953 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c] Processing by PostsController#index as HTML
+D, [2020-10-26T22:10:01.759639 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2020-10-26T22:10:01.760221 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:10:01.761475 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 1 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:10:01.762188 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mStandard Load (0.3ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 1 LIMIT 1[0m
+I, [2020-10-26T22:10:01.762821 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:10:01.764868 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 1[0m
+D, [2020-10-26T22:10:01.766021 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 1[0m
+I, [2020-10-26T22:10:01.766179 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered users/_stats.html.haml (2.8ms)
+I, [2020-10-26T22:10:01.766824 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered posts/_side_bar.html.haml (3.8ms)
+D, [2020-10-26T22:10:01.768771 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:10:01.770162 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:10:01.772997 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 48 LIMIT 1[0m
+D, [2020-10-26T22:10:01.773944 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:10:01.774081 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered likes/_like.html.haml (2.1ms)
+D, [2020-10-26T22:10:01.774858 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:10:01.776944 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 46 LIMIT 1[0m
+D, [2020-10-26T22:10:01.777973 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:10:01.778120 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered likes/_like.html.haml (1.8ms)
+D, [2020-10-26T22:10:01.778900 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:10:01.781041 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 45 LIMIT 1[0m
+D, [2020-10-26T22:10:01.782103 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:10:01.782241 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered likes/_like.html.haml (1.9ms)
+D, [2020-10-26T22:10:01.782976 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:10:01.785010 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 44 LIMIT 1[0m
+D, [2020-10-26T22:10:01.785901 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:10:01.786032 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered likes/_like.html.haml (1.7ms)
+D, [2020-10-26T22:10:01.786768 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:10:01.788671 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 43 LIMIT 1[0m
+D, [2020-10-26T22:10:01.789563 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:10:01.789694 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered likes/_like.html.haml (1.6ms)
+D, [2020-10-26T22:10:01.790603 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:10:01.790759 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered collection of posts/_post.html.haml [5 times] (20.2ms)
+D, [2020-10-26T22:10:01.791348 #15004] DEBUG -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:10:01.794695 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered posts/_main.html.haml (27.7ms)
+I, [2020-10-26T22:10:01.794808 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered posts/index.html.haml within layouts/application (31.9ms)
+I, [2020-10-26T22:10:01.796815 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:10:01.797055 #15004]  INFO -- : [6b85f001-598e-455a-9ed9-6f7ebbd3825c] Completed 200 OK in 39ms (Views: 29.9ms | ActiveRecord: 5.5ms)
+I, [2020-10-26T22:10:05.587686 #15004]  INFO -- : [40f14122-2cc1-4474-9860-15898669a8f3] Started DELETE "/users/sign_out" for 106.180.15.139 at 2020-10-26 22:10:05 +0000
+I, [2020-10-26T22:10:05.588483 #15004]  INFO -- : [40f14122-2cc1-4474-9860-15898669a8f3] Processing by Devise::SessionsController#destroy as HTML
+I, [2020-10-26T22:10:05.588573 #15004]  INFO -- : [40f14122-2cc1-4474-9860-15898669a8f3]   Parameters: {"authenticity_token"=>"T1G3r/+si/fjiIJ6VosEW3bNTQ52IifYol77bgJjFS7cUEur6oq8m6KXKwjOkCNsaiktDD6idDhW5jB2phEkTQ=="}
+D, [2020-10-26T22:10:05.589915 #15004] DEBUG -- : [40f14122-2cc1-4474-9860-15898669a8f3]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2020-10-26T22:10:05.592931 #15004] DEBUG -- : [40f14122-2cc1-4474-9860-15898669a8f3]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2020-10-26T22:10:05.594036 #15004] DEBUG -- : [40f14122-2cc1-4474-9860-15898669a8f3]   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+I, [2020-10-26T22:10:05.594822 #15004]  INFO -- : [40f14122-2cc1-4474-9860-15898669a8f3] Redirected to http://pfcmaster.work/
+I, [2020-10-26T22:10:05.594944 #15004]  INFO -- : [40f14122-2cc1-4474-9860-15898669a8f3] Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+I, [2020-10-26T22:10:05.687206 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642] Started GET "/" for 106.180.15.139 at 2020-10-26 22:10:05 +0000
+I, [2020-10-26T22:10:05.687862 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642] Processing by PostsController#index as HTML
+D, [2020-10-26T22:10:05.689413 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:10:05.689834 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-10-26T22:10:05.691103 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 2 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:10:05.691687 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[36mStandard Load (0.2ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 2 LIMIT 1[0m
+I, [2020-10-26T22:10:05.692319 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:10:05.694268 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 2[0m
+D, [2020-10-26T22:10:05.695324 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 2[0m
+I, [2020-10-26T22:10:05.695472 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered users/_stats.html.haml (2.5ms)
+I, [2020-10-26T22:10:05.696192 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered posts/_side_bar.html.haml (3.7ms)
+D, [2020-10-26T22:10:05.698194 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:10:05.699144 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:10:05.701516 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:10:05.701664 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered likes/_like.html.haml (1.0ms)
+D, [2020-10-26T22:10:05.702411 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:10:05.704390 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:10:05.704509 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:05.705246 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:10:05.707242 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:10:05.707372 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:05.708131 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:10:05.710158 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:10:05.710290 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered likes/_like.html.haml (1.0ms)
+D, [2020-10-26T22:10:05.711008 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:10:05.712977 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:10:05.713096 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:05.713882 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:10:05.714028 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered collection of posts/_post.html.haml [5 times] (14.5ms)
+D, [2020-10-26T22:10:05.714525 #15004] DEBUG -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:10:05.717736 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered posts/_main.html.haml (21.4ms)
+I, [2020-10-26T22:10:05.717823 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered posts/index.html.haml within layouts/application (25.4ms)
+I, [2020-10-26T22:10:05.718963 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:10:05.719189 #15004]  INFO -- : [d24aa943-dfc6-4b4b-89db-0a321434e642] Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 3.9ms)
+I, [2020-10-26T22:10:07.226909 #15004]  INFO -- : [481159c5-afd0-4008-a021-4ec9e5bb86d5] Started POST "/users/guest_sign_in" for 106.180.15.139 at 2020-10-26 22:10:07 +0000
+I, [2020-10-26T22:10:07.227697 #15004]  INFO -- : [481159c5-afd0-4008-a021-4ec9e5bb86d5] Processing by Users::SessionsController#new_guest as HTML
+I, [2020-10-26T22:10:07.227758 #15004]  INFO -- : [481159c5-afd0-4008-a021-4ec9e5bb86d5]   Parameters: {"authenticity_token"=>"FAlPulKS+QOXD1nGF6waJVbokgkTu+KDPMC31FZvadBvoHfQFhzoBiBU0fZbweiH+f/Bj4/638pAX+sMqSYKgA=="}
+D, [2020-10-26T22:10:07.229251 #15004] DEBUG -- : [481159c5-afd0-4008-a021-4ec9e5bb86d5]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'guest@example.com' LIMIT 1[0m
+I, [2020-10-26T22:10:07.229745 #15004]  INFO -- : [481159c5-afd0-4008-a021-4ec9e5bb86d5] Redirected to http://pfcmaster.work/
+I, [2020-10-26T22:10:07.229904 #15004]  INFO -- : [481159c5-afd0-4008-a021-4ec9e5bb86d5] Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+I, [2020-10-26T22:10:07.336961 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf] Started GET "/" for 106.180.15.139 at 2020-10-26 22:10:07 +0000
+I, [2020-10-26T22:10:07.337649 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf] Processing by PostsController#index as HTML
+D, [2020-10-26T22:10:07.339317 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2020-10-26T22:10:07.339929 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:10:07.341127 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 1 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:10:07.341764 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mStandard Load (0.2ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 1 LIMIT 1[0m
+I, [2020-10-26T22:10:07.342373 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:10:07.344185 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 1[0m
+D, [2020-10-26T22:10:07.345230 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 1[0m
+I, [2020-10-26T22:10:07.345377 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered users/_stats.html.haml (2.4ms)
+I, [2020-10-26T22:10:07.346005 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered posts/_side_bar.html.haml (3.5ms)
+D, [2020-10-26T22:10:07.347810 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:10:07.348787 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:10:07.351140 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 48 LIMIT 1[0m
+D, [2020-10-26T22:10:07.351989 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:10:07.352108 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered likes/_like.html.haml (1.7ms)
+D, [2020-10-26T22:10:07.352894 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:10:07.354673 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 46 LIMIT 1[0m
+D, [2020-10-26T22:10:07.355449 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:10:07.355595 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:10:07.356345 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:10:07.358118 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 45 LIMIT 1[0m
+D, [2020-10-26T22:10:07.358924 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:10:07.359041 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:10:07.359785 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:10:07.361533 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 44 LIMIT 1[0m
+D, [2020-10-26T22:10:07.362335 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:10:07.362456 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:10:07.363201 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:10:07.364974 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 43 LIMIT 1[0m
+D, [2020-10-26T22:10:07.365811 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:10:07.365933 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:10:07.366640 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:10:07.366834 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered collection of posts/_post.html.haml [5 times] (17.6ms)
+D, [2020-10-26T22:10:07.367348 #15004] DEBUG -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:10:07.370485 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered posts/_main.html.haml (24.4ms)
+I, [2020-10-26T22:10:07.370579 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered posts/index.html.haml within layouts/application (28.1ms)
+I, [2020-10-26T22:10:07.371624 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:10:07.371854 #15004]  INFO -- : [928fbfa5-62ea-4725-9f54-fd99ad8ce1cf] Completed 200 OK in 34ms (Views: 25.6ms | ActiveRecord: 5.0ms)
+I, [2020-10-26T22:10:11.207541 #15004]  INFO -- : [b0c2021b-43ee-4520-b11e-2470c954dc78] Started DELETE "/users/sign_out" for 106.180.15.139 at 2020-10-26 22:10:11 +0000
+I, [2020-10-26T22:10:11.208318 #15004]  INFO -- : [b0c2021b-43ee-4520-b11e-2470c954dc78] Processing by Devise::SessionsController#destroy as HTML
+I, [2020-10-26T22:10:11.208378 #15004]  INFO -- : [b0c2021b-43ee-4520-b11e-2470c954dc78]   Parameters: {"authenticity_token"=>"WJgIiw1W4JknNY+t198Y4EMxpH2wTNXRypNrAqViKLkjMTDhSdjxnJBuB52bsupC7Cb3+ywN6Ji2DDfaWitL6Q=="}
+D, [2020-10-26T22:10:11.209735 #15004] DEBUG -- : [b0c2021b-43ee-4520-b11e-2470c954dc78]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2020-10-26T22:10:11.210490 #15004] DEBUG -- : [b0c2021b-43ee-4520-b11e-2470c954dc78]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2020-10-26T22:10:11.211334 #15004] DEBUG -- : [b0c2021b-43ee-4520-b11e-2470c954dc78]   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+I, [2020-10-26T22:10:11.212045 #15004]  INFO -- : [b0c2021b-43ee-4520-b11e-2470c954dc78] Redirected to http://pfcmaster.work/
+I, [2020-10-26T22:10:11.212168 #15004]  INFO -- : [b0c2021b-43ee-4520-b11e-2470c954dc78] Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+I, [2020-10-26T22:10:11.317719 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf] Started GET "/" for 106.180.15.139 at 2020-10-26 22:10:11 +0000
+I, [2020-10-26T22:10:11.318305 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf] Processing by PostsController#index as HTML
+D, [2020-10-26T22:10:11.319812 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:10:11.320265 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-10-26T22:10:11.321486 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 2 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:10:11.322108 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[36mStandard Load (0.2ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 2 LIMIT 1[0m
+I, [2020-10-26T22:10:11.322697 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:10:11.324615 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 2[0m
+D, [2020-10-26T22:10:11.325683 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 2[0m
+I, [2020-10-26T22:10:11.325853 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered users/_stats.html.haml (2.5ms)
+I, [2020-10-26T22:10:11.326574 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered posts/_side_bar.html.haml (3.7ms)
+D, [2020-10-26T22:10:11.328481 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:10:11.329421 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:10:11.331813 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:10:11.331952 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:11.332689 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:10:11.334633 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:10:11.334800 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:11.335508 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:10:11.337411 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:10:11.337530 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:11.338324 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:10:11.340203 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:10:11.340318 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:11.341062 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:10:11.342963 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:10:11.343084 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:11.343832 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:10:11.343975 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered collection of posts/_post.html.haml [5 times] (14.2ms)
+D, [2020-10-26T22:10:11.344455 #15004] DEBUG -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:10:11.347560 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered posts/_main.html.haml (20.8ms)
+I, [2020-10-26T22:10:11.347652 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered posts/index.html.haml within layouts/application (24.9ms)
+I, [2020-10-26T22:10:11.348715 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:10:11.348967 #15004]  INFO -- : [0038b3e4-1cdf-4ab7-9e22-07ca0b10eadf] Completed 200 OK in 31ms (Views: 23.4ms | ActiveRecord: 3.8ms)
+I, [2020-10-26T22:10:12.247360 #15004]  INFO -- : [cd3d295c-42f9-4596-a304-a4d7d08aa2b8] Started POST "/users/guest_sign_in" for 106.180.15.139 at 2020-10-26 22:10:12 +0000
+I, [2020-10-26T22:10:12.248078 #15004]  INFO -- : [cd3d295c-42f9-4596-a304-a4d7d08aa2b8] Processing by Users::SessionsController#new_guest as HTML
+I, [2020-10-26T22:10:12.248133 #15004]  INFO -- : [cd3d295c-42f9-4596-a304-a4d7d08aa2b8]   Parameters: {"authenticity_token"=>"Wlv/kuzO8yh0NWdFOEY6Cmzlv5qaCqBErqUUZ46yHKAQxlOJJE/XuqSwivS8yJlGrkh/79kl+DOM5gaY0Ug9qQ=="}
+D, [2020-10-26T22:10:12.249682 #15004] DEBUG -- : [cd3d295c-42f9-4596-a304-a4d7d08aa2b8]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'guest@example.com' LIMIT 1[0m
+I, [2020-10-26T22:10:12.250154 #15004]  INFO -- : [cd3d295c-42f9-4596-a304-a4d7d08aa2b8] Redirected to http://pfcmaster.work/
+I, [2020-10-26T22:10:12.250270 #15004]  INFO -- : [cd3d295c-42f9-4596-a304-a4d7d08aa2b8] Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+I, [2020-10-26T22:10:12.357813 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b] Started GET "/" for 106.180.15.139 at 2020-10-26 22:10:12 +0000
+I, [2020-10-26T22:10:12.358414 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b] Processing by PostsController#index as HTML
+D, [2020-10-26T22:10:12.360118 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2020-10-26T22:10:12.360724 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:10:12.361993 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 1 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:10:12.362638 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mStandard Load (0.3ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 1 LIMIT 1[0m
+I, [2020-10-26T22:10:12.363288 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:10:12.365248 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 1[0m
+D, [2020-10-26T22:10:12.366406 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 1[0m
+I, [2020-10-26T22:10:12.366563 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered users/_stats.html.haml (2.7ms)
+I, [2020-10-26T22:10:12.367268 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered posts/_side_bar.html.haml (3.8ms)
+D, [2020-10-26T22:10:12.369193 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:10:12.370226 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:10:12.372762 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 48 LIMIT 1[0m
+D, [2020-10-26T22:10:12.373623 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:10:12.373748 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered likes/_like.html.haml (1.8ms)
+D, [2020-10-26T22:10:12.374574 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:10:12.376426 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 46 LIMIT 1[0m
+D, [2020-10-26T22:10:12.377285 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:10:12.377412 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered likes/_like.html.haml (1.6ms)
+D, [2020-10-26T22:10:12.378189 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:10:12.380040 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 45 LIMIT 1[0m
+D, [2020-10-26T22:10:12.380884 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:10:12.381015 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered likes/_like.html.haml (1.6ms)
+D, [2020-10-26T22:10:12.381821 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:10:12.383673 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 44 LIMIT 1[0m
+D, [2020-10-26T22:10:12.384525 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:10:12.384658 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered likes/_like.html.haml (1.6ms)
+D, [2020-10-26T22:10:12.385463 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:10:12.391211 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 43 LIMIT 1[0m
+D, [2020-10-26T22:10:12.392079 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:10:12.392198 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered likes/_like.html.haml (1.6ms)
+D, [2020-10-26T22:10:12.392950 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:10:12.393110 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered collection of posts/_post.html.haml [5 times] (22.5ms)
+D, [2020-10-26T22:10:12.393655 #15004] DEBUG -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:10:12.396839 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered posts/_main.html.haml (29.5ms)
+I, [2020-10-26T22:10:12.396925 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered posts/index.html.haml within layouts/application (33.6ms)
+I, [2020-10-26T22:10:12.397999 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:10:12.398232 #15004]  INFO -- : [030a4351-db87-4651-abfd-4d4e70bb598b] Completed 200 OK in 40ms (Views: 30.9ms | ActiveRecord: 5.3ms)
+I, [2020-10-26T22:10:14.407151 #15004]  INFO -- : [c3461dd1-7b18-47f7-acdc-a816fde83053] Started DELETE "/users/sign_out" for 106.180.15.139 at 2020-10-26 22:10:14 +0000
+I, [2020-10-26T22:10:14.407873 #15004]  INFO -- : [c3461dd1-7b18-47f7-acdc-a816fde83053] Processing by Devise::SessionsController#destroy as HTML
+I, [2020-10-26T22:10:14.407921 #15004]  INFO -- : [c3461dd1-7b18-47f7-acdc-a816fde83053]   Parameters: {"authenticity_token"=>"oKXJFe12I0kk3va+ajkLBralbeM+ojv2C/3WG3aoxWbqOGUOJfcH2/RbGw/ut6hKdAitln2NY4EpvsTkKVLkbw=="}
+D, [2020-10-26T22:10:14.409253 #15004] DEBUG -- : [c3461dd1-7b18-47f7-acdc-a816fde83053]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2020-10-26T22:10:14.410042 #15004] DEBUG -- : [c3461dd1-7b18-47f7-acdc-a816fde83053]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2020-10-26T22:10:14.410887 #15004] DEBUG -- : [c3461dd1-7b18-47f7-acdc-a816fde83053]   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+I, [2020-10-26T22:10:14.411557 #15004]  INFO -- : [c3461dd1-7b18-47f7-acdc-a816fde83053] Redirected to http://pfcmaster.work/
+I, [2020-10-26T22:10:14.411676 #15004]  INFO -- : [c3461dd1-7b18-47f7-acdc-a816fde83053] Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+I, [2020-10-26T22:10:15.017706 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d] Started GET "/" for 106.180.15.139 at 2020-10-26 22:10:15 +0000
+I, [2020-10-26T22:10:15.018300 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d] Processing by PostsController#index as HTML
+D, [2020-10-26T22:10:15.019833 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:10:15.020240 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-10-26T22:10:15.021493 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 2 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:10:15.022101 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[36mStandard Load (0.2ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 2 LIMIT 1[0m
+I, [2020-10-26T22:10:15.022749 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:10:15.024695 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 2[0m
+D, [2020-10-26T22:10:15.025762 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 2[0m
+I, [2020-10-26T22:10:15.025906 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered users/_stats.html.haml (2.5ms)
+I, [2020-10-26T22:10:15.026636 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered posts/_side_bar.html.haml (3.7ms)
+D, [2020-10-26T22:10:15.028469 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:10:15.029436 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:10:15.031806 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:10:15.031924 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:15.032697 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:10:15.034634 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:10:15.034754 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:15.035484 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:10:15.037477 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:10:15.037593 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:15.038330 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:10:15.040257 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:10:15.040373 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:15.041098 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:10:15.043048 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:10:15.043168 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered likes/_like.html.haml (0.9ms)
+D, [2020-10-26T22:10:15.043897 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:10:15.044042 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered collection of posts/_post.html.haml [5 times] (14.3ms)
+D, [2020-10-26T22:10:15.044554 #15004] DEBUG -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:10:15.047678 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered posts/_main.html.haml (20.9ms)
+I, [2020-10-26T22:10:15.047765 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered posts/index.html.haml within layouts/application (24.9ms)
+I, [2020-10-26T22:10:15.048864 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:10:15.049084 #15004]  INFO -- : [3b2fab6b-bd48-40c1-a8d3-ed91a7462e4d] Completed 200 OK in 31ms (Views: 23.5ms | ActiveRecord: 3.8ms)
+I, [2020-10-26T22:10:16.186805 #15004]  INFO -- : [fb099217-6e0b-46bc-aca8-ba260a786a1d] Started POST "/users/guest_sign_in" for 106.180.15.139 at 2020-10-26 22:10:16 +0000
+I, [2020-10-26T22:10:16.187555 #15004]  INFO -- : [fb099217-6e0b-46bc-aca8-ba260a786a1d] Processing by Users::SessionsController#new_guest as HTML
+I, [2020-10-26T22:10:16.187605 #15004]  INFO -- : [fb099217-6e0b-46bc-aca8-ba260a786a1d]   Parameters: {"authenticity_token"=>"QBxP3QVfORDz3+Oafws3ZGWYcBEg101mKVCdYRJHkP8pTyrnhFTuxv7dQgyJZqKsMEW5fCEGYpb2DS8XQcbqDA=="}
+D, [2020-10-26T22:10:16.189117 #15004] DEBUG -- : [fb099217-6e0b-46bc-aca8-ba260a786a1d]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'guest@example.com' LIMIT 1[0m
+I, [2020-10-26T22:10:16.189615 #15004]  INFO -- : [fb099217-6e0b-46bc-aca8-ba260a786a1d] Redirected to http://pfcmaster.work/
+I, [2020-10-26T22:10:16.189730 #15004]  INFO -- : [fb099217-6e0b-46bc-aca8-ba260a786a1d] Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+I, [2020-10-26T22:10:16.286770 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210] Started GET "/" for 106.180.15.139 at 2020-10-26 22:10:16 +0000
+I, [2020-10-26T22:10:16.287375 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210] Processing by PostsController#index as HTML
+D, [2020-10-26T22:10:16.289087 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+D, [2020-10-26T22:10:16.289682 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+D, [2020-10-26T22:10:16.290873 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM(`posts`.`calorie`) FROM `posts` WHERE `posts`.`user_id` = 1 AND `posts`.`created_at` BETWEEN '2020-10-26 15:00:00' AND '2020-10-27 14:59:59'[0m
+D, [2020-10-26T22:10:16.291508 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mStandard Load (0.2ms)[0m  [1m[34mSELECT  `standards`.* FROM `standards` WHERE `standards`.`user_id` = 1 LIMIT 1[0m
+I, [2020-10-26T22:10:16.292115 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendering posts/index.html.haml within layouts/application
+D, [2020-10-26T22:10:16.293937 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`following_id` WHERE `relationships`.`follower_id` = 1[0m
+D, [2020-10-26T22:10:16.295005 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`following_id` = 1[0m
+I, [2020-10-26T22:10:16.295157 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered users/_stats.html.haml (2.5ms)
+I, [2020-10-26T22:10:16.295790 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered posts/_side_bar.html.haml (3.5ms)
+D, [2020-10-26T22:10:16.297703 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  `posts`.* FROM `posts` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+D, [2020-10-26T22:10:16.298695 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 1)[0m
+D, [2020-10-26T22:10:16.301047 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 48 LIMIT 1[0m
+D, [2020-10-26T22:10:16.301886 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 48[0m
+I, [2020-10-26T22:10:16.302017 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered likes/_like.html.haml (1.7ms)
+D, [2020-10-26T22:10:16.302815 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 48[0m
+D, [2020-10-26T22:10:16.304590 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 46 LIMIT 1[0m
+D, [2020-10-26T22:10:16.305426 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 46[0m
+I, [2020-10-26T22:10:16.305549 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:10:16.306309 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 46[0m
+D, [2020-10-26T22:10:16.308039 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 45 LIMIT 1[0m
+D, [2020-10-26T22:10:16.308836 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 45[0m
+I, [2020-10-26T22:10:16.309005 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:10:16.309755 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 45[0m
+D, [2020-10-26T22:10:16.311548 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 44 LIMIT 1[0m
+D, [2020-10-26T22:10:16.312359 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 44[0m
+I, [2020-10-26T22:10:16.312487 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:10:16.313223 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 44[0m
+D, [2020-10-26T22:10:16.315007 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `likes` WHERE `likes`.`user_id` = 1 AND `likes`.`post_id` = 43 LIMIT 1[0m
+D, [2020-10-26T22:10:16.315834 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 43[0m
+I, [2020-10-26T22:10:16.315958 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered likes/_like.html.haml (1.5ms)
+D, [2020-10-26T22:10:16.316724 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `comments` WHERE `comments`.`post_id` = 43[0m
+I, [2020-10-26T22:10:16.316885 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered collection of posts/_post.html.haml [5 times] (17.8ms)
+D, [2020-10-26T22:10:16.317410 #15004] DEBUG -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `posts`[0m
+I, [2020-10-26T22:10:16.320651 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered posts/_main.html.haml (24.7ms)
+I, [2020-10-26T22:10:16.320769 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered posts/index.html.haml within layouts/application (28.6ms)
+I, [2020-10-26T22:10:16.321898 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210]   Rendered layouts/_notifications.html.haml (0.1ms)
+I, [2020-10-26T22:10:16.322136 #15004]  INFO -- : [8750f6dc-283f-474c-98cd-cedb34e82210] Completed 200 OK in 35ms (Views: 26.1ms | ActiveRecord: 5.1ms)

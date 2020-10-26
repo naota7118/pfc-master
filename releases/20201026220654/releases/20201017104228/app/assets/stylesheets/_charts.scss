@@ -1,0 +1,25 @@
+body {
+  background-color: #eaeaea;
+}
+
+#myChart {
+  padding: 100px 20px 20px 20px;
+  width: 100%;
+  height: 700px;
+  margin-top: 10px;
+}
+
+.home {
+  background-color: #eaeaea;
+  padding-left: 20px;
+  padding-bottom:20px;
+}
+
+@import "modules/btn";
+// @import "modules/home";
+
+@media (max-width: 480px) { //スマホサイズ用
+  #myChart {
+      height: 400px;
+  }
+}

@@ -1,0 +1,41 @@
+!!!
+%html(lang="ja")
+  %head
+    %meta(charset="UTF-8")/
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")/
+    %title PFC MASTER
+    %script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+    %script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js")
+    %script(src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.js")
+    %link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css")
+    %script{src: "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js", integrity: "sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd", crossorigin: "anonymous"}
+    = csrf_meta_tags
+    = include_gon
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
+    = javascript_include_tag 'application', 'data-turbolinks-track': true
+    = javascript_include_tag 'jquery.bgswitcher.js': true
+
+  %body
+    %header.header.black-sm
+      %nav.navbar.fixed-top.navbar-expand
+        .collapse.navbar-collapse{ id: "navbarSupportedContent"}
+          %ul.navbar-nav.mr-auto{ class: 'navbar'}
+            %li.logo
+              = link_to image_tag('PFCMASTER2.png', class: 'my-logo'), root_path
+            - if user_signed_in?
+              .mypage-and-logout
+                %li.nav-item
+                  = link_to 'マイページ', user_path(current_user.id), class: 'mypage'
+                %li.nav-item
+                  = link_to 'ログアウト', destroy_user_session_path, method:  :delete, class: 'logout'
+            - else
+              .admin-and-login
+                %li.nav-item
+                  = link_to '新規登録', new_user_registration_path, class: 'admin'
+                %li.nav-item
+                  = link_to 'ログイン', new_user_session_path, class: 'login'
+                %li.nav-item
+                  = link_to 'かんたんログイン', users_guest_sign_in_path, method: :post, class:"btn btn-lg btn-success center-block"
+    = render 'layouts/notifications'
+    = yield
+    %script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
