@@ -1,0 +1,34 @@
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/ext/bootsnap
+/home/naota/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20201012-14024-1sc5iei.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c: 関数 ‘bs_cache_path’ 内:
+bootsnap.c:274:39: 警告: 書式 ‘%llx’ は引数の型が ‘long long unsigned int’ であると予期されますが、第 5 引数の型は ‘uint64_t {aka long unsigned int}’ です [-Wformat=]
+   sprintf(*cache_path, "%s/%02x/%014llx", cachedir, first_byte, remainder);
+                                 ~~~~~~^
+                                 %014lx
+bootsnap.c: 関数 ‘bs_rb_fetch’ 内:
+bootsnap.c:315:3: 警告: ISO C90 は宣言とコードの混合を禁止しています [-Wdeclaration-after-statement]
+   char * cachedir = RSTRING_PTR(cachedir_v);
+   ^~~~
+bootsnap.c:666:13: 警告: ‘output_data’ はこの関数内初期化されずに使用されるかもしれません [-Wmaybe-uninitialized]
+     else if (!NIL_P(output_data))             goto succeed; /* fast-path, goal */
+             ^
+bootsnap.c:637:9: 備考: ‘output_data’ はここで定義されています
+   VALUE output_data;  /* return data, e.g. ruby hash or loaded iseq */
+         ^~~~~~~~~~~
+bootsnap.c: トップレベル:
+cc1: 警告: 認識できないコマンドラインオプション ‘-Wno-self-assign’ です
+cc1: 警告: 認識できないコマンドラインオプション ‘-Wno-constant-logical-operand’ です
+cc1: 警告: 認識できないコマンドラインオプション ‘-Wno-parentheses-equality’ です
+linking shared-object bootsnap/bootsnap.so
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20201012-14024-yy387n/bootsnap
