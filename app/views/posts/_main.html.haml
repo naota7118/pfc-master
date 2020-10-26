@@ -42,11 +42,11 @@
             今日食べてOKなのはあと
             = link_to charts_path(current_user.id), class: 'difference' do
               = @difference
-            カロリーです
+            キロカロリー です
           - else
             = link_to charts_path(current_user.id), class: 'difference' do
               = @difference
-            オーバーしています
+            キロカロリー オーバーしています
         - else
           - if @calorie_standard >= @calorie_sum
             今日はあと
