@@ -59,8 +59,8 @@ http://pfcmaster.work/
 - Docker
 - CircleCI
 
-# AWS構成図
-この項目はあとで追記します。
+# AWSインフラ構成図
+<img src="https://user-images.githubusercontent.com/60293887/97389159-16ab4080-191d-11eb-9348-77b81e2aee13.png">
 
 # ER図  
 <img src="https://user-images.githubusercontent.com/60293887/94326084-d59dd480-ffdc-11ea-8f68-b6584a5eb849.png">
