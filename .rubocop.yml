@@ -3,7 +3,10 @@ require:
   - rubocop-performance
   - rubocop-rails
 
+inherit_from: shared/bundle/ruby/2.5.0/gems/ruby-vips-2.0.17/.rubocop_todo.yml
+
 AllCops:
+  NewCops: enable
   TargetRubyVersion: 2.5
   # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
   # to ignore them, so only the ones explicitly set in this file are enabled.
