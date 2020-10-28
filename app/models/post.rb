@@ -10,4 +10,5 @@ class Post < ApplicationRecord
   validates :calorie, presence: true
 
   mount_uploader :image, ImageUploader
+  is_impressionable
 end

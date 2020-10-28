@@ -27,7 +27,7 @@ group :development, :test do
   gem "capistrano3-unicorn"
   gem "faker"
   gem "factory_bot_rails"
-  gem "rubocop"
+  gem 'rubocop', '~> 1.0', require: false
   gem "rubocop-packaging"
   gem "rubocop-performance"
   gem "rubocop-rails"
