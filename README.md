@@ -64,6 +64,7 @@ http://pfcmaster.work/
 
 # ER図  
 (https://user-images.githubusercontent.com/60293887/94326084-d59dd480-ffdc-11ea-8f68-b6584a5eb849.png)
+<img src="https://user-images.githubusercontent.com/60293887/94326084-d59dd480-ffdc-11ea-8f68-b6584a5eb849.png">
 
 # 工夫した点
 「どうしたら減量の食事管理を続けやすくなるか？」という問いから逆算して作成しました。
