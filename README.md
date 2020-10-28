@@ -59,25 +59,23 @@ http://pfcmaster.work/
 - Docker
 - CircleCI
 
-# AWS構成図
-この項目はあとで追記します。
+# AWSインフラ構成図
+<img src="https://user-images.githubusercontent.com/60293887/97389159-16ab4080-191d-11eb-9348-77b81e2aee13.png">
 
 # ER図  
-(https://user-images.githubusercontent.com/60293887/94326084-d59dd480-ffdc-11ea-8f68-b6584a5eb849.png)
+<img src="https://user-images.githubusercontent.com/60293887/94326084-d59dd480-ffdc-11ea-8f68-b6584a5eb849.png">
 
 # 工夫した点
 「どうしたら減量の食事管理を続けやすくなるか？」という問いから逆算して作成しました。
 
-#### 「1日何キロカロリー食べればいいかわからない」→「今日あと何キロカロリー食べてもよいかわかる」グラフを実装
+### 「1日何キロカロリー食べればいいかわからない」→「今日あと何キロカロリー食べてもよいかわかる」グラフを実装
 新規登録の段階で体重と体脂肪率を入力すると1日の摂取カロリー目安が自動計算されます。
-※『除脂肪メソッド』という書籍から、減量期の1日の摂取カロリー = 除脂肪体重 * 40という式を学び、それをjQueryで実装しました。
-(https://user-images.githubusercontent.com/60293887/97382095-f0ca6f80-190d-11eb-9104-f1a109d116b1.png)
+<img src="https://user-images.githubusercontent.com/60293887/97382095-f0ca6f80-190d-11eb-9104-f1a109d116b1.png">
 
-今日あと何キロカロリー食べても大丈夫かわかるグラフを実装しました。  
+「今日あと何キロカロリー食べても大丈夫か」がわかるグラフを実装しました。  
 これによりカロリーコントロールしやすくなると考えました。
-(https://user-images.githubusercontent.com/60293887/97382438-c1683280-190e-11eb-832c-3e560c337502.png)
+<img src="https://user-images.githubusercontent.com/60293887/97382438-c1683280-190e-11eb-832c-3e560c337502.png">
 
-
-#### 「減量が順調に進んでいるのかわからない」→進捗がわかるように「1日ごとのカロリー量・体重を目で終える」グラフを実装
+### 「減量が順調に進んでいるのかわからない」→進捗がわかるように「1日ごとのカロリー量・体重を目で終える」グラフを実装
 頑張りが目に見えるカタチで確認できるとモチベーションが保ちやすくなると考えました。  
-("https://user-images.githubusercontent.com/60293887/97382724-5703c200-190f-11eb-9dc8-fd8f481e8c6e.png)
+<img src="https://user-images.githubusercontent.com/60293887/97382724-5703c200-190f-11eb-9dc8-fd8f481e8c6e.png">
