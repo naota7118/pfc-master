@@ -49,14 +49,14 @@
             キロカロリー オーバーしています
         - else
           - if @calorie_standard >= @calorie_sum
-            今日はあと
+            目安カロリーまであと
             = link_to charts_path(@sampleuser.id), class: 'difference' do
               = @difference
-            カロリーです
+            キロカロリー です
           - else
             = link_to charts_path(@sampleuser.id), class: 'difference' do
               = @difference
-            オーバーしています
+            キロカロリー オーバーしています
       %hr
     .new-post.col-sm-9
       = form_with model: @post, id: 'new_post' do |f|
