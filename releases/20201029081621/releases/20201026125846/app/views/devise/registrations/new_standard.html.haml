@@ -1,0 +1,62 @@
+.standard-setting
+  .standard-setting-wrapper
+    .standard-setting-content
+      .standard-setting-text
+      %h2
+        1日のカロリー・PFC目標値   
+      = form_for @standard do |f|
+        = render "devise/shared/error_messages", resource: @standard
+        .left
+          %p
+            体重を入力してください。
+            .field
+              = f.label :"体重"
+              = f.number_field :weight, step: '0.1'
+              %a kg
+          %p
+            体脂肪率を入力してください。
+            .field
+              = f.label :"体脂肪率"
+              = f.number_field :bodyFatPercentage, step: '0.1'
+              %a %
+          %br
+          %br
+          入力は「体重」「体脂肪率」だけでOKです。
+          %br
+          右側は自動で計算されます。
+        .right
+          .leanBodyMass
+            .field.leanBodyMassStandard
+              = f.label :"除脂肪体重"
+              = f.number_field :leanBodyMass, step: '0.1'
+              %a kgです。
+
+          %p
+            あなたの１日のカロリー目標は
+            .field
+              = f.label :"カロリー"
+              = f.number_field :calorie, step: '0.1'
+              %a g以下です。
+
+          %p
+            あなたの１日のタンパク質目標は
+            .field
+              = f.label :"タンパク質"
+              = f.number_field :protein, step: '0.1'
+              %a gです。
+
+          %p
+            あなたの１日の脂質目標は
+            .field
+              = f.label :"脂質"
+              = f.number_field :fat, step: '0.1'
+              %a gです。
+
+          %p
+            あなたの１日の炭水化物目標は
+            .field
+              = f.label :"炭水化物"
+              = f.number_field :carbo, step: '0.1'
+              %a gです。
+        .action
+          = f.submit "登録する", class: "standard-setting-btn"

@@ -1,0 +1,59 @@
+= link_to "/posts/#{post.id}" do
+  .post
+    .post-box.col-sm-9
+      .upper-post
+        .upper-post__user-name
+          = link_to user_path(post.user_id) do
+            = post.user.name
+        .upper-post__date
+          %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)+"前"
+      .lower-post
+        .weight
+        - if post.weight.present?
+          体重
+          = post.weight
+          kg
+        %table.col-sm-12
+          %thead
+            %tr
+              %th FOOD
+              %th Calorie
+              %th P タンパク質
+              %th F 脂質
+              %th C 炭水化物
+          %tbody.table-body
+            %tr
+              %td 
+                = post.food
+              %td 
+                = post.calorie
+              %td 
+                = post.protein
+              %td 
+                = post.fat
+              %td 
+                = post.carbo
+        - if post.text.present?
+          .text.col-sm-12
+            = post.text
+        - if post.image.present?
+          = image_tag post.image.url, class: 'post-image'
+        %ul.more_list
+          %li
+            = link_to "/posts/#{post.id}", method: :get do
+              %i.fas.fa-info-circle
+              %span.edit 詳細
+          %li
+            = link_to "/posts/#{post.id}/edit", method: :get do
+              %i.fa.fa-edit
+              %span.edit 編集
+          %li
+            = link_to post_path(post.id), method: :delete do
+              %i.fa.fa-trash
+              %span.trash 削除          
+          %li{id: "likes_buttons_#{post.id}", class: 'likes_buttons'}
+            = render partial: 'likes/like', locals: {post: post, likes: @likes}
+          %li
+            = link_to "/posts/#{post.id}" do
+              %i.fa.fa-commenting-o
+            = post.comments.count

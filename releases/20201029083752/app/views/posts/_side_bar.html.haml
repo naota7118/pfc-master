@@ -1,0 +1,46 @@
+.sidebar
+  %ul.sidebar-menu
+    .user-box
+      - if user_signed_in?
+        = link_to image_tag('/profile-image1.png', height: '100', width: '100', class: 'user-img'), user_path(@user.id)
+      - else
+        = link_to image_tag('/profile-image1.png', height: '100', width: '100', class: 'user-img'), user_path(@sampleuser.id)
+        -# = link_to image_tag('/profile-image1.png', height: '100', width: '100', class: 'user-img')
+      .username
+        - if user_signed_in?
+          = link_to current_user.name, user_path(current_user.id), class: 'user-link'
+        - else
+          = link_to @sampleuser.name, user_path(@sampleuser.id), class: 'user-link'
+      .users-stats
+        - if user_signed_in?
+          = render 'users/stats'
+        - else
+          = render 'users/stats'
+    %li.chart
+      - if user_signed_in?
+        = link_to charts_path(current_user.id), class: 'charts-path' do
+          = fa_icon 'bar-chart'
+          %span.graph グラフ
+      - else
+        = link_to charts_path(@sampleuser.id), class: 'charts-path' do
+          = fa_icon 'bar-chart'
+          %span.graph グラフ
+    %li.record
+      - if user_signed_in?
+        = link_to calendars_path(current_user.id), class: 'record-path' do
+          = fa_icon 'calendar'
+          %span.record-text カレンダー
+      - else
+        = link_to calendars_path(@sampleuser.id), class: 'record-path' do
+          = fa_icon 'calendar'
+          %span.record-text カレンダー
+    %li.image-index
+      - if user_signed_in?
+        = link_to posts_image_path(current_user.id), class: 'record-path' do
+          = fa_icon 'image'
+          %span.record-text 画像一覧
+      - else
+        = link_to posts_image_path(@sampleuser.id), class: 'record-path' do
+          = fa_icon 'image'
+          %span.record-text 画像一覧
+  .bg-slider

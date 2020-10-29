@@ -1,0 +1,15 @@
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+/home/naota/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20201012-14024-jzwg7s.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20201012-14024-3qopyo

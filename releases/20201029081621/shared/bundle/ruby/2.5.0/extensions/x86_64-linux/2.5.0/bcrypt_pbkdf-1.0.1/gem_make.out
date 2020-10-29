@@ -1,0 +1,19 @@
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bcrypt_pbkdf-1.0.1/ext/mri
+/home/naota/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20201012-14024-11r1gcp.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bcrypt_pbkdf-1.0.1/ext/mri
+make "DESTDIR=" clean
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bcrypt_pbkdf-1.0.1/ext/mri
+make "DESTDIR="
+compiling bcrypt_pbkdf.c
+compiling bcrypt_pbkdf_ext.c
+compiling blowfish.c
+compiling explicit_bzero.c
+compiling hash_sha512.c
+linking shared-object bcrypt_pbkdf_ext.so
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bcrypt_pbkdf-1.0.1/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_pbkdf_ext.so ./.gem.20201012-14024-y4x4vs

@@ -1,0 +1,29 @@
+.account-page
+  .account-page__inner
+    .account-page-content
+      %h2 新規アカウントを作成
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .field
+          .field-label
+            = f.label :name, "ユーザー名"
+          .field-input
+            = f.text_field :name, autofocus: true
+        .field
+          .field-label
+            = f.label :email
+          .field-input
+            = f.email_field :email, autocomplete: "email"
+        .field
+          .field-label
+            = f.label :password
+            %i (英数字6文字以上)
+          .field-input
+            = f.password_field :password, autocomplete: "off"
+        .field
+          .field-label
+            = f.label :password_confirmation
+          .field-input
+            = f.password_field :password_confirmation, autocomplete: "off"
+        .actions
+          = f.submit "登録する", class: 'signup-btn'

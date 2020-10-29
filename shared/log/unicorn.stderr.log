@@ -1286,3 +1286,72 @@ I, [2020-10-26T22:07:42.446157 #30281]  INFO -- : master complete
 106.171.46.161 - - [29/Oct/2020:08:06:47 +0000] "GET /users/2 HTTP/1.0" 200 9709 0.0330
 106.171.46.161 - - [29/Oct/2020:08:06:48 +0000] "GET / HTTP/1.0" 200 14319 0.0414
 106.171.46.161 - - [29/Oct/2020:08:06:49 +0000] "GET / HTTP/1.0" 200 14319 0.0380
+I, [2020-10-29T08:17:24.609026 #22881]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:fd 11>}] (in /var/www/rails/pfc-master/releases/20201029081621)
+I, [2020-10-29T08:17:24.610564 #22881]  INFO -- : forked child re-executing...
+I, [2020-10-29T08:17:24.965836 #22881]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-29T08:17:24.966061 #22881]  INFO -- : Refreshing Gem list
+/var/www/rails/pfc-master/releases/20201029081621/app/controllers/posts_controller.rb:5:in `<class:PostsController>': undefined method `impressionist' for PostsController:Class (NoMethodError)
+	from /var/www/rails/pfc-master/releases/20201029081621/app/controllers/posts_controller.rb:3:in `<top (required)>'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies.rb:291:in `block in require'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies.rb:257:in `load_dependency'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies.rb:291:in `require'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies/interlock.rb:13:in `loading'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies.rb:37:in `load_interlock'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies.rb:356:in `require_or_load'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/lib/bootsnap/load_path_cache/core_ext/active_support.rb:49:in `block in require_or_load'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/lib/bootsnap/load_path_cache/core_ext/active_support.rb:17:in `allow_bootsnap_retry'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/lib/bootsnap/load_path_cache/core_ext/active_support.rb:48:in `require_or_load'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies.rb:334:in `depend_on'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/bootsnap-1.4.8/lib/bootsnap/load_path_cache/core_ext/active_support.rb:86:in `depend_on'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/activesupport-5.2.4.4/lib/active_support/dependencies.rb:246:in `require_dependency'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/engine.rb:478:in `block (2 levels) in eager_load!'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/engine.rb:477:in `each'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/engine.rb:477:in `block in eager_load!'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/engine.rb:475:in `each'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/engine.rb:475:in `eager_load!'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/engine.rb:356:in `eager_load!'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/application/finisher.rb:69:in `each'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/application/finisher.rb:69:in `block in <module:Finisher>'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/initializable.rb:32:in `instance_exec'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/initializable.rb:32:in `run'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/initializable.rb:61:in `block in run_initializers'
+	from /home/naota/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:228:in `block in tsort_each'
+	from /home/naota/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	from /home/naota/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	from /home/naota/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	from /home/naota/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:347:in `each'
+	from /home/naota/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:347:in `call'
+	from /home/naota/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:347:in `each_strongly_connected_component'
+	from /home/naota/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:226:in `tsort_each'
+	from /home/naota/.rbenv/versions/2.5.1/lib/ruby/2.5.0/tsort.rb:205:in `tsort_each'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/initializable.rb:60:in `run_initializers'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/railties-5.2.4.4/lib/rails/application.rb:361:in `initialize!'
+	from /var/www/rails/pfc-master/releases/20201029081621/config/environment.rb:7:in `<top (required)>'
+	from config.ru:6:in `require_relative'
+	from config.ru:6:in `block in <main>'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/rack-2.2.3/lib/rack/builder.rb:125:in `instance_eval'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/rack-2.2.3/lib/rack/builder.rb:125:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/unicorn-5.7.0/lib/unicorn.rb:54:in `eval'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/unicorn-5.7.0/lib/unicorn.rb:54:in `block in builder'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/unicorn-5.7.0/lib/unicorn/http_server.rb:822:in `build_app!'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/unicorn-5.7.0/lib/unicorn/http_server.rb:141:in `start'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/unicorn-5.7.0/bin/unicorn:128:in `<top (required)>'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn:23:in `load'
+	from /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn:23:in `<main>'
+E, [2020-10-29T08:17:26.917722 #14936] ERROR -- : reaped #<Process::Status: pid 22881 exit 1> exec()-ed
+106.171.46.161 - - [29/Oct/2020:08:18:24 +0000] "GET / HTTP/1.0" 200 14322 0.0459
+106.171.46.161 - - [29/Oct/2020:08:18:31 +0000] "GET / HTTP/1.0" 200 14322 0.0378
+106.171.46.161 - - [29/Oct/2020:08:34:15 +0000] "GET / HTTP/1.0" 200 14332 0.0380
+106.171.46.161 - - [29/Oct/2020:08:34:28 +0000] "GET / HTTP/1.0" 200 14332 0.0375
+106.171.46.161 - - [29/Oct/2020:08:34:31 +0000] "GET / HTTP/1.0" 200 14332 0.0382

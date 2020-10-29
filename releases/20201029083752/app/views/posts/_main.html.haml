@@ -1,0 +1,103 @@
+.main
+  .section
+    .calorie_chart.col-sm-9
+      .calorie_graph
+        %canvas(id="myChart2" width="700" height="100")
+        :javascript
+          var ctx = document.getElementById('myChart2').getContext('2d');
+          var myChart = new Chart(ctx, {
+              type: 'horizontalBar',
+              data: {
+                  labels: ['１日のカロリー目安：' + gon.standard, '今日のカロリー合計：' + gon.today_sum],
+                  datasets: [{
+                      label: '今日のカロリーを確認',
+                      data: [gon.standard, gon.today_sum],
+                      backgroundColor: [
+                          'rgba(255, 99, 132, 0.2)',
+                          'rgba(54, 162, 235, 0.2)',
+                      ],
+                      borderColor: [
+                          'rgba(255,99,132,1)',
+                          'rgba(54, 162, 235, 1)',
+                      ],
+                      borderWidth: 1
+                  }]
+              },
+              options: {
+                  scales: {
+                      xAxes: [{
+                          ticks: {
+                              beginAtZero:true,
+                              suggestedMin: 50,
+                              suggestedMax: 100
+                          }
+                      }]
+                  }
+              }
+          });
+      .today_calorie
+        %p
+        - if user_signed_in?
+          - if @calorie_standard >= @calorie_sum
+            目安カロリーまであと
+            = link_to charts_path(current_user.id), class: 'difference' do
+              = @difference
+            キロカロリー です
+          - else
+            = link_to charts_path(current_user.id), class: 'difference' do
+              = @difference
+            キロカロリー オーバーしています
+        - else
+          - if @calorie_standard >= @calorie_sum
+            目安カロリーまであと
+            = link_to charts_path(@sampleuser.id), class: 'difference' do
+              = @difference
+            キロカロリー です
+          - else
+            = link_to charts_path(@sampleuser.id), class: 'difference' do
+              = @difference
+            キロカロリー オーバーしています
+      %hr
+    .new-post.col-sm-9
+      = form_with model: @post, id: 'new_post' do |f|
+        .input-box
+          %table.col-sm-12
+            %thead
+              %tr
+                %th.food Food
+                %th.calorie Calorie
+                %th.protein P タンパク質
+                %th.fat F 脂質
+                %th.carbo C 炭水化物
+            %tbody.table-body.table-line
+              %tr
+                %td 
+                  = f.text_field :food, placeholder: '例）サラダ'
+                %td 
+                  = f.number_field :calorie, step: '0.1', placeholder: '例）200'
+                %td 
+                  = f.number_field :protein, step: '0.1', placeholder: '例）30'
+                %td 
+                  = f.number_field :fat, step: '0.1', placeholder: '例）20'
+                %td 
+                  = f.number_field :carbo, step: '0.1', placeholder: '例）50'
+                -# %td.icon-plus
+                -#   %i.fa.fa-plus-circle.fa-2x{class: 'plus-button'}
+                -# %td.icon-minus
+                -#   %i.fa.fa-minus-circle.fa-2x{class: 'minus-button'}
+          .text.col-sm-12
+            = f.text_area :text, placeholder: 'なにたべた？', class: 'post-textarea'
+          .icon
+            .image-upload
+              -# %i.fas.fa-image.fa-2x
+              = f.file_field :image, class: 'image_upload'
+          .weight-and-btn
+            .weight
+              体重
+              = f.number_field :weight, step: '0.1', placeholder: '例）70'
+              kg
+            .btn-square
+              = f.submit '投稿する', class: 'post-btn'
+    .posts
+      = render @posts
+      = paginate(@posts)

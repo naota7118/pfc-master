@@ -1,0 +1,76 @@
+@import "reset";
+@import "config/colors";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap";
+@import "index";
+@import "login";
+@import "modules/flash";
+@import "modules/user";
+@import "modules/like";
+@import "side-bar";
+@import "main";
+@import "post";
+@import "preview-image";
+@import "image-index";
+@import "edit";
+@import "show";
+@import "stats";
+@import "charts";
+@import "calendars";
+@import "signup";
+@import "setting_standard";
+@import "modules/btn";
+@import "followers";
+@import "followings";
+@import "modules/home";
+
+header {
+  width: 100vw;
+  z-index: 100;
+  background-color: #22242a;
+  font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  nav {
+    background-color: #22242a;
+    justify-content: space-between;
+    .navbar {
+      display: flex;
+      .my-logo {
+        background-color: #f8f9fa;
+      }
+      .admin-and-login, .mypage-and-logout {
+        display: flex;
+        position: relative;
+        right: 15px;
+        .mypage, .login, .logout, .admin, .btn.btn-lg.btn-success.center-block {
+          border: 1px solid;
+          padding: 5px 15px;
+          -webkit-border-radius: 4px;
+          margin-left: 10px;
+          text-decoration: none;
+          transition: all .5s;
+        }
+        .mypage:hover {
+          color: #f8f9fa;
+          background-color: #0078ff;
+        }
+        .logout:hover {
+          color: #f8f9fa;
+          background-color: #0078ff;
+        }
+        .login:hover {
+          color: #f8f9fa;
+          background-color: #0078ff;
+        }
+        .admin:hover {
+          color: #f8f9fa;
+          background-color: #0078ff;
+        }
+      }
+    }
+  }
+}
+.alert {
+  position: absolute;
+  width: 100vw;
+}

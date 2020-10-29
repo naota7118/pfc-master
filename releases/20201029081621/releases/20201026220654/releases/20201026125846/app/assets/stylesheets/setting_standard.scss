@@ -1,0 +1,54 @@
+header {
+  position: fixed;
+}
+.standard-setting {
+  margin-top: 87px;
+  .standard-setting-wrapper
+    .standard-setting-content {
+      margin: 0 auto;
+      font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      border: 1px solid gray;
+      width: 800px;
+      height: 580px;
+      padding: 10px 30px;
+      margin-top: 100px;
+      h2 {
+        margin-top: 10px;
+      }
+      .new_standard {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .left  {
+          margin-top: 10px;
+          background-color: #70aff7;
+          padding: 5px;
+        }
+        .right {
+          margin-top: 10px;
+          background-color: #dbeafa;
+          opacity: 0.8;
+          padding: 5px;
+          .field.leanBodyMassStandard {
+            display: none;
+          }
+        }
+        .action {
+          margin-top: 30px;
+          .standard-setting-btn {
+            border: 1px solid;
+            padding: 5px 15px;
+            -webkit-border-radius: 4px;
+            margin-left: 10px;
+            text-decoration: none;
+            transition: all .5s;
+          }
+          .standard-setting-btn:hover {
+            color: #f8f9fa;
+            background-color: #0078ff;
+          }
+        }
+      }
+    }
+}
+  
