@@ -4,6 +4,7 @@ require:
   - rubocop-rails
 
 inherit_from: shared/bundle/ruby/2.5.0/gems/ruby-vips-2.0.17/.rubocop_todo.yml
+inherit_from: /home/circleci/projects/pfc-master/releases/20201029083752/shared/bundle/ruby/2.5.0/gems/ruby-vips-2.0.17/.rubocop_todo.yml
 
 AllCops:
   NewCops: enable
@@ -12,6 +13,7 @@ AllCops:
   # to ignore them, so only the ones explicitly set in this file are enabled.
   DisabledByDefault: true
   Exclude:
+    - vendor/**/*
     - '**/tmp/**/*'
     - '**/templates/**/*'
     - '**/vendor/**/*'
