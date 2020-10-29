@@ -27,7 +27,7 @@ group :development, :test do
   gem "capistrano3-unicorn"
   gem "faker"
   gem "factory_bot_rails"
-  gem "rubocop"
+  gem 'rubocop', '~> 1.0', require: false
   gem "rubocop-packaging"
   gem "rubocop-performance"
   gem "rubocop-rails"
@@ -71,3 +71,4 @@ gem "sassc", "~>2.1.0"
 gem "mini_racer"
 gem "bcrypt", "~> 3.1.7"
 gem "autoprefixer-rails"
+gem 'impressionist'

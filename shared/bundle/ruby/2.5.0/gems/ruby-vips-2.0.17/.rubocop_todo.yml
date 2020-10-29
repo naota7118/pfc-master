@@ -10,7 +10,7 @@
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, IndentationWidth.
 # SupportedStyles: with_first_argument, with_fixed_indentation
-Layout/AlignArguments:
+Layout/ArgumentAlignment:
   Exclude:
     - 'example/inheritance_with_refcount.rb'
     - 'lib/vips.rb'
@@ -33,7 +33,7 @@ Lint/UselessAccessModifier:
     - 'lib/vips/operation.rb'
 
 # Offense count: 6
-Lint/UselessComparison:
+Lint/BinaryOperatorWithIdenticalOperands:
   Exclude:
     - 'spec/image_spec.rb'
 
@@ -99,7 +99,7 @@ Naming/PredicateName:
 # Offense count: 6
 # Configuration parameters: MinNameLength, AllowNamesEndingInNumbers, AllowedNames, ForbiddenNames.
 # AllowedNames: io, id, to, by, on, in, at, ip, db
-Naming/UncommunicativeMethodParamName:
+Naming/MethodParameterName:
   Exclude:
     - 'lib/vips.rb'
     - 'lib/vips/image.rb'
@@ -259,7 +259,7 @@ Style/MethodDefParentheses:
     - 'lib/vips/operation.rb'
 
 # Offense count: 2
-Style/MethodMissingSuper:
+Lint/MissingSuper:
   Exclude:
     - 'lib/vips/image.rb'
 
