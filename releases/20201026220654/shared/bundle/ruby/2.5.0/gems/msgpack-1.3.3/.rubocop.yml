@@ -7,6 +7,8 @@
 
 AllCops:
   TargetRubyVersion: 2.5
+  Exclude:
+    - 'vendor/**/*'
 
 # Offense count: 3
 Lint/AmbiguousOperator:
