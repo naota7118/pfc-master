@@ -43,7 +43,7 @@ jobs:
 
       - run:
           name: run rubocop
-          command: bundle exec rubocop --auto-gen-config --auto-correct
+          command: bundle exec rubocop --display-cop-names --auto-gen-config --auto-correct
 
       # run tests!
       - run:
