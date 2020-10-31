@@ -42,6 +42,6 @@ production:
   pool: 5
   database: pfc-master_production
   username: root
-  password: password
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   host: localhost
-  #socket: /var/lib/mysql/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
