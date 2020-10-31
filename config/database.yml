@@ -41,7 +41,7 @@ production:
   encoding: utf8
   pool: 5
   database: pfc-master_production
-  username: root
+  username: naota
   password: <%= ENV['DATABASE_PASSWORD'] %>
   host: localhost
   socket: /var/lib/mysql/mysql.sock
