@@ -14,4 +14,7 @@ class LikesController < ApplicationController
     @like.destroy
     @likeCounts = Like.where(post_id: params[:post_id])
   end
+
+
+  
 end
