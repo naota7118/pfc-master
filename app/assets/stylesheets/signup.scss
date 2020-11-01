@@ -1,0 +1,28 @@
+.account-page {
+  .account-page__inner {
+    width: 600px;
+    height: 580px;
+    padding: 30px 50px;
+    label {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    .signup-btn {
+      margin-top: 10px;
+      border: 1px solid;
+      padding: 5px 15px;
+      -webkit-border-radius: 4px;
+      text-decoration: none;
+      transition: all .5s;
+      background-color: white;
+      color: black;
+    }
+    .signup-btn:hover {
+      color: #f8f9fa;
+      background-color: #0078ff;
+    }
+    .field .field-label i {
+      font-size: 14px;
+    }
+  }
+}

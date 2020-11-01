@@ -1,0 +1,114 @@
+8908244592539a30fb16200f561bb3f81f6514ee	not-for-merge	branch 'Rspec-test' of github:naota7118/pfc-master
+4757e6b924a0893588db38440e5d93b2e0e032c7	not-for-merge	branch 'Rspec-unittest' of github:naota7118/pfc-master
+522fa0ceacf4c08a0416a5c8b74f6e7f06c36fc5	not-for-merge	branch 'add-weight-to-graph' of github:naota7118/pfc-master
+14144237d6066153d1cd17c48bb5e82b555d5407	not-for-merge	branch 'ajax-comment-function' of github:naota7118/pfc-master
+8971ae0f033982a907c0ef9820d1ba7ee23e2e7b	not-for-merge	branch 'ajax-favorite-function' of github:naota7118/pfc-master
+1faee832bb13997df7e11d33c54ff46347b3c7ff	not-for-merge	branch 'auto-change-backgroud-image' of github:naota7118/pfc-master
+b147e824d5f5498f9b346608079b7ac44ae16a42	not-for-merge	branch 'automatic-calculation-function' of github:naota7118/pfc-master
+64183106978d5bed9638aca0987588c01fb79df6	not-for-merge	branch 'capistrano-auto-deploy' of github:naota7118/pfc-master
+18780cbf8cad5a13184ebbc7eb62811131c6bff3	not-for-merge	branch 'capistrano-setting' of github:naota7118/pfc-master
+b9ec6359b6b565138b3114f52083931c7207885e	not-for-merge	branch 'change-from-integer-to-float' of github:naota7118/pfc-master
+9659e49ca95fe69d217c7a930fa092adcf291f3b	not-for-merge	branch 'chart-function' of github:naota7118/pfc-master
+026eb2f6aafc5e4368921085fca100bca97fe55d	not-for-merge	branch 'chnage-data-type-food-column' of github:naota7118/pfc-master
+c4ffaae41eb32ca8ac542e6f25faae06612c5a7c	not-for-merge	branch 'create-comment-model' of github:naota7118/pfc-master
+a76c2e588c5dced2803a7a669d116c71fcdf790c	not-for-merge	branch 'create-graph-function' of github:naota7118/pfc-master
+aca3133fbe115ff9f7c7d21eb36c88911bd1dca7	not-for-merge	branch 'create-image-model2' of github:naota7118/pfc-master
+cf10896d812c52e8d76f1c18353e9728093242ac	not-for-merge	branch 'create-like-model2' of github:naota7118/pfc-master
+71a0965c1d85cc1678e77202f76ca5e0b66dd885	not-for-merge	branch 'create-mypage' of github:naota7118/pfc-master
+2535d1f5b157bb75184917fd99e7737d2bc32117	not-for-merge	branch 'create-wizard-format' of github:naota7118/pfc-master
+59256a9ae66aa7c0ca6d775af541acc980050cd8	not-for-merge	branch 'easy-login-function' of github:naota7118/pfc-master
+697209162f812dc39f922f80cf0538c1df06d846	not-for-merge	branch 'easy-login-function-second' of github:naota7118/pfc-master
+bae5cf2e475f776fb6d575cc553985bb81b26ed9	not-for-merge	branch 'edit-database.yml' of github:naota7118/pfc-master
+323ad4944c31c4550724391a62749fd6415c5cb7	not-for-merge	branch 'favorite-function' of github:naota7118/pfc-master
+a534e0bf9356b5bc483ebaf85841566bf5799d56	not-for-merge	branch 'follow-function' of github:naota7118/pfc-master
+75566612e54037fb862bbc9eb61d4540b938a129	not-for-merge	branch 'gem-haml' of github:naota7118/pfc-master
+184b3c7cc5006c95bb1e17ca0fc7fb73778b7d7f	not-for-merge	branch 'image-index-function' of github:naota7118/pfc-master
+b46c4345823980055e16b9d3edaa99d82d1726e8	not-for-merge	branch 'image-preview-function' of github:naota7118/pfc-master
+f63c63b16385763db08eb2d6938f074b580c5479	not-for-merge	branch 'index-page-markup' of github:naota7118/pfc-master
+daf08b4ceaa69a4a9a8bdadb27adeaba9af2a7d7	not-for-merge	branch 'like-function-2' of github:naota7118/pfc-master
+f7dddb1530c1299b00d621b369c4ef70447a8d7a	not-for-merge	branch 'login-page-markup' of github:naota7118/pfc-master
+49ee65a5be417d53aad36bad3e67b0e4057eca07	not-for-merge	branch 'main-page-markup' of github:naota7118/pfc-master
+d031481d028885a5dc51b2a9385fae0dba792a54	not-for-merge	branch 'make-format-for-post' of github:naota7118/pfc-master
+5a7eaac6f57a44d780351c5d87a659d9a87c602d	not-for-merge	branch 'make-navigation-bar' of github:naota7118/pfc-master
+ea48fbcdae4538c79e62a81ce7b368ef0e098268	not-for-merge	branch 'master' of github:naota7118/pfc-master
+9e8acf3f04c88fdf8c5a9dd58a50fbc928049d06	not-for-merge	branch 'modefy-readme' of github:naota7118/pfc-master
+7222efa14bf9ff06aa6abda37fdafdeba28435d5	not-for-merge	branch 'modify-post-model2' of github:naota7118/pfc-master
+2c3adce86ca76a93a2da8be86b3522caa277bfae	not-for-merge	branch 'move-follow-button' of github:naota7118/pfc-master
+3121220adc4e8fea842eca81aabe53735b7ca4d5	not-for-merge	branch 'multiple-image-function-2' of github:naota7118/pfc-master
+4b1edab9b886d3ee2fa58f517aa5a948e05c079a	not-for-merge	branch 'mutiple-image-function-3' of github:naota7118/pfc-master
+64581f46fddc4299193b98de7ce6607e4413273e	not-for-merge	branch 'mysql-error' of github:naota7118/pfc-master
+de88bb528b596f09b8083bb7ac09eded2cac9055	not-for-merge	branch 'mysql-migration-solution' of github:naota7118/pfc-master
+3b87bce7ea277700f44bfeb155b326facef998af	not-for-merge	branch 'new-simple-calendar' of github:naota7118/pfc-master
+b286a2bda22595bfdf927eca1693b22f470ca0b1	not-for-merge	branch 'post-ajax-function' of github:naota7118/pfc-master
+11f0b5980fd69a0cd62b22bdbdc72419f56b3d0c	not-for-merge	branch 'post-page' of github:naota7118/pfc-master
+0de5bea3ccb1e920be8f61e5357108b6665b1c3a	not-for-merge	branch 'profile-image-function' of github:naota7118/pfc-master
+5f323f869db0a923f44afe1788c2f4447535b4a1	not-for-merge	branch 'remake-index-html' of github:naota7118/pfc-master
+3b82f836c26f824fed4b761b2f519d7303586cd4	not-for-merge	branch 'rspectest' of github:naota7118/pfc-master
+ce291f09b5cfc2c293c16d8864da6e4eb964ac41	not-for-merge	branch 'second-profile-page-back-to-toppage' of github:naota7118/pfc-master
+195c6be3440d4db0cf5748c2762df626241f1192	not-for-merge	branch 'sign-up-page-markup' of github:naota7118/pfc-master
+c39810094ad6080a9485293b0ab721e166b7f478	not-for-merge	branch 'singup-second-page-markup' of github:naota7118/pfc-master
+c81d6fa11ba1380838a53da55e874dc31a18f2d4	not-for-merge	branch 'table-edit-function' of github:naota7118/pfc-master
+25e22a3295e7e01415c6041a48cb638ccf8d1d8a	not-for-merge	branch 'today-calorie-function' of github:naota7118/pfc-master
+d6b83733b91ecf0840293691522b2d643a95499b	not-for-merge	branch 'user-administration-function' of github:naota7118/pfc-master
+b18ec3eb3093b69d3347ded987909fc94444bd07	not-for-merge	branch 'user-login-function' of github:naota7118/pfc-master
+75566612e54037fb862bbc9eb61d4540b938a129	not-for-merge	'refs/pull/1/head' of github:naota7118/pfc-master
+aca3133fbe115ff9f7c7d21eb36c88911bd1dca7	not-for-merge	'refs/pull/10/head' of github:naota7118/pfc-master
+f9a1c53b457a025c07ed32af0a21807a59a2f4ca	not-for-merge	'refs/pull/11/head' of github:naota7118/pfc-master
+7222efa14bf9ff06aa6abda37fdafdeba28435d5	not-for-merge	'refs/pull/12/head' of github:naota7118/pfc-master
+5f323f869db0a923f44afe1788c2f4447535b4a1	not-for-merge	'refs/pull/13/head' of github:naota7118/pfc-master
+d6b83733b91ecf0840293691522b2d643a95499b	not-for-merge	'refs/pull/14/head' of github:naota7118/pfc-master
+c14e66c28c646666c3c3b374be360ef9cac1992b	not-for-merge	'refs/pull/15/head' of github:naota7118/pfc-master
+d031481d028885a5dc51b2a9385fae0dba792a54	not-for-merge	'refs/pull/16/head' of github:naota7118/pfc-master
+1afb512f0bef2888df2a940b72aefcb11a196f4e	not-for-merge	'refs/pull/17/head' of github:naota7118/pfc-master
+323ad4944c31c4550724391a62749fd6415c5cb7	not-for-merge	'refs/pull/18/head' of github:naota7118/pfc-master
+42ed96b4bbfa1922d860ddc6eb9790862d770333	not-for-merge	'refs/pull/19/head' of github:naota7118/pfc-master
+11f0b5980fd69a0cd62b22bdbdc72419f56b3d0c	not-for-merge	'refs/pull/2/head' of github:naota7118/pfc-master
+a534e0bf9356b5bc483ebaf85841566bf5799d56	not-for-merge	'refs/pull/20/head' of github:naota7118/pfc-master
+a76c2e588c5dced2803a7a669d116c71fcdf790c	not-for-merge	'refs/pull/21/head' of github:naota7118/pfc-master
+2cd2e77b1175a6092101a80da5686fe5e04ede2d	not-for-merge	'refs/pull/22/head' of github:naota7118/pfc-master
+59256a9ae66aa7c0ca6d775af541acc980050cd8	not-for-merge	'refs/pull/23/head' of github:naota7118/pfc-master
+2535d1f5b157bb75184917fd99e7737d2bc32117	not-for-merge	'refs/pull/24/head' of github:naota7118/pfc-master
+14144237d6066153d1cd17c48bb5e82b555d5407	not-for-merge	'refs/pull/25/head' of github:naota7118/pfc-master
+533fd8500bb393f9f01de2b75abc40350be86006	not-for-merge	'refs/pull/26/head' of github:naota7118/pfc-master
+8971ae0f033982a907c0ef9820d1ba7ee23e2e7b	not-for-merge	'refs/pull/27/head' of github:naota7118/pfc-master
+b147e824d5f5498f9b346608079b7ac44ae16a42	not-for-merge	'refs/pull/28/head' of github:naota7118/pfc-master
+9659e49ca95fe69d217c7a930fa092adcf291f3b	not-for-merge	'refs/pull/29/head' of github:naota7118/pfc-master
+6804fd83688b812863f86ef647357ee97bcddced	not-for-merge	'refs/pull/3/head' of github:naota7118/pfc-master
+f63c63b16385763db08eb2d6938f074b580c5479	not-for-merge	'refs/pull/30/head' of github:naota7118/pfc-master
+b286a2bda22595bfdf927eca1693b22f470ca0b1	not-for-merge	'refs/pull/31/head' of github:naota7118/pfc-master
+5a7eaac6f57a44d780351c5d87a659d9a87c602d	not-for-merge	'refs/pull/32/head' of github:naota7118/pfc-master
+1faee832bb13997df7e11d33c54ff46347b3c7ff	not-for-merge	'refs/pull/33/head' of github:naota7118/pfc-master
+daf08b4ceaa69a4a9a8bdadb27adeaba9af2a7d7	not-for-merge	'refs/pull/34/head' of github:naota7118/pfc-master
+c81d6fa11ba1380838a53da55e874dc31a18f2d4	not-for-merge	'refs/pull/35/head' of github:naota7118/pfc-master
+3121220adc4e8fea842eca81aabe53735b7ca4d5	not-for-merge	'refs/pull/36/head' of github:naota7118/pfc-master
+25e22a3295e7e01415c6041a48cb638ccf8d1d8a	not-for-merge	'refs/pull/37/head' of github:naota7118/pfc-master
+6904242fd415604c79887bcdea93be1a7d62b4f6	not-for-merge	'refs/pull/38/head' of github:naota7118/pfc-master
+4b1edab9b886d3ee2fa58f517aa5a948e05c079a	not-for-merge	'refs/pull/39/head' of github:naota7118/pfc-master
+b18ec3eb3093b69d3347ded987909fc94444bd07	not-for-merge	'refs/pull/4/head' of github:naota7118/pfc-master
+8873bae819f42f1198fd1b1125e77bf7353d6dbe	not-for-merge	'refs/pull/40/head' of github:naota7118/pfc-master
+b46c4345823980055e16b9d3edaa99d82d1726e8	not-for-merge	'refs/pull/41/head' of github:naota7118/pfc-master
+b9ec6359b6b565138b3114f52083931c7207885e	not-for-merge	'refs/pull/42/head' of github:naota7118/pfc-master
+184b3c7cc5006c95bb1e17ca0fc7fb73778b7d7f	not-for-merge	'refs/pull/43/head' of github:naota7118/pfc-master
+522fa0ceacf4c08a0416a5c8b74f6e7f06c36fc5	not-for-merge	'refs/pull/44/head' of github:naota7118/pfc-master
+0c0cbb6f703b9917cef023b9471b021092f31e69	not-for-merge	'refs/pull/45/head' of github:naota7118/pfc-master
+3b87bce7ea277700f44bfeb155b326facef998af	not-for-merge	'refs/pull/46/head' of github:naota7118/pfc-master
+71a0965c1d85cc1678e77202f76ca5e0b66dd885	not-for-merge	'refs/pull/47/head' of github:naota7118/pfc-master
+2c3adce86ca76a93a2da8be86b3522caa277bfae	not-for-merge	'refs/pull/48/head' of github:naota7118/pfc-master
+64581f46fddc4299193b98de7ce6607e4413273e	not-for-merge	'refs/pull/49/head' of github:naota7118/pfc-master
+cd6423bd881771fba897fcb70bfe3a657165fcc6	not-for-merge	'refs/pull/5/head' of github:naota7118/pfc-master
+de88bb528b596f09b8083bb7ac09eded2cac9055	not-for-merge	'refs/pull/50/head' of github:naota7118/pfc-master
+18780cbf8cad5a13184ebbc7eb62811131c6bff3	not-for-merge	'refs/pull/51/head' of github:naota7118/pfc-master
+697209162f812dc39f922f80cf0538c1df06d846	not-for-merge	'refs/pull/52/head' of github:naota7118/pfc-master
+195c6be3440d4db0cf5748c2762df626241f1192	not-for-merge	'refs/pull/53/head' of github:naota7118/pfc-master
+c39810094ad6080a9485293b0ab721e166b7f478	not-for-merge	'refs/pull/54/head' of github:naota7118/pfc-master
+ce291f09b5cfc2c293c16d8864da6e4eb964ac41	not-for-merge	'refs/pull/55/head' of github:naota7118/pfc-master
+f7dddb1530c1299b00d621b369c4ef70447a8d7a	not-for-merge	'refs/pull/56/head' of github:naota7118/pfc-master
+648a8c9631f54ac3c67fa111f331dbe2ebafb2b2	not-for-merge	'refs/pull/57/head' of github:naota7118/pfc-master
+3b82f836c26f824fed4b761b2f519d7303586cd4	not-for-merge	'refs/pull/58/head' of github:naota7118/pfc-master
+026eb2f6aafc5e4368921085fca100bca97fe55d	not-for-merge	'refs/pull/59/head' of github:naota7118/pfc-master
+266b9bc4d3d320bd1f7b60a8984b94b0e9d8f345	not-for-merge	'refs/pull/6/head' of github:naota7118/pfc-master
+bae5cf2e475f776fb6d575cc553985bb81b26ed9	not-for-merge	'refs/pull/60/head' of github:naota7118/pfc-master
+64183106978d5bed9638aca0987588c01fb79df6	not-for-merge	'refs/pull/61/head' of github:naota7118/pfc-master
+9e8acf3f04c88fdf8c5a9dd58a50fbc928049d06	not-for-merge	'refs/pull/7/head' of github:naota7118/pfc-master
+c4ffaae41eb32ca8ac542e6f25faae06612c5a7c	not-for-merge	'refs/pull/8/head' of github:naota7118/pfc-master
+cf10896d812c52e8d76f1c18353e9728093242ac	not-for-merge	'refs/pull/9/head' of github:naota7118/pfc-master

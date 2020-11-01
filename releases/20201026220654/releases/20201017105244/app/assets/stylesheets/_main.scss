@@ -1,0 +1,210 @@
+* {
+  font-family: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.main {
+  height: 100%;
+  overflow-y: scroll;
+  margin-top: 87px;
+  background-color: #eaeaea;
+  .section {
+    margin-left: 20px;
+    margin-right: 50px;
+    .calorie_chart.col-sm-9 {
+      margin: 0 auto;
+      margin-top: 15px;
+      background-color: #fff;
+      box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
+      // position: fixed;
+      .chartjs-render-monitor {
+        padding-top: 10px;
+      }
+    }
+    .calorie_graph {
+      
+    }
+    .today_calorie {
+      margin-left: 10px;
+      .difference {
+        font-weight: bolder;
+        color: #007bff;
+      }
+    }
+    .new-post.col-sm-9 {
+      background-color: #ffffff;
+      margin: 0 auto;
+      margin-top: 10px;
+      border-color: gray;
+      border: ridge;
+      border-radius: 10px;
+      padding: 5px;
+      #new_post {
+        padding: 10px 20px 10px 20px;
+        .input-box {
+          table.col-sm-12 {
+            border-collapse: separate;
+            border-spacing: 0;
+            table-layout:fixed;
+          }
+          table th:first-child{
+            border-radius: 10px 0 0 0;
+          }
+          table th:last-child{
+            border-radius: 0 10px 0 0;
+            border-right: 1px solid #6cb3fa;
+          }
+          table th{
+            text-align: center;
+            color: white;
+            background: linear-gradient(#78b7fa,#007bff);
+            border-left: 1px solid #6cb3fa;
+            border-top: 1px solid #6cb3fa;
+            border-bottom: 1px solid #6cb3fa;
+            box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+            width: 20%;
+            padding: 10px 0;
+          }
+          table td{
+            text-align: center;
+            border-left: 1px solid #a8b7c5;
+            border-bottom: 1px solid #a8b7c5;
+            border-top:none;
+            box-shadow: 0px -3px 5px 1px #eee inset;
+            width: 25%;
+            padding: 10px 0;
+          }
+          
+          table td:nth-child(5){
+            border-right: 1px solid #a8b7c5;
+            width: 25%;
+          }
+          
+          table tr:last-child td:first-child {
+            border-radius: 0 0 0 10px;
+          }
+          
+          table tr:last-child td:nth-child(5) {
+            border-radius: 0 0 10px 0;
+          }
+          input#post_food, #post_calorie, #post_protein, #post_fat, #post_carbo {
+            width: 100%;
+            border: 1px solid #e5e5e5;
+            font-size: 14px;
+            outline: none;
+            line-height: 1.6;
+          }
+          input::placeholder {
+            color: #e5e5e5;
+          }
+          // .icon-plus {
+          //   padding-left: 10px;
+          // }
+          // .icon-minus {
+          //   padding-left: 50px;
+          // }
+        }
+        .text.col-sm-12 {
+          margin-top: 10px;
+          width: 100%;
+          #post_text {
+            box-sizing: border-box; 
+            display: inline-block;
+            vertical-align: top;
+            max-height: 170px;
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #e5e5e5;
+            font-size: 14px;
+            outline: none;
+            line-height: 1.6;
+            resize: vertical;
+            width: 100%;
+          }
+          #post_text::placeholder {
+            color: #e5e5e5;
+          }
+        }
+        .icon {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+        }
+        .image_upload {
+          width: auto;
+        }
+        .weight-and-btn {
+          display: flex;
+          justify-content: space-between;
+          .weight {
+            margin-top: 5px;
+            #post_weight {
+              width: 30%;
+            }
+          }
+          .btn-square {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            background: linear-gradient(#78b7fa,#007bff);
+            border-bottom: solid 4px #627295;
+            border-radius: 10px;
+            margin-top: 5px;
+            // margin-right: 80px;
+            .post-btn {
+              background-color: transparent;
+              border: none;
+              color: white;
+              font-size: 16px;
+            }
+          }
+          .btn-square:active {
+            /*ボタンを押したとき*/
+            -webkit-transform: translateY(4px);
+            transform: translateY(4px);/*下に動く*/
+            border-bottom: none;/*線を消す*/
+          }
+        }
+      }
+    }
+  }
+  /*PAGE TOPボタン追加*/
+  .pagination {
+    margin-top: 50px;
+    justify-content: center;
+  }
+  #page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
+    background: #0078ff; /*ボタンの色*/
+    opacity: 0.6;
+    border-radius: 50%; /*角の丸み*/
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+  }
+  #page_top a::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f102";
+    font-weight: 900;
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    // text-align: center;
+  }
+}

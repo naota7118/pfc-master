@@ -1,0 +1,10 @@
+.calendar
+  = month_calendar events: @posts do |date, posts|
+    = date.day
+    - posts.each do |post|
+      .calendar-record
+      = post.food
+      = post.calorie
+      %a.calendar-calorie kcal
+      = post.weight
+      %a.calendar-weight kg

@@ -1,0 +1,66 @@
+%head
+  %link(rel="stylesheet" type="text/js" href="js/show.js")
+%body
+  .content
+    .post
+      %table
+        %thead
+          %tr
+            %th FOOD
+            %th Calorie
+        %tbody
+          %tr
+            %td 
+              = @post.food
+            %td 
+              = @post.calorie
+      %table
+        %thead
+          %tr
+            %th P
+            %th F
+            %th C
+        %tbody
+          %tr
+            %td 
+              = @post.protein
+            %td 
+              = @post.fat
+            %td 
+              = @post.carbo
+      %table
+        %tbody
+          %tr
+            %td 
+              = @post.text
+      %table
+        %tbody
+          %tr
+            %td 
+              -# - if @post.image.present?
+              -#   = image_tag @post.image.url, class: "image"
+    %ul.more_list
+      %li
+        = link_to '編集', edit_post_path(@post.id)
+      %li
+        = link_to '削除', "/posts/#{@post.id}", method: :delete
+    .likes_buttons{id: "likes_buttons_#{@post.id}"}
+      = render partial: "likes/like", locals: {post: @post}
+    .comment
+      - if user_signed_in?
+        = form_with model: [@post, @comment], local: true, id: 'new_comment' do |f|
+          = f.text_area :comment, placeholder: "コメントする", rows: "2"
+          = f.submit "SEND", class: "commentBtn", id: "commentBtn"
+    .commentList
+      コメント一覧
+      - if @comments
+        .comments
+          - @comments.each do |comment|
+            .comment
+              .commentUser
+                = comment.user.name
+              .commentContent
+                = comment.comment
+              %time(datetime="#{comment.created_at}")= time_ago_in_words(comment.created_at)+"前"
+
+    = link_to "ホームへ戻る", root_path

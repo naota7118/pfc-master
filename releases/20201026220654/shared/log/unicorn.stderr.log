@@ -1,0 +1,1030 @@
+I, [2020-10-12T12:22:35.385323 #4159]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T12:22:35.385513 #4159]  INFO -- : worker=0 spawning...
+I, [2020-10-12T12:22:35.385998 #4159]  INFO -- : master process ready
+I, [2020-10-12T12:22:35.393952 #4162]  INFO -- : worker=0 spawned pid=4162
+I, [2020-10-12T12:22:35.394088 #4162]  INFO -- : Refreshing Gem list
+I, [2020-10-12T12:22:36.138828 #4187]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201012122207)
+I, [2020-10-12T12:22:36.138912 #4187]  INFO -- : forked child re-executing...
+I, [2020-10-12T12:22:36.819138 #4187]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T12:22:36.819396 #4187]  INFO -- : worker=0 spawning...
+I, [2020-10-12T12:22:36.824154 #4187]  INFO -- : master process ready
+I, [2020-10-12T12:22:36.826190 #4211]  INFO -- : worker=0 spawned pid=4211
+I, [2020-10-12T12:22:36.826324 #4211]  INFO -- : Refreshing Gem list
+I, [2020-10-12T12:22:38.110480 #4162]  INFO -- : worker=0 ready
+I, [2020-10-12T12:22:39.126343 #4211]  INFO -- : worker=0 ready
+E, [2020-10-12T12:27:35.175160 #4187] ERROR -- : old PID:4159 running with existing pid=/var/www/rails/pfc-master/shared/tmp/pids/unicorn.pid.oldbin, refusing rexec
+E, [2020-10-12T12:38:42.170508 #4187] ERROR -- : old PID:4159 running with existing pid=/var/www/rails/pfc-master/shared/tmp/pids/unicorn.pid.oldbin, refusing rexec
+I, [2020-10-12T12:41:02.632828 #4159]  INFO -- : reaped #<Process::Status: pid 4162 exit 0> worker=0
+I, [2020-10-12T12:41:02.632934 #4159]  INFO -- : master complete
+I, [2020-10-12T12:41:11.082828 #4187]  INFO -- : reaped #<Process::Status: pid 4211 exit 0> worker=0
+I, [2020-10-12T12:41:11.082949 #4187]  INFO -- : master complete
+I, [2020-10-12T12:42:30.717253 #17417]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-12T12:42:30.717509 #17417]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T12:42:30.717657 #17417]  INFO -- : worker=0 spawning...
+I, [2020-10-12T12:42:30.719938 #17417]  INFO -- : master process ready
+I, [2020-10-12T12:42:30.729441 #17420]  INFO -- : worker=0 spawned pid=17420
+I, [2020-10-12T12:42:30.729680 #17420]  INFO -- : Refreshing Gem list
+I, [2020-10-12T12:42:31.502729 #17445]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201012124203)
+I, [2020-10-12T12:42:31.502865 #17445]  INFO -- : forked child re-executing...
+I, [2020-10-12T12:42:32.196564 #17445]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T12:42:32.196852 #17445]  INFO -- : worker=0 spawning...
+I, [2020-10-12T12:42:32.199961 #17445]  INFO -- : master process ready
+I, [2020-10-12T12:42:32.201732 #17463]  INFO -- : worker=0 spawned pid=17463
+I, [2020-10-12T12:42:32.201953 #17463]  INFO -- : Refreshing Gem list
+I, [2020-10-12T12:42:33.453395 #17420]  INFO -- : worker=0 ready
+I, [2020-10-12T12:42:34.519159 #17463]  INFO -- : worker=0 ready
+I, [2020-10-12T12:50:22.053211 #17417]  INFO -- : reaped #<Process::Status: pid 17420 exit 0> worker=0
+I, [2020-10-12T12:50:22.053317 #17417]  INFO -- : master complete
+I, [2020-10-12T12:51:03.932667 #17445]  INFO -- : reaped #<Process::Status: pid 17463 exit 0> worker=0
+I, [2020-10-12T12:51:03.932794 #17445]  INFO -- : master complete
+I, [2020-10-12T12:58:00.496650 #14578]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-12T12:58:00.497444 #14578]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-12T12:58:00.497566 #14578]  INFO -- : worker=0 spawning...
+I, [2020-10-12T12:58:00.499072 #14578]  INFO -- : master process ready
+I, [2020-10-12T12:58:00.507130 #14581]  INFO -- : worker=0 spawned pid=14581
+I, [2020-10-12T12:58:00.507287 #14581]  INFO -- : Refreshing Gem list
+I, [2020-10-12T12:58:01.388522 #14606]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {12=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201012125731)
+I, [2020-10-12T12:58:01.388627 #14606]  INFO -- : forked child re-executing...
+I, [2020-10-12T12:58:02.095210 #14606]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-12T12:58:02.095496 #14606]  INFO -- : worker=0 spawning...
+I, [2020-10-12T12:58:02.095924 #14606]  INFO -- : master process ready
+I, [2020-10-12T12:58:02.099675 #14630]  INFO -- : worker=0 spawned pid=14630
+I, [2020-10-12T12:58:02.099804 #14630]  INFO -- : Refreshing Gem list
+I, [2020-10-12T12:58:03.161388 #14581]  INFO -- : worker=0 ready
+I, [2020-10-12T12:58:04.333037 #14630]  INFO -- : worker=0 ready
+I, [2020-10-12T21:23:27.997745 #14578]  INFO -- : reaped #<Process::Status: pid 14581 exit 0> worker=0
+I, [2020-10-12T21:23:27.997850 #14578]  INFO -- : master complete
+I, [2020-10-12T21:23:37.628066 #14606]  INFO -- : reaped #<Process::Status: pid 14630 exit 0> worker=0
+I, [2020-10-12T21:23:37.628188 #14606]  INFO -- : master complete
+I, [2020-10-12T21:25:42.131335 #5401]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-12T21:25:42.131586 #5401]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T21:25:42.131695 #5401]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:25:42.132141 #5401]  INFO -- : master process ready
+I, [2020-10-12T21:25:42.139076 #5404]  INFO -- : worker=0 spawned pid=5404
+I, [2020-10-12T21:25:42.139222 #5404]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:25:42.869182 #5429]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201012212515)
+I, [2020-10-12T21:25:42.869262 #5429]  INFO -- : forked child re-executing...
+I, [2020-10-12T21:25:43.529122 #5429]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T21:25:43.529412 #5429]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:25:43.535051 #5429]  INFO -- : master process ready
+I, [2020-10-12T21:25:43.535523 #5444]  INFO -- : worker=0 spawned pid=5444
+I, [2020-10-12T21:25:43.535641 #5444]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:25:44.815687 #5404]  INFO -- : worker=0 ready
+I, [2020-10-12T21:25:45.839917 #5444]  INFO -- : worker=0 ready
+I, [2020-10-12T21:26:25.668436 #5401]  INFO -- : reaped #<Process::Status: pid 5404 exit 0> worker=0
+I, [2020-10-12T21:26:25.668571 #5401]  INFO -- : master complete
+I, [2020-10-12T21:26:32.607512 #5429]  INFO -- : reaped #<Process::Status: pid 5444 exit 0> worker=0
+I, [2020-10-12T21:26:32.607630 #5429]  INFO -- : master complete
+I, [2020-10-12T21:27:17.152198 #6482]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-12T21:27:17.152430 #6482]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T21:27:17.152554 #6482]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:27:17.152992 #6482]  INFO -- : master process ready
+I, [2020-10-12T21:27:17.159825 #6485]  INFO -- : worker=0 spawned pid=6485
+I, [2020-10-12T21:27:17.160012 #6485]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:27:17.897094 #6510]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201012212650)
+I, [2020-10-12T21:27:17.897221 #6510]  INFO -- : forked child re-executing...
+I, [2020-10-12T21:27:18.565425 #6510]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T21:27:18.565711 #6510]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:27:18.566193 #6510]  INFO -- : master process ready
+I, [2020-10-12T21:27:18.570992 #6525]  INFO -- : worker=0 spawned pid=6525
+I, [2020-10-12T21:27:18.571126 #6525]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:27:19.833894 #6485]  INFO -- : worker=0 ready
+I, [2020-10-12T21:27:20.876749 #6525]  INFO -- : worker=0 ready
+I, [2020-10-12T21:38:33.832519 #6482]  INFO -- : reaped #<Process::Status: pid 6485 exit 0> worker=0
+I, [2020-10-12T21:38:33.832621 #6482]  INFO -- : master complete
+I, [2020-10-12T21:38:40.272440 #6510]  INFO -- : reaped #<Process::Status: pid 6525 exit 0> worker=0
+I, [2020-10-12T21:38:40.272571 #6510]  INFO -- : master complete
+I, [2020-10-12T21:39:55.016510 #18227]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-12T21:39:55.018772 #18227]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-12T21:39:55.018882 #18227]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:39:55.019326 #18227]  INFO -- : master process ready
+I, [2020-10-12T21:39:55.027212 #18230]  INFO -- : worker=0 spawned pid=18230
+I, [2020-10-12T21:39:55.027385 #18230]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:39:55.824334 #18255]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {12=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201012213928)
+I, [2020-10-12T21:39:55.824432 #18255]  INFO -- : forked child re-executing...
+I, [2020-10-12T21:39:56.475847 #18255]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-12T21:39:56.476130 #18255]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:39:56.476575 #18255]  INFO -- : master process ready
+I, [2020-10-12T21:39:56.478981 #18259]  INFO -- : worker=0 spawned pid=18259
+I, [2020-10-12T21:39:56.479115 #18259]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:39:57.625037 #18230]  INFO -- : worker=0 ready
+I, [2020-10-12T21:39:58.677941 #18259]  INFO -- : worker=0 ready
+I, [2020-10-12T21:43:51.782309 #18227]  INFO -- : reaped #<Process::Status: pid 18230 exit 0> worker=0
+I, [2020-10-12T21:43:51.782433 #18227]  INFO -- : master complete
+I, [2020-10-12T21:44:04.462565 #18255]  INFO -- : reaped #<Process::Status: pid 18259 exit 0> worker=0
+I, [2020-10-12T21:44:04.462712 #18255]  INFO -- : master complete
+I, [2020-10-12T21:44:51.422093 #19361]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-12T21:44:51.422325 #19361]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-12T21:44:51.422423 #19361]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:44:51.422832 #19361]  INFO -- : master process ready
+I, [2020-10-12T21:44:51.427107 #19364]  INFO -- : worker=0 spawned pid=19364
+I, [2020-10-12T21:44:51.427258 #19364]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:44:52.132337 #19389]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {12=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201012214423)
+I, [2020-10-12T21:44:52.132440 #19389]  INFO -- : forked child re-executing...
+I, [2020-10-12T21:44:52.800581 #19389]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-12T21:44:52.800873 #19389]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:44:52.803016 #19389]  INFO -- : master process ready
+I, [2020-10-12T21:44:52.806991 #19393]  INFO -- : worker=0 spawned pid=19393
+I, [2020-10-12T21:44:52.807127 #19393]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:44:54.084700 #19364]  INFO -- : worker=0 ready
+I, [2020-10-12T21:44:55.057754 #19393]  INFO -- : worker=0 ready
+I, [2020-10-12T21:56:21.747233 #19361]  INFO -- : reaped #<Process::Status: pid 19364 exit 0> worker=0
+I, [2020-10-12T21:56:21.747341 #19361]  INFO -- : master complete
+I, [2020-10-12T21:56:28.157404 #19389]  INFO -- : reaped #<Process::Status: pid 19393 exit 0> worker=0
+I, [2020-10-12T21:56:28.157524 #19389]  INFO -- : master complete
+I, [2020-10-12T21:57:23.303010 #20461]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-12T21:57:23.303256 #20461]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T21:57:23.303361 #20461]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:57:23.304691 #20461]  INFO -- : master process ready
+I, [2020-10-12T21:57:23.310042 #20464]  INFO -- : worker=0 spawned pid=20464
+I, [2020-10-12T21:57:23.310193 #20464]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:57:24.043487 #20489]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201012215654)
+I, [2020-10-12T21:57:24.043575 #20489]  INFO -- : forked child re-executing...
+I, [2020-10-12T21:57:24.705395 #20489]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T21:57:24.705679 #20489]  INFO -- : worker=0 spawning...
+I, [2020-10-12T21:57:24.706146 #20489]  INFO -- : master process ready
+I, [2020-10-12T21:57:24.710985 #20504]  INFO -- : worker=0 spawned pid=20504
+I, [2020-10-12T21:57:24.711117 #20504]  INFO -- : Refreshing Gem list
+I, [2020-10-12T21:57:25.998167 #20464]  INFO -- : worker=0 ready
+I, [2020-10-12T21:57:27.016254 #20504]  INFO -- : worker=0 ready
+I, [2020-10-12T22:03:20.157579 #20461]  INFO -- : reaped #<Process::Status: pid 20464 exit 0> worker=0
+I, [2020-10-12T22:03:20.157693 #20461]  INFO -- : master complete
+I, [2020-10-12T22:03:25.751060 #20489]  INFO -- : reaped #<Process::Status: pid 20504 exit 0> worker=0
+I, [2020-10-12T22:03:25.751230 #20489]  INFO -- : worker=0 spawning...
+I, [2020-10-12T22:03:25.751966 #20622]  INFO -- : worker=0 spawned pid=20622
+I, [2020-10-12T22:03:25.752112 #20622]  INFO -- : Refreshing Gem list
+I, [2020-10-12T22:03:27.370892 #20622]  INFO -- : worker=0 ready
+I, [2020-10-12T22:04:11.189540 #21587]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:fd 10>}] (in /var/www/rails/pfc-master/releases/20201012220343)
+I, [2020-10-12T22:04:11.189628 #21587]  INFO -- : forked child re-executing...
+I, [2020-10-12T22:04:11.522404 #21587]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-12T22:04:11.522734 #21587]  INFO -- : worker=0 spawning...
+I, [2020-10-12T22:04:11.523232 #21587]  INFO -- : master process ready
+I, [2020-10-12T22:04:11.523676 #21602]  INFO -- : worker=0 spawned pid=21602
+I, [2020-10-12T22:04:11.523796 #21602]  INFO -- : Refreshing Gem list
+I, [2020-10-12T22:04:13.190762 #21602]  INFO -- : worker=0 ready
+I, [2020-10-17T03:22:15.244541 #20489]  INFO -- : reaped #<Process::Status: pid 20622 exit 0> worker=0
+I, [2020-10-17T03:22:15.247619 #20489]  INFO -- : master complete
+I, [2020-10-17T03:22:27.812717 #21587]  INFO -- : reaped #<Process::Status: pid 21602 exit 0> worker=0
+I, [2020-10-17T03:22:27.813940 #21587]  INFO -- : master complete
+I, [2020-10-17T03:23:33.516340 #17613]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T03:23:33.516597 #17613]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T03:23:33.516707 #17613]  INFO -- : worker=0 spawning...
+I, [2020-10-17T03:23:33.517178 #17613]  INFO -- : master process ready
+I, [2020-10-17T03:23:33.525325 #17616]  INFO -- : worker=0 spawned pid=17616
+I, [2020-10-17T03:23:33.525476 #17616]  INFO -- : Refreshing Gem list
+I, [2020-10-17T03:23:34.343768 #17641]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017032259)
+I, [2020-10-17T03:23:34.343931 #17641]  INFO -- : forked child re-executing...
+I, [2020-10-17T03:23:34.999778 #17641]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T03:23:35.000076 #17641]  INFO -- : worker=0 spawning...
+I, [2020-10-17T03:23:35.000612 #17641]  INFO -- : master process ready
+I, [2020-10-17T03:23:35.002989 #17656]  INFO -- : worker=0 spawned pid=17656
+I, [2020-10-17T03:23:35.003116 #17656]  INFO -- : Refreshing Gem list
+I, [2020-10-17T03:23:36.255512 #17616]  INFO -- : worker=0 ready
+I, [2020-10-17T03:23:37.276798 #17656]  INFO -- : worker=0 ready
+I, [2020-10-17T04:05:30.693026 #17613]  INFO -- : reaped #<Process::Status: pid 17616 exit 0> worker=0
+I, [2020-10-17T04:05:30.693141 #17613]  INFO -- : master complete
+I, [2020-10-17T04:05:36.083257 #17641]  INFO -- : reaped #<Process::Status: pid 17656 exit 0> worker=0
+I, [2020-10-17T04:05:36.083381 #17641]  INFO -- : master complete
+I, [2020-10-17T04:06:29.044709 #8258]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T04:06:29.044961 #8258]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-17T04:06:29.045074 #8258]  INFO -- : worker=0 spawning...
+I, [2020-10-17T04:06:29.049491 #8258]  INFO -- : master process ready
+I, [2020-10-17T04:06:29.056429 #8261]  INFO -- : worker=0 spawned pid=8261
+I, [2020-10-17T04:06:29.056580 #8261]  INFO -- : Refreshing Gem list
+I, [2020-10-17T04:06:29.992330 #8286]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {12=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017040556)
+I, [2020-10-17T04:06:29.992413 #8286]  INFO -- : forked child re-executing...
+I, [2020-10-17T04:06:30.656107 #8286]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-17T04:06:30.656386 #8286]  INFO -- : worker=0 spawning...
+I, [2020-10-17T04:06:30.656912 #8286]  INFO -- : master process ready
+I, [2020-10-17T04:06:30.659063 #8302]  INFO -- : worker=0 spawned pid=8302
+I, [2020-10-17T04:06:30.659187 #8302]  INFO -- : Refreshing Gem list
+I, [2020-10-17T04:06:31.505252 #8261]  INFO -- : worker=0 ready
+I, [2020-10-17T04:06:32.725853 #8302]  INFO -- : worker=0 ready
+I, [2020-10-17T04:30:26.637416 #8258]  INFO -- : reaped #<Process::Status: pid 8261 exit 0> worker=0
+I, [2020-10-17T04:30:26.637591 #8258]  INFO -- : master complete
+I, [2020-10-17T04:30:32.958007 #8286]  INFO -- : reaped #<Process::Status: pid 8302 exit 0> worker=0
+I, [2020-10-17T04:30:32.958128 #8286]  INFO -- : master complete
+I, [2020-10-17T04:31:29.984516 #20613]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T04:31:29.984747 #20613]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T04:31:29.984865 #20613]  INFO -- : worker=0 spawning...
+I, [2020-10-17T04:31:29.985410 #20613]  INFO -- : master process ready
+I, [2020-10-17T04:31:29.992768 #20616]  INFO -- : worker=0 spawned pid=20616
+I, [2020-10-17T04:31:29.992934 #20616]  INFO -- : Refreshing Gem list
+I, [2020-10-17T04:31:30.849299 #20641]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017043055)
+I, [2020-10-17T04:31:30.849386 #20641]  INFO -- : forked child re-executing...
+I, [2020-10-17T04:31:31.531778 #20641]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T04:31:31.532100 #20641]  INFO -- : worker=0 spawning...
+I, [2020-10-17T04:31:31.535094 #20641]  INFO -- : master process ready
+I, [2020-10-17T04:31:31.538994 #20656]  INFO -- : worker=0 spawned pid=20656
+I, [2020-10-17T04:31:31.539134 #20656]  INFO -- : Refreshing Gem list
+I, [2020-10-17T04:31:32.601110 #20616]  INFO -- : worker=0 ready
+I, [2020-10-17T04:31:33.756972 #20656]  INFO -- : worker=0 ready
+E, [2020-10-17T09:01:31.649515 #20641] ERROR -- : old PID:20613 running with existing pid=/var/www/rails/pfc-master/shared/tmp/pids/unicorn.pid.oldbin, refusing rexec
+I, [2020-10-17T09:02:23.124757 #20613]  INFO -- : reaped #<Process::Status: pid 20616 exit 0> worker=0
+I, [2020-10-17T09:02:23.124879 #20613]  INFO -- : master complete
+I, [2020-10-17T09:02:28.643999 #20641]  INFO -- : reaped #<Process::Status: pid 20656 exit 0> worker=0
+I, [2020-10-17T09:02:28.644125 #20641]  INFO -- : master complete
+I, [2020-10-17T09:03:44.340651 #14764]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:03:44.341051 #14764]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-17T09:03:44.341163 #14764]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:03:44.341672 #14764]  INFO -- : master process ready
+I, [2020-10-17T09:03:44.348744 #14767]  INFO -- : worker=0 spawned pid=14767
+I, [2020-10-17T09:03:44.348924 #14767]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:03:44.612586 #14792]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {12=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017090331)
+I, [2020-10-17T09:03:44.612667 #14792]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:03:45.350554 #14792]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-17T09:03:45.356285 #14792]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:03:45.356769 #14792]  INFO -- : master process ready
+I, [2020-10-17T09:03:45.362993 #14847]  INFO -- : worker=0 spawned pid=14847
+I, [2020-10-17T09:03:45.363122 #14847]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:03:47.651073 #14767]  INFO -- : worker=0 ready
+I, [2020-10-17T09:03:48.152504 #14847]  INFO -- : worker=0 ready
+I, [2020-10-17T09:12:59.752726 #14764]  INFO -- : reaped #<Process::Status: pid 14767 exit 0> worker=0
+I, [2020-10-17T09:12:59.752831 #14764]  INFO -- : master complete
+I, [2020-10-17T09:13:06.106084 #14792]  INFO -- : reaped #<Process::Status: pid 14847 exit 0> worker=0
+I, [2020-10-17T09:13:06.106208 #14792]  INFO -- : master complete
+I, [2020-10-17T09:13:30.593611 #27429]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:13:30.593835 #27429]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:13:30.594052 #27429]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:13:30.597476 #27429]  INFO -- : master process ready
+I, [2020-10-17T09:13:30.604412 #27432]  INFO -- : worker=0 spawned pid=27432
+I, [2020-10-17T09:13:30.604559 #27432]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:13:30.879424 #27457]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017091317)
+I, [2020-10-17T09:13:30.879510 #27457]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:13:31.618807 #27457]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:13:31.619099 #27457]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:13:31.619596 #27457]  INFO -- : master process ready
+I, [2020-10-17T09:13:31.622990 #27512]  INFO -- : worker=0 spawned pid=27512
+I, [2020-10-17T09:13:31.623117 #27512]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:13:33.861749 #27432]  INFO -- : worker=0 ready
+I, [2020-10-17T09:13:34.404651 #27512]  INFO -- : worker=0 ready
+I, [2020-10-17T09:14:00.530738 #27429]  INFO -- : reaped #<Process::Status: pid 27432 exit 0> worker=0
+I, [2020-10-17T09:14:00.530841 #27429]  INFO -- : master complete
+I, [2020-10-17T09:14:10.796630 #27457]  INFO -- : reaped #<Process::Status: pid 27512 exit 0> worker=0
+I, [2020-10-17T09:14:10.796752 #27457]  INFO -- : master complete
+I, [2020-10-17T09:17:21.820583 #28556]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:17:21.820957 #28556]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-17T09:17:21.821066 #28556]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:17:21.825948 #28556]  INFO -- : master process ready
+I, [2020-10-17T09:17:21.833096 #28559]  INFO -- : worker=0 spawned pid=28559
+I, [2020-10-17T09:17:21.833260 #28559]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:17:22.132611 #28584]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {12=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017091707)
+I, [2020-10-17T09:17:22.132708 #28584]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:17:22.867017 #28584]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-17T09:17:22.867296 #28584]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:17:22.867789 #28584]  INFO -- : master process ready
+I, [2020-10-17T09:17:22.870974 #28639]  INFO -- : worker=0 spawned pid=28639
+I, [2020-10-17T09:17:22.871104 #28639]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:17:24.994426 #28559]  INFO -- : worker=0 ready
+I, [2020-10-17T09:17:25.567073 #28639]  INFO -- : worker=0 ready
+I, [2020-10-17T09:17:57.199763 #28556]  INFO -- : reaped #<Process::Status: pid 28559 exit 0> worker=0
+I, [2020-10-17T09:17:57.199906 #28556]  INFO -- : master complete
+I, [2020-10-17T09:18:23.209353 #28584]  INFO -- : reaped #<Process::Status: pid 28639 exit 0> worker=0
+I, [2020-10-17T09:18:23.209497 #28584]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:18:23.210223 #28659]  INFO -- : worker=0 spawned pid=28659
+I, [2020-10-17T09:18:23.210382 #28659]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:18:24.833876 #28659]  INFO -- : worker=0 ready
+I, [2020-10-17T09:18:34.195168 #28584]  INFO -- : reaped #<Process::Status: pid 28659 exit 0> worker=0
+I, [2020-10-17T09:18:34.195287 #28584]  INFO -- : master complete
+I, [2020-10-17T09:24:29.260368 #29656]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:24:29.260586 #29656]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:24:29.260691 #29656]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:24:29.261132 #29656]  INFO -- : master process ready
+I, [2020-10-17T09:24:29.268257 #29659]  INFO -- : worker=0 spawned pid=29659
+I, [2020-10-17T09:24:29.268402 #29659]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:24:29.589632 #29684]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017092416)
+I, [2020-10-17T09:24:29.589715 #29684]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:24:30.330793 #29684]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:24:30.331067 #29684]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:24:30.331582 #29684]  INFO -- : master process ready
+I, [2020-10-17T09:24:30.334985 #29739]  INFO -- : worker=0 spawned pid=29739
+I, [2020-10-17T09:24:30.335107 #29739]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:24:32.442781 #29659]  INFO -- : worker=0 ready
+I, [2020-10-17T09:24:33.029346 #29739]  INFO -- : worker=0 ready
+E, [2020-10-17T09:30:29.072415 #29684] ERROR -- : old PID:29656 running with existing pid=/var/www/rails/pfc-master/shared/tmp/pids/unicorn.pid.oldbin, refusing rexec
+I, [2020-10-17T09:31:03.744189 #29656]  INFO -- : reaped #<Process::Status: pid 29659 exit 0> worker=0
+I, [2020-10-17T09:31:03.744323 #29656]  INFO -- : master complete
+I, [2020-10-17T09:31:09.621078 #29684]  INFO -- : reaped #<Process::Status: pid 29739 exit 0> worker=0
+I, [2020-10-17T09:31:09.621302 #29684]  INFO -- : master complete
+I, [2020-10-17T09:31:32.695862 #11092]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:31:32.696083 #11092]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:31:32.696192 #11092]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:31:32.696654 #11092]  INFO -- : master process ready
+I, [2020-10-17T09:31:32.703603 #11095]  INFO -- : worker=0 spawned pid=11095
+I, [2020-10-17T09:31:32.703727 #11095]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:31:33.050309 #11120]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017093119)
+I, [2020-10-17T09:31:33.050391 #11120]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:31:33.769266 #11120]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:31:33.769547 #11120]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:31:33.771396 #11120]  INFO -- : master process ready
+I, [2020-10-17T09:31:33.774979 #11175]  INFO -- : worker=0 spawned pid=11175
+I, [2020-10-17T09:31:33.775099 #11175]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:31:35.812560 #11095]  INFO -- : worker=0 ready
+I, [2020-10-17T09:31:36.431202 #11175]  INFO -- : worker=0 ready
+I, [2020-10-17T09:32:23.786331 #11092]  INFO -- : reaped #<Process::Status: pid 11095 exit 0> worker=0
+I, [2020-10-17T09:32:23.786460 #11092]  INFO -- : master complete
+I, [2020-10-17T09:32:30.784774 #11120]  INFO -- : reaped #<Process::Status: pid 11175 exit 0> worker=0
+I, [2020-10-17T09:32:30.784895 #11120]  INFO -- : master complete
+I, [2020-10-17T09:34:27.980593 #12176]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:34:27.980827 #12176]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-17T09:34:27.981066 #12176]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:34:27.983109 #12176]  INFO -- : master process ready
+I, [2020-10-17T09:34:27.992323 #12179]  INFO -- : worker=0 spawned pid=12179
+I, [2020-10-17T09:34:27.992475 #12179]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:34:28.348843 #12204]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {12=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017093414)
+I, [2020-10-17T09:34:28.348931 #12204]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:34:29.089302 #12204]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=12
+I, [2020-10-17T09:34:29.089598 #12204]  INFO -- : worker=0 spawning...
+I, [2020-10-17T09:34:29.095141 #12204]  INFO -- : master process ready
+I, [2020-10-17T09:34:29.095656 #12259]  INFO -- : worker=0 spawned pid=12259
+I, [2020-10-17T09:34:29.095779 #12259]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:34:31.128084 #12179]  INFO -- : worker=0 ready
+I, [2020-10-17T09:34:31.782295 #12259]  INFO -- : worker=0 ready
+I, [2020-10-17T09:35:46.560268 #12176]  INFO -- : reaped #<Process::Status: pid 12179 exit 0> worker=0
+I, [2020-10-17T09:35:46.560384 #12176]  INFO -- : master complete
+I, [2020-10-17T09:35:53.668139 #12204]  INFO -- : reaped #<Process::Status: pid 12259 exit 0> worker=0
+I, [2020-10-17T09:35:53.668260 #12204]  INFO -- : master complete
+I, [2020-10-17T09:37:20.122573 #13344]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:37:21.745394 #13344]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:37:21.745581 #13344]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:37:21.750662 #13344]  INFO -- : master process ready
+I, [2020-10-17T09:37:21.756027 #13348]  INFO -- : worker=0 ready
+I, [2020-10-17T09:37:21.978919 #13374]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017093706)
+I, [2020-10-17T09:37:21.979023 #13374]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:37:22.325448 #13374]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:37:22.325682 #13374]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:37:23.984099 #13374]  INFO -- : master process ready
+I, [2020-10-17T09:37:23.988002 #13441]  INFO -- : worker=0 ready
+I, [2020-10-17T09:37:24.078599 #13344]  INFO -- : reaped #<Process::Status: pid 13348 exit 0> worker=0
+I, [2020-10-17T09:37:24.078717 #13344]  INFO -- : master complete
+I, [2020-10-17T09:42:45.026700 #13374]  INFO -- : reaped #<Process::Status: pid 13441 exit 0> worker=0
+I, [2020-10-17T09:42:45.026838 #13374]  INFO -- : master complete
+I, [2020-10-17T09:43:16.368741 #14496]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:43:17.993915 #14496]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:43:17.994092 #14496]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:43:17.998991 #14496]  INFO -- : master process ready
+I, [2020-10-17T09:43:18.004890 #14500]  INFO -- : worker=0 ready
+I, [2020-10-17T09:43:18.178824 #14526]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017094303)
+I, [2020-10-17T09:43:18.178945 #14526]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:43:18.529525 #14526]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T09:43:18.529771 #14526]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:43:20.180107 #14526]  INFO -- : master process ready
+I, [2020-10-17T09:43:20.184045 #14593]  INFO -- : worker=0 ready
+I, [2020-10-17T09:43:20.274417 #14496]  INFO -- : reaped #<Process::Status: pid 14500 exit 0> worker=0
+I, [2020-10-17T09:43:20.274513 #14496]  INFO -- : master complete
+I, [2020-10-17T09:44:22.944167 #14526]  INFO -- : reaped #<Process::Status: pid 14593 exit 0> worker=0
+I, [2020-10-17T09:44:22.944281 #14526]  INFO -- : master complete
+I, [2020-10-17T09:47:04.425825 #16237]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:47:06.267941 #16237]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:47:06.268112 #16237]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T09:47:06.272777 #16237]  INFO -- : master process ready
+I, [2020-10-17T09:47:06.279733 #16241]  INFO -- : worker=0 ready
+I, [2020-10-17T09:47:06.540555 #16267]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017094646)
+I, [2020-10-17T09:47:06.540683 #16267]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:47:06.880266 #16267]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T09:47:06.880505 #16267]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:47:08.565029 #16267]  INFO -- : master process ready
+I, [2020-10-17T09:47:08.569218 #16334]  INFO -- : worker=0 ready
+I, [2020-10-17T09:47:08.660813 #16237]  INFO -- : reaped #<Process::Status: pid 16241 exit 0> worker=0
+I, [2020-10-17T09:47:08.660910 #16237]  INFO -- : master complete
+I, [2020-10-17T09:49:36.221061 #16267]  INFO -- : reaped #<Process::Status: pid 16334 exit 0> worker=0
+I, [2020-10-17T09:49:36.221188 #16267]  INFO -- : master complete
+I, [2020-10-17T09:50:00.561697 #17345]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:50:02.315202 #17345]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:50:02.315386 #17345]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T09:50:02.320238 #17345]  INFO -- : master process ready
+I, [2020-10-17T09:50:02.327213 #17355]  INFO -- : worker=0 ready
+I, [2020-10-17T09:50:02.585948 #17381]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017094947)
+I, [2020-10-17T09:50:02.586058 #17381]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:50:02.945077 #17381]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T09:50:02.945309 #17381]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:50:04.625086 #17381]  INFO -- : master process ready
+I, [2020-10-17T09:50:04.629394 #17448]  INFO -- : worker=0 ready
+I, [2020-10-17T09:50:04.719578 #17345]  INFO -- : reaped #<Process::Status: pid 17355 exit 0> worker=0
+I, [2020-10-17T09:50:04.719678 #17345]  INFO -- : master complete
+I, [2020-10-17T09:58:09.905450 #17381]  INFO -- : reaped #<Process::Status: pid 17448 exit 0> worker=0
+I, [2020-10-17T09:58:09.905574 #17381]  INFO -- : master complete
+I, [2020-10-17T09:58:59.123633 #18462]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:59:00.755582 #18462]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T09:59:00.755747 #18462]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T09:59:00.760559 #18462]  INFO -- : master process ready
+I, [2020-10-17T09:59:00.767378 #18466]  INFO -- : worker=0 ready
+I, [2020-10-17T09:59:01.007564 #18492]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017095845)
+I, [2020-10-17T09:59:01.007710 #18492]  INFO -- : forked child re-executing...
+I, [2020-10-17T09:59:01.365476 #18492]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T09:59:01.365732 #18492]  INFO -- : Refreshing Gem list
+I, [2020-10-17T09:59:03.029033 #18492]  INFO -- : master process ready
+I, [2020-10-17T09:59:03.033259 #18559]  INFO -- : worker=0 ready
+I, [2020-10-17T09:59:03.124989 #18462]  INFO -- : reaped #<Process::Status: pid 18466 exit 0> worker=0
+I, [2020-10-17T09:59:03.125093 #18462]  INFO -- : master complete
+I, [2020-10-17T10:07:21.814114 #18492]  INFO -- : reaped #<Process::Status: pid 18559 exit 0> worker=0
+I, [2020-10-17T10:07:21.814244 #18492]  INFO -- : master complete
+I, [2020-10-17T10:07:50.761884 #19614]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:07:52.389698 #19614]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:07:52.389872 #19614]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:07:52.394593 #19614]  INFO -- : master process ready
+I, [2020-10-17T10:07:52.401380 #19618]  INFO -- : worker=0 ready
+I, [2020-10-17T10:07:52.676863 #19644]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017100737)
+I, [2020-10-17T10:07:52.676989 #19644]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:07:53.021338 #19644]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:07:53.021577 #19644]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:07:54.665006 #19644]  INFO -- : master process ready
+I, [2020-10-17T10:07:54.666471 #19711]  INFO -- : worker=0 ready
+I, [2020-10-17T10:07:54.757337 #19614]  INFO -- : reaped #<Process::Status: pid 19618 exit 0> worker=0
+I, [2020-10-17T10:07:54.757432 #19614]  INFO -- : master complete
+I, [2020-10-17T10:17:56.849269 #19644]  INFO -- : reaped #<Process::Status: pid 19711 exit 0> worker=0
+I, [2020-10-17T10:17:56.849373 #19644]  INFO -- : master complete
+I, [2020-10-17T10:20:42.399047 #16364]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:20:44.186931 #16364]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:20:44.187094 #16364]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:20:44.191779 #16364]  INFO -- : master process ready
+I, [2020-10-17T10:20:44.198362 #16368]  INFO -- : worker=0 ready
+I, [2020-10-17T10:20:44.510652 #16394]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017102027)
+I, [2020-10-17T10:20:44.510785 #16394]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:20:44.863810 #16394]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:20:44.864042 #16394]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:20:46.518245 #16394]  INFO -- : master process ready
+I, [2020-10-17T10:20:46.519769 #16461]  INFO -- : worker=0 ready
+I, [2020-10-17T10:20:46.610347 #16364]  INFO -- : reaped #<Process::Status: pid 16368 exit 0> worker=0
+I, [2020-10-17T10:20:46.610441 #16364]  INFO -- : master complete
+106.171.32.65 - - [17/Oct/2020:10:22:29 +0000] "GET / HTTP/1.0" 200 13685 0.1876
+106.171.32.65 - - [17/Oct/2020:10:22:31 +0000] "GET / HTTP/1.0" 200 13685 0.0340
+106.171.32.65 - - [17/Oct/2020:10:23:11 +0000] "GET / HTTP/1.0" 200 13685 0.0461
+I, [2020-10-17T10:23:27.605762 #16394]  INFO -- : reaped #<Process::Status: pid 16461 exit 0> worker=0
+I, [2020-10-17T10:23:27.605941 #16394]  INFO -- : master complete
+I, [2020-10-17T10:23:54.502876 #17486]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:23:56.134410 #17486]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:23:56.134585 #17486]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:23:56.139543 #17486]  INFO -- : master process ready
+I, [2020-10-17T10:23:56.146587 #17490]  INFO -- : worker=0 ready
+I, [2020-10-17T10:23:56.481369 #17516]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017102340)
+I, [2020-10-17T10:23:56.481502 #17516]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:23:56.824171 #17516]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:23:56.824420 #17516]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:23:58.493432 #17516]  INFO -- : master process ready
+I, [2020-10-17T10:23:58.498548 #17583]  INFO -- : worker=0 ready
+I, [2020-10-17T10:23:58.587832 #17486]  INFO -- : reaped #<Process::Status: pid 17490 exit 0> worker=0
+I, [2020-10-17T10:23:58.587927 #17486]  INFO -- : master complete
+106.171.32.65 - - [17/Oct/2020:10:24:06 +0000] "GET / HTTP/1.0" 200 13685 0.1594
+106.171.32.65 - - [17/Oct/2020:10:24:08 +0000] "GET / HTTP/1.0" 200 13685 0.0327
+I, [2020-10-17T10:30:21.418114 #17516]  INFO -- : reaped #<Process::Status: pid 17583 exit 0> worker=0
+I, [2020-10-17T10:30:21.418249 #17516]  INFO -- : master complete
+I, [2020-10-17T10:30:53.290943 #18612]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:30:54.917905 #18612]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:30:54.918081 #18612]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:30:54.922913 #18612]  INFO -- : master process ready
+I, [2020-10-17T10:30:54.929755 #18616]  INFO -- : worker=0 ready
+I, [2020-10-17T10:30:55.206960 #18642]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017103039)
+I, [2020-10-17T10:30:55.207086 #18642]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:30:55.555973 #18642]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:30:55.556204 #18642]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:30:57.210278 #18642]  INFO -- : master process ready
+I, [2020-10-17T10:30:57.211811 #18709]  INFO -- : worker=0 ready
+I, [2020-10-17T10:30:57.303014 #18612]  INFO -- : reaped #<Process::Status: pid 18616 exit 0> worker=0
+I, [2020-10-17T10:30:57.303110 #18612]  INFO -- : master complete
+106.171.32.65 - - [17/Oct/2020:10:31:15 +0000] "GET / HTTP/1.0" 200 14085 0.1595
+I, [2020-10-17T10:31:41.979590 #18642]  INFO -- : reaped #<Process::Status: pid 18709 exit 0> worker=0
+I, [2020-10-17T10:31:41.979713 #18642]  INFO -- : master complete
+I, [2020-10-17T10:32:05.463351 #19696]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:32:07.097625 #19696]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:32:07.097805 #19696]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T10:32:07.102701 #19696]  INFO -- : master process ready
+I, [2020-10-17T10:32:07.110533 #19700]  INFO -- : worker=0 ready
+I, [2020-10-17T10:32:07.286539 #19726]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {10=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017103152)
+I, [2020-10-17T10:32:07.286642 #19726]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:32:07.644293 #19726]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=10
+I, [2020-10-17T10:32:07.644536 #19726]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:32:09.330295 #19726]  INFO -- : master process ready
+I, [2020-10-17T10:32:09.334495 #19793]  INFO -- : worker=0 ready
+I, [2020-10-17T10:32:09.423648 #19696]  INFO -- : reaped #<Process::Status: pid 19700 exit 0> worker=0
+I, [2020-10-17T10:32:09.423760 #19696]  INFO -- : master complete
+106.171.32.65 - - [17/Oct/2020:10:32:19 +0000] "GET / HTTP/1.0" 200 14085 0.1593
+I, [2020-10-17T10:37:51.586298 #19726]  INFO -- : reaped #<Process::Status: pid 19793 exit 0> worker=0
+I, [2020-10-17T10:37:51.586432 #19726]  INFO -- : master complete
+I, [2020-10-17T10:38:53.943054 #405]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:38:55.538405 #405]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:38:55.538585 #405]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:38:55.543297 #405]  INFO -- : master process ready
+I, [2020-10-17T10:38:55.550127 #409]  INFO -- : worker=0 ready
+I, [2020-10-17T10:38:55.780189 #435]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017103841)
+I, [2020-10-17T10:38:55.780300 #435]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:38:56.126824 #435]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:38:56.127058 #435]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:38:57.782255 #435]  INFO -- : master process ready
+I, [2020-10-17T10:38:57.786499 #502]  INFO -- : worker=0 ready
+I, [2020-10-17T10:38:57.878316 #405]  INFO -- : reaped #<Process::Status: pid 409 exit 0> worker=0
+I, [2020-10-17T10:38:57.878411 #405]  INFO -- : master complete
+106.171.32.65 - - [17/Oct/2020:10:39:16 +0000] "GET / HTTP/1.0" 200 14085 0.1586
+I, [2020-10-17T10:39:24.450906 #435]  INFO -- : reaped #<Process::Status: pid 502 exit 0> worker=0
+I, [2020-10-17T10:39:24.451033 #435]  INFO -- : master complete
+I, [2020-10-17T10:41:03.002932 #1504]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:41:04.638876 #1504]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:41:04.639060 #1504]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:41:04.643975 #1504]  INFO -- : master process ready
+I, [2020-10-17T10:41:04.651065 #1508]  INFO -- : worker=0 ready
+I, [2020-10-17T10:41:04.916991 #1534]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017104050)
+I, [2020-10-17T10:41:04.917171 #1534]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:41:05.274063 #1534]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:41:05.274316 #1534]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:41:06.950257 #1534]  INFO -- : master process ready
+I, [2020-10-17T10:41:06.951731 #1601]  INFO -- : worker=0 ready
+I, [2020-10-17T10:41:07.043301 #1504]  INFO -- : reaped #<Process::Status: pid 1508 exit 0> worker=0
+I, [2020-10-17T10:41:07.043394 #1504]  INFO -- : master complete
+I, [2020-10-17T10:42:18.510671 #1534]  INFO -- : reaped #<Process::Status: pid 1601 exit 0> worker=0
+I, [2020-10-17T10:42:18.510802 #1534]  INFO -- : master complete
+I, [2020-10-17T10:42:40.758894 #2609]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:42:42.395235 #2609]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:42:42.395398 #2609]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:42:42.400116 #2609]  INFO -- : master process ready
+I, [2020-10-17T10:42:42.407036 #2613]  INFO -- : worker=0 ready
+I, [2020-10-17T10:42:42.588764 #2639]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017104228)
+I, [2020-10-17T10:42:42.588887 #2639]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:42:42.942436 #2639]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:42:42.942666 #2639]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:42:44.598284 #2639]  INFO -- : master process ready
+I, [2020-10-17T10:42:44.602476 #2723]  INFO -- : worker=0 ready
+I, [2020-10-17T10:42:44.694041 #2609]  INFO -- : reaped #<Process::Status: pid 2613 exit 0> worker=0
+I, [2020-10-17T10:42:44.694155 #2609]  INFO -- : master complete
+106.171.32.65 - - [17/Oct/2020:10:43:10 +0000] "GET / HTTP/1.0" 200 14085 0.1608
+I, [2020-10-17T10:46:51.162258 #2639]  INFO -- : reaped #<Process::Status: pid 2723 exit 0> worker=0
+I, [2020-10-17T10:46:51.162385 #2639]  INFO -- : master complete
+I, [2020-10-17T10:47:15.534970 #3810]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:47:17.187025 #3810]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:47:17.187193 #3810]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:47:17.192073 #3810]  INFO -- : master process ready
+I, [2020-10-17T10:47:17.199179 #3814]  INFO -- : worker=0 ready
+I, [2020-10-17T10:47:17.476397 #3840]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017104702)
+I, [2020-10-17T10:47:17.476521 #3840]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:47:17.840513 #3840]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:47:17.840753 #3840]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:47:19.518306 #3840]  INFO -- : master process ready
+I, [2020-10-17T10:47:19.522514 #3907]  INFO -- : worker=0 ready
+I, [2020-10-17T10:47:19.612318 #3810]  INFO -- : reaped #<Process::Status: pid 3814 exit 0> worker=0
+I, [2020-10-17T10:47:19.612426 #3810]  INFO -- : master complete
+I, [2020-10-17T10:47:37.830960 #3840]  INFO -- : reaped #<Process::Status: pid 3907 exit 0> worker=0
+I, [2020-10-17T10:47:37.831085 #3840]  INFO -- : master complete
+I, [2020-10-17T10:48:09.578893 #4893]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:48:11.207063 #4893]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:48:11.207241 #4893]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:48:11.212095 #4893]  INFO -- : master process ready
+I, [2020-10-17T10:48:11.219931 #4897]  INFO -- : worker=0 ready
+I, [2020-10-17T10:48:11.420969 #4923]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017104756)
+I, [2020-10-17T10:48:11.421306 #4923]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:48:11.770486 #4923]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:48:11.770920 #4923]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:48:13.426492 #4923]  INFO -- : master process ready
+I, [2020-10-17T10:48:13.430589 #4990]  INFO -- : worker=0 ready
+I, [2020-10-17T10:48:13.520382 #4893]  INFO -- : reaped #<Process::Status: pid 4897 exit 0> worker=0
+I, [2020-10-17T10:48:13.520488 #4893]  INFO -- : master complete
+106.171.32.65 - - [17/Oct/2020:10:50:55 +0000] "GET / HTTP/1.0" 200 14085 0.1598
+I, [2020-10-17T10:52:18.416232 #4923]  INFO -- : reaped #<Process::Status: pid 4990 exit 0> worker=0
+I, [2020-10-17T10:52:18.416355 #4923]  INFO -- : master complete
+I, [2020-10-17T10:52:57.558748 #5985]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:52:59.205759 #5985]  INFO -- : unlinking existing socket=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock
+I, [2020-10-17T10:52:59.205953 #5985]  INFO -- : listening on addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:52:59.210901 #5985]  INFO -- : master process ready
+I, [2020-10-17T10:52:59.217650 #5989]  INFO -- : worker=0 ready
+I, [2020-10-17T10:52:59.438644 #6015]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock>}] (in /var/www/rails/pfc-master/releases/20201017105244)
+I, [2020-10-17T10:52:59.438757 #6015]  INFO -- : forked child re-executing...
+I, [2020-10-17T10:52:59.788119 #6015]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-17T10:52:59.788357 #6015]  INFO -- : Refreshing Gem list
+I, [2020-10-17T10:53:01.470335 #6015]  INFO -- : master process ready
+I, [2020-10-17T10:53:01.471855 #6082]  INFO -- : worker=0 ready
+I, [2020-10-17T10:53:01.562476 #5985]  INFO -- : reaped #<Process::Status: pid 5989 exit 0> worker=0
+I, [2020-10-17T10:53:01.562575 #5985]  INFO -- : master complete
+106.171.32.65 - - [17/Oct/2020:10:53:06 +0000] "GET / HTTP/1.0" 200 14085 0.1592
+106.171.32.65 - - [17/Oct/2020:10:53:08 +0000] "GET / HTTP/1.0" 200 14085 0.0354
+3.133.113.146 - - [17/Oct/2020:14:03:21 +0000] "GET / HTTP/1.0" 200 13685 0.0415
+179.43.171.74 - - [17/Oct/2020:16:19:16 +0000] "GET / HTTP/1.0" 200 13685 0.0416
+179.43.171.74 - - [18/Oct/2020:04:04:57 +0000] "GET / HTTP/1.0" 200 13689 0.0487
+179.43.171.74 - - [18/Oct/2020:16:04:35 +0000] "GET / HTTP/1.0" 200 13690 0.0331
+69.25.58.18 - - [19/Oct/2020:02:31:57 +0000] "GET / HTTP/1.0" 200 13690 0.1702
+179.43.171.74 - - [19/Oct/2020:03:51:16 +0000] "GET / HTTP/1.0" 200 13690 0.0330
+92.119.159.43 - - [19/Oct/2020:07:57:39 +0000] "GET /wp-login.php HTTP/1.0" 404 33316 0.1380
+106.171.53.63 - - [19/Oct/2020:11:26:47 +0000] "GET / HTTP/1.0" 200 13690 0.0399
+106.171.53.63 - - [19/Oct/2020:11:26:51 +0000] "GET /users/sign_in HTTP/1.0" 200 3474 0.0189
+106.171.53.63 - - [19/Oct/2020:11:27:12 +0000] "POST /users/sign_in HTTP/1.0" 302 88 0.1843
+106.171.53.63 - - [19/Oct/2020:11:27:12 +0000] "GET / HTTP/1.0" 200 14143 0.0392
+106.171.53.63 - - [19/Oct/2020:11:29:42 +0000] "GET / HTTP/1.0" 200 14074 0.0354
+106.171.53.63 - - [19/Oct/2020:11:31:16 +0000] "POST /posts/19/likes HTTP/1.0" 200 205 0.0816
+106.171.53.63 - - [19/Oct/2020:11:32:19 +0000] "POST /posts HTTP/1.0" 200 88 0.0239
+106.171.53.63 - - [19/Oct/2020:11:32:19 +0000] "GET / HTTP/1.0" 200 14140 0.0384
+106.171.53.63 - - [19/Oct/2020:11:32:19 +0000] "GET /calendars.3 HTTP/1.0" 200 7064 0.0385
+106.171.53.63 - - [19/Oct/2020:11:32:33 +0000] "GET /users/3 HTTP/1.0" 200 9949 0.0453
+106.171.53.63 - - [19/Oct/2020:11:32:54 +0000] "GET / HTTP/1.0" 200 14134 0.0377
+106.171.53.63 - - [19/Oct/2020:11:32:57 +0000] "GET /charts.3 HTTP/1.0" 200 4561 0.0190
+106.171.53.63 - - [19/Oct/2020:11:33:05 +0000] "GET / HTTP/1.0" 200 14134 0.0437
+106.171.53.63 - - [19/Oct/2020:11:33:06 +0000] "GET /posts/image.3 HTTP/1.0" 200 3303 0.0188
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33675 0.0819
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33675 0.0808
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33675 0.0807
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33675 0.0815
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33675 0.0820
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33675 0.0840
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33675 0.0815
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33675 0.0809
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33670 0.0819
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33674 0.0815
+106.171.53.63 - - [19/Oct/2020:11:33:07 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33674 0.0840
+106.171.53.63 - - [19/Oct/2020:11:33:08 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33674 0.0812
+106.171.53.63 - - [19/Oct/2020:11:33:08 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33674 0.0823
+106.171.53.63 - - [19/Oct/2020:11:33:08 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33678 0.0814
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET / HTTP/1.0" 200 14134 0.0379
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33675 0.0826
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33675 0.0832
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33675 0.0804
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33675 0.0812
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33675 0.0814
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33675 0.0802
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33675 0.0848
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33675 0.0813
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33670 0.0815
+106.171.53.63 - - [19/Oct/2020:11:33:28 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33674 0.0816
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33674 0.0813
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33674 0.0837
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33674 0.0813
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33678 0.0815
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /posts/image.3 HTTP/1.0" 200 3303 0.0096
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33675 0.0819
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33675 0.0818
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33675 0.0826
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33675 0.0831
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33675 0.0818
+106.171.53.63 - - [19/Oct/2020:11:33:29 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33675 0.0801
+106.171.53.63 - - [19/Oct/2020:11:33:30 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33675 0.0826
+106.171.53.63 - - [19/Oct/2020:11:33:30 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33675 0.0829
+106.171.53.63 - - [19/Oct/2020:11:33:30 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33670 0.0850
+106.171.53.63 - - [19/Oct/2020:11:33:30 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33674 0.0813
+106.171.53.63 - - [19/Oct/2020:11:33:30 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33674 0.0823
+106.171.53.63 - - [19/Oct/2020:11:33:30 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33674 0.0812
+106.171.53.63 - - [19/Oct/2020:11:33:30 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33674 0.0821
+106.171.53.63 - - [19/Oct/2020:11:33:30 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33678 0.0850
+106.171.53.63 - - [19/Oct/2020:11:33:40 +0000] "GET / HTTP/1.0" 200 14134 0.0377
+106.171.53.63 - - [19/Oct/2020:11:38:09 +0000] "POST /posts HTTP/1.0" 200 88 0.4525
+106.171.53.63 - - [19/Oct/2020:11:38:09 +0000] "GET / HTTP/1.0" 200 14332 0.0390
+106.171.53.63 - - [19/Oct/2020:11:38:18 +0000] "GET /posts/image.3 HTTP/1.0" 200 3400 0.0091
+106.171.53.63 - - [19/Oct/2020:11:38:18 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33675 0.0828
+106.171.53.63 - - [19/Oct/2020:11:38:18 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33675 0.0822
+106.171.53.63 - - [19/Oct/2020:11:38:18 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33675 0.0824
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33675 0.0843
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33675 0.0808
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33675 0.0817
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33675 0.0835
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33675 0.0828
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33670 0.0860
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33674 0.0822
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33674 0.0821
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33674 0.0806
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33674 0.0822
+106.171.53.63 - - [19/Oct/2020:11:38:19 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33678 0.0830
+106.171.53.63 - - [19/Oct/2020:11:38:39 +0000] "GET / HTTP/1.0" 200 14326 0.0415
+106.171.53.63 - - [19/Oct/2020:11:40:51 +0000] "POST /posts HTTP/1.0" 200 88 0.4013
+106.171.53.63 - - [19/Oct/2020:11:40:51 +0000] "GET / HTTP/1.0" 200 14466 0.0394
+106.171.53.63 - - [19/Oct/2020:11:40:59 +0000] "GET /posts/image.3 HTTP/1.0" 200 3497 0.0093
+106.171.53.63 - - [19/Oct/2020:11:40:59 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33675 0.0829
+106.171.53.63 - - [19/Oct/2020:11:40:59 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33675 0.0824
+106.171.53.63 - - [19/Oct/2020:11:40:59 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33675 0.0840
+106.171.53.63 - - [19/Oct/2020:11:40:59 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33675 0.0862
+106.171.53.63 - - [19/Oct/2020:11:40:59 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33675 0.0809
+106.171.53.63 - - [19/Oct/2020:11:40:59 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33675 0.0809
+106.171.53.63 - - [19/Oct/2020:11:40:59 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33675 0.0819
+106.171.53.63 - - [19/Oct/2020:11:41:00 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33675 0.1016
+106.171.53.63 - - [19/Oct/2020:11:41:00 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33670 0.0848
+106.171.53.63 - - [19/Oct/2020:11:41:00 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33674 0.0856
+106.171.53.63 - - [19/Oct/2020:11:41:00 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33674 0.0811
+106.171.53.63 - - [19/Oct/2020:11:41:00 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33674 0.0808
+106.171.53.63 - - [19/Oct/2020:11:41:00 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33674 0.0819
+106.171.53.63 - - [19/Oct/2020:11:41:00 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33678 0.0827
+178.32.198.221 - - [19/Oct/2020:12:23:00 +0000] "GET /wp-login.php HTTP/1.0" 404 33317 0.0862
+106.171.41.242 - - [19/Oct/2020:12:58:22 +0000] "GET / HTTP/1.0" 200 14478 0.0399
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33676 0.0834
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33676 0.0840
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33676 0.0824
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33676 0.0832
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33676 0.0855
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33676 0.0814
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33676 0.0823
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33676 0.0825
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33671 0.0833
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33675 0.0849
+106.171.41.242 - - [19/Oct/2020:12:58:23 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33675 0.0825
+106.171.41.242 - - [19/Oct/2020:12:58:24 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33675 0.0822
+106.171.41.242 - - [19/Oct/2020:12:58:24 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33675 0.0819
+106.171.41.242 - - [19/Oct/2020:12:58:24 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33679 0.0825
+106.171.41.242 - - [19/Oct/2020:13:00:34 +0000] "POST /posts HTTP/1.0" 200 88 0.2904
+106.171.41.242 - - [19/Oct/2020:13:00:34 +0000] "GET / HTTP/1.0" 200 14538 0.0391
+106.171.41.242 - - [19/Oct/2020:13:00:37 +0000] "GET /charts.3 HTTP/1.0" 200 4561 0.0095
+106.171.41.242 - - [19/Oct/2020:13:02:02 +0000] "GET / HTTP/1.0" 200 14532 0.0386
+106.171.41.242 - - [19/Oct/2020:13:04:05 +0000] "POST /posts HTTP/1.0" 200 88 0.2815
+106.171.41.242 - - [19/Oct/2020:13:04:05 +0000] "GET / HTTP/1.0" 200 14690 0.0380
+106.171.41.242 - - [19/Oct/2020:13:04:15 +0000] "GET /users/3 HTTP/1.0" 200 10455 0.0348
+106.171.41.242 - - [19/Oct/2020:13:04:30 +0000] "GET / HTTP/1.0" 200 14690 0.0395
+106.171.41.242 - - [19/Oct/2020:13:04:31 +0000] "GET /posts/image.3 HTTP/1.0" 200 3691 0.0097
+106.171.41.242 - - [19/Oct/2020:13:04:31 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33676 0.0838
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33676 0.0852
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33676 0.0840
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33676 0.0816
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33676 0.0821
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33676 0.0811
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33676 0.0857
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33676 0.0860
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33671 0.0823
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33675 0.0820
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33675 0.0821
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33675 0.0815
+106.171.41.242 - - [19/Oct/2020:13:04:32 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33675 0.0855
+106.171.41.242 - - [19/Oct/2020:13:04:33 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33679 0.0823
+106.180.14.189 - - [19/Oct/2020:14:02:44 +0000] "GET / HTTP/1.0" 200 14696 0.0384
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33676 0.0830
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33676 0.0815
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33676 0.0817
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33676 0.0847
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33676 0.0823
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33676 0.0834
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33676 0.0832
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33676 0.0822
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33671 0.0848
+106.180.14.189 - - [19/Oct/2020:14:02:45 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33675 0.0818
+106.180.14.189 - - [19/Oct/2020:14:02:46 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33675 0.0831
+106.180.14.189 - - [19/Oct/2020:14:02:46 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33675 0.0822
+106.180.14.189 - - [19/Oct/2020:14:02:46 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33675 0.0827
+106.180.14.189 - - [19/Oct/2020:14:02:46 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33679 0.0851
+106.180.14.189 - - [19/Oct/2020:14:04:10 +0000] "POST /posts HTTP/1.0" 200 88 0.2824
+106.180.14.189 - - [19/Oct/2020:14:04:10 +0000] "GET / HTTP/1.0" 200 14771 0.0372
+106.180.14.189 - - [19/Oct/2020:14:06:44 +0000] "POST /posts HTTP/1.0" 200 88 0.4248
+106.180.14.189 - - [19/Oct/2020:14:06:45 +0000] "GET / HTTP/1.0" 200 14840 0.0410
+106.180.14.189 - - [19/Oct/2020:14:10:48 +0000] "POST /posts HTTP/1.0" 200 88 0.2705
+106.180.14.189 - - [19/Oct/2020:14:10:48 +0000] "GET / HTTP/1.0" 200 14800 0.0380
+106.180.14.189 - - [19/Oct/2020:14:10:51 +0000] "GET /posts/image.3 HTTP/1.0" 200 3982 0.0098
+106.180.14.189 - - [19/Oct/2020:14:10:51 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33676 0.0838
+106.180.14.189 - - [19/Oct/2020:14:10:51 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33676 0.0832
+106.180.14.189 - - [19/Oct/2020:14:10:51 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33676 0.0900
+106.180.14.189 - - [19/Oct/2020:14:10:51 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33676 0.0879
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33676 0.0950
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33676 0.0915
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33676 0.0883
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33676 0.0967
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33671 0.0826
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33675 0.0798
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33675 0.0828
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33675 0.0818
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33675 0.0864
+106.180.14.189 - - [19/Oct/2020:14:10:52 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33679 0.0810
+106.180.14.189 - - [19/Oct/2020:14:11:41 +0000] "GET / HTTP/1.0" 200 14794 0.0387
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33676 0.0832
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33676 0.0828
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33676 0.0826
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33676 0.0853
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33676 0.0821
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33676 0.0804
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33676 0.0823
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33676 0.0829
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33671 0.0829
+106.180.14.189 - - [19/Oct/2020:14:11:42 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33675 0.0852
+106.180.14.189 - - [19/Oct/2020:14:11:43 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33675 0.0821
+106.180.14.189 - - [19/Oct/2020:14:11:43 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33675 0.0805
+106.180.14.189 - - [19/Oct/2020:14:11:43 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33675 0.0820
+106.180.14.189 - - [19/Oct/2020:14:11:43 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33679 0.0822
+106.180.14.189 - - [19/Oct/2020:14:18:26 +0000] "POST /posts HTTP/1.0" 200 88 0.0464
+106.180.14.189 - - [19/Oct/2020:14:18:27 +0000] "GET / HTTP/1.0" 200 14708 0.0407
+106.180.14.189 - - [19/Oct/2020:14:18:42 +0000] "GET /users/3 HTTP/1.0" 200 10476 0.0375
+106.180.14.189 - - [19/Oct/2020:14:18:45 +0000] "GET / HTTP/1.0" 200 14708 0.0387
+106.180.14.189 - - [19/Oct/2020:14:18:47 +0000] "GET /calendars.3 HTTP/1.0" 200 8095 0.0195
+106.180.14.189 - - [19/Oct/2020:14:19:24 +0000] "GET /users/3 HTTP/1.0" 200 10470 0.0341
+106.180.14.189 - - [19/Oct/2020:14:19:25 +0000] "GET / HTTP/1.0" 200 14702 0.0392
+106.180.14.189 - - [19/Oct/2020:14:19:27 +0000] "GET /charts.3 HTTP/1.0" 200 4561 0.0096
+179.43.171.74 - - [19/Oct/2020:18:32:46 +0000] "GET / HTTP/1.0" 200 14338 0.0356
+179.43.171.74 - - [20/Oct/2020:03:38:34 +0000] "GET / HTTP/1.0" 200 14343 0.0417
+106.180.15.113 - - [20/Oct/2020:09:24:55 +0000] "GET / HTTP/1.0" 200 14727 0.0412
+106.180.15.113 - - [20/Oct/2020:09:25:55 +0000] "POST /posts HTTP/1.0" 200 88 0.0607
+106.180.15.113 - - [20/Oct/2020:09:25:55 +0000] "GET / HTTP/1.0" 200 14695 0.0371
+106.180.15.113 - - [20/Oct/2020:09:27:21 +0000] "POST /posts HTTP/1.0" 200 88 0.0369
+106.180.15.113 - - [20/Oct/2020:09:27:21 +0000] "GET / HTTP/1.0" 200 14646 0.0399
+106.180.15.113 - - [20/Oct/2020:09:29:13 +0000] "POST /posts HTTP/1.0" 200 88 0.0364
+106.180.15.113 - - [20/Oct/2020:09:29:13 +0000] "GET / HTTP/1.0" 200 14606 0.0379
+106.180.15.113 - - [20/Oct/2020:09:31:03 +0000] "POST /posts HTTP/1.0" 200 88 0.0377
+106.180.15.113 - - [20/Oct/2020:09:31:03 +0000] "GET / HTTP/1.0" 200 14594 0.0373
+106.180.15.113 - - [20/Oct/2020:09:31:06 +0000] "GET /charts.3 HTTP/1.0" 200 4592 0.0105
+106.180.15.113 - - [20/Oct/2020:09:31:14 +0000] "GET /calendars.3 HTTP/1.0" 200 8635 0.0192
+179.43.171.74 - - [20/Oct/2020:17:49:23 +0000] "GET / HTTP/1.0" 200 14219 0.0352
+206.189.231.196 - - [20/Oct/2020:20:17:17 +0000] "GET /backup/wp-login.php HTTP/1.0" 404 33325 0.0861
+179.43.171.74 - - [21/Oct/2020:05:34:21 +0000] "GET / HTTP/1.0" 200 14223 0.0475
+51.91.89.182 - - [21/Oct/2020:12:45:09 +0000] "GET /wp-login.php HTTP/1.0" 404 33315 0.0905
+208.80.194.42 - - [21/Oct/2020:13:50:50 +0000] "GET / HTTP/1.0" 200 14195 0.0492
+179.43.171.74 - - [21/Oct/2020:17:49:37 +0000] "GET / HTTP/1.0" 200 14195 0.0345
+179.43.171.74 - - [22/Oct/2020:05:33:48 +0000] "GET / HTTP/1.0" 200 14195 0.0359
+37.59.56.124 - - [22/Oct/2020:13:50:48 +0000] "GET /wp-login.php HTTP/1.0" 404 33315 0.0975
+179.43.171.74 - - [22/Oct/2020:17:54:31 +0000] "GET / HTTP/1.0" 200 14195 0.0377
+18.221.235.50 - - [22/Oct/2020:21:52:46 +0000] "GET / HTTP/1.0" 200 14195 0.0361
+179.43.171.74 - - [23/Oct/2020:05:45:08 +0000] "GET / HTTP/1.0" 200 14195 0.0404
+46.4.33.48 - - [23/Oct/2020:07:02:12 +0000] "GET / HTTP/1.0" 200 14195 0.0589
+106.171.38.122 - - [23/Oct/2020:10:21:04 +0000] "GET / HTTP/1.0" 200 14195 0.0351
+106.171.38.122 - - [23/Oct/2020:10:21:07 +0000] "GET /users/sign_in HTTP/1.0" 200 3474 0.0096
+106.171.38.122 - - [23/Oct/2020:10:21:15 +0000] "POST /users/sign_in HTTP/1.0" 302 88 0.1647
+106.171.38.122 - - [23/Oct/2020:10:21:15 +0000] "GET / HTTP/1.0" 200 14648 0.0399
+106.171.38.122 - - [23/Oct/2020:10:21:19 +0000] "DELETE /users/sign_out HTTP/1.0" 302 88 0.0145
+106.171.38.122 - - [23/Oct/2020:10:21:19 +0000] "GET / HTTP/1.0" 200 14267 0.0339
+106.171.38.122 - - [23/Oct/2020:10:21:20 +0000] "GET /users/sign_up HTTP/1.0" 200 3663 0.0190
+106.171.38.122 - - [23/Oct/2020:10:21:43 +0000] "POST /users HTTP/1.0" 200 4049 0.2172
+106.171.38.122 - - [23/Oct/2020:10:22:00 +0000] "POST /users HTTP/1.0" 200 4559 0.1723
+106.171.38.122 - - [23/Oct/2020:10:22:09 +0000] "POST /standards HTTP/1.0" 302 88 0.1899
+106.171.38.122 - - [23/Oct/2020:10:22:09 +0000] "GET / HTTP/1.0" 200 14672 0.0382
+138.68.247.68 - - [23/Oct/2020:11:12:17 +0000] "GET /wp-login.php HTTP/1.0" 404 33316 0.0984
+179.43.171.74 - - [23/Oct/2020:16:34:26 +0000] "GET / HTTP/1.0" 200 14195 0.0385
+207.46.13.109 - - [23/Oct/2020:22:00:28 +0000] "GET / HTTP/1.0" 200 14195 0.0344
+40.77.189.210 - - [23/Oct/2020:23:02:02 +0000] "GET / HTTP/1.0" 200 14195 0.0355
+147.92.153.2 - - [24/Oct/2020:03:21:33 +0000] "GET / HTTP/1.0" 200 14195 0.0506
+147.92.153.18 - - [24/Oct/2020:03:21:36 +0000] "GET / HTTP/1.0" 200 14195 0.0338
+179.43.171.74 - - [24/Oct/2020:04:33:58 +0000] "GET / HTTP/1.0" 200 14195 0.0344
+179.43.171.74 - - [24/Oct/2020:16:50:30 +0000] "GET / HTTP/1.0" 200 14195 0.0364
+179.43.171.74 - - [25/Oct/2020:04:41:38 +0000] "GET / HTTP/1.0" 200 14195 0.0397
+178.128.226.161 - - [25/Oct/2020:06:12:01 +0000] "GET /wp-login.php HTTP/1.0" 404 33318 0.1493
+213.248.241.201 - - [25/Oct/2020:12:33:39 +0000] "HEAD / HTTP/1.0" 200 - 0.0353
+213.248.241.201 - - [25/Oct/2020:12:33:40 +0000] "GET / HTTP/1.0" 200 14195 0.0347
+179.43.171.74 - - [25/Oct/2020:16:53:07 +0000] "GET / HTTP/1.0" 200 14195 0.0349
+159.203.174.138 - - [25/Oct/2020:22:05:16 +0000] "GET /wp-login.php HTTP/1.0" 404 33318 0.0825
+106.180.10.141 - - [25/Oct/2020:22:53:11 +0000] "GET /calendars.3 HTTP/1.0" 200 5308 0.0195
+106.180.10.141 - - [25/Oct/2020:22:53:19 +0000] "GET /users/sign_in HTTP/1.0" 200 3474 0.0077
+106.180.10.141 - - [25/Oct/2020:22:53:37 +0000] "POST /users/sign_in HTTP/1.0" 302 88 0.1645
+106.180.10.141 - - [25/Oct/2020:22:53:38 +0000] "GET / HTTP/1.0" 200 14648 0.0409
+106.180.10.141 - - [25/Oct/2020:22:55:15 +0000] "POST /posts HTTP/1.0" 200 88 0.5458
+106.180.10.141 - - [25/Oct/2020:22:55:15 +0000] "GET / HTTP/1.0" 200 14591 0.0388
+106.180.10.141 - - [25/Oct/2020:22:56:34 +0000] "POST /posts HTTP/1.0" 200 88 0.4197
+106.180.10.141 - - [25/Oct/2020:22:56:34 +0000] "GET / HTTP/1.0" 200 14536 0.0405
+106.180.10.141 - - [25/Oct/2020:22:57:47 +0000] "POST /posts HTTP/1.0" 200 88 0.3374
+106.180.10.141 - - [25/Oct/2020:22:57:47 +0000] "GET / HTTP/1.0" 200 14473 0.0370
+106.180.10.141 - - [25/Oct/2020:22:59:12 +0000] "POST /posts HTTP/1.0" 200 88 0.4215
+106.180.10.141 - - [25/Oct/2020:22:59:13 +0000] "GET / HTTP/1.0" 200 14367 0.0365
+106.180.10.141 - - [25/Oct/2020:23:00:51 +0000] "POST /posts HTTP/1.0" 200 88 0.4224
+106.180.10.141 - - [25/Oct/2020:23:00:51 +0000] "GET / HTTP/1.0" 200 14261 0.0370
+106.180.10.141 - - [25/Oct/2020:23:00:58 +0000] "GET /charts.3 HTTP/1.0" 200 4624 0.0198
+46.4.78.216 - - [26/Oct/2020:00:46:50 +0000] "GET / HTTP/1.0" 200 13922 0.0412
+46.4.78.216 - - [26/Oct/2020:00:55:23 +0000] "GET / HTTP/1.0" 200 13922 0.0354
+179.43.171.74 - - [26/Oct/2020:04:36:04 +0000] "GET / HTTP/1.0" 200 13922 0.0357
+106.171.49.180 - - [26/Oct/2020:10:59:19 +0000] "GET / HTTP/1.0" 200 14320 0.0391
+106.171.49.180 - - [26/Oct/2020:10:59:31 +0000] "GET / HTTP/1.0" 200 14320 0.0401
+106.171.51.194 - - [26/Oct/2020:12:12:08 +0000] "GET /charts.3 HTTP/1.0" 200 4624 0.0129
+106.171.51.194 - - [26/Oct/2020:12:12:15 +0000] "GET /users/3 HTTP/1.0" 200 10158 0.0347
+106.171.51.194 - - [26/Oct/2020:12:12:17 +0000] "GET / HTTP/1.0" 200 14290 0.0367
+106.171.51.194 - - [26/Oct/2020:12:14:16 +0000] "POST /posts HTTP/1.0" 200 88 0.2855
+106.171.51.194 - - [26/Oct/2020:12:14:16 +0000] "GET / HTTP/1.0" 200 14305 0.0363
+106.171.51.194 - - [26/Oct/2020:12:15:56 +0000] "POST /posts HTTP/1.0" 200 88 0.2684
+106.171.51.194 - - [26/Oct/2020:12:15:56 +0000] "GET / HTTP/1.0" 200 14315 0.0372
+106.171.49.180 - - [26/Oct/2020:12:24:58 +0000] "GET / HTTP/1.0" 200 14340 0.0380
+106.171.49.180 - - [26/Oct/2020:12:25:02 +0000] "GET /calendars.20 HTTP/1.0" 200 5085 0.0187
+106.171.49.180 - - [26/Oct/2020:12:25:05 +0000] "GET /users/20 HTTP/1.0" 200 2323 0.0085
+106.171.49.180 - - [26/Oct/2020:12:25:07 +0000] "DELETE /users/sign_out HTTP/1.0" 302 88 0.0062
+106.171.49.180 - - [26/Oct/2020:12:25:07 +0000] "GET / HTTP/1.0" 200 14019 0.0341
+106.171.49.180 - - [26/Oct/2020:12:25:10 +0000] "GET /users/sign_in HTTP/1.0" 200 3474 0.0065
+106.171.49.180 - - [26/Oct/2020:12:25:14 +0000] "POST /users/sign_in HTTP/1.0" 302 88 0.1557
+106.171.49.180 - - [26/Oct/2020:12:25:14 +0000] "GET / HTTP/1.0" 200 14379 0.0402
+106.171.49.180 - - [26/Oct/2020:12:25:39 +0000] "GET /posts/39/edit HTTP/1.0" 200 3827 0.0162
+106.171.49.180 - - [26/Oct/2020:12:25:52 +0000] "GET /posts/39 HTTP/1.0" 200 3677 0.0303
+106.171.49.180 - - [26/Oct/2020:12:25:58 +0000] "GET /posts/39 HTTP/1.0" 200 3677 0.0099
+106.171.49.180 - - [26/Oct/2020:12:26:01 +0000] "POST /posts/39/likes HTTP/1.0" 200 205 0.0141
+106.171.49.180 - - [26/Oct/2020:12:26:04 +0000] "POST /posts/38/likes HTTP/1.0" 200 205 0.0129
+106.171.49.180 - - [26/Oct/2020:12:26:06 +0000] "POST /posts/37/likes HTTP/1.0" 200 205 0.0130
+106.171.49.180 - - [26/Oct/2020:12:26:26 +0000] "GET / HTTP/1.0" 200 14341 0.0398
+106.171.49.180 - - [26/Oct/2020:12:26:40 +0000] "GET /calendars.3 HTTP/1.0" 200 9580 0.0199
+106.171.51.194 - - [26/Oct/2020:12:30:52 +0000] "POST /posts HTTP/1.0" 200 88 0.4177
+106.171.51.194 - - [26/Oct/2020:12:30:52 +0000] "GET / HTTP/1.0" 200 14416 0.0379
+106.171.49.180 - - [26/Oct/2020:12:31:23 +0000] "GET /calendars.3 HTTP/1.0" 200 9714 0.0201
+106.171.49.180 - - [26/Oct/2020:12:31:27 +0000] "GET /calendars.3 HTTP/1.0" 200 9714 0.0195
+106.171.49.180 - - [26/Oct/2020:12:31:38 +0000] "GET /calendars.3 HTTP/1.0" 200 9714 0.0200
+106.171.49.180 - - [26/Oct/2020:12:38:52 +0000] "GET /calendars.3 HTTP/1.0" 200 9712 0.0207
+106.171.49.180 - - [26/Oct/2020:12:38:55 +0000] "GET / HTTP/1.0" 200 14373 0.0419
+106.171.49.180 - - [26/Oct/2020:12:38:57 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0098
+106.171.49.180 - - [26/Oct/2020:12:39:52 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0098
+106.171.49.180 - - [26/Oct/2020:12:40:34 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0096
+106.171.49.180 - - [26/Oct/2020:12:41:41 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0096
+106.171.49.180 - - [26/Oct/2020:12:43:19 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0093
+106.171.49.180 - - [26/Oct/2020:12:43:20 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0097
+106.171.49.180 - - [26/Oct/2020:12:43:21 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0094
+106.171.49.180 - - [26/Oct/2020:12:43:22 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0093
+106.171.49.180 - - [26/Oct/2020:12:43:24 +0000] "GET /users/3 HTTP/1.0" 200 10242 0.0363
+106.171.49.180 - - [26/Oct/2020:12:43:25 +0000] "GET / HTTP/1.0" 200 14373 0.0392
+106.171.49.180 - - [26/Oct/2020:12:45:17 +0000] "DELETE /users/sign_out HTTP/1.0" 302 88 0.0061
+106.171.49.180 - - [26/Oct/2020:12:45:17 +0000] "GET / HTTP/1.0" 200 14053 0.0346
+106.171.49.180 - - [26/Oct/2020:12:45:20 +0000] "GET /users/sign_in HTTP/1.0" 200 3474 0.0063
+106.171.49.180 - - [26/Oct/2020:12:45:21 +0000] "POST /users/guest_sign_in HTTP/1.0" 302 88 0.0045
+106.171.49.180 - - [26/Oct/2020:12:45:21 +0000] "GET / HTTP/1.0" 200 14480 0.0368
+106.171.49.180 - - [26/Oct/2020:12:47:17 +0000] "POST /posts HTTP/1.0" 200 88 0.0451
+106.171.49.180 - - [26/Oct/2020:12:47:17 +0000] "GET / HTTP/1.0" 200 14444 0.0376
+106.171.49.180 - - [26/Oct/2020:12:49:04 +0000] "POST /posts HTTP/1.0" 200 88 0.0477
+106.171.49.180 - - [26/Oct/2020:12:49:04 +0000] "GET / HTTP/1.0" 200 14501 0.0412
+106.171.49.180 - - [26/Oct/2020:12:49:10 +0000] "GET /charts.1 HTTP/1.0" 200 4593 0.0095
+106.171.49.180 - - [26/Oct/2020:12:53:03 +0000] "GET / HTTP/1.0" 200 14495 0.0375
+106.171.49.180 - - [26/Oct/2020:12:53:07 +0000] "DELETE /users/sign_out HTTP/1.0" 302 88 0.0061
+106.171.49.180 - - [26/Oct/2020:12:53:07 +0000] "GET / HTTP/1.0" 200 14165 0.0330
+106.171.49.180 - - [26/Oct/2020:12:53:10 +0000] "GET /users/sign_in HTTP/1.0" 200 3474 0.0063
+106.171.49.180 - - [26/Oct/2020:12:53:23 +0000] "POST /users/sign_in HTTP/1.0" 302 88 0.1571
+106.171.49.180 - - [26/Oct/2020:12:53:23 +0000] "GET / HTTP/1.0" 200 14534 0.0372
+106.171.49.180 - - [26/Oct/2020:12:55:18 +0000] "GET / HTTP/1.0" 200 14465 0.0375
+106.171.49.180 - - [26/Oct/2020:12:55:23 +0000] "GET / HTTP/1.0" 200 14465 0.0375
+I, [2020-10-26T12:59:01.780267 #30281]  INFO -- : executing ["/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/bin/unicorn", "-c", "/var/www/rails/pfc-master/current/config/unicorn.rb", "-E", "deployment", "-D", {11=>#<Kgio::UNIXServer:fd 11>}] (in /var/www/rails/pfc-master/releases/20201026125846)
+I, [2020-10-26T12:59:01.780890 #30281]  INFO -- : forked child re-executing...
+I, [2020-10-26T12:59:02.157417 #30281]  INFO -- : inherited addr=/var/www/rails/pfc-master/shared/tmp/sockets/unicorn.sock fd=11
+I, [2020-10-26T12:59:02.157660 #30281]  INFO -- : Refreshing Gem list
+I, [2020-10-26T12:59:04.030778 #30281]  INFO -- : master process ready
+I, [2020-10-26T12:59:04.032273 #30350]  INFO -- : worker=0 ready
+I, [2020-10-26T12:59:04.122386 #6015]  INFO -- : reaped #<Process::Status: pid 6082 exit 0> worker=0
+I, [2020-10-26T12:59:04.122504 #6015]  INFO -- : master complete
+106.171.49.180 - - [26/Oct/2020:12:59:07 +0000] "GET / HTTP/1.0" 200 14491 0.1768
+106.171.49.180 - - [26/Oct/2020:12:59:09 +0000] "GET / HTTP/1.0" 200 14491 0.0390
+106.171.49.180 - - [26/Oct/2020:12:59:10 +0000] "GET / HTTP/1.0" 200 14491 0.0507
+106.171.49.180 - - [26/Oct/2020:12:59:13 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0280
+106.171.49.180 - - [26/Oct/2020:12:59:17 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0093
+106.171.49.180 - - [26/Oct/2020:13:03:07 +0000] "GET /charts.3 HTTP/1.0" 200 4655 0.0094
+106.171.49.180 - - [26/Oct/2020:13:03:26 +0000] "GET /users/3 HTTP/1.0" 200 10252 0.0415
+106.171.49.180 - - [26/Oct/2020:13:03:27 +0000] "GET / HTTP/1.0" 200 14496 0.0362
+106.171.49.180 - - [26/Oct/2020:13:03:29 +0000] "GET /calendars.3 HTTP/1.0" 200 9716 0.0385
+106.171.49.180 - - [26/Oct/2020:13:03:30 +0000] "GET /users/3 HTTP/1.0" 200 10252 0.0348
+106.171.49.180 - - [26/Oct/2020:13:03:31 +0000] "GET / HTTP/1.0" 200 14496 0.0388
+106.171.49.180 - - [26/Oct/2020:13:03:32 +0000] "GET /calendars.3 HTTP/1.0" 200 9716 0.0200
+106.171.49.180 - - [26/Oct/2020:13:03:37 +0000] "GET / HTTP/1.0" 200 14496 0.0376
+106.171.49.180 - - [26/Oct/2020:13:03:38 +0000] "GET /posts/image.3 HTTP/1.0" 200 5243 0.0204
+106.171.49.180 - - [26/Oct/2020:13:03:38 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33683 0.0981
+106.171.49.180 - - [26/Oct/2020:13:03:38 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33683 0.0795
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33683 0.0790
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33683 0.0800
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33683 0.0808
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33683 0.0806
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33683 0.0853
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33683 0.0802
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33678 0.0806
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33682 0.0809
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33682 0.0824
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33682 0.0866
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33682 0.0807
+106.171.49.180 - - [26/Oct/2020:13:03:39 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33686 0.0818
+106.180.15.139 - - [26/Oct/2020:13:30:33 +0000] "POST /posts HTTP/1.0" 200 88 0.2944
+106.180.15.139 - - [26/Oct/2020:13:30:33 +0000] "GET / HTTP/1.0" 200 14512 0.0368
+106.180.15.139 - - [26/Oct/2020:13:58:05 +0000] "POST /posts HTTP/1.0" 200 88 0.4249
+106.180.15.139 - - [26/Oct/2020:13:58:06 +0000] "GET / HTTP/1.0" 200 14630 0.0382
+106.180.15.139 - - [26/Oct/2020:13:58:09 +0000] "GET /posts/image.3 HTTP/1.0" 200 5437 0.0121
+106.180.15.139 - - [26/Oct/2020:13:58:10 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33676 0.0829
+106.180.15.139 - - [26/Oct/2020:13:58:10 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33676 0.0838
+106.180.15.139 - - [26/Oct/2020:13:58:10 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33676 0.0817
+106.180.15.139 - - [26/Oct/2020:13:58:10 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33676 0.0824
+106.180.15.139 - - [26/Oct/2020:13:58:10 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33676 0.0801
+106.180.15.139 - - [26/Oct/2020:13:58:11 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33676 0.0802
+106.180.15.139 - - [26/Oct/2020:13:58:11 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33676 0.0852
+106.180.15.139 - - [26/Oct/2020:13:58:11 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33676 0.0818
+106.180.15.139 - - [26/Oct/2020:13:58:11 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33671 0.0823
+106.180.15.139 - - [26/Oct/2020:13:58:11 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33675 0.0805
+106.180.15.139 - - [26/Oct/2020:13:58:11 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33675 0.0810
+106.180.15.139 - - [26/Oct/2020:13:58:11 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33675 0.0815
+106.180.15.139 - - [26/Oct/2020:13:58:11 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33675 0.0867
+106.180.15.139 - - [26/Oct/2020:13:58:11 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33679 0.0811
+106.180.15.139 - - [26/Oct/2020:14:00:23 +0000] "GET / HTTP/1.0" 200 14624 0.0387
+106.180.15.139 - - [26/Oct/2020:14:00:23 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33676 0.0823
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33676 0.0816
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33676 0.0817
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33676 0.0831
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33676 0.0811
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33676 0.0803
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33676 0.0815
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33676 0.0822
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33671 0.0834
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33675 0.0808
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33675 0.0819
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33675 0.0804
+106.180.15.139 - - [26/Oct/2020:14:00:24 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33675 0.0808
+106.180.15.139 - - [26/Oct/2020:14:00:25 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33679 0.0818
+106.180.15.139 - - [26/Oct/2020:14:01:00 +0000] "POST /posts HTTP/1.0" 200 88 0.4146
+106.180.15.139 - - [26/Oct/2020:14:01:00 +0000] "GET / HTTP/1.0" 200 14624 0.0380
+106.180.15.139 - - [26/Oct/2020:14:01:26 +0000] "GET /users/3 HTTP/1.0" 200 10347 0.0366
+106.180.15.139 - - [26/Oct/2020:14:01:30 +0000] "GET / HTTP/1.0" 200 14624 0.0379
+106.180.15.139 - - [26/Oct/2020:14:01:46 +0000] "POST /posts HTTP/1.0" 200 88 0.4159
+106.180.15.139 - - [26/Oct/2020:14:01:47 +0000] "GET / HTTP/1.0" 200 14592 0.0389
+106.180.15.139 - - [26/Oct/2020:14:01:58 +0000] "GET /users/3 HTTP/1.0" 200 10327 0.0352
+106.180.15.139 - - [26/Oct/2020:14:01:59 +0000] "GET /users/3 HTTP/1.0" 200 10327 0.0346
+106.180.15.139 - - [26/Oct/2020:14:02:23 +0000] "DELETE /posts/47 HTTP/1.0" 302 95 0.0093
+106.180.15.139 - - [26/Oct/2020:14:02:23 +0000] "GET /users/3 HTTP/1.0" 200 10347 0.0354
+106.180.15.139 - - [26/Oct/2020:14:03:02 +0000] "GET / HTTP/1.0" 200 14624 0.0386
+106.180.15.139 - - [26/Oct/2020:14:03:23 +0000] "POST /posts HTTP/1.0" 200 88 0.4200
+106.180.15.139 - - [26/Oct/2020:14:03:23 +0000] "GET / HTTP/1.0" 200 14592 0.0425
+179.43.171.74 - - [26/Oct/2020:16:38:39 +0000] "GET / HTTP/1.0" 200 14221 0.0368
+207.46.13.79 - - [26/Oct/2020:19:33:27 +0000] "GET / HTTP/1.0" 200 14221 0.1446
+193.27.229.26 - - [26/Oct/2020:21:00:57 +0000] "GET /wp-content/plugins/wp-file-manager/readme.txt HTTP/1.0" 404 33349 0.0823
+106.180.15.139 - - [26/Oct/2020:21:49:36 +0000] "GET / HTTP/1.0" 200 14612 0.0379
+106.180.15.139 - - [26/Oct/2020:21:49:37 +0000] "GET /uploads/post/image/19/IMG-8824__1_.jpg HTTP/1.0" 404 33683 0.0849
+106.180.15.139 - - [26/Oct/2020:21:49:37 +0000] "GET /uploads/post/image/18/IMG-8833__1_.jpg HTTP/1.0" 404 33683 0.0813
+106.180.15.139 - - [26/Oct/2020:21:49:37 +0000] "GET /uploads/post/image/16/IMG-8834__1_.JPG HTTP/1.0" 404 33683 0.0800
+106.180.15.139 - - [26/Oct/2020:21:49:37 +0000] "GET /uploads/post/image/17/IMG-8829__1_.jpg HTTP/1.0" 404 33683 0.0807
+106.180.15.139 - - [26/Oct/2020:21:49:37 +0000] "GET /uploads/post/image/14/IMG-8841__1_.jpg HTTP/1.0" 404 33683 0.0821
+106.180.15.139 - - [26/Oct/2020:21:49:37 +0000] "GET /uploads/post/image/15/IMG-8831__1_.jpg HTTP/1.0" 404 33683 0.0806
+106.180.15.139 - - [26/Oct/2020:21:49:37 +0000] "GET /uploads/post/image/13/IMG-8840__1_.jpg HTTP/1.0" 404 33683 0.0861
+106.180.15.139 - - [26/Oct/2020:21:49:37 +0000] "GET /uploads/post/image/12/IMG-8838__1_.jpg HTTP/1.0" 404 33683 0.0825
+106.180.15.139 - - [26/Oct/2020:21:49:38 +0000] "GET /uploads/post/image/9/IMG-8737.jpg HTTP/1.0" 404 33678 0.0823
+106.180.15.139 - - [26/Oct/2020:21:49:38 +0000] "GET /uploads/post/image/8/IMG-8666__1_.jpg HTTP/1.0" 404 33682 0.0812
+106.180.15.139 - - [26/Oct/2020:21:49:38 +0000] "GET /uploads/post/image/6/IMG-8265__1_.jpg HTTP/1.0" 404 33682 0.0826
+106.180.15.139 - - [26/Oct/2020:21:49:38 +0000] "GET /uploads/post/image/5/IMG-8328__2_.jpg HTTP/1.0" 404 33682 0.0844
+106.180.15.139 - - [26/Oct/2020:21:49:38 +0000] "GET /uploads/post/image/4/IMG-8484__1_.jpg HTTP/1.0" 404 33682 0.0818
+106.180.15.139 - - [26/Oct/2020:21:49:38 +0000] "GET /uploads/post/image/3/IMG-8663__1___1_.jpg HTTP/1.0" 404 33686 0.0804
+106.180.15.139 - - [26/Oct/2020:21:51:25 +0000] "GET / HTTP/1.0" 200 14612 0.0390
+106.180.15.139 - - [26/Oct/2020:21:51:28 +0000] "DELETE /users/sign_out HTTP/1.0" 302 88 0.0112
+106.180.15.139 - - [26/Oct/2020:21:51:28 +0000] "GET / HTTP/1.0" 200 14293 0.0355
+106.180.15.139 - - [26/Oct/2020:21:53:37 +0000] "GET / HTTP/1.0" 200 14221 0.0349
+106.180.15.139 - - [26/Oct/2020:21:58:14 +0000] "GET / HTTP/1.0" 200 14221 0.0361
+106.180.15.139 - - [26/Oct/2020:21:58:16 +0000] "GET / HTTP/1.0" 200 14221 0.0348
