@@ -1,0 +1,51 @@
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/mini_racer-0.3.1/ext/mini_racer_extension
+/home/naota/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20201012-14024-re4yzz.rb extconf.rb
+checking for -lpthread... yes
+creating Makefile
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/mini_racer-0.3.1/ext/mini_racer_extension
+make "DESTDIR=" clean
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/mini_racer-0.3.1/ext/mini_racer_extension
+make "DESTDIR="
+compiling mini_racer_extension.cc
+cc1plus: 警告: コマンドラインオプション ‘-Wimplicit-int’ は C/ObjC 用としては有効ですが、C++ 用としては有効ではありません
+mini_racer_extension.cc: 関数 ‘v8::Local<v8::Value> convert_ruby_to_v8(v8::Isolate*, v8::Local<v8::Context>, VALUE)’ 内:
+mini_racer_extension.cc:542:96: 警告: warn_unused_result 属性付きで宣言されている ‘v8::Maybe<bool> v8::Object::Set(v8::Local<v8::Context>, uint32_t, v8::Local<v8::Value>)’ の戻り値を無視しています [-Wunused-result]
+             array->Set(context, i, convert_ruby_to_v8(isolate, context, rb_ary_entry(value, i)));
+                                                                                                ^
+In file included from mini_racer_extension.cc:5:0:
+/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/libv8-8.4.255.0-x86_64-linux/vendor/v8/include/v8.h:3667:37: 備考: ここで宣言されています
+   V8_WARN_UNUSED_RESULT Maybe<bool> Set(Local<Context> context, uint32_t index,
+                                     ^~~
+mini_racer_extension.cc:552:78: 警告: warn_unused_result 属性付きで宣言されている ‘v8::Maybe<bool> v8::Object::Set(v8::Local<v8::Context>, v8::Local<v8::Value>, v8::Local<v8::Value>)’ の戻り値を無視しています [-Wunused-result]
+                   convert_ruby_to_v8(isolate, context, rb_ary_entry(pair, 1)));
+                                                                              ^
+In file included from mini_racer_extension.cc:5:0:
+/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/libv8-8.4.255.0-x86_64-linux/vendor/v8/include/v8.h:3664:37: 備考: ここで宣言されています
+   V8_WARN_UNUSED_RESULT Maybe<bool> Set(Local<Context> context,
+                                     ^~~
+mini_racer_extension.cc: 関数 ‘VALUE rb_external_function_notify_v8(VALUE)’ 内:
+mini_racer_extension.cc:1161:46: 警告: warn_unused_result 属性付きで宣言されている ‘v8::Maybe<bool> v8::Object::Set(v8::Local<v8::Context>, v8::Local<v8::Value>, v8::Local<v8::Value>)’ の戻り値を無視しています [-Wunused-result]
+                             .ToLocalChecked());
+                                              ^
+In file included from mini_racer_extension.cc:5:0:
+/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/libv8-8.4.255.0-x86_64-linux/vendor/v8/include/v8.h:3664:37: 備考: ここで宣言されています
+   V8_WARN_UNUSED_RESULT Maybe<bool> Set(Local<Context> context,
+                                     ^~~
+mini_racer_extension.cc:1186:58: 警告: warn_unused_result 属性付きで宣言されている ‘v8::Maybe<bool> v8::Object::Set(v8::Local<v8::Context>, v8::Local<v8::Value>, v8::Local<v8::Value>)’ の戻り値を無視しています [-Wunused-result]
+                                         .ToLocalChecked());
+                                                          ^
+In file included from mini_racer_extension.cc:5:0:
+/var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/libv8-8.4.255.0-x86_64-linux/vendor/v8/include/v8.h:3664:37: 備考: ここで宣言されています
+   V8_WARN_UNUSED_RESULT Maybe<bool> Set(Local<Context> context,
+                                     ^~~
+大域スコープ:
+cc1plus: 警告: 認識できないコマンドラインオプション ‘-Wno-self-assign’ です
+cc1plus: 警告: 認識できないコマンドラインオプション ‘-Wno-constant-logical-operand’ です
+cc1plus: 警告: 認識できないコマンドラインオプション ‘-Wno-parentheses-equality’ です
+linking shared-object mini_racer_extension.so
+
+current directory: /var/www/rails/pfc-master/shared/bundle/ruby/2.5.0/gems/mini_racer-0.3.1/ext/mini_racer_extension
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 mini_racer_extension.so ./.gem.20201012-14024-1d196pf

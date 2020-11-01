@@ -1,0 +1,40 @@
+default:
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: password
+  host: db
+  #socket: /tmp/mysql.sock
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  database: pfc-master_development
+  pool: 5
+  username: root
+  password: password
+  host: localhost
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: pfc-master_test
+  pool: 5
+  username: 'root'
+  password: password
+  host: '127.0.0.1'
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  database: pfc-master_production
+  username: root
+<<<<<<< HEAD
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+=======
+  password: password
+>>>>>>> f2edc551bbb3444da181af9c3ce0a6d289b25810
+  host: localhost
+  socket: /var/lib/mysql/mysql.sock

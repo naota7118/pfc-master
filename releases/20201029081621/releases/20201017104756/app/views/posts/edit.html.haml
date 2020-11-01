@@ -1,0 +1,52 @@
+.new-post
+  = form_with model: @post do |f|
+    .input-box
+      %table
+        %thead
+          %tr
+            %th FOOD
+            %th Calorie
+        %tbody
+          %tr
+            %td 
+              = f.text_field :food, placeholder: '例）サラダチキン'
+            %td 
+              = f.number_field :calorie, placeholder: '例）200'
+      %table
+        %thead
+          %tr
+            %th P
+            %th F
+            %th C
+        %tbody
+          %tr
+            %td 
+              = f.number_field :protein, placeholder: '例）30'
+            %td 
+              = f.number_field :fat, placeholder: '例）20'
+            %td 
+              = f.number_field :carbo, placeholder: '例）50'
+      %table
+        %thead
+          %tr
+            %th 今日のひとこと
+        %tbody
+          %tr
+            %td 
+              = f.text_area :text, placeholder: 'なにたべた？'
+      %table
+        %thead
+          %tr
+            %th 3枚までアップロードできます
+        %tbody
+          %tr
+            %td 
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image
+      .submit-btn
+        = f.submit '投稿する'
+
+-# どうやって編集したあと一覧画面に再投稿するんだっけ？一覧画面へのpathはどのように設定するんだっけ？
+-# 「投稿する」ボタンを押したら、一覧画面に飛んで、投稿内容が変わっているようにしたい
+-# チーム開発の方は、なんで商品情報編集したら、showにいくようになってるんだっけ？どこでそういう設定してるんだっけ？
+-# コンソールにエラーが出ていた。そうか、updateアクションか。controllerのupdateアクションの設定か。editのform_withはupdateアクションに飛ぶのか。
