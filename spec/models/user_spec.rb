@@ -3,6 +3,7 @@
 require "rails_helper"
 
 RSpec.describe User, type: :model do
+
   it "名前, メールアドレス, パスワードがあれば登録できる" do
     user = User.new(name: "John", email: "test@example.com", password: "testtest")
     expect(user).to be_valid

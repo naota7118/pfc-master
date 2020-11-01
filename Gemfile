@@ -15,18 +15,18 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
-  gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
-  gem "spring"
-  gem "pry-rails"
-  gem "sprockets"
-  gem "rspec-rails"
-  gem "capistrano"
-  gem "capistrano-bundler"
-  gem "capistrano-rails"
-  gem "capistrano-rbenv"
-  gem "capistrano3-unicorn"
-  gem "faker"
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'spring'
+  gem 'pry-rails'
+  gem 'sprockets'
+  gem 'rspec-rails'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
   gem "factory_bot_rails"
+  gem "faker"
   gem 'rubocop', '~> 1.0', require: false
   gem "rubocop-packaging"
   gem "rubocop-performance"
@@ -40,9 +40,9 @@ group :development do
 end
 
 group :test do
-  gem "capybara", ">= 2.15"
-  gem "selenium-webdriver"
-  gem "webdrivers", "~> 3.0"
+  gem 'capybara', '>= 2.15'
+  gem 'selenium-webdriver'
+  gem 'webdrivers', '~> 3.0'
   gem "rspec_junit_formatter"
 end
 
