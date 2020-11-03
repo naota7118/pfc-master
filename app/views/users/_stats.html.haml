@@ -1,20 +1,20 @@
-- if user_signed_in?
-  .stats
-    .following
-      = link_to following_user_path(@user), class: "follow-link" do
-        = @user.followings.count
-      フォロー
-    .follower
-      = link_to followers_user_path(@user), class: "follow-link" do
-        = @user.followers.count
-      フォロワー
-- else
-  .stats
-    .following
-      = link_to following_user_path(@sampleuser), class: "follow-link" do
-        = @sampleuser.followings.count
-      フォロー
-    .follower
-      = link_to followers_user_path(@sampleuser), class: "follow-link" do
-        = @sampleuser.followers.count
-      フォロワー
+-# - if user_signed_in?
+-#   .stats
+-#     .following
+-#       = link_to following_user_path(@user), class: "follow-link" do
+-#         = @user.followings.count
+-#       フォロー
+-#     .follower
+-#       = link_to followers_user_path(@user), class: "follow-link" do
+-#         = @user.followers.count
+-#       フォロワー
+-# - else
+-#   .stats
+-#     .following
+-#       = link_to following_user_path(@sampleuser), class: "follow-link" do
+-#         = @sampleuser.followings.count
+-#       フォロー
+-#     .follower
+-#       = link_to followers_user_path(@sampleuser), class: "follow-link" do
+-#         = @sampleuser.followers.count
+-#       フォロワー
