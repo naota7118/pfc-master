@@ -5,6 +5,7 @@ default:
   username: root
   password: password
   host: db
+  wait_timeout: 180
   #socket: /tmp/mysql.sock
 
 development:
