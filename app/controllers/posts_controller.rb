@@ -11,31 +11,31 @@ class PostsController < ApplicationController
     @sampleuser = User.find_by(id: 2)
 
     # グラフに必要なデータを表示させるための変数を条件分岐
-    # if user_signed_in?
-    #   @user = current_user
-    #   @calorie_sum = Post.where(user_id: current_user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-    #   gon.today_sum = @calorie_sum
-    #   @standard = Standard.find_by(user_id: current_user.id)
-    #   @calorie_standard = @standard.calorie
-    #   gon.standard = @calorie_standard
-    #   if @calorie_sum >= @calorie_standard
-    #     @difference = @calorie_sum - @calorie_standard
-    #   else
-    #     @difference = @calorie_standard - @calorie_sum
-    #   end
-    # else
-    #   @sampleuser = User.find_by(id: 2)
-    #   @calorie_sum = Post.where(user_id: @sampleuser.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
-    #   gon.today_sum = @calorie_sum
-    #   @standard = Standard.find_by(user_id: @sampleuser.id)
-    #   @calorie_standard = @standard.calorie
-    #   gon.standard = @calorie_standard
-    #   if @calorie_sum >= @calorie_standard
-    #     @difference = @calorie_sum - @calorie_standard
-    #   else
-    #     @difference = @calorie_standard - @calorie_sum
-    #   end
-    # end
+    if user_signed_in?
+      @user = current_user
+      @calorie_sum = Post.where(user_id: current_user.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+      gon.today_sum = @calorie_sum
+      @standard = Standard.find_by(user_id: current_user.id)
+      @calorie_standard = @standard.calorie
+      gon.standard = @calorie_standard
+      if @calorie_sum >= @calorie_standard
+        @difference = @calorie_sum - @calorie_standard
+      else
+        @difference = @calorie_standard - @calorie_sum
+      end
+    else
+      @sampleuser = User.find_by(id: 2)
+      @calorie_sum = Post.where(user_id: @sampleuser.id, created_at: Time.zone.now.beginning_of_day..Time.zone.now.end_of_day).sum(:calorie)
+      gon.today_sum = @calorie_sum
+      @standard = Standard.find_by(user_id: @sampleuser.id)
+      @calorie_standard = @standard.calorie
+      gon.standard = @calorie_standard
+      if @calorie_sum >= @calorie_standard
+        @difference = @calorie_sum - @calorie_standard
+      else
+        @difference = @calorie_standard - @calorie_sum
+      end
+    end
   end
 
 
