@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   impressionist :actions=> [:show]
   
   def index
-    binding.pry
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
     @user = current_user
@@ -37,7 +36,6 @@ class PostsController < ApplicationController
     #     @difference = @calorie_standard - @calorie_sum
     #   end
     # end
-    binding.pry
   end
 
 
