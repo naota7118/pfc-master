@@ -7,8 +7,8 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
-    # @user = current_user
-    # @sampleuser = User.find_by(id: 2)
+    @user = current_user
+    @sampleuser = User.find_by(id: 2)
 
     # グラフに必要なデータを表示させるための変数を条件分岐
     # if user_signed_in?
