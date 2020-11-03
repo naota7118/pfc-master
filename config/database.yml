@@ -33,4 +33,4 @@ production:
   username: root
   password: password
   host: localhost
-  socket: /var/lib/mysql/mysql.sock
+  # socket: /var/lib/mysql/mysql.sock
