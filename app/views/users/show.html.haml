@@ -1,18 +1,18 @@
--# .user-wrapper
--#   .users-show.col-sm-8
--#     .user-name
--#       - if user_signed_in?
--#         = @user.name
--#         さんの投稿一覧
--#       - else
--#         = @sampleuser.name
--#         さんの投稿一覧
--#     .users-follow
--#       = render 'follow_form'
--#     .posts
--#       - if user_signed_in?
--#         = render @posts
--#         = paginate(@posts)
--#       - else
--#         = render @posts
--#         = paginate(@posts)
+.user-wrapper
+  .users-show.col-sm-8
+    .user-name
+      - if user_signed_in?
+        = @user.name
+        さんの投稿一覧
+      - else
+        = @sampleuser.name
+        さんの投稿一覧
+    .users-follow
+      = render 'follow_form'
+    .posts
+      - if user_signed_in?
+        = render @posts
+        = paginate(@posts)
+      - else
+        = render @posts
+        = paginate(@posts)

@@ -1,32 +1,32 @@
--# - if user_signed_in?
--#   - if @user.followers.present?
--#     - @user.followers.each do |user|
--#       .follower-list.col-sm-5
--#         .follower-flame
--#           = @user.name
--#           さんのフォロワーリスト
--#           %table.follower-list-table
--#             %tr
--#               %td
--#                 %li
--#                   = link_to user_path(@user), class: 'followers-name' do
--#                     = user.name
--#   - else
--#     .follower-list 
--#       フォロワーはまだいません
--# - else
--#   - if @sampleuser.followers.present?
--#     - @sampleuser.followers.each do |user|
--#       .follower-list.col-sm-5
--#         .follower-flame 
--#           = @sampleuser.name
--#           さんのフォロワーリスト
--#           %table.follower-list-table
--#             %tr
--#               %td
--#                 %li
--#                   = link_to user_path(@sampleuser), class: 'followers-name' do
--#                     = user.name
--#   - else
--#     .follower-list 
--#       フォロワーはまだいません
+- if user_signed_in?
+  - if @user.followers.present?
+    - @user.followers.each do |user|
+      .follower-list.col-sm-5
+        .follower-flame
+          = @user.name
+          さんのフォロワーリスト
+          %table.follower-list-table
+            %tr
+              %td
+                %li
+                  = link_to user_path(@user), class: 'followers-name' do
+                    = user.name
+  - else
+    .follower-list 
+      フォロワーはまだいません
+- else
+  - if @sampleuser.followers.present?
+    - @sampleuser.followers.each do |user|
+      .follower-list.col-sm-5
+        .follower-flame 
+          = @sampleuser.name
+          さんのフォロワーリスト
+          %table.follower-list-table
+            %tr
+              %td
+                %li
+                  = link_to user_path(@sampleuser), class: 'followers-name' do
+                    = user.name
+  - else
+    .follower-list 
+      フォロワーはまだいません
