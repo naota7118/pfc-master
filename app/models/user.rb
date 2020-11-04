@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_many :followers, through: :follower_relationships, source: :follower
   has_one :standard
 
-  validates :name, presence: true
+  # validates :name, presence: true
   validates :name, uniqueness: true
   validates :email, presence: true
   validates :email, uniqueness: true
