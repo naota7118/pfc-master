@@ -5,11 +5,11 @@ class UsersController < ApplicationController
     if user_signed_in?
       @user = User.find(params[:id])
       @posts = Post.where(user_id: @user.id).order("created_at DESC").page(params[:page]).per(5)
-      @calorie = @user.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
+      # @calorie = @user.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
     else
       @sampleuser = User.find_by(id: 3)
       @posts = Post.where(user_id: @sampleuser.id).order("created_at DESC").page(params[:page]).per(5)
-      @calorie = @sampleuser.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
+      # @calorie = @sampleuser.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
     end
   end
 
