@@ -26,15 +26,14 @@
                 - if @post.carbo.present?
                   = @post.carbo
         %table.table-body.table-line
-        .text.col-sm-11
-          - if @post.text.present?
+        - if @post.text.present?
+          .text.col-sm-11
             = @post.text
-        .icon
+        - if @post.image.present?
           .image-upload
-            - if @post.image.present?
-              = image_tag @post.image.url
-        .weight
-          - if @post.weight.present?
+            = image_tag @post.image.url
+        - if @post.weight.present?
+          .weight
             体重：
             = @post.weight 
             kg
