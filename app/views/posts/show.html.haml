@@ -26,16 +26,18 @@
                 - if @post.carbo.present?
                   = @post.carbo
         %table.table-body.table-line
-        .text.col-sm-12
+        .text.col-sm-11
           - if @post.text.present?
             = @post.text
         .icon
           .image-upload
             - if @post.image.present?
-              = @post.image
+              = image_tag @post.image.url
         .weight
           - if @post.weight.present?
-            = @post.weight
+            体重：
+            = @post.weight 
+            kg
       .comment.col-sm-12
         - if user_signed_in?
           = form_with model: [@post, @comment], local: true, id: 'new_comment' do |f|
