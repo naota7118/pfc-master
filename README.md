@@ -54,7 +54,7 @@ http://pfcmaster.work/
 - RSpec
 
 #### インフラ・開発環境
-- AWS（VPC, EC2, RDS, IAM, Route53）
+- AWS（VPC, EC2, RDS, IAM, Route53, S3）
 - Capistrano
 - Docker
 - CircleCI
