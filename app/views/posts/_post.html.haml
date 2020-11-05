@@ -38,19 +38,20 @@
             = post.text
         - if post.image.present?
           = image_tag post.image.url, class: 'post-image'
-        %ul.more_list
+        %ul
           %li
             = link_to "/posts/#{post.id}", method: :get do
               %i.fas.fa-info-circle
               %span.edit 詳細
-          %li
-            = link_to "/posts/#{post.id}/edit", method: :get do
-              %i.fa.fa-edit
-              %span.edit 編集
-          %li
-            = link_to post_path(post.id), method: :delete do
-              %i.fa.fa-trash
-              %span.trash 削除          
+          - if user_signed_in? && current_user.id == post.user_id
+            %li
+              = link_to "/posts/#{post.id}/edit", method: :get do
+                %i.fa.fa-edit
+                %span.edit 編集
+            %li
+              = link_to post_path(post.id), method: :delete do
+                %i.fa.fa-trash
+                %span.trash 削除
           %li{id: "likes_buttons_#{post.id}", class: 'likes_buttons'}
             = render partial: 'likes/like', locals: {post: post, likes: @likes}
           %li
