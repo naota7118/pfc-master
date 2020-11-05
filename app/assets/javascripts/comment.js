@@ -1,14 +1,14 @@
 $(function(){
   function buildHTML(comment){
     var html = `<div class="comment">
+                  <div class="commentTime">
+                    <time datetime="${comment.created_at}">${comment.created_at}</time>
+                  </div>
                   <div class="commentUser">
                     ${comment.user_name}
                   </div>
                   <div class="commentContent">
                   ${comment.comment}
-                  </div>
-		              <div class="commentTime">
-                    <time datetime="${comment.created_at}">${comment.created_at}</time>
                   </div>
                 </div>`;
     return html;

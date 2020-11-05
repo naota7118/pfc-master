@@ -2,8 +2,7 @@
 
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create, :destroy]
-  impressionist :actions=> [:show]
-  
+
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     @post = Post.new
@@ -54,7 +53,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    impressionist(@post, nil, unique: [:session_hash])
     @comment = Comment.new
     @comments = @post.comments.includes(:user).order("created_at DESC")
     @like = Like.new

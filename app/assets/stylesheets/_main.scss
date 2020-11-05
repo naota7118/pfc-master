@@ -15,13 +15,9 @@
       margin-top: 15px;
       background-color: #fff;
       box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
-      // position: fixed;
       .chartjs-render-monitor {
         padding-top: 10px;
       }
-    }
-    .calorie_graph {
-      
     }
     .today_calorie {
       margin-left: 10px;
@@ -96,12 +92,6 @@
           input::placeholder {
             color: #e5e5e5;
           }
-          // .icon-plus {
-          //   padding-left: 10px;
-          // }
-          // .icon-minus {
-          //   padding-left: 50px;
-          // }
         }
         .text.col-sm-12 {
           margin-top: 10px;
