@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create, :destroy]
   
@@ -53,7 +51,6 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    impressionist(@post, nil, unique: [:session_hash])
     @comment = Comment.new
     @comments = @post.comments.includes(:user).order("created_at DESC")
     @like = Like.new
