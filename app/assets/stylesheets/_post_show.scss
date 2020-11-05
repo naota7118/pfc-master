@@ -1,0 +1,147 @@
+html {
+  background-color: #eaeaea;
+  .content {
+    height: 100%;
+    overflow-y: scroll;
+    margin-left: 20px;
+    margin-right: 50px;
+    background-color: #eaeaea;
+    .post.col-sm-9 {
+      background-color: #ffffff;
+      margin: 0 auto;
+      margin-top: 150px;
+      border-color: gray;
+      border: ridge;
+      border-radius: 10px;
+      padding: 5px;
+      .post-box {
+        padding: 10px 20px 10px 20px;
+        table.col-sm-12 {
+          border-collapse: separate;
+          border-spacing: 0;
+          table-layout:fixed;
+        }
+        table th:first-child{
+          border-radius: 10px 0 0 0;
+        }
+        table th:last-child{
+          border-radius: 0 10px 0 0;
+          border-right: 1px solid #6cb3fa;
+        }
+        table th{
+          text-align: center;
+          color: white;
+          background: linear-gradient(#78b7fa,#007bff);
+          border-left: 1px solid #6cb3fa;
+          border-top: 1px solid #6cb3fa;
+          border-bottom: 1px solid #6cb3fa;
+          box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+          width: 20%;
+          padding: 10px 0;
+        }
+        table td{
+          text-align: center;
+          border-left: 1px solid #a8b7c5;
+          border-bottom: 1px solid #a8b7c5;
+          border-top:none;
+          box-shadow: 0px -3px 5px 1px #eee inset;
+          width: 25%;
+          padding: 10px 0;
+        }
+        
+        table td:nth-child(5){
+          border-right: 1px solid #a8b7c5;
+          width: 25%;
+        }
+        
+        table tr:last-child td:first-child {
+          border-radius: 0 0 0 10px;
+        }
+        
+        table tr:last-child td:nth-child(5) {
+          border-radius: 0 0 10px 0;
+        }
+        input#post_food, #post_calorie, #post_protein, #post_fat, #post_carbo {
+          width: 100%;
+          border: 1px solid #e5e5e5;
+          font-size: 14px;
+          outline: none;
+          line-height: 1.6;
+        }
+        input::placeholder {
+          color: #e5e5e5;
+        }
+      }
+      .comment.col-sm-12 {
+        margin-top: 10px;
+        margin-left: 10px;
+        #new_comment {
+          padding-right: 22px;
+          text-align: center;
+          #comment_comment {
+            box-sizing: border-box; 
+            display: inline-block;
+            vertical-align: top;
+            max-height: 170px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #e5e5e5;
+            font-size: 14px;
+            outline: none;
+            line-height: 1.6;
+            resize: vertical;
+            width: 100%;
+          }
+          .commentBtn {
+            display: inline-block;
+            width: 80px;
+            margin: 10px 0;
+          }
+        }
+      }
+      .commentList {
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #a8b7c5;
+        font-size: 14px;
+        margin-left: 25px;
+        margin-right: 25px;
+        padding: 10px;
+        .commentlist {
+          text-align: center;
+        }
+        .comments {
+          .comment {
+            margin-top: 5px;
+          }
+        }
+      }
+      .comment-fa {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        .comment-edit, .comment-trash {
+          text-decoration: none;
+        }
+      }
+    }
+    .home {
+      margin-top: 20px;
+      .comment-home {
+        margin-top: 10px;
+        border: 1px solid;
+        padding: 5px 15px;
+        -webkit-border-radius: 4px;
+        text-decoration: none;
+        transition: all .5s;
+        background-color: white;
+        color: black;
+      }
+      .comment-home:hover {
+        color: #f8f9fa;
+        background-color: #0078ff;
+        text-decoration: none;
+      }
+    }
+  }
+}
