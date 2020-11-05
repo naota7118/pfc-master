@@ -14,6 +14,7 @@ html {
       padding: 5px;
       .post-box {
         padding: 10px 20px 10px 20px;
+        text-align: center;
         table.col-sm-12 {
           border-collapse: separate;
           border-spacing: 0;
@@ -69,9 +70,20 @@ html {
         input::placeholder {
           color: #e5e5e5;
         }
+        .text.col-sm-11 {
+          display: inline-block;
+          box-sizing: border-box;
+          border-radius: 5px;
+          border: 1px solid #a8b7c5;
+          font-size: 14px;
+          margin: 10px;
+          padding: 10px;
+        }
+        .weight {
+          margin-top: 5px;
+        }
       }
       .comment.col-sm-12 {
-        margin-top: 10px;
         margin-left: 10px;
         #new_comment {
           padding-right: 22px;
