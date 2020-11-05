@@ -7,7 +7,7 @@ class UsersController < ApplicationController
       @posts = Post.where(user_id: @user.id).order("created_at DESC").page(params[:page]).per(5)
       # @calorie = @user.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
     else
-      @sampleuser = User.find_by(id: 3)
+      @sampleuser = User.find_by(id: 2)
       @posts = Post.where(user_id: @sampleuser.id).order("created_at DESC").page(params[:page]).per(5)
       # @calorie = @sampleuser.posts.order("created_at DESC").group("date(created_at)").sum(:calorie)
     end
