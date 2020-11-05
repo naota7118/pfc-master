@@ -3,7 +3,7 @@
 class ChartsController < ApplicationController
   def index
     # カロリー
-    @sampleuser = User.find_by(id: 3)
+    @sampleuser = User.find_by(id: 2)
     if user_signed_in?
       # 日付ごとで分けてカロリー合計を算出
       sum_calorie = current_user.posts.group("date(created_at)").sum(:calorie)
