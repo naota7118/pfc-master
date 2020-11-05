@@ -2,7 +2,6 @@
 
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create, :destroy]
-  impressionist :actions=> [:show]
   
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)

@@ -71,5 +71,4 @@ gem "sassc", "~>2.1.0"
 gem "mini_racer"
 gem "bcrypt", "~> 3.1.7"
 gem "autoprefixer-rails"
-gem 'impressionist'
 gem 'fog-aws'
