@@ -74,10 +74,10 @@ jobs:
           fingerprints:
             - "90:a0:74:73:63:66:9b:9c:c2:95:9e:54:1a:2c:1d:6a"
 
-      - deploy:
-          name: Capistrano deploy
-          command: |
-            if [ "${CIRCLE_BRANCH}" != "master" ]; then
-            exit 0
-            fi
-            bundle exec cap production deploy
+      # - deploy:
+      #     name: Capistrano deploy
+      #     command: |
+      #       if [ "${CIRCLE_BRANCH}" != "master" ]; then
+      #       exit 0
+      #       fi
+      #       bundle exec cap production deploy
