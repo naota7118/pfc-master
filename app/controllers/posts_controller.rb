@@ -2,6 +2,7 @@
 
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create, :destroy]
+  before_action :twitter_client, only: [:create]
 
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
@@ -43,6 +44,7 @@ class PostsController < ApplicationController
     # 今日の日付を取得(simple_calendarのため)
     @post[:start_time] = Date.today.strftime("%Y-%m-%d")
     if @post.save
+      @client.update("TwitterAPIと連携しました!!")
       redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
     else
       @posts = Post.includes(:user)
@@ -90,5 +92,14 @@ class PostsController < ApplicationController
   private
     def post_params
       params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image, :weight, :start_time).merge(user_id: current_user.id)
+    end
+
+    def twitter_client
+      @client = Twitter::REST::Client.new do |config|
+        config.consumer_key = "VjhTBtqid9Ivqb9nN27NH106A"
+        config.consumer_secret = "QCz0ZsxROeVhwy86af6imxBojXX0MrN46Sp8Gu15BM2NOvcwHK"
+        config.access_token = "1201457388848443393-VgMDPP6TvnaIh3Twev40QEw5n4rdaA"
+        config.access_token_secret ="AGbPhsHGbaHfcOFNuCiKbafnKqQ3aou7r4t0Wui5GgZZe"
+      end
     end
 end
