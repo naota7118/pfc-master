@@ -97,9 +97,9 @@ GEM
     chartkick (3.4.2)
     childprocess (3.0.0)
     coderay (1.1.3)
-    coffee-rails (4.2.2)
+    coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.0)
+      railties (>= 5.2.0)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -117,7 +117,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     ed25519 (1.2.4)
     equalizer (0.0.11)
-    erubi (1.9.0)
+    erubi (1.10.0)
     erubis (2.7.0)
     excon (0.78.0)
     execjs (2.7.0)
@@ -404,7 +404,7 @@ GEM
       multipart-post (~> 2.0)
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
-    tzinfo (1.2.7)
+    tzinfo (1.2.8)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
@@ -451,7 +451,7 @@ DEPENDENCIES
   carrierwave
   chart-js-rails
   chartkick
-  coffee-rails (~> 4.2)
+  coffee-rails (~> 5.0)
   devise
   ed25519
   factory_bot_rails
