@@ -44,7 +44,7 @@ class PostsController < ApplicationController
     # 今日の日付を取得(simple_calendarのため)
     @post[:start_time] = Date.today.strftime("%Y-%m-%d")
     if @post.save
-      @client.update("TwitterAPIと連携しました!!")
+      @client.update("TwitterAPIと連携しました（テスト投稿）")
       redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
     else
       @posts = Post.includes(:user)
@@ -96,10 +96,10 @@ class PostsController < ApplicationController
 
     def twitter_client
       @client = Twitter::REST::Client.new do |config|
-        config.consumer_key = "VjhTBtqid9Ivqb9nN27NH106A"
-        config.consumer_secret = "QCz0ZsxROeVhwy86af6imxBojXX0MrN46Sp8Gu15BM2NOvcwHK"
-        config.access_token = "1201457388848443393-VgMDPP6TvnaIh3Twev40QEw5n4rdaA"
-        config.access_token_secret ="AGbPhsHGbaHfcOFNuCiKbafnKqQ3aou7r4t0Wui5GgZZe"
+        config.consumer_key = ENV['CONSUMER_KEY']
+        config.consumer_secret = ENV['CONSUMER_SECRET']
+        config.access_token = ENV['ACCESS_TOKEN']
+        config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
       end
     end
 end
