@@ -55,7 +55,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.4.9)
       msgpack (~> 1.0)
-    bootstrap (4.4.1)
+    bootstrap (4.5.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
@@ -117,7 +117,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     ed25519 (1.2.4)
     equalizer (0.0.11)
-    erubi (1.9.0)
+    erubi (1.10.0)
     erubis (2.7.0)
     excon (0.78.0)
     execjs (2.7.0)
@@ -404,7 +404,7 @@ GEM
       multipart-post (~> 2.0)
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
-    tzinfo (1.2.7)
+    tzinfo (1.2.8)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
@@ -440,7 +440,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bcrypt_pbkdf
   bootsnap (>= 1.1.0)
-  bootstrap (~> 4.4.1)
+  bootstrap (~> 4.5.3)
   byebug
   capistrano
   capistrano-bundler
