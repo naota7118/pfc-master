@@ -38,7 +38,6 @@ class PostsController < ApplicationController
     end
   end
 
-
   def create
     @post = Post.new(post_params)
     # 今日の日付を取得(simple_calendarのため)
