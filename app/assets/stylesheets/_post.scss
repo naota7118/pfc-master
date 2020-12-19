@@ -12,8 +12,6 @@
     border: ridge;
     border-radius: 10px;
     padding: 10px 20px 0px 20px;
-    textarea {
-    }
     .upper-post {
       display: flex;
       .upper-post__date {
@@ -85,5 +83,18 @@
     .post-image {
       margin: 5px 0;
     }
+  }
+}
+.notifications {
+  color: $white;
+  text-align: center;  
+
+  .notice {
+    background-color: lightBlue;
+  }
+
+  .alert {
+    background-color: rgb(247, 184, 67);
+    opacity: 0.5;
   }
 }

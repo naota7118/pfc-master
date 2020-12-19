@@ -1,6 +1,9 @@
 .main
   .section
     .calorie_chart.col-sm-9
+      .notifications
+        - flash.each do |key, value|
+          = content_tag(:div, value, class: key)
       .calorie_graph
         %canvas(id="myChart2" width="700" height="100")
         :javascript
