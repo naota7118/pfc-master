@@ -43,11 +43,14 @@ class PostsController < ApplicationController
     # 今日の日付を取得(simple_calendarのため)
     @post[:start_time] = Date.today.strftime("%Y-%m-%d")
     if @post.save
-      @client.update("TwitterAPIと連携しました（テスト投稿）")
-      redirect_back(fallback_location: root_path) # なぜredirect_to root_pathじゃダメなのかわかってない
+      flash[:notice] = "投稿が完了しました。"
+      # @client.update("TwitterAPIと連携しました（テスト投稿）")
+      redirect_back(fallback_location: root_path)
     else
-      @posts = Post.includes(:user)
-      flash.now[:alert] = "必須項目をしてください。" # フラッシュメッセージが出るか確認する
+      # @posts = Post.includes(:user)
+      # flashはハッシュオブジェクトで、文字列をハッシュオブジェクトflashのalertキーに代入している
+      flash[:alert] = "投稿に失敗しました。入力されていないもしくは値が期待される範囲外にある項目があります。"
+      # render :index
       redirect_back(fallback_location: root_path)
     end
   end
