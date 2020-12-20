@@ -49,9 +49,9 @@ class PostsController < ApplicationController
     else
       @posts = Post.includes(:user)
       # flashはハッシュオブジェクトで、文字列をハッシュオブジェクトflashのalertキーに代入している
-      flash[:alert] = "投稿に失敗しました。入力されていない項目があります。"
-      redirect_back(fallback_location: root_path)
-      # render :index
+      flash.now[:alert] = "投稿に失敗しました。入力されていない項目があります。"
+      render :index
+      # redirect_back(fallback_location: root_path)
     end
   end
 

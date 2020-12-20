@@ -46,7 +46,7 @@ header {
         .mypage, .login, .logout, .admin {
           border: 1px solid;
           padding: 5px 15px;
-          -webkit-border-radius: 4px;
+          border-radius: 4px;
           margin-left: 10px;
           text-decoration: none;
           transition: all .5s;
@@ -71,10 +71,6 @@ header {
     }
   }
 }
-// .alert {
-//   position: absolute;
-//   width: 100vw;
-// }
 
 .alert-success, .alert-danger{
   z-index: 100;
