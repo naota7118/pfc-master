@@ -47,9 +47,9 @@ class PostsController < ApplicationController
       # @client.update("TwitterAPIと連携しました（テスト投稿）")
       redirect_back(fallback_location: root_path)
     else
-      @posts = Post.includes(:user)
+      # @posts = Post.includes(:user)
       # flashはハッシュオブジェクトで、文字列をハッシュオブジェクトflashのalertキーに代入している
-      flash[:alert] = "投稿に失敗しました。入力されていない項目があります。"
+      flash[:alert] = "投稿に失敗しました。入力されていないもしくは値が期待される範囲外にある項目があります。"
       # render :index
       redirect_back(fallback_location: root_path)
     end
