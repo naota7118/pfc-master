@@ -75,3 +75,9 @@ header {
 //   position: absolute;
 //   width: 100vw;
 // }
+
+.alert-success, .alert-danger{
+  z-index: 100;
+  position: absolute;
+  width: 100vw;
+}
