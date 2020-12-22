@@ -14,8 +14,9 @@ RSpec.describe Post, type: :model do
   end
 
   it "foodとcalorieがあれば投稿できる" do
-    john = create(:john)
-    curry = create(:curry, user_id: john.id)
+    # john = create(:john)
+    # curry = create(:curry, user_id: john.id)
+    post = Post.new(food: "カレー", calorie: '100')
     expect(curry).to be_valid
   end
 
