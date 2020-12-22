@@ -17,7 +17,7 @@ RSpec.describe Post, type: :model do
     # john = create(:john)
     # curry = create(:curry, user_id: john.id)
     post = Post.new(food: "カレー", calorie: '100')
-    expect(curry).to be_valid
+    expect(post).to be_valid
   end
 
   # it "protein, fat, carboが空欄でも投稿できる" do
