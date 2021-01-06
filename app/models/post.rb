@@ -41,5 +41,7 @@ class Post < ApplicationRecord
     carbo.present?
   end
 
+  # mount_uploader :ファイルを保存するカラム名, アップローダークラス名
   mount_uploader :image, ImageUploader
+  # アップロード画像用のカラムとアップローダーカラムを紐付ける
 end
