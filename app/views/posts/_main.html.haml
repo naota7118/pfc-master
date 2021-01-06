@@ -39,20 +39,20 @@
         %p
         - if user_signed_in?
           - if @calorie_standard >= @calorie_sum
-            目安カロリーまであと
+            目安カロリーを
             = link_to charts_path(current_user.id), class: 'difference' do
               = @difference
-            キロカロリー です
+            キロカロリー下回っています
           - else
             = link_to charts_path(current_user.id), class: 'difference' do
               = @difference
             キロカロリー オーバーしています
         - else
           - if @calorie_standard >= @calorie_sum
-            目安カロリーまであと
+            目安を
             = link_to charts_path(@sampleuser.id), class: 'difference' do
               = @difference
-            キロカロリー です
+            キロカロリー 下回っています
           - else
             = link_to charts_path(@sampleuser.id), class: 'difference' do
               = @difference
