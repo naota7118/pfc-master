@@ -73,3 +73,4 @@ gem "bcrypt", "~> 3.1.7"
 gem "autoprefixer-rails"
 gem 'fog-aws'
 gem 'twitter'
+gem 'omniauth-twitter'
