@@ -34,4 +34,7 @@ Rails.application.routes.draw do
   resources :calendars, only: :index
 
   resources :relationships, only: [:create, :destroy]
+
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 end
