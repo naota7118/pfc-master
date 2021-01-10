@@ -10,12 +10,11 @@
 # 概要
 私自身「減量が続かない」という悩みを抱えていた経験から、「減量を継続して成功させたい」ユーザー様のためのアプリを開発しました。    
 自らこのアプリを使い、2ヶ月で４キロの減量に成功しました。
- 
-![PFCMASTERメイン画面](https://user-images.githubusercontent.com/60293887/97381551-aa284580-190c-11eb-9d19-cd793b98c516.png)
 
+![PFCMASTERトップ画面](https://user-images.githubusercontent.com/60293887/104120809-0d0e7200-537d-11eb-965e-af6443a62458.png)
 
 #### URL
-http://pfcmaster.work/
+https://pfcmaster.work/
 #### テストアカウント
 最初に出てくる画面の「かんたんログイン」をクリックして頂くと、ゲストユーザーとしてログインできます。
 
