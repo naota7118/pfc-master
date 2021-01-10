@@ -3,6 +3,8 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create, :destroy]
   before_action :twitter_client, only: [:create]
+  impressionist :actions=> [:show]
+  # impressionist :actions => [:show], unique: [:session_hash]
 
   def index
     @posts = Post.all.includes(:user).order("created_at DESC").page(params[:page]).per(5)
@@ -57,6 +59,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    impressionist(@post)
     @comment = Comment.new
     @comments = @post.comments.includes(:user).order("created_at DESC")
     @like = Like.new

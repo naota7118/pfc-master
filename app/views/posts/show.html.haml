@@ -5,26 +5,14 @@
         %table.col-sm-12
           %thead
             %tr
-              %th.food Food
-              %th.calorie Calorie
-              %th.protein P タンパク質
-              %th.fat F 脂質
-              %th.carbo C 炭水化物
+              %th.food 食べたもの
+              %th.calorie カロリー
           %tbody.table-body.table-line
             %tr
               %td
                 = @post.food
               %td
                 = @post.calorie
-              %td
-                - if @post.protein.present?
-                  = @post.protein
-              %td
-                - if @post.fat.present?
-                  = @post.fat
-              %td
-                - if @post.carbo.present?
-                  = @post.carbo
         %table.table-body.table-line
         - if @post.text.present?
           .text.col-sm-11
@@ -66,5 +54,8 @@
               %span.trash 削除
           .likes_buttons{id: "likes_buttons_#{@post.id}"}
             = render partial: "likes/like", locals: {post: @post}
+      .impression
+      %a このページが表示された回数：
+      = @post.impressionist_count(:filter=>:session_hash)
     .home
       = link_to "ホームへ戻る", root_path, class: 'comment-home'

@@ -44,4 +44,6 @@ class Post < ApplicationRecord
   # mount_uploader :ファイルを保存するカラム名, アップローダークラス名
   mount_uploader :image, ImageUploader
   # アップロード画像用のカラムとアップローダーカラムを紐付ける
+
+  is_impressionable
 end
