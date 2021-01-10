@@ -16,23 +16,14 @@
         %table.col-sm-12
           %thead
             %tr
-              %th FOOD
-              %th Calorie
-              %th P タンパク質
-              %th F 脂質
-              %th C 炭水化物
+              %th 食べたもの
+              %th カロリー
           %tbody.table-body
             %tr
               %td 
                 = post.food
               %td 
                 = post.calorie
-              %td 
-                = post.protein
-              %td 
-                = post.fat
-              %td 
-                = post.carbo
         - if post.text.present?
           .text.col-sm-12
             = post.text
