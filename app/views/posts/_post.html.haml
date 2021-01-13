@@ -40,7 +40,7 @@
                 %i.fa.fa-edit
                 %span.edit 編集
             %li
-              = link_to post_path(post.id), method: :delete do
+              = link_to post_path(post.id), method: :delete, data: { confirm: "本当に削除しますか？" } do
                 %i.fa.fa-trash
                 %span.trash 削除
           %li{id: "likes_buttons_#{post.id}", class: 'likes_buttons'}
