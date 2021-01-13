@@ -63,6 +63,18 @@
             キロカロリー オーバーしています。
             %p 明日からまた頑張っていきましょう！
         - else
+          .standard_calorie
+            %a １日あたりの目標カロリーは
+            = link_to charts_path(@sampleuser.id), class: 'difference' do
+              = @calorie_standard
+            キロカロリー以下です。
+
+          .sum_calorie
+            今日の摂取カロリーは
+            = link_to charts_path(@sampleuser.id), class: 'difference' do
+              = @calorie_sum
+            キロカロリーです。
+          %hr
           - if @calorie_standard >= @calorie_sum
             目標カロリーを
             = link_to charts_path(@sampleuser.id), class: 'difference' do
