@@ -16,7 +16,7 @@ $(function() {
       return html;
     }
 
-    $(document).on('change', '.image_upload', function() {
+    $(document).on('change', '.input-box-file', function() {
       //選択したfileのオブジェクトを取得
       var file = this.files[0];
       //FileReaderオブジェクトの生成

@@ -128,9 +128,23 @@
           display: flex;
           justify-content: space-between;
           margin-top: 10px;
-          .image-upload {
-            width: auto;
+          .input-box__image {
             margin: 0 auto;
+            // font-size: large;
+            height: 100px;
+            width: 100px;
+            background-color: #fafafa;
+            border: 1px solid gray;
+            border-style: dashed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .fas.fa-image {
+              font-size: x-large;
+            }
+            .input-box-file {
+              display: none;
+            }
           }
         }
         .weight-and-btn {

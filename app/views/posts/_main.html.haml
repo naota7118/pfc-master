@@ -79,8 +79,9 @@
               【任意】
             = f.text_area :text, placeholder: 'なにたべた？', class: 'post-textarea'
           .icon
-            .image-upload
-              = f.file_field :image, class: 'image_upload'
+            %label{class: "input-box__image"}
+              = icon('fas', 'image')
+              %input{type: "file", class: "input-box-file"}
           .weight-and-btn
             .any
               【任意】
