@@ -61,6 +61,8 @@
     .new-post.col-sm-9
       = form_with model: @post, id: 'new_post' do |f|
         .input-box
+          .required
+            【必須】
           %table.col-sm-12
             %thead
               %tr
@@ -73,15 +75,20 @@
                 %td 
                   = f.number_field :calorie, step: '0.1', placeholder: '例）200'
           .text.col-sm-12
+            .any
+              【任意】
             = f.text_area :text, placeholder: 'なにたべた？', class: 'post-textarea'
           .icon
             .image-upload
               = f.file_field :image, class: 'image_upload'
           .weight-and-btn
+            .any
+              【任意】
             .weight
               体重
               = f.number_field :weight, step: '0.1', placeholder: '例）70'
               kg
+          .btn-post
             .btn-square
               = f.submit '投稿する', class: 'post-btn'
     .posts
