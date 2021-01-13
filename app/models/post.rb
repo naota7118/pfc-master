@@ -19,27 +19,6 @@ class Post < ApplicationRecord
   def present_weight?
     weight.present?
   end
-  
-  # 投稿されるタンパク質量は0以上500未満でなければならないというバリデーション
-  validates :protein, numericality: { less_than_or_equal_to: 500, greater_than_or_equal_to: 0}, if: :present_protein?
-
-  def present_protein?
-    protein.present?
-  end
-
-  # 投稿される脂質量は0以上500未満でなければならないというバリデーション
-  validates :fat, numericality: { less_than_or_equal_to: 500, greater_than_or_equal_to: 0}, if: :present_fat?
-
-  def present_fat?
-    fat.present?
-  end
-
-  # 投稿される炭水化物量は0以上500未満でなければならないというバリデーション
-  validates :carbo, numericality: { less_than_or_equal_to: 500, greater_than_or_equal_to: 0}, if: :present_carbo?
-
-  def present_carbo?
-    carbo.present?
-  end
 
   # mount_uploader :ファイルを保存するカラム名, アップローダークラス名
   mount_uploader :image, ImageUploader

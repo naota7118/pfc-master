@@ -16,7 +16,7 @@ $(function() {
       return html;
     }
 
-    $(document).on('change', '.image_upload', function() {
+    $(document).on('change', '.input-box-file', function() {
       //選択したfileのオブジェクトを取得
       var file = this.files[0];
       //FileReaderオブジェクトの生成
@@ -36,6 +36,9 @@ $(function() {
   
           //画像を追加
           $(`.upper-box img`).attr('src', `${image}`);
+
+          // 画像投稿のフォームを削除
+          $('.icon').remove();
 
         // すでにプレビュー画像が存在する場合
         }else{

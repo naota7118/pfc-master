@@ -46,7 +46,7 @@ class PostsController < ApplicationController
     @post[:start_time] = Date.today.strftime("%Y-%m-%d")
     if @post.save
       flash[:notice] = "投稿が完了しました。"
-      @client.update("TwitterAPIと連携しました（テスト投稿）")
+      # @client.update("TwitterAPIと連携しました（テスト投稿）")
       redirect_back(fallback_location: root_path)
     else
       # @posts = Post.includes(:user)
@@ -96,7 +96,7 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:food, :calorie, :protein, :fat, :carbo, :text, :image, :weight, :start_time).merge(user_id: current_user.id)
+      params.require(:post).permit(:food, :calorie, :text, :image, :weight, :start_time).merge(user_id: current_user.id)
     end
 
     def twitter_client
