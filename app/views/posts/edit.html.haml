@@ -5,23 +5,14 @@
         %table.col-sm-12
           %thead
             %tr
-              %th.food FOOD
-              %th.calorie Calorie
-              %th.protein P タンパク質
-              %th.fat F 脂質
-              %th.carbo C 炭水化物
+              %th.food 食べたもの
+              %th.calorie カロリー
           %tbody.table-body.table-line
             %tr
               %td 
                 = f.text_field :food
               %td 
                 = f.number_field :calorie, step: '0.1'
-              %td 
-                = f.number_field :protein, step: '0.1'
-              %td 
-                = f.number_field :fat, step: '0.1'
-              %td 
-                = f.number_field :carbo, step: '0.1'
         .text.col-sm-12
           = f.text_area :text, class: 'post-textarea'
         .icon
