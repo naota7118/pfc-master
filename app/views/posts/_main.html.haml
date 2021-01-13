@@ -81,7 +81,7 @@
           .icon
             %label{class: "input-box__image"}
               = icon('fas', 'image')
-              %input{type: "file", class: "input-box-file"}
+              = f.file_field :image, class: 'input-box-file'
           .weight-and-btn
             .any
               【任意】
