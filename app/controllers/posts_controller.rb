@@ -46,7 +46,7 @@ class PostsController < ApplicationController
     @post[:start_time] = Date.today.strftime("%Y-%m-%d")
     if @post.save
       flash[:notice] = "投稿が完了しました。"
-      @client.update("TwitterAPIと連携しました（テスト投稿）")
+      # @client.update("TwitterAPIと連携しました（テスト投稿）")
       redirect_back(fallback_location: root_path)
     else
       # @posts = Post.includes(:user)
