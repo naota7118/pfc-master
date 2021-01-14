@@ -13,7 +13,10 @@ default:
 
 development:
   adapter: mysql2
-  encoding: utf8
+  # encoding: utf8
+  encoding: utf8mb4
+  charset: utf8mb4
+  collation: utf8mb4_unicode_ci
   database: pfc-master_development
   pool: 5
   username: root
