@@ -2,10 +2,10 @@
   .users-show.col-sm-8
     .user-name
       - if user_signed_in?
-        = @user.name
+        = @user.username
         さんの投稿一覧
       - else
-        = @sampleuser.name
+        = @sampleuser.username
         さんの投稿一覧
     .users-follow
       = render 'follow_form'
