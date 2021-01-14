@@ -29,7 +29,7 @@
         - if user_signed_in?
           = form_with model: [@post, @comment], local: true, id: 'new_comment' do |f|
             = f.text_area :comment, placeholder: "コメントする", rows: "2"
-            = f.submit "SEND", class: "commentBtn", id: "commentBtn"
+            = f.submit "送信する", class: "commentBtn", id: "commentBtn"
       .commentList
         .commentlist 
           [コメント一覧]
