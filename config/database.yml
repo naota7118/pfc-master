@@ -1,6 +1,5 @@
 default:
   adapter: mysql2
-  # encoding: utf8
   encoding: utf8mb4
   charset: utf8mb4
   collation: utf8mb4_unicode_ci
@@ -13,7 +12,6 @@ default:
 
 development:
   adapter: mysql2
-  # encoding: utf8
   encoding: utf8mb4
   charset: utf8mb4
   collation: utf8mb4_unicode_ci
@@ -34,7 +32,9 @@ test:
 
 production:
   adapter: mysql2
-  encoding: utf8
+  encoding: utf8mb4
+  charset: utf8mb4
+  collation: utf8mb4_unicode_ci
   pool: 5
   database: pfc-master_production
   username: root
