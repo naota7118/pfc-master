@@ -4,7 +4,7 @@
       .upper-post
         .upper-post__user-name
           = link_to user_path(post.user_id) do
-            = post.user.name
+            = post.user.username
         .upper-post__date
           %time(datetime="#{post.created_at}")= time_ago_in_words(post.created_at)+"前"
       .lower-post
