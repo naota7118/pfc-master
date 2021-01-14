@@ -37,8 +37,8 @@ $(function() {
           //画像を追加
           $(`.upper-box img`).attr('src', `${image}`);
 
-          // 画像投稿のフォームを削除
-          $('.icon').remove();
+          // 画像投稿のフォームを非表示にする
+          $('.icon').hide();
 
         // すでにプレビュー画像が存在する場合
         }else{
