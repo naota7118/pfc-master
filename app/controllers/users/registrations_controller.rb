@@ -17,7 +17,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       # 同じアクション内でrenderを2回記述する場合はand returnを使用する
     end
     # attributesで全ての属性を取得しsessionで保存
-    session["devise.regist_data"] = { user: @user.attributes }
+    session["devise.regist_data"] = { username: @user.attributes }
     # passwordを保存
     session["devise.regist_data"][:username]["password"] = params[:username][:password]
     # standard = @user.standard
