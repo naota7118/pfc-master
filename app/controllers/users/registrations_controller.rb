@@ -19,14 +19,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
     # attributesで全ての属性を取得しsessionで保存
     session["devise.regist_data"] = { user: @user.attributes }
     # passwordを保存
-    session["devise.regist_data"][:user]["password"] = params[:user][:password]
+    session["devise.regist_data"][:username]["password"] = params[:username][:password]
     # standard = @user.standard
     @standard = @user.build_standard
     render :new_standard
   end
 
   def create_standard
-    @user = User.new(session["devise.regist_data"]["user"])
+    @user = User.new(session["devise.regist_data"]["username"])
     @standard = Standard.new(standard_params)
     unless @standard.valid?
       flash.now[:alert] = @standard.errors.full_messages
@@ -35,8 +35,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user.build_standard(@standard.attributes)
     if @user.save
       # sessionを削除
-      session["devise.regist_data"]["user"].clear
-      sign_in(:user, @user)
+      session["devise.regist_data"]["username"].clear
+      sign_in(:username, @user)
       flash[:notice] = "アカウント登録が完了しました"
       redirect_to root_path
     else
